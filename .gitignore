@@ -1,11 +1,24 @@
+# Virtual environment
 env/
-pycache/
+
+# Python cache
+__pycache__/
 *.pyc
 *.pyo
+
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints
+
+# Data files
 data/raw/
 data/processed/
+
+# System files
 .DS_Store
+
+# Logs and temporary files
 *.log
 *.tmp
+
+# Environment variable file
 .env
