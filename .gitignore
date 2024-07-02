@@ -1,0 +1,11 @@
+env/
+pycache/
+*.pyc
+*.pyo
+.ipynb_checkpoints
+data/raw/
+data/processed/
+.DS_Store
+*.log
+*.tmp
+.env
