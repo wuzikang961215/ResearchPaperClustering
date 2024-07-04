@@ -14,17 +14,17 @@ def test_extract_abstracts():
     """
     dp = DataProcessing()
     
-    # List all PDF files in the data/raw directory
+    # Directory containing raw PDF files
     raw_data_dir = os.path.join(parent_dir, 'data/raw')
-    file_paths = [os.path.join(raw_data_dir, f) for f in os.listdir(raw_data_dir) if f.endswith('.pdf')]
-
+    
     # Extract abstracts from all PDF files
-    abstracts = dp.extract_abstracts(file_paths)
+    results = dp.extract_abstracts(raw_data_dir)
     
     # Print the results for verification
-    for i, abstract in enumerate(abstracts):
-        print(f"Abstract {i + 1}:\n{abstract}\n")
+    for file_path, abstract in results:
+        file_name = os.path.basename(file_path)
+        # print(f"File: {file_name}\nAbstract:\n{dp.preprocess_text(abstract) if abstract != 'Abstract not found' else abstract}\n")
+        print(f"File: {file_name}\nAbstract:\n{abstract}\n")
 
 if __name__ == "__main__":
     test_extract_abstracts()
-
