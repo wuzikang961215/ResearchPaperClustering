@@ -1,7 +1,8 @@
 # Research Paper Clustering
 
-## Project Overview
-This project focuses on clustering a given set of research papers based on their abstract similarity. It demonstrates skills in natural language processing, text preprocessing, and unsupervised machine learning.
+## Overview
+
+(Introduction and how to run instructions will be added here once the project is complete.)
 
 ## Steps to Run the Project
 1. **Setup the Environment**:
@@ -31,6 +32,7 @@ This project focuses on clustering a given set of research papers based on their
       ```
 
 ## File Structure
+ResearchPaperClustering/
 ├── data
 │ ├── raw
 │ │ └── *.pdf
@@ -52,20 +54,43 @@ Feel free to contribute to this project by creating issues or submitting pull re
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Progress and Exploration
+## Exploration Process
+
+### Current Progress
+
+#### Data Extraction and Preprocessing
+
+- Implemented a `DataProcessing` class in `data_processing.py` to handle text extraction and preprocessing.
+- Successfully extracted text from PDF files using `PdfReader` from PyPDF2.
+- Implemented text preprocessing including lowercasing, removal of non-word characters, stop word removal, and lemmatization.
+
+#### Testing
+
+- Created a `tests` directory with a `test.py` script to test the text extraction functionality.
+- The script lists all PDF files in the `data/raw` directory, extracts abstracts, and prints them for verification.
+- Added sorting of file names to ensure consistent processing order.
+- Modified the test script to include the PDF file names in the output for easier verification.
+
+### Challenges
+
+#### PDF Parsing
+
+- Encountered deprecation issues with `PdfFileReader` in PyPDF2 version 3.0.0.
+  - Solution: Switched to `PdfReader` for extracting text from PDF files.
+
+#### Text Matching
+
+- Difficulty in verifying the extracted abstracts against the original PDF files due to order mismatch.
+  - Solution: Included the PDF file names in the test output to match abstracts with their respective files.
 
 ### Key Findings
 During the preprocessing phase, it was discovered that the abstracts typically end with the keywords "introduction" and "keywords". This observation is crucial for accurately extracting the abstract section from the research papers.
 
-### Data Preprocessing
-The preprocessing steps involve extracting the abstract content from each PDF file and handling any special characters or formatting issues.
+### Next Steps
 
-### Current Progress
-- Implemented a function to rename PDF files for consistency.
-- Developed a method to extract abstracts from the PDF files.
-- Identified the keywords "introduction" and "keywords" as critical markers for the end of abstracts.
-- Implemented a cleaning function to remove redundant phrases from the abstracts.
+- Continue refining the text extraction and preprocessing steps to handle edge cases and improve accuracy.
+- Implement text vectorization using techniques like TF-IDF and word embeddings.
+- Develop clustering algorithms to group similar research papers based on their abstracts.
+- Perform thorough evaluation of the clustering results using appropriate metrics.
+- Visualize the clustering results using dimensionality reduction techniques like t-SNE or PCA.
 
-### Challenges and Solutions
-- Ensuring accurate extraction of abstracts despite diverse PDF formats.
-- Handling redundant phrases that appear at the end of abstracts, such as "2014 Elsevier Ltd. All rights reserved."
