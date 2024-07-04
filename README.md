@@ -34,14 +34,15 @@
 ## File Structure
 ResearchPaperClustering/
 ├── data
-│ ├── raw
-│ │ └── *.pdf
+│   ├── raw
+│   │   └── *.pdf
 ├── src
-│ ├── data_processing.py
+│   ├── data_processing.py
 ├── tests
-│ ├── test.py
+│   ├── test.py
 ├── requirements.txt
 └── README.md
+
 
 ## Future Work
 - Further refinement of text preprocessing steps, including stop words removal and case normalization.
