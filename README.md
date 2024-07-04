@@ -31,19 +31,6 @@
       python tests/test.py
       ```
 
-## File Structure
-ResearchPaperClustering/
-├── data
-│   ├── raw
-│   │   └── *.pdf
-├── src
-│   ├── data_processing.py
-├── tests
-│   ├── test.py
-├── requirements.txt
-└── README.md
-
-
 ## Future Work
 - Further refinement of text preprocessing steps, including stop words removal and case normalization.
 - Implementation of clustering algorithms to group similar research papers.
