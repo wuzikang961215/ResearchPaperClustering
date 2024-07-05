@@ -72,7 +72,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   - Solution: Included the PDF file names in the test output to match abstracts with their respective files.
 
 ### Key Findings
-During the preprocessing phase, it was discovered that the abstracts typically end with the keywords "introduction" and "keywords". This observation is crucial for accurately extracting the abstract section from the research papers.
+During the preprocessing phase, it was discovered that the abstracts typically end with the keywords "introduction", "index terms" and "keywords". This observation is crucial for accurately extracting the abstract section from the research papers.
 
 ### Next Steps
 
