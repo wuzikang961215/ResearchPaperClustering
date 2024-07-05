@@ -58,6 +58,7 @@ class DataProcessing:
                         results.append((file_path, abstract))
                     else:
                         results.append((file_path, "Abstract not found"))
+
             except Exception as e:
                 print(f"Error processing {file_path}: {e}")
         return results
@@ -74,7 +75,7 @@ class DataProcessing:
             str: Extracted abstract text.
         """
         # Use improved regular expression to find the 'Abstract' section
-        abstract_match = re.search(r'(?i)(abstract|ABSTRACT|ABSTRACT:)[:\s]+(.*?)(?=\n(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography))', text, re.DOTALL)
+        abstract_match = re.search(r'(?i)(abstract)[:\s]*(.*?)(?=(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography))', text, re.DOTALL)
         if abstract_match:
             abstract = abstract_match.group(2).strip()
             abstract = self._clean_abstract(abstract)
