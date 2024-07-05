@@ -5,6 +5,10 @@ from PyPDF2 import PdfReader
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import spacy
+import pytesseract
+from PIL import Image
+from pdf2image import convert_from_path
+
 
 # Download required NLTK data
 nltk.download('stopwords')
@@ -52,8 +56,22 @@ class DataProcessing:
                     for page_num in range(min(2, len(reader.pages))):  # Extract text from the first two pages only
                         text += reader.pages[page_num].extract_text()
                     # Print a small portion of the full extracted text for debugging
-                    print(f"Extracted text from {file_path}:\n{text[:500]}...\n")
+                    print(f"Extracted text from {file_path}:\n{text[:1000]}...\n")
                     abstract = self._extract_abstract(text)
+
+                    if not abstract:
+                        # Use OCR as a fallback
+                        print(f"Using OCR for file: {file_path}")
+                        pages = convert_from_path(file_path, first_page=1, last_page=2)
+                        ocr_text = ''
+                        for page in pages:
+                            ocr_text += pytesseract.image_to_string(page)
+
+                        # Print a small portion of the OCR extracted text for debugging
+                        print(f"OCR extracted text from {file_path}:\n{ocr_text[:1000]}...\n")
+                        abstract = self._extract_abstract(ocr_text)
+
+
                     if abstract:
                         results.append((file_path, abstract))
                     else:
@@ -75,13 +93,13 @@ class DataProcessing:
             str: Extracted abstract text.
         """
         # Use improved regular expression to find the 'Abstract' section
-        abstract_match = re.search(r'(?i)(abstract)[:\s]*(.*?)(?=(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography))', text, re.DOTALL)
+        abstract_match = re.search(r'(?i)(abstract)[:\s\n]*(.*?)(?=(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography))', text, re.DOTALL)
+
         if abstract_match:
             abstract = abstract_match.group(2).strip()
             abstract = self._clean_abstract(abstract)
             return abstract
         return None
-
     
     def _clean_abstract(self, abstract):
         """
