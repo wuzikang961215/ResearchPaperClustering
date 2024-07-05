@@ -71,8 +71,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Difficulty in verifying the extracted abstracts against the original PDF files due to order mismatch.
   - Solution: Included the PDF file names in the test output to match abstracts with their respective files.
 
-### Key Findings
-During the preprocessing phase, it was discovered that the abstracts typically end with the keywords "introduction", "index terms" and "keywords". This observation is crucial for accurately extracting the abstract section from the research papers.
+### Key Findings from Initial Data Processing
+1. During the preprocessing phase, it was discovered that the abstracts typically end with the keywords "introduction", "index terms" and "keywords". This observation is crucial for accurately extracting the abstract section from the research papers.
+2. In some PDFs, the introduction starts with "1. Introduction", causing "1." to be included in the abstract. (Consider using stop words from NLP to handle this.)
+3. In `paper_69` and `paper_70`, the abstract title "ABSTRACT" in red was not recognized by the system.
+4. In `paper_50`, the "K E Y W O R D S" were not recognized, resulting in the extraction of the entire article. This is likely due to the spaces in the keyword.
+5. In `paper_51`, `paper_53`, `paper_58`, `paper_59`, `paper_63`, `paper_66`, `paper_72`, and `paper_73`, there is no keyword "abstract"; the abstracts are just sections at the beginning of the articles.
+6. In the abstract for `paper_66`, the words are stuck together after extraction, possibly because the abstract section has a yellow background in the original PDF.
+7. In `paper_79`, redundant words like university affiliations and email addresses were included in the extracted abstract. These are references at the bottom of page 1 but were mistakenly included in the abstract.
 
 ### Next Steps
 
