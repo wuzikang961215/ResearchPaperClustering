@@ -49,8 +49,8 @@ class DataProcessing:
                 with open(file_path, 'rb') as f:
                     reader = PdfReader(f)
                     text = ''
-                    for page in reader.pages:
-                        text += page.extract_text()
+                    for page_num in range(min(2, len(reader.pages))):  # Extract text from the first two pages only
+                        text += reader.pages[page_num].extract_text()
                     # Print a small portion of the full extracted text for debugging
                     print(f"Extracted text from {file_path}:\n{text[:500]}...\n")
                     abstract = self._extract_abstract(text)
@@ -61,6 +61,7 @@ class DataProcessing:
             except Exception as e:
                 print(f"Error processing {file_path}: {e}")
         return results
+
 
     def _extract_abstract(self, text):
         """
@@ -73,12 +74,13 @@ class DataProcessing:
             str: Extracted abstract text.
         """
         # Use improved regular expression to find the 'Abstract' section
-        abstract_match = re.search(r'(?i)(abstract)[:\s]+(.*?)(?=introduction|keywords|index terms)', text, re.DOTALL)
+        abstract_match = re.search(r'(?i)(abstract|ABSTRACT|ABSTRACT:)[:\s]+(.*?)(?=\n(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography))', text, re.DOTALL)
         if abstract_match:
             abstract = abstract_match.group(2).strip()
             abstract = self._clean_abstract(abstract)
             return abstract
         return None
+
     
     def _clean_abstract(self, abstract):
         """
@@ -93,14 +95,18 @@ class DataProcessing:
         # Remove common redundant phrases
         redundant_phrases = [
             r"(\d{4} )?elsevier ltd", r"all rights reserved", r"©", r"doi:", r"published by",
-            r"\d{4} (elsevier|springer|wiley|taylor & francis) [\w\s]+"
+            r"\d{4} (elsevier|springer|wiley|taylor & francis) [\w\s]+", r"K\s*E\s*Y\s*W\s*O\s*R\s*D\s*S",
+            r"School of [\w\s]+", r"Email: [\w\s@.]+", r"Corresponding Author:", r"Data Availability Statement included at the end of the article."
         ]
+
+
         for phrase in redundant_phrases:
             abstract = re.sub(phrase, '', abstract, flags=re.IGNORECASE)
         
         # Remove trailing references, copyright lines, and excessive whitespace
         abstract = re.sub(r'\s*(references|acknowledgements|bibliography)\s*$', '', abstract, flags=re.IGNORECASE)
         abstract = re.sub(r'\s*[\d]+\s*$', '', abstract, flags=re.IGNORECASE)
+        abstract = re.sub(r'([a-z])([A-Z])', r'\1 \2', abstract) # deal with words stuck together due to different background color
         abstract = re.sub(r'\s+', ' ', abstract).strip()
         
         return abstract
