@@ -5,54 +5,6 @@
 (Introduction and how to run instructions will be added here once the project is complete.)
 
 ## Steps to Run the Project
-1. **Setup the Environment**:
-    - Create a virtual environment:
-      ```bash
-      python -m venv env
-      ```
-    - Activate the virtual environment:
-      ```bash
-      source env/bin/activate  # On Windows use `env\Scripts\activate`
-      ```
-    - Install the required packages:
-      ```bash
-      pip install -r requirements.txt
-      ```
-
-2. **Extract Abstracts**:
-    - Run the data extraction script to extract abstracts from the PDF files:
-      ```bash
-      python src/data_processing.py
-      ```
-
-3. **Testing**:
-    - Run the test script to verify the extraction process:
-      ```bash
-      python tests/test.py
-      ```
-
-## Future Work
-- Further refinement of text preprocessing steps, including stop words removal and case normalization.
-- Implementation of clustering algorithms to group similar research papers.
-- Visualization of clustering results using dimensionality reduction techniques.
-
-## Contributions
-Feel free to contribute to this project by creating issues or submitting pull requests. Any contributions are welcome!
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Exploration Process
-
-### Current Progress
-
-# Research Paper Clustering
-
-## Overview
-
-(Introduction and how to run instructions will be added here once the project is complete.)
-
-## Steps to Run the Project
 
 1. **Setup the Environment**:
     - Create a virtual environment:
@@ -127,3 +79,5 @@ To handle edge cases where the PDF's text is not recognized due to formatting is
   - Updated the requirements file to include `pdf2image`.
 
 The integration of OCR successfully addressed the issue in `paper_50`, where keywords were not recognized due to the library used. The OCR solution proved to be effective for extracting text in cases where the initial approach failed due to formatting issues.
+
+
