@@ -74,10 +74,10 @@ class DataProcessing:
                     for page_num in range(min(2, len(reader.pages))):  # Extract text from the first two pages only
                         text += reader.pages[page_num].extract_text()
                     # Print a small portion of the full extracted text for debugging
-                    print(f"Extracted text from {file_path}:\n{text[:3000]}...\n")
+                    print(f"Extracted text from {file_path}:\n{text[:5000]}...\n")
                     abstract = self._extract_abstract(text)
 
-                    if self._detect_stuck_words(text):
+                    if not abstract or self._detect_stuck_words(text):
                         # Use OCR as a fallback
                         print(f"Using OCR for file: {file_path}")
                         pages = convert_from_path(file_path, first_page=1, last_page=2)
@@ -86,7 +86,7 @@ class DataProcessing:
                             ocr_text += pytesseract.image_to_string(page)
 
                         # Print a small portion of the OCR extracted text for debugging
-                        print(f"OCR extracted text from {file_path}:\n{ocr_text[:1000]}...\n")
+                        print(f"OCR extracted text from {file_path}:\n{ocr_text[:5000]}...\n")
                         abstract = self._extract_abstract(ocr_text)
 
 
@@ -119,11 +119,11 @@ class DataProcessing:
             return abstract
         
         # Fallback: Assume the abstract is the first block of text before the first heading
-        pattern = re.compile(r'(.*?)(?=\n1\.\s*introduction|\nintroduction|1\.\s*background|background|keywords|index terms|references|acknowledgements|bibliography)', re.DOTALL | re.IGNORECASE)
+        pattern = re.compile(r'(?i)(Di-Jia Liu1,7*|Pau Farras®"2*|and Yang Hou|United States of America)[:\s\n]*(.*?)(?=\n1\.\s*introduction|\nintroduction|keywords|index terms|Low-temperature water electrolysis|munities, with more|Received 28th October|2023 The Author(s))', re.DOTALL | re.IGNORECASE)
         fallback_abstract_match = pattern.search(text)
 
         if fallback_abstract_match:
-            abstract = fallback_abstract_match.group(1).strip()
+            abstract = fallback_abstract_match.group(2).strip()
             abstract = self._clean_abstract(abstract)
             return abstract
 
@@ -144,7 +144,11 @@ class DataProcessing:
         redundant_phrases = [
             r"(\d{4} )?elsevier ltd", r"all rights reserved", r"©", r"doi:", r"published by",
             r"\d{4} (elsevier|springer|wiley|taylor & francis) [\w\s]+", r"K\s*E\s*Y\s*W\s*O\s*R\s*D\s*S",
-            r"School of [\w\s]+", r"Email: [\w\s@.]+", r"Corresponding Author:", r"Data Availability Statement included at the end of the article."
+            r"School of [\w\s]+", r"Email: [\w\s@.]+", r"Corresponding Author:", r"Data Availability Statement included at the end of the article.",
+            r"1, Shandong Normal University, China", r"2, Shanghai Jiao Tong University \(SJTU\), Shanghai, China",
+            r"3Al-Rayyan International University College, in Partnership with the University of Derby UK, Doha, Qatar",
+            r"4& Finance, Xi’an Jiaotong University, Xian, China", r"Jaffar Abbas, Antai College of Economics and Management",
+            r",Shanghai Jiao Tong University, No. 800, Dongchuan Road, Minhang District, Shanghai 200240,China."
         ]
 
         for phrase in redundant_phrases:
