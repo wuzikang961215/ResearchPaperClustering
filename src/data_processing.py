@@ -31,6 +31,24 @@ class DataProcessing:
                 new_name = f"paper_{i+1}.pdf"
                 os.rename(os.path.join(directory, filename), os.path.join(directory, new_name))
 
+    
+    def _detect_stuck_words(self, text):
+        """
+        Detects if there are stuck words in the text by counting occurrences
+        of concatenated lowercase and uppercase letters.
+
+        Args:
+            text (str): Text to check for stuck words.
+
+        Returns:
+            bool: True if stuck words are detected, False otherwise.
+        """
+        stuck_words = re.findall(r'[a-z][A-Z]', text)
+        # Set a threshold for the number of stuck word pairs to determine if OCR is needed
+        return len(stuck_words) > 44  # 44 is the max length of stuck words in paper_66
+
+        
+    
     def extract_abstracts(self, directory):
         """
         Extracts abstracts from PDF files in the specified directory.
@@ -45,7 +63,7 @@ class DataProcessing:
         # self.rename_files(directory)
         
         # List all renamed PDF files and sort them
-        file_paths = sorted([os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.pdf')])
+        file_paths = sorted([os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.pdf')]) # modify file name here for testing
 
         results = []
         for file_path in file_paths:
@@ -56,10 +74,10 @@ class DataProcessing:
                     for page_num in range(min(2, len(reader.pages))):  # Extract text from the first two pages only
                         text += reader.pages[page_num].extract_text()
                     # Print a small portion of the full extracted text for debugging
-                    print(f"Extracted text from {file_path}:\n{text[:1000]}...\n")
+                    print(f"Extracted text from {file_path}:\n{text[:3000]}...\n")
                     abstract = self._extract_abstract(text)
 
-                    if not abstract:
+                    if self._detect_stuck_words(text):
                         # Use OCR as a fallback
                         print(f"Using OCR for file: {file_path}")
                         pages = convert_from_path(file_path, first_page=1, last_page=2)
@@ -99,36 +117,45 @@ class DataProcessing:
             abstract = abstract_match.group(2).strip()
             abstract = self._clean_abstract(abstract)
             return abstract
+        
+        # Fallback: Assume the abstract is the first block of text before the first heading
+        pattern = re.compile(r'(.*?)(?=\n1\.\s*introduction|\nintroduction|1\.\s*background|background|keywords|index terms|references|acknowledgements|bibliography)', re.DOTALL | re.IGNORECASE)
+        fallback_abstract_match = pattern.search(text)
+
+        if fallback_abstract_match:
+            abstract = fallback_abstract_match.group(1).strip()
+            abstract = self._clean_abstract(abstract)
+            return abstract
+
         return None
     
+
     def _clean_abstract(self, abstract):
         """
-        Cleans the extracted abstract by removing redundant phrases.
+        Cleans the extracted abstract by removing redundant phrases and unwanted sections.
 
         Args:
-            abstract (str): Extracted abstract text.
+        abstract (str): Extracted abstract text.
 
         Returns:
             str: Cleaned abstract text.
         """
-        # Remove common redundant phrases
+        # List of phrases and patterns to remove
         redundant_phrases = [
             r"(\d{4} )?elsevier ltd", r"all rights reserved", r"©", r"doi:", r"published by",
             r"\d{4} (elsevier|springer|wiley|taylor & francis) [\w\s]+", r"K\s*E\s*Y\s*W\s*O\s*R\s*D\s*S",
             r"School of [\w\s]+", r"Email: [\w\s@.]+", r"Corresponding Author:", r"Data Availability Statement included at the end of the article."
         ]
 
-
         for phrase in redundant_phrases:
             abstract = re.sub(phrase, '', abstract, flags=re.IGNORECASE)
-        
-        # Remove trailing references, copyright lines, and excessive whitespace
-        abstract = re.sub(r'\s*(references|acknowledgements|bibliography)\s*$', '', abstract, flags=re.IGNORECASE)
-        abstract = re.sub(r'\s*[\d]+\s*$', '', abstract, flags=re.IGNORECASE)
-        abstract = re.sub(r'([a-z])([A-Z])', r'\1 \2', abstract) # deal with words stuck together due to different background color
+
+        # Remove excessive whitespace and fix issues caused by different background color
+        abstract = re.sub(r'([a-z])([A-Z])', r'\1 \2', abstract)  # deal with words stuck together due to different background color
         abstract = re.sub(r'\s+', ' ', abstract).strip()
-        
+
         return abstract
+
 
     def _refine_abstract(self, abstract):
         """
