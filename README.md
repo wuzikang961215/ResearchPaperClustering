@@ -42,7 +42,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Initial Data Extraction and Preprocessing
 
-The journey began with implementing a `DataProcessing` class in `data_processing.py` to handle text extraction and preprocessing. Successfully extracted text from PDF files using `PdfReader` from PyPDF2. Text preprocessing was implemented, including lowercasing, removal of non-word characters, stop word removal, and lemmatization.
+The journey began with implementing a `DataProcessing` class in `data_processing.py` to handle text extraction and preprocessing. Successfully extracted text from PDF files using `PdfReader` from PyPDF2.
 
 ### Testing and Verification
 
@@ -56,7 +56,9 @@ Deprecation issues were encountered with `PdfFileReader` in PyPDF2 version 3.0.0
 
 #### Text Matching Difficulties
 
-Verifying the extracted abstracts against the original PDF files was challenging due to order mismatch. This was resolved by including the PDF file names in the test output to match abstracts with their respective files.
+Verifying the extracted abstracts against the original PDF files was challenging due to several reasons:
+- **Order Mismatch**: The extracted text often did not match the order of the text in the original PDF, making manual verification difficult.
+- **Complex File Names**: The original file names were long and complex, such as "1-s2.0-S0360128523000023-main.pdf", making it hard to read and compare the extraction results with the actual words in the PDF. To simplify this process, files were renamed to a consistent format (e.g., `paper_2` to `paper_80`). This renaming made it much easier to manually check the extracted abstracts.
 
 ### Key Findings from Initial Data Processing
 
