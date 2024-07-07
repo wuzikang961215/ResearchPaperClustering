@@ -101,3 +101,29 @@ This approach balances the need for accuracy with the practical constraints of t
 
 It was discovered that while OCR helps when "Abstract" is in a weird format and cannot be recognized, overusing OCR can lead to poor word extraction. For instance, in some cases where there are stuck words due to newline removal, using OCR introduced more issues. Therefore, it is more effective to use `PdfReader`'s `extract_text` function even if it results in stuck words. The stuck words can then be handled by adding a space when newline characters are removed.
 
+It was discovered that while OCR helps when "Abstract" is in a weird format and cannot be recognized, overusing OCR can lead to poor word extraction. For instance, in some cases where there are stuck words due to newline removal, using OCR introduced more issues. Therefore, it is more effective to use `PdfReader`'s `extract_text` function even if it results in stuck words. The stuck words can then be handled by adding a space when newline characters are removed.
+
+### Moving Forward with Text Vectorization and Clustering
+
+Despite the challenges faced with perfect abstract extraction, progress was made to move forward with text vectorization and clustering. The following steps were implemented:
+
+1. **Text Vectorization**:
+    - TF-IDF vectorization was used to convert the preprocessed text data into numerical representation. This technique effectively captures the importance of terms within the abstracts.
+
+2. **Clustering**:
+    - K-Means clustering was applied to group similar research papers based on their abstracts.
+    - The optimal number of clusters was determined to be 5.
+    - Silhouette score was calculated to evaluate the quality of the clustering.
+
+3. **Visualization**:
+    - t-SNE was used to visualize the clustering results. This dimensionality reduction technique helped in displaying the high-dimensional abstract vectors in a 2D space.
+    - The visualization provided insights into the clustering performance, showing that while some clusters were well-defined, others had overlapping points, indicating the need for further refinement.
+
+The current approach provided a good starting point for clustering the research papers based on their abstracts. The process involved:
+- Extracting and preprocessing abstracts.
+- Vectorizing the text using TF-IDF.
+- Clustering with K-Means.
+- Visualizing the clusters using t-SNE.
+
+The overall process highlighted the complexities involved in text extraction from PDFs and the importance of balancing accuracy with practical constraints. Future work will focus on improving the extraction techniques and exploring more advanced models for better clustering performance.
+
