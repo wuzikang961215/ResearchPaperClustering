@@ -20,11 +20,10 @@ def test_extract_abstracts():
     # Extract abstracts from all PDF files
     results = dp.extract_abstracts(raw_data_dir)
     
-    # Print the results for verification
-    for file_path, abstract in results:
-        file_name = os.path.basename(file_path)
-        # print(f"File: {file_name}\nAbstract:\n{dp.preprocess_text(abstract) if abstract != 'Abstract not found' else abstract}\n")
-        print(f"File: {file_name}\nAbstract:\n{abstract}\n")
+    # Save the results to a CSV file
+    output_csv = os.path.join(parent_dir, 'data/processed/abstracts.csv')
+    dp.save_abstracts_to_csv(results, output_csv)
+    print(f"Abstracts saved to {output_csv}")
 
 if __name__ == "__main__":
     test_extract_abstracts()

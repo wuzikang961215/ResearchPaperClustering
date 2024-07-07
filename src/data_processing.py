@@ -8,6 +8,7 @@ import spacy
 import pytesseract
 from PIL import Image
 from pdf2image import convert_from_path
+import csv
 
 
 # Download required NLTK data
@@ -110,15 +111,13 @@ class DataProcessing:
         Returns:
             str: Extracted abstract text.
         """
-        # Use improved regular expression to find the 'Abstract' section
-        abstract_match = re.search(r'(?i)(abstract)[:\s\n]*(.*?)(?=(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography|Nomenclature Note:|1\.\s*background and introduction|Copyright 2015, Hydrogen Energy|2022 The Author(s)|2022 Hydrogen Energy Public|2023 Hydrogen Energy Publications|/C2112023 International Association))', text, re.DOTALL)
+        # Improved regular expression to find the 'Abstract' section and avoid 'Graphical Abstract' and other irrelevant sections
+        abstract_match = re.search(r'(?i)(abstract)[:\s\n]*(.*?)(?=(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography|Nomenclature Note:|1\.\s*background and introduction|Copyright 2015, Hydrogen Energy|2022 The Author(s)|2022 Hydrogen Energy Public|2023 Hydrogen Energy Publications|/C2112023 International Association|Nomenclature))', text, re.DOTALL)
 
         if abstract_match:
             abstract = abstract_match.group(2).strip()
             abstract = self._clean_abstract(abstract)
             return abstract
-        
-        return None
     
 
     def _clean_abstract(self, abstract):
@@ -136,7 +135,7 @@ class DataProcessing:
             r"(\d{4} )?elsevier ltd", r"all rights reserved", r"©", r"doi:", r"published by",
             r"\d{4} (elsevier|springer|wiley|taylor & francis) [\w\s]+", r"K\s*E\s*Y\s*W\s*O\s*R\s*D\s*S",
             r"School of [\w\s]+", r"Email: [\w\s@.]+", r"Corresponding Author:", r"Data Availability Statement included at the end of the article.",
-            r"1, Shandong Normal University, China", r"2, Shanghai Jiao Tong University \(SJTU\), Shanghai, China",
+            r"Graphical Abstract", r"Highlights", r"Key Points", r"Summary", r"1, Shandong Normal University, China", r"2, Shanghai Jiao Tong University \(SJTU\), Shanghai, China",
             r"3Al-Rayyan International University College, in Partnership with the University of Derby UK, Doha, Qatar",
             r"4& Finance, Xi’an Jiaotong University, Xian, China", r"Jaffar Abbas, Antai College of Economics and Management",
             r",Shanghai Jiao Tong University, No. 800, Dongchuan Road, Minhang District, Shanghai 200240,China."
@@ -187,3 +186,20 @@ class DataProcessing:
         words = text.split()
         words = [self.lemmatizer.lemmatize(word) for word in words if word not in self.stop_words]
         return ' '.join(words)
+    
+
+    def save_abstracts_to_csv(self, results, output_file):
+        """
+        Save the extracted abstracts to a CSV file.
+
+        Args:
+            results (list): List of tuples containing file names and extracted abstracts.
+            output_file (str): Path to the output CSV file.
+        """
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(['File Name', 'Abstract'])
+            for file_path, abstract in results:
+                file_name = os.path.basename(file_path)
+                writer.writerow([file_name, abstract])
