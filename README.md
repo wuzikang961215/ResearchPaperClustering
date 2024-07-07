@@ -88,7 +88,7 @@ The integration of OCR successfully addressed the issue in `paper_50`, where key
 
 Explored Grobid and other libraries like pdfminer, PyMuPDF, and transformers for abstract extraction. Grobid, despite its promising capabilities, was found to be complex to set up and did not yield significantly better results than the current approach. The same applied to other libraries and models, which either required extensive training or did not handle the specific edge cases encountered.
 
-### Decided Approach and Future Steps
+### Decided Abstract Extraction Approach and Future Steps
 
 After several days of attempting to extract abstracts perfectly, it was found that the variations in PDF structures made it extremely difficult to achieve perfect results with the current approach. Given the constraints and time limitations, the current approach will use the regex patterns and keywords identification to extract abstracts. 
 
