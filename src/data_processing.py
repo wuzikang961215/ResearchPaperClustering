@@ -111,22 +111,13 @@ class DataProcessing:
             str: Extracted abstract text.
         """
         # Use improved regular expression to find the 'Abstract' section
-        abstract_match = re.search(r'(?i)(abstract)[:\s\n]*(.*?)(?=(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography))', text, re.DOTALL)
+        abstract_match = re.search(r'(?i)(abstract)[:\s\n]*(.*?)(?=(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography|Nomenclature Note:|1\.\s*background and introduction|Copyright 2015, Hydrogen Energy|2022 The Author(s)|2022 Hydrogen Energy Public|2023 Hydrogen Energy Publications|/C2112023 International Association))', text, re.DOTALL)
 
         if abstract_match:
             abstract = abstract_match.group(2).strip()
             abstract = self._clean_abstract(abstract)
             return abstract
         
-        # Fallback: Assume the abstract is the first block of text before the first heading
-        pattern = re.compile(r'(?i)(Di-Jia Liu1,7*|Pau Farras®"2*|and Yang Hou|United States of America)[:\s\n]*(.*?)(?=\n1\.\s*introduction|\nintroduction|keywords|index terms|Low-temperature water electrolysis|munities, with more|Received 28th October|2023 The Author(s))', re.DOTALL | re.IGNORECASE)
-        fallback_abstract_match = pattern.search(text)
-
-        if fallback_abstract_match:
-            abstract = fallback_abstract_match.group(2).strip()
-            abstract = self._clean_abstract(abstract)
-            return abstract
-
         return None
     
 
