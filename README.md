@@ -58,21 +58,21 @@ Deprecation issues were encountered with `PdfFileReader` in PyPDF2 version 3.0.0
 
 Verifying the extracted abstracts against the original PDF files was challenging due to several reasons:
 - **Order Mismatch**: The extracted text often did not match the order of the text in the original PDF, making manual verification difficult.
-- **Complex File Names**: The original file names were long and complex, such as "1-s2.0-S0360128523000023-main.pdf", making it hard to read and compare the extraction results with the actual words in the PDF. To simplify this process, files were renamed to a consistent format (e.g., `paper_2` to `paper_80`). This renaming made it much easier to manually check the extracted abstracts.
+- **Complex File Names**: The original file names were long and complex, such as "1-s2.0-S0360128523000023-main.pdf", making it hard to read and compare the extraction results with the actual words in the PDF. To simplify this process, files were renamed to a consistent format (e.g., `paper_1` to `paper_79`). This renaming made it much easier to manually check the extracted abstracts.
 
 ### Key Findings from Initial Data Processing
 
 1. During the preprocessing phase, it was discovered that the abstracts typically end with the keywords "introduction", "index terms" and "keywords". This observation is crucial for accurately extracting the abstract section from the research papers.
 2. In some PDFs, the introduction starts with "1. Introduction", causing "1." to be included in the abstract. (Consider using stop words from NLP to handle this.)
-3. In `paper_69` and `paper_70`, the abstract title "ABSTRACT" in red was not recognized by the system.
-4. In `paper_50`, the "K E Y W O R D S" were not recognized, resulting in the extraction of the entire article. This is likely due to the spaces in the keyword.
-5. In `paper_51`, `paper_53`, `paper_58`, `paper_59`, `paper_63`, `paper_66`, `paper_72`, and `paper_73`, there is no keyword "abstract"; the abstracts are just sections at the beginning of the articles.
-6. In the abstract for `paper_66`, the words are stuck together after extraction, possibly because the abstract section has a yellow background in the original PDF.
-7. In `paper_79`, redundant words like university affiliations and email addresses were included in the extracted abstract. These are references at the bottom of page 1 but were mistakenly included in the abstract.
+3. In `paper_68` and `paper_69`, the abstract title "ABSTRACT" in red was not recognized by the system.
+4. In `paper_49`, the "K E Y W O R D S" were not recognized, resulting in the extraction of the entire article. This is likely due to the spaces in the keyword.
+5. In `paper_50`, `paper_52`, `paper_57`, `paper_58`, `paper_62`, `paper_65`, `paper_71`, and `paper_72`, there is no keyword "abstract"; the abstracts are just sections at the beginning of the articles.
+6. In the abstract for `paper_65`, the words are stuck together after extraction, possibly because the abstract section has a yellow background in the original PDF.
+7. In `paper_78`, redundant words like university affiliations and email addresses were included in the extracted abstract. These are references at the bottom of page 1 but were mistakenly included in the abstract.
 
 ### Addressing Key Issues with OCR Integration
 
-To handle edge cases where the PDF's text is not recognized due to formatting issues (e.g., red "ABSTRACT"), OCR (Optical Character Recognition) was integrated using Tesseract and Poppler. This approach was particularly useful for PDFs like `paper_69` and `paper_70`, where the abstract title "ABSTRACT" in red was not recognized by the system.
+To handle edge cases where the PDF's text is not recognized due to formatting issues (e.g., red "ABSTRACT"), OCR (Optical Character Recognition) was integrated using Tesseract and Poppler. This approach was particularly useful for PDFs like `paper_68` and `paper_69`, where the abstract title "ABSTRACT" in red was not recognized by the system.
 
 - **Steps to integrate OCR**:
   - Installed Homebrew to manage dependencies.
