@@ -46,7 +46,7 @@ class DataProcessing:
         """
         stuck_words = re.findall(r'[a-z][A-Z]', text)
         # Set a threshold for the number of stuck word pairs to determine if OCR is needed
-        return len(stuck_words) > 44  # 44 is the max length of stuck words in paper_66
+        return len(stuck_words) > 44 # 44 is the max length of stuck words in paper_66
 
         
     
@@ -78,7 +78,7 @@ class DataProcessing:
                     print(f"Extracted text from {file_path}:\n{text[:5000]}...\n")
                     abstract = self._extract_abstract(text)
 
-                    if not abstract or self._detect_stuck_words(text):
+                    if not abstract: # or self._detect_stuck_words(text):
                         # Use OCR as a fallback
                         print(f"Using OCR for file: {file_path}")
                         pages = convert_from_path(file_path, first_page=1, last_page=2)
@@ -89,7 +89,6 @@ class DataProcessing:
                         # Print a small portion of the OCR extracted text for debugging
                         print(f"OCR extracted text from {file_path}:\n{ocr_text[:5000]}...\n")
                         abstract = self._extract_abstract(ocr_text)
-
 
                     if abstract:
                         results.append((file_path, abstract))
@@ -117,6 +116,8 @@ class DataProcessing:
         if abstract_match:
             abstract = abstract_match.group(2).strip()
             abstract = self._clean_abstract(abstract)
+            abstract = self._refine_abstract(abstract)
+            abstract = self.preprocess_text(abstract)
             return abstract
     
 
