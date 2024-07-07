@@ -82,8 +82,6 @@ To handle edge cases where the PDF's text is not recognized due to formatting is
 
 The integration of OCR successfully addressed the issue in `paper_50`, where keywords were not recognized due to the library used. The OCR solution proved to be effective for extracting text in cases where the initial approach failed due to formatting issues.
 
-The integration of OCR successfully addressed the issue in `paper_50`, where keywords were not recognized due to the library used. The OCR solution proved to be effective for extracting text in cases where the initial approach failed due to formatting issues.
-
 ### Exploration of Grobid and Other Libraries
 
 Explored Grobid and other libraries like pdfminer, PyMuPDF, and transformers for abstract extraction. Grobid, despite its promising capabilities, was found to be complex to set up and did not yield significantly better results than the current approach. The same applied to other libraries and models, which either required extensive training or did not handle the specific edge cases encountered.
@@ -98,4 +96,8 @@ After several days of attempting to extract abstracts perfectly, it was found th
 - The integration of OCR has improved the accuracy for some edge cases, but further refinement is needed.
 
 This approach balances the need for accuracy with the practical constraints of the project timeline. Further enhancements will focus on improving the regex patterns and exploring more advanced text extraction techniques.
+
+### Further Findings on OCR Usage
+
+It was discovered that while OCR helps when "Abstract" is in a weird format and cannot be recognized, overusing OCR can lead to poor word extraction. For instance, in some cases where there are stuck words due to newline removal, using OCR introduced more issues. Therefore, it is more effective to use `PdfReader`'s `extract_text` function even if it results in stuck words. The stuck words can then be handled by adding a space when newline characters are removed.
 
