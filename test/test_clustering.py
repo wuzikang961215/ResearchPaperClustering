@@ -76,3 +76,21 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # Initialize clustering
+    # clustering = Clustering()
+
+    # # Load abstracts from CSV
+    # abstracts_df = pd.read_csv(os.path.join(parent_dir, 'data/processed/abstracts.csv'))
+    # abstracts = abstracts_df['Abstract'].tolist()
+    # file_names = abstracts_df['File Name'].tolist()
+
+    # # Vectorize abstracts
+    # X = clustering.vectorize_texts(abstracts)
+
+    # # Display the shape of the vectorized text
+    # print("Number of documents, Number of features: ", X.shape)  # (Number of documents, Number of features)
+
+    # # Display some examples of vectorized text features and their values
+    # feature_names = clustering.vectorizer.get_feature_names_out()
+    # print("Features (words):", feature_names[:10])  # Print the first 10 features (words)
+    # print("Vector values for first abstract:", X[0].toarray()[0][:10])  # Print the vector values of the first abstract for the first 10 features

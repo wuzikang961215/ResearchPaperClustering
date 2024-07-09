@@ -6,7 +6,8 @@ from sklearn.metrics import silhouette_score
 class Clustering:
     def __init__(self, n_clusters=5):
         self.n_clusters = n_clusters
-        self.vectorizer = TfidfVectorizer(max_features=1000)
+        # Ensure only alphabetic words are considered as features
+        self.vectorizer = TfidfVectorizer(max_features=1000, token_pattern=r'(?u)\b[A-Za-z]+\b')
         self.model = KMeans(n_clusters=self.n_clusters, random_state=42)
 
     def determine_optimal_clusters(self, texts, max_clusters=20):
