@@ -127,3 +127,49 @@ The current approach provided a good starting point for clustering the research 
 
 The overall process highlighted the complexities involved in text extraction from PDFs and the importance of balancing accuracy with practical constraints. Future work will focus on improving the extraction techniques and exploring more advanced models for better clustering performance.
 
+### Progress with Jupyter Notebook, Vectorization, and Clustering Visualization
+
+#### Transition to Jupyter Notebook
+
+To enhance the exploration and visualization of the clustering process, we transitioned the entire workflow to a Jupyter Notebook. This provided an interactive platform to document and visualize each step effectively.
+
+#### Abstract Extraction and Saving
+
+- Initially, we faced significant challenges in extracting abstracts accurately due to the varied and complex structures of the PDFs.
+- We applied a combination of regex patterns and OCR to handle edge cases where the text format was non-standard.
+- Extracted abstracts were saved to a CSV file for consistency and ease of further processing.
+
+#### Text Vectorization
+
+- We utilized TF-IDF vectorization to convert the preprocessed text data into numerical representation, capturing the importance of terms within the abstracts.
+- This process involved validating the vectorization output by inspecting the shape of the vectorized data and the feature names.
+- We printed sample vector values and corresponding feature words to ensure the vectorization was working as expected.
+
+#### Determining Optimal Number of Clusters
+
+- To find the optimal number of clusters, we conducted two key analyses:
+    - **Elbow Method**: Plotted the within-cluster sum of squares (WCSS) for a range of cluster numbers to identify the "elbow point" where adding more clusters did not significantly improve the clustering.
+    - **Silhouette Analysis**: Calculated silhouette scores for different cluster numbers to measure the similarity of points within their own cluster compared to other clusters. This helped determine the quality of the clustering.
+- These analyses led us to set the number of clusters to 20 for the current implementation.
+
+#### Clustering and Evaluation
+
+- K-Means clustering was applied to group similar research papers based on their abstracts.
+- We evaluated the clustering results using silhouette scores to ensure the quality of the clusters.
+- The clustering results, including the file names and their respective cluster labels, were saved to a CSV file for further analysis.
+
+#### Visualization
+
+- Dimensionality reduction was performed using t-SNE to visualize the clusters in a 2D space.
+- The clusters were plotted, providing a visual representation of how the abstracts were grouped.
+- The visualization revealed that while some clusters were well-defined, others had overlapping points, indicating areas for potential improvement.
+
+### Summary of Findings and Future Steps
+
+- The initial approach using regex patterns and OCR for abstract extraction was challenging but provided a good starting point.
+- Moving to a Jupyter Notebook allowed for a more interactive and iterative exploration process.
+- TF-IDF vectorization and K-Means clustering were effective in grouping similar abstracts, although some clusters showed overlap.
+- Further refinement is needed, especially in handling the extraction phase and improving clustering performance.
+- Future work will explore more advanced text extraction techniques and clustering models to enhance the accuracy and quality of the results.
+
+
