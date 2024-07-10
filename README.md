@@ -210,4 +210,38 @@ To determine the optimal number of clusters, we employed two key analyses:
 - The optimal number of clusters was identified as 9, based on the silhouette score analysis.
 - Further work will focus on refining the extraction phase and exploring advanced clustering algorithms to improve performance.
 
+#### Exploring Different Clustering Algorithms
+
+- **K-Means Clustering**:
+  - Initially used K-Means clustering which provided the best silhouette score of 0.12 with Word2Vec vectorization.
+  - Applied dimensionality reduction using t-SNE for visualization which revealed some well-defined clusters but also indicated overlapping points.
+
+- **Hierarchical Clustering**:
+  - Explored hierarchical clustering but found that the elbow curve remained flat, indicating no significant change in within-cluster sum of squares.
+  - Hierarchical clustering was less effective in this context due to the nature of the data.
+
+- **DBSCAN**:
+  - Applied DBSCAN which resulted in only 1 cluster.
+  - DBSCAN's sensitivity to density variations made it unsuitable for the current dataset.
+
+- **Spectral Clustering**:
+  - Implemented spectral clustering which resulted in a majority of papers (40+) being grouped into a single cluster, with the remaining clusters containing significantly fewer papers.
+  - Due to this imbalance, spectral clustering was deemed unsuitable for this dataset.
+
+- **Gaussian Mixture Models (GMM)**:
+  - Explored GMM which returned similar silhouette scores of 0.12 at 9 or 10 clusters.
+  - However, GMM took too long to plot the elbow and silhouette curves (approximately 2 minutes), making it less practical compared to other methods.
+
+### Observations and Future Steps
+
+- **Observations**:
+  - The highest silhouette scores ranged between 0.12 to 0.2 across various vectorization and clustering methods, with Word2Vec and K-Means providing the best results.
+  - Despite exploring multiple techniques, the overall clustering quality indicated potential issues with the initial text extraction process.
+
+- **Future Steps**:
+  - Decided to focus on improving text extraction quality to enhance the overall clustering performance.
+  - Will explore more advanced text extraction methods, possibly integrating more robust OCR techniques or leveraging external text extraction services like AWS Textract.
+  - Further refinement of the extraction phase is expected to lead to better representation and improved clustering outcomes.
+
+
 
