@@ -1,17 +1,20 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN, SpectralClustering
+from sklearn.mixture import GaussianMixture
 from sklearn.metrics import silhouette_score
 from transformers import BertTokenizer, BertModel
 import numpy as np
 import spacy
 
 class Clustering:
-    def __init__(self, n_clusters=5, vectorizer_type='tfidf', n_init=100):
+    def __init__(self, n_clusters=9, vectorizer_type='word2vec', algorithm='kmeans', n_init=100):
         self.n_clusters = n_clusters
         self.vectorizer_type = vectorizer_type
+        self.algorithm = algorithm
         self.vectorizer = self._initialize_vectorizer(vectorizer_type)
-        self.model = KMeans(n_clusters=self.n_clusters, random_state=42, n_init=n_init)
+        self.model = self._initialize_model(algorithm, n_clusters, n_init)
+        
 
     def _initialize_vectorizer(self, vectorizer_type):
         if vectorizer_type == 'tfidf':
@@ -22,6 +25,20 @@ class Clustering:
             return BERTVectorizer()
         else:
             raise ValueError("Unsupported vectorizer type. Choose from 'tfidf', 'spacy_word2vec', or 'bert'.")
+        
+    def _initialize_model(self, algorithm, n_clusters, n_init):
+        if algorithm == 'kmeans':
+            return KMeans(n_clusters=n_clusters, random_state=42, n_init=n_init)
+        elif algorithm == 'hierarchical':
+            return AgglomerativeClustering(n_clusters=n_clusters)
+        elif algorithm == 'dbscan':
+            return DBSCAN(eps=0.5, min_samples=5)
+        elif algorithm == 'spectral':
+            return SpectralClustering(n_clusters=n_clusters, random_state=42)
+        elif algorithm == 'gmm':
+            return GaussianMixture(n_components=n_clusters, random_state=42)
+        else:
+            raise ValueError("Unsupported algorithm. Choose from 'kmeans', 'hierarchical', 'dbscan', 'spectral', or 'gmm'.")
 
 
     def determine_optimal_clusters(self, texts, max_clusters=20):
@@ -40,9 +57,18 @@ class Clustering:
         silhouette_scores = []
 
         for n in range(2, max_clusters + 1):
-            model = KMeans(n_clusters=n, random_state=42)
-            labels = model.fit_predict(X)
-            wcss.append(model.inertia_)
+            model = self._initialize_model(self.algorithm, n, 10)
+            if self.algorithm in ['kmeans', 'spectral', 'gmm']:
+                labels = model.fit_predict(X)
+            elif self.algorithm == 'hierarchical':
+                model.n_clusters = n
+                labels = model.fit_predict(X)
+            elif self.algorithm == 'dbscan':
+                labels = model.fit_predict(X)
+                if len(set(labels)) == 1:  # DBSCAN sometimes returns only one cluster
+                    silhouette_scores.append(-1)
+                    continue
+            wcss.append(model.inertia_ if hasattr(model, 'inertia_') else 0)
             silhouette_scores.append(silhouette_score(X, labels))
 
         return wcss, silhouette_scores
@@ -69,7 +95,12 @@ class Clustering:
         Returns:
             tuple: Cluster labels and silhouette score.
         """
-        labels = self.model.fit_predict(X)
+        if self.algorithm in ['kmeans', 'spectral', 'gmm']:
+            labels = self.model.fit_predict(X)
+        elif self.algorithm == 'hierarchical':
+            labels = self.model.fit_predict(X)
+        elif self.algorithm == 'dbscan':
+            labels = self.model.fit_predict(X)
         score = silhouette_score(X, labels)
         return labels, score
 
