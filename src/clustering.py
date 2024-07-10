@@ -1,8 +1,8 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN, SpectralClustering
-from sklearn.mixture import GaussianMixture
-from sklearn.metrics import silhouette_score
+from sklearn.mixture import GaussianMixture 
+from sklearn.metrics import silhouette_score, davies_bouldin_score
 from transformers import BertTokenizer, BertModel
 import numpy as np
 import spacy
@@ -55,23 +55,24 @@ class Clustering:
         X = self.vectorize_texts(texts)
         wcss = []
         silhouette_scores = []
+        davies_bouldin_scores = []
 
         for n in range(2, max_clusters + 1):
-            model = self._initialize_model(self.algorithm, n, 10)
-            if self.algorithm in ['kmeans', 'spectral', 'gmm']:
-                labels = model.fit_predict(X)
+            if self.algorithm == 'kmeans':
+                model = KMeans(n_clusters=n, random_state=42)
             elif self.algorithm == 'hierarchical':
-                model.n_clusters = n
-                labels = model.fit_predict(X)
-            elif self.algorithm == 'dbscan':
-                labels = model.fit_predict(X)
-                if len(set(labels)) == 1:  # DBSCAN sometimes returns only one cluster
-                    silhouette_scores.append(-1)
-                    continue
+                model = AgglomerativeClustering(n_clusters=n)
+            elif self.algorithm == 'spectral':
+                model = SpectralClustering(n_clusters=n, random_state=42)
+            elif self.algorithm == 'gmm':
+                model = GaussianMixture(n_components=n, random_state=42)
+            labels = model.fit_predict(X)
             wcss.append(model.inertia_ if hasattr(model, 'inertia_') else 0)
             silhouette_scores.append(silhouette_score(X, labels))
+            davies_bouldin_scores.append(davies_bouldin_score(X, labels))
 
-        return wcss, silhouette_scores
+        return wcss, silhouette_scores, davies_bouldin_scores
+    
 
     def vectorize_texts(self, texts):
         """
