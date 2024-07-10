@@ -172,4 +172,42 @@ To enhance the exploration and visualization of the clustering process, we trans
 - Further refinement is needed, especially in handling the extraction phase and improving clustering performance.
 - Future work will explore more advanced text extraction techniques and clustering models to enhance the accuracy and quality of the results.
 
+### Vectorization Methods and Silhouette Scores
+
+To enhance the clustering results, we explored various vectorization methods and evaluated their performance using silhouette scores:
+
+1. **TF-IDF Vectorization**:
+   - TF-IDF vectorization was used initially, which captures the importance of terms within the abstracts.
+   - The highest silhouette score achieved with TF-IDF vectorization was approximately 0.036.
+
+2. **Word2Vec Vectorization**:
+   - Word2Vec vectorization was implemented to capture semantic relationships between words.
+   - This method yielded the highest silhouette score of 0.12, making it the best-performing vectorization method among those tested.
+
+3. **Doc2Vec Vectorization**:
+   - Doc2Vec was also explored, which aims to capture semantic relationships at the document level.
+   - The performance of Doc2Vec was not as high as Word2Vec, indicating that it may not be the best fit for this specific task.
+
+4. **BERT Vectorization**:
+   - BERT vectorization was tested to leverage the contextual embeddings of words.
+   - However, this method resulted in a silhouette score of around 0.08, which was lower than Word2Vec.
+
+### Identifying Optimal Number of Clusters
+
+To determine the optimal number of clusters, we employed two key analyses:
+
+1. **Elbow Method**:
+   - Plotted the within-cluster sum of squares (WCSS) for a range of cluster numbers to identify the "elbow point" where adding more clusters did not significantly improve the clustering.
+   - The elbow point suggested a potential range for the number of clusters.
+
+2. **Silhouette Analysis**:
+   - Calculated silhouette scores for different cluster numbers to measure the similarity of points within their own cluster compared to other clusters.
+   - The highest silhouette score for Word2Vec vectorization was observed at 9 clusters, despite the overall score being 0.12, indicating a better-defined clustering structure at this point.
+
+### Summary of Findings and Future Steps
+
+- Word2Vec vectorization emerged as the best method for this task, providing the highest silhouette score.
+- The optimal number of clusters was identified as 9, based on the silhouette score analysis.
+- Further work will focus on refining the extraction phase and exploring advanced clustering algorithms to improve performance.
+
 
