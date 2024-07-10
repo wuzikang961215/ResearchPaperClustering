@@ -147,9 +147,12 @@ class Clustering:
             cluster_filenames = [file_names[i] for i in cluster_indices]
 
             # Get top terms for the cluster
-            X_cluster = self.vectorizer.transform(cluster_abstracts)
-            terms = self.vectorizer.get_feature_names_out()
-            top_terms = self._get_top_terms(X_cluster, terms)
+            if self.vectorizer_type == 'tfidf':
+                X_cluster = self.vectorizer.transform(cluster_abstracts)
+                terms = self.vectorizer.get_feature_names_out()
+                top_terms = self._get_top_terms(X_cluster, terms)
+            else:
+                top_terms = self._get_top_terms_word2vec(cluster_abstracts)
 
             summary.append({
                 'Cluster': cluster,
@@ -172,6 +175,17 @@ class Clustering:
             # Handle word2vec and spacy_word2vec
             top_terms = ["Not available for word2vec or spacy_word2vec vectorizers"]
         return top_terms
+    
+    def _get_top_terms_word2vec(self, cluster_abstracts, top_n=10):
+        # Load the pre-trained spaCy model
+        nlp = spacy.load('en_core_web_md')
+        docs = [nlp(abstract) for abstract in cluster_abstracts]
+        word_vectors = np.array([token.vector for doc in docs for token in doc if not token.is_stop and not token.is_punct])
+        avg_vector = word_vectors.mean(axis=0)
+        similar_words = nlp.vocab.vectors.most_similar(avg_vector.reshape(1, -1), n=top_n)
+        top_terms = [nlp.vocab.strings[word_id] for word_id in similar_words[0][0]]
+        return top_terms
+    
     
 
 class BERTVectorizer:
