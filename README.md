@@ -1,10 +1,8 @@
-# Research Paper Clustering
-
 ## Overview
 
-(Introduction and how to run instructions will be added here once the project is complete.)
+The Research Paper Clustering project aims to cluster research papers based on their abstracts. This involves extracting text from PDF files, preprocessing the text, vectorizing the text data, and applying clustering algorithms to group similar research papers together. The project is designed to help researchers and academics identify related papers quickly and efficiently.
 
-## Steps to Run the Project
+### Steps to Run the Project
 
 1. **Setup the Environment**:
     - Create a virtual environment:
@@ -20,17 +18,12 @@
       pip install -r requirements.txt
       ```
 
-2. **Extract Abstracts**:
-    - Run the data extraction script to extract abstracts from the PDF files:
+2. **Run the Jupyter Notebook**:
+    - Launch the Jupyter Notebook to perform abstract extraction, vectorization, clustering, and evaluation:
       ```bash
-      python src/data_processing.py
+      jupyter notebook
       ```
-
-3. **Testing**:
-    - Run the test script to verify the extraction process:
-      ```bash
-      python tests/test.py
-      ```
+    - Open and run the provided notebook to execute the various steps of the project interactively.
 
 ## Contributions
 Feel free to contribute to this project by creating issues or submitting pull requests. Any contributions are welcome!
