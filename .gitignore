@@ -9,11 +9,6 @@ __pycache__/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints
 
-# Data files
-data/raw/
-data/processed/
-data/unprocessed/
-
 # System files
 .DS_Store
 
