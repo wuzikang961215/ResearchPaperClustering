@@ -1,0 +1,168 @@
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 0 ( 2 0 1 5 ) 5 7 6 3 e5 7 7 5
+
+Available online at www.sciencedirect.com
+ScienceDirect
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / h e
+
+Role of power-to-gas in an integrated gas
+and electricity system in Great Britain
+
+Meysam Qadrdan
+Jianzhong Wu, Nick Jenkins
+
+*
+, Muditha Abeysekera, Modassar Chaudry,
+
+Cardiff School of Engineering, Cardiff University, Queens Buildings, The Parade, Cardiff CF24 3AA, UK
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Article history:
+
+Received 29 December 2014
+
+Received in revised form
+
+1 March 2015
+
+Accepted 2 March 2015
+
+Power-to-gas (PtG) converts electricity into hydrogen using the electrolysis process and
+
+uses the gas grid for the storage and transport of hydrogen. Hydrogen is injected into a gas
+
+network in a quantity and quality compatible with the gas safety regulations and thereby
+
+transported as a mixture of hydrogen and natural gas to demand centres. Once integrated
+
+into the electricity network, PtG systems can provide ﬂexibility to the power system and
+
+Available online 31 March 2015
+
+absorb excess electricity from renewables to produce hydrogen. Injection of hydrogen into
+
+Keywords:
+
+Power-to-gas
+
+the gas network reduces gas volumes supplied from terminals.
+
+In order to investigate this concept, hydrogen electrolysers were included as a tech-
+
+nology option within an operational optimisation model of the Great Britain (GB) combined
+
+Hydrogen electrolysis
+
+gas and electricity network (CGEN). The model was used to determine the minimum cost of
+
+Combined gas and electricity
+
+meeting the electricity and gas demand in a typical low and high electricity demand day in
+
+networks
+
+GB, in the presence of a signiﬁcant capacity of wind generation. The value of employing
+
+power-to-gas systems in the gas and electricity supply system was investigated given
+
+different allowable levels of hydrogen injections. The results showed that producing
+
+hydrogen from electricity is capable of reducing wind curtailment in a high wind case and
+
+decreasing the overall cost of operating the GB gas and electricity network. The northern
+
+part of GB was identiﬁed as a suitable region to develop hydrogen electrolysis and injection
+
+facilities due to its vicinity to a signiﬁcant capacity of wind generation, as well as the ex-
+
+istence of gas network headroom capacity, which is expected to increase as a result of
+
+depletion of UK domestic gas resources.
+Copyright © 2015, Hydrogen Energy Publications, LLC. Published by Elsevier Ltd. All rights
+reserved.
+
+Introduction
+
+The UK government has ambitious plans to deploy renewable
+sources of energy and reduce greenhouse gas (GHG) emissions
+from the energy sector. As part of the EU 2020 target [1], the
+share of electrical energy generated from renewables needs to
+
+increase to approximately 30% by 2020. Furthermore, the UK is
+committed to reduce its GHG emissions by at least 80% (from
+1990 levels) by 2050 [2].
+
+Wind generation is projected to play an important role in
+achieving the UK's renewable and emissions targets. The
+onshore installed wind capacity is expected to increase to
+
+* Corresponding author. Tel.: þ44 02920870370.
+
+E-mail address: qadrdanm@cardiff.ac.uk (M. Qadrdan).
+
+http://dx.doi.org/10.1016/j.ijhydene.2015.03.004
+0360-3199/Copyright © 2015, Hydrogen Energy Publications, LLC. Published by Elsevier Ltd. All rights reserved.
+
+5764
+
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 0 ( 2 0 1 5 ) 5 7 6 3 e5 7 7 5
+
+21 GW by 2035 from 5.5 GW in 2012 [3]. Offshore wind ca-
+pacity is expected to increase to 12 GW by 2020, 28.6 GW by
+2025 and up to 37.5 GW by 2035 [3]. As the penetration of
+renewable power increases, periods of excess generation
+will become more frequent and of larger magnitude. Previ-
+ous studies [4,5] suggest electricity curtailment could reach
+2.8 TWh per annum by 2020 and as much as 50e100 TWh
+per annum by 2050 depending on the amount of installed
+renewables. If storage is used the monetary value of storing
+this excess energy could be as high as £10 bn/year by 2050
+[4].
+
+The integration of large capacity of wind generation into
+the grid poses a number of challenges. Given that large wind
+farms (especially offshore wind farms) are located far away
+from demand centres, signiﬁcant investment is required to
+build or reinforce the electricity transmission network to
+transport the power generated. The variability of wind power,
+which results in an annual capacity factor of 27%e35% [6],
+makes it difﬁcult to justify the expansion of transmission
+capacity to accommodate the maximum wind power pro-
+duced. Previous studies [6] showed that the curtailment of
+wind power is sensitive to insufﬁcient transmission capacity,
+low consumer demand and installed must-run generation
+units such as nuclear. Currently, UK wind curtailment is
+0.1 TWh/annum [5] and occurs primarily due to transmission
+line constraints. In a future scenario where the UK increases
+its nuclear power generation capacity alongside wind,
+curtailment will increase further.
+
+Owing to a number of ﬁnancial incentives supporting efﬁ-
+ciency improvements (Green Deal, Energy Company Obliga-
+tion) and a shift to electriﬁed heating [7], the demand for gas to
+domestic dwellings is projected to decrease over the next few
+
+Fig. 2 e Power-to-gas system schematic.
+
+decades [3]. The decrease in gas demand combined with the
+depletion of the UK domestic gas resources is changing the
+pattern of gas ﬂows in the National Transmission System
+(NTS), as shown by Fig. 1. In particular, the north-south gas
+ﬂow is projected to decrease further despite the large capacity
+of the gas transmission network in Scotland.
+
+Power-to-gas (PtG) converts electricity into hydrogen
+using the electrolysis process and uses the gas grid for the
+storage and transport of hydrogen. This method is different
+from conventional electrical energy storage systems, which
+absorb and output electrical energy (pumped storage, batte-
+ries). PtG systems produce hydrogen that can be blended
+with natural gas in a quantity and quality compatible with
+the gas grid. Fig. 2 shows a schematic of a PtG system. In a
+
+Fig. 1 e Gas ﬂow pattern in the NTS [8].
+
+

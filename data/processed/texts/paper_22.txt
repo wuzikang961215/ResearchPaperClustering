@@ -1,0 +1,208 @@
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 8 ( 2 0 2 3 ) 2 8 8 0 3 e2 8 8 2 3
+
+Available online at www.sciencedirect.com
+ScienceDirect
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / h e
+
+Review Article
+
+Utilization of green ammonia as a hydrogen energy
+carrier for decarbonization in spark ignition
+engines
+
+Caneon Kurien, Mayank Mittal
+
+*
+
+Department of Mechanical Engineering, Indian Institute of Technology Madras, Chennai, 600036, Tamil Nadu, India
+
+h i g h l i g h t s
+
+(cid:1) Decarbonization of power generation and transportation sectors by ammonia fuelled SI engines.
+(cid:1) Review on green ammonia production, combustion, and utilization in spark ignition engines.
+(cid:1) Fuel enhancement and engine modiﬁcations improved combustion and performance characteristics.
+(cid:1) Unburned ammonia and NOx emissions demand requirement for after-treatment systems.
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Available online 26 April 2023
+
+hydrogen energy. Ammonia is an effective hydrogen energy carrier with a well-established
+
+Article history:
+
+Received 24 January 2023
+
+Received in revised form
+
+20 March 2023
+
+Accepted 6 April 2023
+
+Keywords:
+
+Ammonia
+
+Combustion
+
+Green fuels
+
+Hydrogen energy carrier
+
+Renewable energy
+
+Rising concerns about the dependence of modern energy systems on fossil fuels have
+
+raised the requirement for green alternate fuels to pave the roadmap for a sustainable
+
+energy future with a carbon-free economy. Massive expectations of hydrogen as an enabler
+
+for decarbonization of the energy sector are limited by the lack of required infrastructure,
+
+whose implementation is affected by the issues related to the storage and distribution of
+
+and mature infrastructure for long-distance transportation and distribution. The possi-
+
+bility for green ammonia production from renewable energy sources has made it a suitable
+
+green alternate fuel for the decarbonization of the automotive and power generation
+
+sectors. In this work, engine characteristics for ammonia combustion in spark ignition
+
+engines have been reported with a detailed note on engines fuelled with pure ammonia as
+
+well as blends of ammonia with gasoline, hydrogen, and methane. Higher auto-ignition
+
+temperature, low ﬂammability, and lower ﬂame speed of ammonia have a detrimental
+
+effect on engine characteristics, and it could be addressed either by incorporating engine
+
+modiﬁcations or by enhancing the fuel quality. Literature shows that the increase in
+
+compression ratio from 9.4:1 to 11.5:1 improved the maximum power by 59% and the
+
+addition of 10% hydrogen in supercharged conditions improved the indicated efﬁciency by
+
+37%. Challenges and strategies for the utilization of ammonia as combustible fuel in en-
+
+gines are discussed by considering the need for technical advancements as well as social
+
+acceptance. Energy efﬁciency for green ammonia production is also discussed with a due
+
+note on techniques for direct synthesis of ammonia from air and water.
+
+© 2023 Hydrogen Energy Publications LLC. Published by Elsevier Ltd. All rights reserved.
+
+* Corresponding author.
+
+E-mail addresses: caneonkurien@gmail.com (C. Kurien), mmittal@iitm.ac.in (M. Mittal).
+
+https://doi.org/10.1016/j.ijhydene.2023.04.073
+0360-3199/© 2023 Hydrogen Energy Publications LLC. Published by Elsevier Ltd. All rights reserved.
+
+28804
+
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 8 ( 2 0 2 3 ) 2 8 8 0 3 e2 8 8 2 3
+
+Contents
+
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28804
+Green ammonia production . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28805
+Green ammonia synthesis from air and water . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28805
+Ammonia combustion in spark ignition (SI) engines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28807
+Pure ammonia combustion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28807
+Ammonia and hydrogen fuel blends . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28810
+Ammonia and gasoline fuel blends . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28813
+Ammonia and methane fuel blends . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28815
+Challenges and strategies for ammonia combustion in SI engines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28816
+Techno-economic aspects of green ammonia as a fuel
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28817
+Conclusions and future scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28817
+Declaration of competing interest . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28819
+Acknowledgment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28819
+Supplementary data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28819
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28819
+
+Introduction
+
+The intensity of renewable energy sources (wind, solar,
+geothermal, etc.) varies from one geographic location to
+another and it is dispersed on the earth [1]. For instance, re-
+gions near the equator receive a higher intensity of direct
+normal solar radiations [2]. It has been a major challenge to
+transport renewable energy from regions of higher intensity
+to other regions as an energy vector and liquid fuels produced
+using renewable energy sources could be a possible solution
+for the storage and transportation of renewable energy [3].
+Green hydrogen produced by water electrolysis (utilizing
+electricity from renewable energy sources) has gained a lot of
+attention recently as the future fuel but the challenges related
+to the storage and transportation of hydrogen have limited its
+implementation [4]. Ammonia has been identiﬁed as an en-
+ergy vector for the green energy (zero-emission) cycle owing to
+its potential to serve as a hydrogen energy carrier for the
+storage and transportation of green hydrogen [5].
+
+Energy storage techniques will play a key role in the tran-
+sition from dependency on fossil fuels to renewable energy
+systems since the integration of renewable energy systems
+will raise the huge requirement for electricity storage to
+ensure a continuous supply of power to meet rising demand
+(considering intermittent power supply from wind turbines
+and solar panels) [6e8]. Various techniques for energy storage
+are deployed depending on the required storage capacity and
+restitution time for speciﬁc applications and it includes me-
+chanical (ex: compressed air energy storage) [9], electrical (ex:
+capacitors) [10], electrochemical (ex: batteries) [11], thermal
+(ex: cryogenics) [12] and chemical storage systems (ex: fuels
+like gasoline, diesel, hydrogen, methane, ammonia, etc.) [13].
+Energy storage for longer terms with larger quantities can be
+accomplished by chemical storage techniques since it has a
+lower levelized cost of energy storage, where energy gener-
+ated by using renewable sources will be stored by converting it
+
+into fuel (power-to-fuel) [14]. Wherein electricity produced by
+using solar or wind turbines will be employed for hydrogen
+generation by electrolysis method and the useful product (H2)
+released from electrolysis will further react with nitrogen (air
+separation unit) to produce ammonia to act as an energy
+carrier [15]. The hydrogen produced can also react with carbon
+dioxide (from the carbon capture facility) to produce methane
+or methanol, which also falls under the Power-to-Fuel para-
+digm [16,17]. Fuels produced by following this process are
+called e-fuels and these will have a major role in future
+mobility, serving as a sustainable energy source [18]. Also, the
+need for decarbonization of transportation and power gener-
+ation sectors uplifts the suitability of ammonia among these
+e-fuels as an effective power-to-x fuel, since it is carbon-free
+fuel and also a hydrogen energy carrier [19e21]. In recent
+years, there has been an increasing focus on ammonia as a
+liquid energy carrier for enabling easy transportation of
+hydrogen energy by cracking ammonia to hydrogen and ni-
+trogen at end use [22e24]. The physico-chemical properties of
+hydrogen, methane, ammonia, and other fuels are listed in
+Table A1 in appendix A [25e29]. The development of facilities
+for green ammonia production accompanied by the feasibility
+for direct use of ammonia as a combustible fuel has broad-
+ened its range of applications speciﬁcally for power genera-
+tion and transportation [30]. Extensive studies and reviews on
+ammonia oxidation chemistry are reported in the literature
+[31e34] owing to its fuel NOx formation and widespread
+application as a reducing agent in selective catalytic reduction
+systems. Detailed kinetics for ammonia oxidation was pro-
+posed initially by Miller et al. [35] by performing computa-
+tional studies in a variety of burner-stabilized and freely
+ammonia/
+propagating ﬂames
+hydrogen/oxygen) and the model (22 species and 98 reactions)
+predicted satisfactorily at lean and moderately rich condi-
+tions. The elementary reaction models and the understanding
+of ammonia oxidation have improved over the years and
+some of the recently developed reaction mechanisms with
+
+(ammonia/oxygen and
+
+

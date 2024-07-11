@@ -1,0 +1,153 @@
+Journal of The ElectrochemicalSociety     OPEN ACCESSElectrode Blocking Due to Redox Reactions inAluminum Chloride-Sodium Iodide Molten SaltsTo cite this article: Adam M. Maraschky et al 2023 J. Electrochem. Soc. 170 066504 View the article online for updates and enhancements.You may also likeContinuous Purification of Molten ChlorideSalt: Electrochemical Behavior of MgOHClReductionLiam Witteman, Kerry Rippy, PatrickTaylor et al.-Study on Stable Lithiophilic AgModification Layer on Copper CurrentCollector for High Coulombic-EfficiencyLithium Metal AnodeHe-yi Xia, Dong-lei Wang, Yu-ke Wang etal.-Enhancing Electrochemical Performanceof Zinc-Air Batteries Using FreezeCrosslinked Carboxymethylcellulose-Chitosan Hydrogels as ElectrolytesMaría Fernanda Bósquez-Cáceres, JoséBejar, Lorena Álvarez-Contreras et al.-This content was downloaded from IP address 101.115.233.30 on 29/06/2024 at 10:12Journal of The Electrochemical Society, 2023 170 066504
+
+Electrode Blocking Due to Redox Reactions in Aluminum
+Chloride-Sodium Iodide Molten Salts
+Adam M. Maraschky,1,z,*
+L. Meyerson,1,* Amanda S. Peretti,1 Erik D. Spoerke,1,*
+
+Stephen J. Percival,1,* Rose Y. Lee,1,2,* Melissa
+
+and Leo J. Small1,z,*
+
+1Sandia National Laboratories, Albuquerque, New Mexico 87185, United States of America
+2Department of Chemical Engineering, University of Washington, Seattle, Washington 98195, United States of America
+
+Iodide redox reactions in molten NaI/AlCl3 are shown to generate surface-blocking ﬁlms, which may limit the useful cycling rates
+and energy densities of molten sodium batteries below 150 °C. An experimental investigation of electrode interfacial stability at
+110 °C reveals the source of the reaction rate limitations. Electrochemical experiments in a 3-electrode conﬁguration conﬁrm an
+increase of resistance on the electrode surface after oxidation or reduction current is passed. Using chronopotentiometry,
+chronoamperometry, cyclic voltammetry, and electrochemical impedance spectroscopy, the ﬁlm formation is shown to depend on
+− in the molten salt
+the electrode material (W, Mo, Ta, or glassy carbon), as well as the Lewis acidity and molar ratio of I−/I3
+electrolytes. These factors impact the amount of charge that can be passed at a given current density prior to developing excessive
+overpotential due to ﬁlm formation that blocks the electrode surface. The results presented here guide the design and use of iodide-
+based molten salt electrolytes and electrode materials for grid scale battery applications.
+© 2023 The Author(s). Published on behalf of The Electrochemical Society by IOP Publishing Limited. This is an open access
+article distributed under the terms of the Creative Commons Attribution 4.0 License (CC BY, http://creativecommons.org/licenses/
+by/4.0/), which permits unrestricted reuse of the work in any medium, provided the original work is properly cited. [DOI: 10.1149/
+1945-7111/acd874]
+
+Manuscript submitted February 1, 2023; revised manuscript received April 24, 2023. Published June 5, 2023. This paper is part of
+the JES Focus Issue on Molten Salts and Ionic Liquids III.
+
+Supplementary material for this article is available online
+
+Molten sodium batteries (MNaBs) with metal halide-sodium
+iodide electrolytes have emerged as an Earth-abundant,1 cost-
+effective, and safe technology for grid scale electrochemical energy
+storage.2,3 This class of low-temperature (<150 °C) MNaBs is
+enabled by a Na-ion superconductor
+(NaSICON, nominally
+Na1+xZr2SixP3-xO12) solid electrolyte,4–6 which physically separates
+the Na metal anode from the molten salt electrolyte.7,8 Mixtures of
+NaI and AlCl3 offer relatively inexpensive, nonﬂammable, highly
+conductive (>100 mS cm−1), highly concentrated (>4 mol l−1),
+redox-active electrolytes at temperatures slightly above the melting
+point of Na metal (98 °C). Despite these advantages, achieving the
+high cycling rates needed for on-demand, high-rate energy storage
+applications may present challenges for this molten salt chemistry at
+low temperatures (<150 °C).
+
+polyiodide
+
+Pairing the iodide redox couple with alkali metal anodes in
+nonaqueous electrolytes for a battery cell >3 V was investigated by
+Hanson and Tobias in 1987.9 More recently, iodide electrochemistry
+has seen applications in Zn/I2 redox ﬂow batteries,10–13 room
+temperature ionic liquid electrolytes,14 and dye-sensitized solar
+cells.15,16 Much of the research on iodide electrochemistry has
+been devoted to discerning the reaction mechanisms,17–19 character-
+izing the electrocatalytic activity of electrode materials,16,20,21 and
+understanding
+iodide
+oxidation.9–11,22–26 This prior work provides guidance for applica-
+tions of I−/I3
+−/I2 redox reactions, which are known to be highly
+dependent on the solvent22,27,28 and concentration.20 For low-
+temperature MNaBs with NaI/AlCl3 electrolytes in particular, the
+species and phases present depend on the electrolyte composition,
+which varies with the battery’s state of charge (SoC) via the ratio of
+−.28,29 Understanding the
+I− to higher order polyiodides such as I3
+complex and interrelated physicochemical behavior of these systems
+requires careful analysis of what processes limit the cycling rate at
+temperatures and electrolyte compositions relevant
+to practical
+battery operation.
+
+ﬁlm formation
+
+during
+
+The present investigation seeks to clarify the roles that (i) electrode
+material and (ii) molten salt composition play in the electrochemistry
+of iodide in NaI/AlCl3 electrolytes. Achieving this understanding will
+
+*Electrochemical Society Member.
+zE-mail: ammaras@sandia.gov; ljsmall@sandia.gov
+
+provide a better mechanistic picture of whether the redox reaction rates
+are limited by mass transport, charge transfer kinetics, or electrode
+surface changes, such as adsorption or blocking. This understanding
+will aid in identifying what engineering solutions can be used to
+improve the battery’s energy efﬁciency and power density. Toward
+this goal, we investigate the NaI/AlCl3 system using cyclic voltam-
+metry (CV), electrochemical impedance spectroscopy (EIS), chron-
+oamperometry (CA), and chronopotentiometry (CP). The 3-electrode
+conﬁguration employed here isolates the electrode in contact with the
+molten salt electrolyte.29 Although the selection of materials chemi-
+cally compatible with the NaI/AlCl3 electrolyte is limited, we examine
+three refractory metals:
+tungsten (W), molybdenum (Mo), and
+tantalum (Ta), as well as glassy carbon (GC) as candidate electrode
+materials. Ideally, these materials need to be not only chemically inert
+in the electrolyte, but cost-effective and electrocatalytically active. The
+electrochemical behavior of the candidate electrodes is examined at
+two SoCs (7.5 and 50%) and two molar ratios of the NaI/AlCl3
+electrolyte (nominally, Lewis acidic and Lewis basic). Results show
+that electrode materials and electrolyte compositions differ most
+notably in their susceptibility to blockage caused by reversible surface
+ﬁlm formation during electrolysis. Electrolyte composition—through
+both Lewis acidity and SoC—impacts the phase stability of electro-
+chemical reaction products and their tendency to form electrode-
+blocking ﬁlms. These insights will guide the future development of
+low-temperature MNaBs for sustainable grid scale energy storage.
+
+Experimental
+
+Electrolyte composition.—Electrolytes were made by mixing
+NaI (ultra-dry, 99.99%, Alfa Aesar), AlCl3 (ultra-dry, 99.99%, Alfa
+Aesar), and I2 (ultra-dry, 99.998%, Alfa Aesar), all of which were
+used without further puriﬁcation and were handled in an Ar-ﬁlled
+glovebox with <0.1 ppm H2O and O2. Electrolyte compositions are
+listed in Table I. The theoretical capacity of the electrolyte is
+zFn, where F is the Faraday constant, n is the
+determined by =C
+number of moles of NaI for a fully discharged (0% SoC) electrolyte,
+and z is the number of electrons per mole of I3
+
+− in the reaction:
+
+I
+
+−
+3
+
++
+
+2e
+
+−
+
+→
+
+−
+3I
+
+1
+[ ]
+
+Equation 1 is an idealized reaction for this system and may not
+represent the actual species present in the electrolyte since I− is
+
+

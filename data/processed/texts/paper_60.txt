@@ -1,0 +1,331 @@
+IEEE TRANSACTIONS ON TRANSPORTATION ELECTRIFICATION, VOL. 9, NO. 2, JUNE 2023
+
+2583
+
+Voltage Sensorless Based Model Predictive Control
+With Battery Management System: For Solar PV
+Powered On-Board EV Charging
+
+Nishant Kumar
+
+, Senior Member, IEEE, Bhim Singh, Fellow, IEEE,
+
+and Bijaya Ketan Panigrahi
+
+, Senior Member, IEEE
+
+Abstract— This work deals with a novel voltage sensorless
+based model predictive control (VSPC) scheme for continuous
+and quick maximum power harvesting (MPH) from a photo-
+voltaic (PV) array for a solar-powered on-board electric vehicle
+(EV) charging system. In VSPC, the ﬁrst model predictive control
+(MPC) is used with a PV array to predict the system state in the
+horizon of time and to eliminate the voltage sensor. An adaptive
+concept is used for deciding the operating point, which accelerates
+the tracking process and improves dynamic performance during
+irradiation changes and shading pattern changes in partially
+shaded conditions. Moreover, VSPC also takes care of the EV
+charging process using the EV-provided battery management
+system (BMS) command or threshold safety limits of the EV
+battery. The working principle of VSPC is based on a prediction
+of the future behavior of the system. It realizes on a selected time
+horizon, in an arbitrary number of samples, which is decided
+according to the complexity of the ﬁtness function. In order to
+minimize or maximize the ﬁtness function, it predicts the voltage
+of the solar PV array as well as tunes the present control signal,
+which forces it to converge or reach the convergence criteria.
+Moreover, the cost and response time of current sensors are lower
+than voltage sensors. Therefore, the VSPC control gives a fast
+response and low power oscillations in steady-state compared to
+conventional techniques. This control technique is veriﬁed on a
+developed prototype of the PV system in different shading and
+irradiance conditions, as well as the system stability, is analyzed
+through the Bode plot. The system performance is also compared
+with the state-of-the-art methods.
+
+Index Terms— Battery management system (BMS), electric
+vehicle (EV), maximum power point tracking (MPPT), model
+predictive control
+(MPC), partial shading condition, photo-
+voltaic (PV), solar powered EV (SP-EV), voltage sensor-less.
+
+I. INTRODUCTION
+
+N OWADAYS, the application of solar photovoltaic (PV)
+
+power has grown substantially. On low power ratings
+in residential areas and high power ratings in commercial
+levels, as well as in aerospace equipment, solar PV arrays are
+used very frequently [1]. Moreover, to avoid fossil fuel, solar-
+powered electric vehicle (SP-EV) is used. In each system,
+the user wants to harvest maximum and quality power from
+the PV panel. Here the meaning of quality is oscillations-free
+
+Manuscript received 15 March 2022; revised 30 April 2022, 9 July 2022,
+and 29 September 2022; accepted 6 October 2022. Date of publication
+10 October 2022; date of current version 13 June 2023. This work was sup-
+ported by the Science and Engineering Research Board (SERB), Government
+of India-National Science Chair (NSC) Fellowship. (Corresponding author:
+Nishant Kumar.)
+
+Nishant Kumar is with the Electrical Engineering Department, IIT Jodhpur,
+
+Jodhpur 342011, India (e-mail: nishantkumar@iitj.ac.in).
+
+Bhim Singh and Bijaya Ketan Panigrahi are with the Electrical Engineering
+
+Department, IIT Delhi, New Delhi 110016, India.
+
+Digital Object Identiﬁer 10.1109/TTE.2022.3213253
+
+power in the steady-state and quick response during dynamic
+conditions, which is only possible through a strong maximum
+power harvesting (MPH) technique.
+
+For MPH, one needs a global maximum power point
+tracking (GMPPT) algorithm. Because the power–voltage or
+power–current characteristic of the PV array consists of a
+nonlinear nature [2], [3]. Therefore,
+the maximum power
+exists, only on a single voltage and a single current on PV
+characteristics [4]. An exhaustive literature survey reveals
+that for GMPPT, several techniques have been proposed such
+as hill-climbing [5], perturb and observe (P&O) [6], and
+incremental conductance (InC) [7]. However, according to the
+situation, these techniques are unable to decide an optimal
+step size. Therefore, these techniques are suffered from steady-
+state oscillation and longer tracking duration issues. Because,
+a small step size gives a good steady-state performance, while
+it takes a longer time to reach the maximum power peak (MPP)
+during the dynamic condition. Similarly, a large step size
+gives a good dynamic performance, while during the steady-
+state condition, it creates oscillations in the output. Moreover,
+these
+during sudden and large irradiation fall conditions,
+techniques lose the tracking direction. A few techniques have
+been proposed to solve these issues, such as modiﬁed P&O
+(MP&O) [8], modiﬁed InC, improved P&O [9], improved
+InC, etc. However, no one algorithm is perfect for all types
+of situations. Few techniques have oscillation-free steady-
+state performance, but the performances are very poor during
+dynamic conditions. Some algorithms have good tracking
+capability in a dynamic condition, but during a steady-state
+condition produce oscillation in the output. Some of them
+have an optimal solution for both steady-state and dynamic
+conditions. However, computational burden and large design
+dependences are the main constraint.
+
+Some other techniques, like fractional open circuit volt-
+age and short circuit current, are also famous, where step
+size depends on panel ratings, such as open-circuit voltage
+and short circuit current of the solar PV panel. However,
+the ratings are not
+the PV panel,
+in the entire life of
+constant. Therefore, these techniques are not reliable solu-
+tions for maximum power point
+tracking (MPPT). More-
+over, some researchers have proposed, improved model-based
+MPPT [10], current control loop-based MPPT [11], closed-
+loop MPPT [12], discrete current sensing-based MPPT [13],
+root-ﬁnding techniques-based MPPT, incremental resistance-
+based MPPT, sliding mode MPPT, and MPPT based on
+ripple correlation. However, improvements in solutions are not
+remarkable and signiﬁcant because these techniques perform
+
+2332-7782 © 2022 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:16:08 UTC from IEEE Xplore.  Restrictions apply. 
+
+2584
+
+IEEE TRANSACTIONS ON TRANSPORTATION ELECTRIFICATION, VOL. 9, NO. 2, JUNE 2023
+
+very well during a few irradiation patterns. While, during other
+types of irradiation patterns, these techniques cannot ﬁnd the
+optimal solution. After these, artiﬁcial intelligence techniques,
+such as fuzzy logic [14], neural networks, etc., have been used
+for MPPT [15]. However, fuzziﬁcation and training require
+huge amounts of data, which creates computational burden
+and complexity, so these techniques are not popular. Some
+researchers have proposed soft computing-based techniques
+for MPPT, such as particle swarm optimization (PSO) [16],
+ﬁreﬂy optimization, differential evolution, whale optimization
+with differential evolution (WODE) [17], harmony search,
+etc. However, the problems with these techniques are the
+same as artiﬁcial intelligence-based algorithms. For searching,
+it requires a big population of searching agents, which creates
+a huge computational burden and poor dynamic performance.
+A substantial literature shows that after these techniques,
+researchers have tried model predictive control (MPC) based
+MPPT such as multi-sensor based MPC MPPT [18]. This
+technique [18] is shown excellent performance in different
+solar irradiance conditions. However, it
+is based on three
+sensors (two-voltage sensors and one-current sensor), which
+is not an economical solution. Moreover, extremum-seeking-
+based MPC MPPT [19] and modiﬁed MPC MPPT [20]
+algorithms have been proposed. These techniques have needed
+one sensor by using an output observer, such as extremum
+seeking-based MPC MPPT [19] is based on a one-voltage
+sensor, one-current sensor, and one-output current observer,
+and modiﬁed MPC MPPT [20] is based on a one-voltage
+sensor, one-current sensor, and one-output voltage observer.
+However, designing an accurate observer according to the
+system is the key challenge in these techniques. Somehow
+these issues are tried to solve in [21], [22], and [23]. However,
+it is limited to a resistive load. In the case of EV or battery
+charging, charging current monitoring or battery management
+system (BMS) requires for safe operation.
+
+A. Motivation
+
+The major problems with these all techniques are that all
+techniques require two sensors, one voltage, and one current
+sensor [24]. The limitations of this type of technique are that
+it monitors only input terminal parameters, as well as the solar
+voltage is less sensitive to the change in solar irradiance and
+environmental temperature, which makes dynamic response
+the cost and response time of voltage
+slower. Moreover,
+sensors are higher and poor than current sensors. Therefore,
+researchers have concentrated on voltage-sensorless MPPT
+techniques. The available literature reveals that the Cauchy
+and Gaussian sine cosine optimization algorithm [25] and
+MPC [21], [22], [23] based techniques have been used avail-
+able for MPPT only by using the current sensor. However, the
+major limitation of this technique is that it is only applicable
+to batteries [25] and resistive loads [21], [22], [23]. These are
+not applicable for EV with BMS support. Moreover, it is based
+on population-based searching, which creates a huge compu-
+tational burden. Therefore, it is not possible to implement on
+a low-cost microprocessor [26], [27], [28], [29], [30], [31],
+[32], [33], [34]. These issues motivate a generalized current
+sensor-based MPPT algorithm. Therefore, a novel voltage
+sensorless-based model predictive control (VSPC) scheme is
+
+developed for SP-EV applications to operate with the partially
+shaded conditions for EV charging applications, which have
+continuous, quick, and better dynamic performers during MPH
+from the solar PV panel.
+
+II. VOLTAGE SENSOR-LESS PREDICTIVE CONTROL
+
+The general principle of the MPH is based on the output
+of one voltage and one current sensor, which decides the PV
+power. However, the voltage is less sensitive to the change
+in solar irradiance and environmental temperature. Moreover,
+the cost and response time of voltage sensors are higher and
+poor than current sensors. Therefore, for the elimination of
+the voltage sensor, the model predictive control (MPC) is
+used here, as well as it also reduces the ripples in output
+power. Moreover, adaptive control is used here to improve
+the system’s dynamic response.
+
+A. Model Predictive Control
+
+The working principle of MPC [26] is based on a pre-
+diction of the future behavior of the system. It realizes on
+a selected time horizon, in an arbitrary number of samples,
+which is decided according to the complexity of the ﬁtness
+function [27]. In order to minimize or maximize the ﬁtness
+function, it predicts the future steps as well as tunes the
+present control signal, which forces it to converge or reach
+the convergence criteria. The future response is denoted as,
+˜S(n + N), where N = 1.
+
+The ﬁtness function (ff) is described as
+
+ff = min( f (S(n), u(n), . . . , u(n + N − 1)))
+
+(1)
+
+where L is the time horizon, u(n) is the controller output.
+The controller output is totally dependent on the switching
+ON (ξ = 1)/OFF (ξ = 0) state.
+
+In an optimization problem, at each sampling time, the
+problem is solved by using sensed variables (S(n)), and it
+predicts the future response ( ˜S(n + N)) by using MPC at
+different switching states (ξ  [1: x]), where x is the total
+number of states. After that, the predicted results are compared
+with the reference response, and it generates an error. Then
+the new objective is to minimize the error signal, which
+helps fulﬁll the expected response. The objective function and
+constraints are described as [26]
+⎛
+
+⎞
+
+μ1
+
+⎜
+⎜
+⎝
+
+
+
+
+
+
+
+ξ∈[1:x]
+(n + 1) − S∗
+ ˜S
+
+1
+1
+
+ξ∈[1:x]
+(n + 1) − S∗
++μ2
+(n + 1)
+ ˜S
+
+2
+2
+
+ξ∈[1:x]
+(n + 1) − S∗
+ ˜S
+. . . . . + μI
+I
+I
+
+(n + 1)
+
+
+
+
+
+
+
+
+
+(n + 1)
+
+ε = min
+
+S(n) ≤ SLimit
+
+⎟
+⎟
+⎠(2)
+
+(3)
+
+where μ is the weight factor or importance factor of each
+objective. SLimit is the maximum value of the variable. The
+ﬂowchart of the MPC is given in Fig. 1.
+
+B. Voltage Sensorless Predictive Control
+
+In VSPC, two current sensors are used, one close to the PV
+panel, which senses the PV current, and one sensor close to
+the load, which senses the load current. Here, by using these
+two currents, MPC decides the PV voltage and predicts the
+PV current for the next sampling time. It is described in two
+
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:16:08 UTC from IEEE Xplore.  Restrictions apply. 
+
+

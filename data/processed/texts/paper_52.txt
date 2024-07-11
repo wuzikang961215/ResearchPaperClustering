@@ -1,0 +1,285 @@
+1166
+
+IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 29, NO. 3, MAY 2014
+
+Optimal Prediction Intervals
+of Wind Power Generation
+
+Can Wan, Student Member, IEEE, Zhao Xu, Senior Member, IEEE, Pierre Pinson, Senior Member, IEEE,
+Zhao Yang Dong, Senior Member, IEEE, and Kit Po Wong, Fellow, IEEE
+
+Abstract—Accurate and reliable wind power forecasting is es-
+sential to power system operation. Given signiﬁcant uncertainties
+involved in wind generation, probabilistic interval forecasting
+provides a unique solution to estimate and quantify the potential
+impacts and risks facing system operation with wind penetration
+beforehand. This paper proposes a novel hybrid intelligent algo-
+rithm approach to directly formulate optimal prediction intervals
+of wind power generation based on extreme learning machine and
+particle swarm optimization. Prediction intervals with associated
+conﬁdence levels are generated through direct optimization of
+both the coverage probability and sharpness to ensure the quality.
+The proposed method does not involve the statistical inference
+or distribution assumption of forecasting errors needed in most
+existing methods. Case studies using real wind farm data from
+Australia have been conducted. Comparing with benchmarks
+applied, experimental results demonstrate the high efﬁciency and
+reliability of the developed approach. It is therefore convinced
+that the proposed method provides a new generalized framework
+for probabilistic wind power forecasting with high reliability and
+ﬂexibility and has a high potential of practical applications in
+power systems.
+
+Index Terms—Extreme learning machine, forecasts, particle
+
+swarm optimization, prediction intervals, wind power.
+
+I. INTRODUCTION
+
+W IND energy is the most important and efﬁcient renew-
+
+able energy and is widely utilized for power generation
+in modern power systems in the past decades. In particular, wind
+power can supply up to 20% of annual electricity consumption
+
+Manuscript received March 27, 2013; revised July 13, 2013 and September
+23, 2013; accepted October 23, 2013. Date of publication November 12, 2013;
+date of current version April 16, 2014. This work was supported in part by Hong
+Kong RGC GRF grants no.515110, 528412, and T23-407/13-N. The work of
+C. Wan was supported by a Hong Kong Ph.D. Fellowship. Paper no. TPWRS-
+00371-2013.
+
+C. Wan is with the Department of Electrical Engineering, The Hong Kong
+Polytechnic University, Hung Hom, Hong Kong, and also with Centre for Elec-
+tric Power and Energy, Technical University of Denmark, 2800 Kgs. Lyngby,
+Denmark (e-mail: can.wan@connect.polyu.hk).
+
+Z. Xu is with the Department of Electrical Engineering, The Hong Kong Poly-
+technic University, Hung Hom, Hong Kong, and also with the University of
+Newcastle, Callaghan NSW 2308, Australia (e-mail: eezhaoxu@polyu.edu.hk).
+P. Pinson is with the Centre for Electric Power and Energy, Technical Univer-
+sity of Denmark, 2800 Kgs. Lyngby, Denmark (e-mail: ppin@elektro.dtu.dk).
+Z. Y. Dong is with the School of Electrical and Information Engineering, The
+
+University of Sydney, NSW 2006, Australia (e-mail: zydong@ieee.org).
+
+K. P. Wong is with the School of Electrical, Electronic and Computer En-
+gineering, The University of Western Australia, WA 6009, Australia (e-mail:
+kitpo@ieee.org).
+
+Color versions of one or more of the ﬁgures in this paper are available online
+
+at http://ieeexplore.ieee.org.
+
+Digital Object Identiﬁer 10.1109/TPWRS.2013.2288100
+
+in Denmark. However, wind power also introduces much more
+uncertainties than conventional generation due to the chaotic na-
+ture of the weather system. Accurate and reliable wind power
+forecasting becomes highly meaningful to optimize the oper-
+ation cost and improve the reliability for power systems with
+increased wind penetration [1].
+
+In the past, most researches focused on point forecasting ap-
+proaches for wind power [2]. Due to the nonstationarity of wind
+power series, traditional point forecasting can hardly be accu-
+rate, and the forecasting errors are unavoidable and signiﬁcant
+to some extent. For traditional applications, wind power fore-
+casting errors are statistically analyzed in [3]. With the integra-
+tion of high penetration of wind generation in deregulated power
+systems, the development of probabilistic forecasting tools is
+needed for making decisions in the operational domain to ac-
+counting for wind generation uncertainties. Recently, different
+approaches have been proposed for probabilistic wind power
+forecasts to obtain prediction intervals (PIs). Meteorological
+ensembles are used to obtain predictive distribution and esti-
+mate the uncertainty of forecasts [4], [5]. The uncertainty of
+wind power forecasting is investigated based on the nonlinear
+power curve and statistical analysis of wind speed prediction
+errors [6]. Quantile regression is used to estimate different fore-
+casting quantiles [7], [8]. Based on the point prediction results
+of AWPPS, WPPT and Sipreólico, PIs are constructed through a
+combined nonparametric probability forecasts and adaptive re-
+sampling approach [9]. In [10], radial basis function has been
+implemented to derive quantile forecasts of wind power based
+on point prediction results, weather conditions, etc. The con-
+ditional kernel density (CKD) estimation approach is proposed
+to estimate of the probability distribution of wind power gen-
+eration [11]. In general, PIs with associated conﬁdence levels
+successfully quantify the uncertainties of wind power forecasts,
+which essentially beneﬁt all participants in power systems to
+prepare for possible scenarios in advance and signiﬁcantly re-
+duce risks facing power system operation and control, such as
+wind farm control, reserve setting, energy storage sizing, unit
+commitment, wind power trading, and so forth [12]–[17].
+
+In this paper, a hybrid intelligent algorithm (HIA) based in-
+terval forecasting approach is newly developed to produce pre-
+diction intervals of wind power generation based on the ex-
+treme learning machine (ELM) [18] and particle swarm opti-
+mization (PSO) [19]. The proposed HIA method aims to ob-
+tain optimal PIs without the prior knowledge, statistical infer-
+ence or distribution assumption of forecasting errors required
+in most traditional approaches. ELM applied in the proposed
+approach is a novel learning algorithm proposed for training
+
+0885-8950 © 2013 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:24:42 UTC from IEEE Xplore.  Restrictions apply. 
+
+WAN et al.: OPTIMAL PREDICTION INTERVALS OF WIND POWER GENERATION
+
+1167
+
+single-hidden layer feedforward neural networks (SLFNs) fea-
+turing extremely fast learning speed and superior generaliza-
+tion capability. ELM successfully avoids the limitations of tradi-
+tional neural networks (NNs) learning algorithms, such as local
+minima, overtraining, high computation costs and so forth. Due
+to its excellent performance, ELM has been used in many dif-
+ferent applications including both regression and classiﬁcation
+tasks [20]–[22].
+
+Classical NNs based PIs construction methods always as-
+sume that prediction errors are normally distributed [23]–[26].
+These methods are not applicable to the case of ELM, since the
+extreme learning process is very different from that for con-
+ventional NNs. Lower upper bound estimation (LUBE) method
+is proposed for PI construction based on traditional NN [27],
+applied in load forecasting [28] and wind power forecasting
+[29]. However, traditional NNs employed in the LUBE method
+would cause several inevitable limitations, such as overtraining,
+high computation burden, and so forth. Furthermore, the cov-
+erage width-based criterion (CWC) cannot accurately measure
+the overall skill of constructed PIs. Traditional PIs construc-
+tion methods for wind power rely on quantile analysis of point
+forecast errors with or without prior distribution assumptions
+[4]–[11], where the procedures of PIs formulation and ﬁnal per-
+formance assessment are usually separated. E.g. in [9], PIs can
+be achieved through a conditional probabilistic modeling be-
+tween point forecast outputs and associated errors. In contrast,
+the proposed HIA approach integrates the two procedures holis-
+tically to formulate the PIs directly to pursue the best quality of
+resultant PIs, without the need of prior knowledge and distribu-
+tion assumption of point forecasts errors. As investigated in [30]
+as early as 1970s, with a properly constructed cost function, PI
+estimation could be considered as a Bayesian decision-making
+procedure to acquire an optimal PI that minimizes the expected
+cost. The objective function of HIA is specially formulated to
+address both the coverage probability and sharpness of PIs si-
+multaneously, and is optimized through PSO featuring fast con-
+vergence and gradient-free optimization. Furthermore, the pro-
+posed method is able to generate multiple optimal PIs of dif-
+ferent conﬁdence levels in one single optimization process.
+
+Generally, different decision-makers in power systems have
+different look-ahead time preferences ranging from minutes to
+days for wind power forecasts according to their own opera-
+tional requirements. Very short-term wind power prediction is
+needed to wind farm control [12], [13], the temporal operation
+of wind storage systems associated with temporal market
+regulations such as Australian National Electricity Market with
+5-min resolution [31], and the transmission system operator
+(TSO) which aims to optimally dispatch reserves for the con-
+tinuous balance of the power system [32], [33]. Hourly ahead
+forecast is crucial for power system and electricity market
+balance, e.g., Nord pool market [34]. Longer term forecasts
+up to days ahead are very meaningful for unit commitment
+[16], day-ahead market trading [17], etc. The proposed HIA
+method has been tested using the practical data of two wind
+farms in Australia. Without loss of generality, in the case study
+we focus on the hourly forecast on an hourly basis though with
+extendibility. Comparing with benchmarks, the effectiveness of
+
+the proposed method has been proved through comprehensive
+evaluations with respect to both the reliability and overall skill
+of the forecasting results. By accurate quantiﬁcation of the un-
+certainties of wind generation forecasts, the proposed interval
+forecasting approach has a high potential to support various
+operation and planning activities in power systems, such as to
+provide reliable information for dispatching, e.g., the hourly
+Nord pool market. Particularly, the interval forecasting results
+can also be used to develop new operation and planning tools
+for TSO to probabilistically determine the needed reserves in
+advance [14], [15], and to facilitate Gencos’ risk management
+through strategic biding [17].
+
+The rest of this paper is organized as follows. Section II in-
+troduces the ELM and PIs formulation. Section III describes PIs
+evaluation indices including reliability and sharpness. Objective
+function modeling and the detailed procedures of the proposed
+HIA approach are expressed in Section IV. Comprehensive nu-
+merical studies are implemented and analyzed in Section V. Fi-
+nally, the conclusion is drawn in Section VI.
+
+II. PREDICTION INTERVAL FORMULATION
+
+A. Extreme Learning Machine
+
+ELM is a recently developed novel algorithm for training
+a single hidden-layer feedforward neural network [18]. Dif-
+ferent from traditional gradient-based training algorithms in
+supervised batch learning, ELM randomly chooses the input
+weights and hidden biases and needs not be tuned in the training
+process, dramatically saving learning time. Given datasets with
+where the inputs
+hidden
+
+arbitrary distinct samples
+and the targets
+neurons and activation function
+samples with zero error, it can be expressed by the following
+equation:
+
+can approximate the
+
+, if the ELM with
+
+where
+connecting the
+
+represents the weight vector
+th hidden neuron and the input neurons,
+denotes the weight vector connecting
+denotes the
+is the
+.
+
+the th hidden neuron and the output neurons,
+threshold of the th hidden neuron, and
+output of the th hidden neuron with respect to the input
+Equation (1) can be simpliﬁed as
+
+where
+expressed as
+
+is the hidden layer output matrix of the modeled ELM,
+
+...
+
+...
+
+(1)
+
+(2)
+
+(3)
+
+The
+
+th column of
+
+the
+
+th hidden neuron with respect
+
+denotes the output vector of
+to the inputs
+
+. In addition,
+
+is the matrix of output
+
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:24:42 UTC from IEEE Xplore.  Restrictions apply. 
+
+

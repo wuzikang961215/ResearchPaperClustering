@@ -1,0 +1,243 @@
+Gondwana Research 127 (2024) 131–143
+
+Contents lists available at ScienceDirect
+
+Gondwana Research
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / g r
+
+Modeling the linkage between climate-tech, energy transition, and CO2
+emissions: Do environmental regulations matter?
+Mahmood Ahmad a,b, Zahoor Ahmed c,d, Muhammad Riaz e, Xiyue Yang f,⇑
+
+a Business School, Shandong University of Technology, Zibo-255000, Shandong, China
+b Wenzhounese Economy Research Institute, Wenzhou University, Wenzhou 325000, China
+c Department of Accounting and Finance, Faculty of Economics and Administrative Sciences, Cyprus International University, Mersin 10, Haspolat 99040, Turkey
+d Department of Business Administration, Faculty of Management Sciences, ILMA University, Karachi, Pakistan
+e School of International Trade and Economics, University of International Business and Economics, Beijing 100029, China
+f Key Laboratory of Ocean Energy Utilization and Energy Conservation of Ministry of Education, School of Energy and Power, Dalian University of Technology, Dalian 116024, China
+
+a r t i c l e
+
+i n f o
+
+a b s t r a c t
+
+Article history:
+Received 4 November 2022
+Revised 6 February 2023
+Accepted 6 April 2023
+Available online 10 April 2023
+
+Keywords:
+Climate-Tech
+Energy Transition
+Environmental Regulations
+CO2 Emissions
+
+The transition from conventional energy to clean energy is the ultimate strategy to reduce global CO2
+emissions. In this regard, climate technologies (climate-tech) can pave the way toward achieving the
+capabilities required to promote alternative energy and energy saving. In addition, environmental regu-
+lations can support technological upgrading, energy transition, and emissions reduction to promote sus-
+tainable development. With this in view, this study investigates the impact of climate technologies
+(climate-tech) and energy transitions on CO2 emissions in the European Union (EU) member countries.
+Further, we examine the role of environmental regulation in the relationship between climate-tech,
+energy transition, and CO2 emissions. The empirical analysis is conducted based on international panel
+data for 26 EU countries ranging from 1994 to 2019, and the Common Correlated Effects Mean Group
+(CCE-MG) method is employed to estimate the coefﬁcients of the variables. The outcomes of the analysis
+indicate that both climate-tech and energy transitions mitigate environmental degradation by reducing
+carbon emissions. Additionally, environmental regulations are found to be an effective monitoring and
+controlling tool that can signiﬁcantly reduce CO2 emissions. Moreover, economic growth and urbaniza-
+tion as control variables contribute to increasing CO2 emissions, thus negatively affecting environmental
+sustainability. The causal analysis demonstrates that decision-making trends related to climate-tech,
+energy transition, and environmental regulations inﬂuence CO2 emissions. Conversely, strategies for cop-
+ing with CO2 emissions and climate change will affect energy transitions and environmental regulations.
+In light of these analytical ﬁndings, this paper proposes that EU countries should vigorously develop
+climate-related green technologies and actively promote the energy transition process along with the
+implementation of environmental regulations for sustainable development.
+(cid:1) 2023 International Association for Gondwana Research. Published by Elsevier B.V. All rights reserved.
+
+1. Introduction
+
+Climate change is one of the crucial issues hindering the sus-
+tainable development of human society and is being widely dis-
+cussed by all sectors of society (Akimoto et al., 2021; Khan et al.,
+2022a). The rapidly expanding economic landscape and increasing
+industrialization have accelerated the widespread use of fossil fuel
+energy sources and led to signiﬁcant emissions of air pollutants
+(Jiang et al., 2022; Verbicˇ et al., 2022). To combat the phenomena,
+
+⇑ Corresponding author.
+
+E-mail addresses: mahmood@sdut.edu.cn (M. Ahmad), zahoorahmed83@yahoo.
+com (Z. Ahmed), riazswl@hotmail.com (M. Riaz), yangxiyue513@mail.dlut.edu.cn
+(X. Yang).
+
+the Sustainable Development Goals (SDGs) emphasize the need to
+take action on climate change on an urgent basis.
+
+Many studies indicate that climate and environmental tech-
+nologies are effective and environmentally friendly means of mit-
+igating climate issues (Ding et al., 2021; Obobisa et al., 2022).
+Climate technologies (climate-tech), also described as green tech-
+nologies, refer to technological innovation that improves environ-
+mental quality, reduces emissions, enhances energy efﬁciency, as
+well as promotes green development (Ahmad and Wu, 2022). The-
+oretically, effective climate-related technologies can reduce equip-
+ment losses, excessive costs, and fuel waste in the production
+process and improve production efﬁciency. In addition, it can pro-
+mote the well-being of humans (or society) (Can et al., 2022, 2021).
+Climate-tech mitigates atmospheric pollution by decreasing
+
+https://doi.org/10.1016/j.gr.2023.04.003
+1342-937X/(cid:1) 2023 International Association for Gondwana Research. Published by Elsevier B.V. All rights reserved.
+
+M. Ahmad, Z. Ahmed, M. Riaz et al.
+
+Gondwana Research 127 (2024) 131–143
+
+emissions generated from production and promotes sustainability
+of production patterns and consumption (Xin et al., 2021; Xu et al.,
+2022). However, in practice, climate technology development is a
+highly costly and complex process that requires substantial human
+and ﬁnancial resources. In the short term, inadequate climate tech-
+nologies may consume more resources and may even require addi-
+tional funding to reduce the costs and challenges of climate
+technology development. Therefore,
+innovations
+measured by patents may be deemed a barrier to dealing with cli-
+mate problems, thus limiting development (Raiser et al., 2017).
+However, in the long term, complete and advanced climate tech-
+nologies will lower the portion of fossil energy and escalate the
+process of the green energy transition, which in turn can improve
+environmental quality (Danish and Ulucak, 2021).
+
+technological
+
+The energy transition refers to the process of shifting from the
+use of non-renewable energy sources, such as fossil fuels, to the
+use of renewable energy sources, such as wind, solar, and hydro-
+power. This process helps to promote sustainable development
+and address environmental challenges (Saidi and Omri, 2020).
+The energy transition is a global energy policy implemented by
+all countries after realizing the threat of CO2 emissions (Can and
+Ahmed, 2023; Khan et al., 2022b). Since 1990, the EU has been cut-
+ting the share of coal in the primary energy structure and replacing
+fossil fuels with the widespread utilization of low-carbon fuels
+(such as natural gas and atomic) and renewable sources. In July
+2021, the EU proposed the ‘‘Fit for 55” package (‘‘commitment to
+reduce greenhouse gas emissions by at least 55 % by the end of
+2030 compared to 1990”), of which the bill to add a portion of
+renewable energy is the crucial component. However, the current
+global energy prices are volatile, and energy supply problems are
+In order to urgently decrease the dependence on
+plentiful.
+imported energy,
+the European Commission published the
+‘‘REPower EU” energy plan on its website in May this year, which
+intends to broaden portions of renewable energy in energy struc-
+ture from 40 % to 45 % by 2030 (EU, 2022). There are many chal-
+lenges in the usage of renewable energy. For instance, renewable
+energy technologies require large initial investments and have long
+R&D cycles, which imply very high costs (Marques and Fuinhas,
+2012; Ocal and Aslan, 2013). However, expanding the quota of
+green energy and accelerating the energy transition process are
+undoubtedly important means to attain environmental sustain-
+ability. Many studies have shown that renewable energy plays a
+crucial part in lowering CO2 emissions (Balsalobre-Lorente et al.,
+2018; Dogan and Seker, 2016; Ocal and Aslan, 2013).
+
+In addition, environmental regulations as an essential environ-
+mental preservation strategy have been a hot issue for research.
+The government has strengthened environmental pollution control
+by imposing environment-related taxes and increasing the cost of
+pollution emissions. However, overly strict environmental regula-
+tions may have different environmental effects, and there are dif-
+ferent views of scholars in this context. Some research ﬁndings
+support the ‘‘green paradox” that strict environmental regulations
+are not effective in reducing emissions, but rather energy produc-
+ers will accelerate energy extraction to avoid more losses, leading
+to the opposite outcome of environmental policies (Hao et al.,
+2018; Wang and Zhang, 2022; Can et al., 2021). However, another
+part of the research argues that energy reserves are ﬁnite and can-
+not be sustained indeﬁnitely and that excessive extraction costs
+will reduce emissions when environmental regulations intervene
+(Hashmi and Alam, 2019; Kathuria, 2007; Yirong, 2022). Some aca-
+demics also suggest regional heterogeneity in the effect of environ-
+mental regulations on emissions, which may also vary depending
+on the strength of environmental regulations (Kathuria, 2007;
+Wenbo and Yan, 2018).
+
+This study concentrates on the countries within the European
+Union (EU) due to following reasons. The European Union (EU)
+
+recently accounted for 8 % of the total CO2 emissions in the world.
+However, the cumulative emissions of the EU since the start of
+industrialization are among the highest globally. Consequently,
+the EU makes a substantial contribution to the accumulation of
+greenhouse gases in the atmosphere (Lau et al., 2012). But in tan-
+dem, the EU is also a staunch defender and implementer of the Paris
+Agreement and is one of the ﬁrst regions which offers a carbon–neu-
+tral plan. According to the EU’s climate policy, the EU will cut down
+its emissions by 55 % by 2030 compared with 1990, and realize
+carbon neutrality, i.e. net zero emissions, by 2050. Therefore, an
+in-depth analysis of the factors inﬂuencing CO2 emissions in EU
+countries is crucial to accelerate the EU’s goal of carbon neutrality.
+However, available studies lack a joint analysis of the impacts of
+climate-tech, energy transition, and environmental regulations on
+CO2 emissions under the context of the EU. Therefore, the objective
+of this study is to analyze the effect of climate-tech, energy trans-
+formation, and environmental regulations on CO2 emissions by
+including economic growth and urbanization in the nexus and pro-
+pose policy insights that would be useful for the reduction of car-
+bon emissions. This study answers the following questions: (i) Are
+climate technologies signiﬁcantly effective in mitigating emis-
+sions? (ii) Does accelerating the energy transformation process
+help mitigate environmental degradation? (iii) What is the impact
+of environmental regulations on climate change? In light of this,
+this paper investigates the above issues using annual panel data
+for 26 EU countries from 1994 to 2019 and contributes to the exist-
+ing literature in the following ways: (1) In terms of research frame-
+work design, this study includes climate technology, energy
+transition, environmental regulation, and carbon emissions in the
+same framework for the ﬁrst time, which helps to study the emis-
+sion reduction effects of climate technology and energy transition
+while considering the role of environmental regulation in the emis-
+sion reduction process. (2) At the level of empirical analysis, this
+study uses the CCE-MG method to examine the relationship
+between the variables of interest and the CuP-FM and CuP-BC
+methods to test the robustness of the results. This helps to address
+possible endogeneity and cross-sectional dependence in the
+empirical analysis process. (3) This study enriches the ﬁndings in
+the EU context and conﬁrms that climate technologies play an
+important role in CO2 emission reduction in the EU. At the same
+time, the advancement of energy transition can reduce CO2 emis-
+sions faster. More importantly, in the EU context, environmental
+regulations do not have a ‘‘green paradox” effect but have a crucial
+deterrent effect on CO2 emissions. In addition, economic develop-
+ment and urbanization are considered to be important drivers of
+emissions. (4) Finally, the Dumitrescu and Hurlin causality test
+considering cross-sectional dependence conﬁrms that climate
+technology, energy transition, and environmental regulation all
+help to explain future changes in carbon emissions in 26 EU
+countries.
+
+The structure of the paper is as follows: In Section 2, a literature
+review is presented. Section 3 details the research data and
+methodology used. The empirical results are discussed in Section 4.
+Finally, in Section 5, the paper concludes with policy recommenda-
+tions, limitations, and suggestions for future research.
+
+2. Literature review
+
+2.1. Climate-tech and environmental quality
+
+Technology innovation is widely viewed as the most effective
+way for countries around the world to accomplish Sustainable
+Development Goals as they face the Fourth Industrial Revolution
+(Ahmad et al., 2022). In this background, studies have indicated
+that technological innovation could be an essential instrument
+
+132
+
+

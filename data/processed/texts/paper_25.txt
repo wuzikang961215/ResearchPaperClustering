@@ -1,0 +1,236 @@
+Contents lists available at ScienceDirect 
+
+Process Safety and Environmental Protection 
+
+journal homepage: www.journals.elsevier.com/process-safety-and-environmental-protection 
+
+Highly efficient adsorption and removal bio-staining dye from industrial 
+wastewater onto mesoporous Ag-MOFs 
+
+Meshari M. Aljohani a, Salhah D. Al-Qahtani b, Mubark Alshareef c, Mohamed G. El-Desouky d,*, 
+Ashraf A. El-Bindary e, Nashwa M. El-Metwaly f, Mohamed A. El-Bindary g 
+a Department of Chemistry, College of Science, University of Tabuk, 71474 Tabuk, Saudi Arabia 
+b Department of Chemistry, College of Science, Princess Nourah bint Abdulrahman University, P.O. Box 84428, Riyadh 11671, Saudi Arabia 
+c Department of Chemistry, Faculty of Applied Science, Umm-Al-Qura University, Makkah, Saudi Arabia 
+d Egyptian Propylene and Polypropylene Company, Port Said 42511, Egypt 
+e Chemistry Department, Faculty of Science, Damietta University, Damietta 34517, Egypt 
+f Department of Chemistry, Faculty of Science, Mansoura University, El-Gomhoria Street, 35516, Egypt 
+g Basic Science Department, Higher Institute of Engineering and Technology, Damietta 34517, Egypt   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Ag-MOF 
+Batch adsorption 
+Isotherm 
+Thermodynamics 
+Mechanism of interaction 
+Box-Behnken design 
+
+Adsorption  is  an  effective  and  promising  approach  for  removing  pollutants  from  wastewater.  Too  many  haz-
+ardous colors were unintentionally released into the water, which had a negative impact on the environment. A 
+popular textile dye is malachite green (MG). Thus, in this work, an environmentally acceptable inorganic-organic 
+Ag metal-organic framework-based technique to remove colors from industrial water was developed (Ag-MOF). 
+The sorbent was analyzed in the first section of the work using SEM, XPS, XRD, FT-IR, pHpzc, and BET, which 
+confirmed that the Ag-MOF had the BET surface area, is 676 m2/g, which is a significant surface area. In a later 
+stage, the sorption properties of the dye were examined along with the effects of pH, sorbent dosage, temper-
+ature, and ionic strength; the sorption isotherms and uptake kinetics were examined: As opposed to the kinetic 
+profile, Isotherm profiles are well-fit by the Langmuir equation and can be modeled by the pseudo-second order 
+rate  equation.  The  outcomes  further  demonstrated  that  MG  was  mostly  adsorbed  onto  Ag-MOF  adsorbent  by 
+electrostatic attraction forces, hydrogen bonding, ion exchange, and pore filling. 2.25 mmol/g was found to be 
+the  greatest  adsorption  effectiveness  of  MG  onto  Ag-MOF  adsorbent.  (i.e.  809.71  mg/g).  Adsorbent  dosage, 
+solution  pH,  temperature,  and  time  were  the  four  adsorption  process  parameters  that  were  tuned  using  Box- 
+Behnken  design  (BBD)  in  response  surface  methodology  (RSM).  The  (ΔH
+)  MG  dye  was 
+endothermically and spontaneously extracted using Ag-MOF as an adsorbent, according to the specifications. Up 
+to  five  cycles  of  adsorption-desorption,  the  synthesised  Ag-MOF  adsorbent  demonstrates  exceptional  render 
+ability and cyclability. The produced adsorbent’s efficacy for purifying wastewater samples at a laboratory scale 
+was assessed as a proof of concept. Study the mechanism of interaction between the Ag-MOF and MG as it could 
+be take place through π-π  interaction, pore filling, H-Bonding or electrostatic interaction. The mesoporous Ag- 
+MOF  adsorbent  offered  a  simple  and  effective  way  to  handle  water  filtering  and  industrial  wastewater  man-
+agement. According to our research, this work is the first to explain how to remove MG dye from wastewater 
+samples using Ag-MOF adsorbents.   
+
+),  and  (ΔG
+
+◦
+),  (ΔS
+
+◦
+
+◦
+
+1. Introduction 
+
+Recent  years  have  seen  an  increase  in  the  focus  on  sustainable 
+resource  development  among  planners,  environmental  scientists,  and 
+decision-makers.  Water  is  the  most  important  renewable  natural 
+resource among them due to the fact that it is both an essential part of 
+
+life and a key enabler. The majority of the world’s drinking water comes 
+from groundwater. Over 1.5 billion people throughout the world receive 
+their drinking water from groundwater, which also supplies about 43 % 
+of  all  irrigation  needs  (Garg  et  al.,  2019).  Groundwater  quality  and 
+quantity have declined as a result of rising industrialization, the rapid 
+population growth, and unrestricted freshwater use. Per the statistics, 
+
+* Corresponding author. 
+
+E-mail addresses: mohamed.eldesoky@EPP-EG.com, ch.moh.gamal@gmail.com (M.G. El-Desouky).  
+
+https://doi.org/10.1016/j.psep.2023.02.036 
+Received 5 November 2022; Received in revised form 11 February 2023; Accepted 13 February 2023   
+
+ProcessSafetyandEnvironmentalProtection172(2023)395–407Availableonline17February20230957-5820/©2023InstitutionofChemicalEngineers.PublishedbyElsevierLtd.Allrightsreserved.M.M. Aljohani et al.                                                                                                                                                                                                                            
+
+1.2 billion people worldwide lack access to clean water, and 663 million 
+people  suffer  from  contaminated  water  (Rashid  et  al.,  2019).  Water 
+discharged into the ecosystem that has either not been cleaned at all or 
+has only been partially treated causes the majority of surface water and 
+groundwater pollution. Particularly, organic dyes from industrial wastes 
+such as paper, solar cells, leather, plastics, and textiles seriously harm 
+the  environment  and  people’s  health  (Amarasooriya  and  Kawakami, 
+2019). 
+
+Humans  have  contaminated  a  limited  number  of  freshwater  re-
+sources.  The  discharge  water  containing  dyes  is  one  of  the  pollution 
+sources. Dyes are employed as colourants in the manufacturing process 
+in  a  variety  of  industries,  includes  those  in  the  food  production,  cos-
+metics, automotive, pharmaceutical, plastics, paint, leather, and textile 
+industries. Each year, these companies create more than 7 × 105 tons of 
+dyes and almost 10,000 different types. Even at low concentrations (1 
+mg/L), dyes are visible to the human eye. Dye contains hazardous ele-
+ments  that  harm  aquatic  life,  natural  life,  and  human  life,  as  well  as 
+upset the ecological equilibrium. These industrial discharges are highly 
+colored  and  have  high  chemical  (COD)  and  biochemical  oxygen  de-
+mands (BOD) (Lee et al., 1999). Dye types include anionic, cationic, and 
+dispersion  dyes.  Anionic  dyes  are  divided  into  three  subcategories: 
+reactive, direct, and acid dyes. Basic dyes are another name for cationic 
+dyes. Disperse dyes are not ionic (Gu et al., 2013). The release of dyes 
+has detrimental effects on ecosystems, human health, soil fertility, and 
+marine  life  since  they  are  genotoxic,  mutagenic,  and  carcinogenic. 
+Diverse  techniques are  used to treat dye  wastewater, including mem-
+brane  separation  procedures,  degradation,  flocculation,  precipitation, 
+and  oxidation.  While  these  techniques  are  effective  in  removing  dye, 
+they  are  costly  for  developing  nations  to  implement  on  a  wide  scale 
+(Islam and Mostafa, 2018; Gao et al., 2011; Agarwal and Singh, 2017). 
+The adsorption technique is commonly used to remove colours because 
+of  its  great  efficacy  and  ease  of  use.  Adsorbents  used  in  wastewater 
+treatment,  including  activated  carbon,  silica  gel,  MOF,  activated 
+alumina, and others, are expensive and need a challenging regeneration 
+process.  This  has  made  it  possible  to  search  for  novel,  simple,  and 
+affordable adsorbents with outstanding dye percentage removal (Celik 
+et al., 2021). 
+
+Malachite green (MG), C23H25N2, is a cationic dye with numerous 
+commercial and industrial uses, including disinfection in medicine and 
+the treatment of fungal and protozoal infections, particularly in aqua-
+culture (Sallam et al., 2018; El-Subruiti et al., 2019). The food business 
+uses MG as a coloring and additive, The industries that use it as a dyeing 
+agent include those that work with leather, silk, wool, cotton, paper, and 
+acrylic. In these businesses, one of the biggest issues is getting MG dye 
+out of the environment (Agarwal and Singh, 2017; Royer et al., 2009; 
+Abdolali et al., 2014). The number of dyes released into waterways has 
+increased  due  to  the  strong  demand  for  vibrant  hues.  Infertility,  pul-
+monary toxicity, and teratogenic consequences from MG exposure are 
+all possible side effects. To avoid unnecessary exposure, it is crucial to 
+remove MG dye from water (Mahmoodi, 2013). The dye’s complicated 
+chemical  makeup,  great  resilience  to  oxidising  chemicals,  and  low 
+chemical and biological precipitation efficacy for this sort of molecule 
+make  cleaning  difficult.  As  a  result,  it  is  recommended  that  creating 
+techniques  for  depolarization  from  aquatic  sources  is  a  worthwhile 
+research area (Adebayo et al., 2014). 
+
+In the literature, various techniques for wastewater purification have 
+been  published.  Due  to  its  environmental  friendliness  and  the  afford-
+ability of traditional adsorbents, The removal of organic contaminants 
+from  water  via  adsorption  has  been  found  to  be  more  successful 
+(Nanotube et al., 2013). However, these materials have a low adsorption 
+capacity as well, necessitating the urgent need for additional adsorbents 
+with high removal capacities. 
+
+Numerous  promising  nanomaterials,  particularly  metal-organic 
+frameworks,  have  been  the  subject  of  recent  research  (MOFs),  to 
+detect and remove harmful metals and organic dyes from the environ-
+ment. The superior porosity, vast surface area, and organized structure 
+
+of MOFs have been linked to the latter’s high removal % of harmful dyes 
+and  metals.  As  a  result,  MOFs  outperform  traditional  materials  in 
+detecting  and  eliminating  harmful  heavy  metals  and  organic  dyes. 
+Different MOFs with tremendous morphology can be created thanks to 
+the interaction between linker subunits and inorganic metals. In general, 
+the  usage  of  MOFs for  sensing  and  eliminating  contaminants  benefits 
+from the vast availability of different particular linkers. Because of their 
+stability and improved textural properties, Ag imidazolate frameworks 
+are typically regarded as promising adsorbent materials in order to get 
+rid of organic dyes (Li et al., 2017; El-Sewify et al., 2022). 
+
+The  bigger  surface-to-volume  ratio  of  the  smaller  silver  nano-
+particles,  which  results  in  a  larger  area  of  contact  between  both  the 
+nanoparticles and bacteria, has been investigated in the literature as the 
+reason why smaller silver nanoparticles are much more active than those 
+made of larger size. Smaller Ag-MOF naturally releases more silver ions 
+into the environment than larger ones, which effectively inhibits bac-
+terial development. It was discovered that when Ag-MOF are combined, 
+their inhibition zones are bigger than when the corresponding Ag-MOF 
+is used individually. The uniqueness of our work may be summed up as 
+the creation of inorganic-organic MOFs with high MG dye adsorption 
+capabilities as well as antibacterial and fungal activities through syn-
+thesis  using  a  one-pot,  environmentally  friendly  technique.  Ag-MOF 
+effectively removes 809.713 mg/g of MG from water and has a surface 
+area  of  676.06  m2/g.  Examine  how  temperature,  pH,  concentration, 
+dose, and time affect the adsorption reaction, as well as how these fac-
+tors  affect  the  thermodynamic  parameter.  This  will  help  you  confirm 
+that  the  adsorption  reaction  was  endothermic  and  spontaneous.  This 
+suggests that as the temperature rises, the rate of elimination increases. 
+Investigation  into  the  mechanisms  of  adsorption  and  reaction  was 
+extensive.  A  pseudo-second-order  kinetic  model  and  an  isothermal 
+Langmuir model were used to simulate the adsorption process. These 
+adsorbents can be reused up to five times and still have a removal effi-
+ciency of 82.7 %, making them reusable as well. When the efficiency of 
+MG  removal  from  earlier  study  was  examined,  it  was  found  that  our 
+adsorbent outperformed the others. 
+
+2. Materials and methods 
+
+2.1. Materials and instruments 
+
+The materials and instruments are given in the Support information. 
+
+2.2. Synthesis of Ag-MOF nanoparticles 
+
+The silver-based metal-organic frameworks were made by dissolving 
+0.58 g of AgNO3 at 3 mL distilled water and 1.64 g of 2-methylimidazole 
+in 25.0 mL of ammonium hydroxide, after complete desolvation mix the 
+two  solutions  together  as  in  the  traditional  hydrothermal  synthesis 
+method. This reaction mixture was heated at 100 
+C in a Teflon auto-
+◦
+clave with a 100 mL wall for 24 h (5 
+C/min heating rate). The substance 
+was centrifuged, cooled, and then washed three times with deionized 
+water before being dried for a whole night at 80 degrees Celsius. 
+
+◦
+
+2.3. Removal and batch studies of the Ag-MOF 
+
+(cid:0) 4 to 2.2 × 10
+
+To ascertain the ideal adsorption circumstances, MG stock solution 
+was made. Utilizing the stock solution, the dye solution was produced at 
+(cid:0) 3 mmol 
+working concentrations ranging from 2.76 × 10
+(cid:0) 1. Stock solutions were prepared with deionized water. Several batch 
+L
+adsorption tests were run in order to explore the adsorption capabilities 
+of Ag-MOF for the elimination of MG dye. The necessary quantity of Ag- 
+MOF adsorbent was added to aqueous solutions containing MG dye in a 
+consistent  concentration. After  that,  the  mixture was  shaken  continu-
+ously. After a predetermined amount of time, an aliquot of the solution 
+was taken, centrifuged at 6000 rpm to extract it, and the supernatant 
+was filtering out before being subjected to UV–vis spectroscopy analysis. 
+
+ProcessSafetyandEnvironmentalProtection172(2023)395–407396

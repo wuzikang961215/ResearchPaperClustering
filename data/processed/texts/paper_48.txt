@@ -1,0 +1,138 @@
+International Journal of Sustainable Development &
+World Ecology
+
+ISSN: (Print) (Online) Journal homepage: www.tandfonline.com/journals/tsdw20
+
+Green innovation, foreign investment and carbon
+emissions: a roadmap to sustainable development
+via green energy and energy efficiency for BRICS
+economies
+
+Queling Zeng, Mehmet Akif Destek, Zeeshan Khan, Ramez Abubakr Badeeb
+& Changyong Zhang
+
+To cite this article: Queling Zeng, Mehmet Akif Destek, Zeeshan Khan, Ramez Abubakr Badeeb
+& Changyong Zhang (2024) Green innovation, foreign investment and carbon emissions:
+a roadmap to sustainable development via green energy and energy efficiency for BRICS
+economies, International Journal of Sustainable Development & World Ecology, 31:2, 191-205,
+DOI: 10.1080/13504509.2023.2268569
+
+To link to this article:  https://doi.org/10.1080/13504509.2023.2268569
+
+Published online: 01 Nov 2023.
+
+Submit your article to this journal 
+
+Article views: 416
+
+View related articles 
+
+View Crossmark data
+
+Citing articles: 5 View citing articles 
+
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=tsdw20
+
+INTERNATIONAL JOURNAL OF SUSTAINABLE DEVELOPMENT & WORLD ECOLOGY 
+2024, VOL. 31, NO. 2, 191–205 
+https://doi.org/10.1080/13504509.2023.2268569
+
+Green innovation, foreign investment and carbon emissions: a roadmap to 
+sustainable development via green energy and energy efficiency for BRICS 
+economies
+
+Queling Zenga, Mehmet Akif Destekb,c, Zeeshan Khand, Ramez Abubakr Badeebe  and Changyong Zhangf
+
+aSchool of Artificial Intelligence, Guangdong Mechanical & Electrical Polytechnic, Guangzhou, China;  bDepartment of Economics, 
+Gaziantep University, Gaziantep, Turkey;  cAdnan Kassar School of Business, Lebanese American University, Beirut, Lebanon;  dFaculty of 
+Business, Curtin University, Miri, Sarawak, Malaysia;  eFaculty of Art and Social Sciences, Nottingham University Business School, Jalan 
+Broga, Semenyih, Malaysia;  fDepartment of Accounting, Finance and Economics, Faculty of Business, Curtin University, Miri, Sarawak, 
+Malaysia
+
+ARTICLE HISTORY 
+Received 7 August 2023  
+Accepted 5 October 2023 
+
+KEYWORDS 
+Foreign direct investment; 
+green energy; environmental 
+Kuznets curve; trade; 
+technological innovation; 
+carbon emissions
+
+ABSTRACT
+In  contemporary  times,  emerging  economies  are  intended  to  achieve  higher  economic 
+growth  via  foreign  direct  investment  and  technological  innovation.  However,  due  to 
+increased  environmental  challenges,  these  economies  are  adopting  green  energy  as  the 
+key  source  of  environmental  recovery  and  net  zero  emissions.  The  present  study 
+investigates  the  influence  of  FDI,  technological  innovation,  green  energy,  and  trade 
+on  carbon  emissions  in  BRICS  economies  during  1990–2022.  This  study  also  considers 
+the  role  of  economic  expansion  in  identifying  the  environmental  Kuznets  curve  (EKC). 
+Using  several  panel  diagnostic  and  cointegration  tests,  this  study  validates  the  slope 
+heterogeneity  and  the  existence  of  the  cointegration  between  variables.  Due  to  the 
+non-normal  data  dispersion,  this  study  uses  novel  moments  quantile  regression,  while 
+bootstrap  quantile  regression  is  used  for  the  robustness.  The  results  examined  asserted 
+the  presence  of  the  EKC  hypothesis  in  the  region,  where  the  initial  growth  enhances 
+emissions  while  after  reaching  at  a  threshold  level,  the  emission  level  tends  to  reduce 
+and  environmental  quality  improves.  Besides,  this  study  observed  that  foreign  trade 
+and  technological  innovation  are  the  key  drivers  of  environmental  degradation  as  these 
+indicators  significantly  enhances  pollution  emissions.  In  contrast,  foreign  investment, 
+energy  efficiency,  renewable  electricity  output,  and  renewable’s  consumption  signifi-
+cantly  improve  environmental  quality  by  declining  carbon  emissions.  Following  the 
+empirical  results,  the  policy  recommendations  asserted  enhanced  investment  in  renew-
+able  and  energy  efficiency  sectors  while  attracting  more  foreign  investment  for  sustain-
+able  development.
+
+1. Introduction
+
+The  correlation  between  economic  expansion/growth 
+(GDP)  and  climatic  change  has  been  extensively  inves-
+tigated within sustainability, environmental, and energy 
+economics.  Numerous  studies  have  explored  this  rela-
+tionship,  including  Bashir  et  al.  (2023);  Gu  et  al.  (2023); 
+Ali  et  al.  (2022);  Balsalobre-Lorente  et  al.  (2022);  Leitão 
+et  al.  (2021).  There  is  a  significant  interconnection 
+between  two  distinct  categories  of  empirical  research: 
+the  environmental  Kuznets  curve  (EKC)  and  the  causes 
+of economy’s development. The experimental investiga-
+tions have provided explanations for these two relation-
+ships  by  examining  variables  including  foreign  direct 
+investment  (FDI),  foreign  trade,  renewable  energy, and 
+emissions of pollutants. Furthermore, these studies have 
+been implemented in various nations or regions, using 
+various  econometric  methodologies  such  as  panel  or 
+time series analysis.
+
+The  BRICS  economies  have  considerable  impor-
+tance  due  to  their  substantial  share  of  the  global 
+population  and  economic  productivity.  As  these 
+countries  undergo  a  period  of  rapid  urbanization 
+and  industrialization,  they  are  concurrently  con-
+fronted  with  the  challenging  task  of  ensuring  envir-
+onmental  sustainability,  with  a  specific  focus  on 
+mitigating  carbon  emissions  (CO2e)  (Qing  et  al.  
+2023).  Since  the  BRICS  countries  are  in  the  take-off 
+situation  in  the  economic  growth’s  perspective. 
+Therefore,  industrial  and  economic  activities  have 
+been  enhanced,  mostly  dependent  on  fossil  fuel 
+consumption, 
+to  higher  CO2e.  From 
+Figure  1,  it  can  be  observed  that  the  level  of  CO2e 
+persistently  rises.  However,  China  remains  the  top- 
+emitting  economy  within  the  group  economies,  fol-
+lowed  by  India  and  Russia.  Still,  over  the  years,  the 
+level  of  emissions  has  increased  in  China  and  India, 
+while  Russia  has  reduced  the  level  of  CO2e.
+
+leading 
+
+CONTACT Mehmet Akif Destek 
+Gaziantep 1102-2801, Turkey
+© 2023 Informa UK Limited, trading as Taylor & Francis Group 
+
+adestek@gantep.edu.tr 
+
+Department of Economics, Gaziantep University, Adnan Kassar School of Business, 
+
+

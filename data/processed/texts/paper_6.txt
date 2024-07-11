@@ -1,0 +1,279 @@
+Contents lists available at ScienceDirect 
+
+Energy Conversion and Management 
+
+journal homepage: www.elsevier.com/locate/enconman 
+
+Design and investigation of PV string/central architecture for bayesian 
+fusion technique using grey wolf optimization and flower pollination 
+optimized algorithm 
+
+Hemalatha S a,*, Johny Renoald A b, Banu G c, Indirajith K d 
+a Department of EEE, St. Joseph’s Institute of Technology, Chennai, Tamilnadu, India 
+b Department of EEE, Erode Sengunthar Engineering College, Perundurai, Tamilnadu, India 
+c Department of EEE, VSB College of Engineering Technical Campus, Coimbatore, Tamilnadu, India 
+d Department of EEE, Erode Sengunthar Engineering College, Perundurai, Tamilnadu, India   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Grey Wolf Optimization algorithm 
+Flower Pollination Algorithm 
+Partially Shading Condition 
+Bayesian Fusion Technique Maximum Power 
+Point 
+Photovoltaic array 
+
+One of the most essential factors in the current study is effectively harvesting the Maximum Power Extraction 
+(MPE)  from  the  Photovoltaic  (PV)  panel.  The  primary  difficulties  in  extracting  solar  power  is  occurrence  of 
+partial shading which causes the panel to significantly increases power loss. These will mainly occur due to when 
+partially  shaded  solar  PV  array  kept  under  certain  critical  conditions  for  obtaining  maximum  output  power. 
+Many researcher have suggested by connecting bypass diodes in anti-parallel to the PV modules hotspots in the 
+modules  can  be  avoided.  Out  of  all  techniques,  the  proposed  Bayesian  Fusion  Technique  (BFT)  is  a  hybrid 
+optimization  algorithm  that  combines  the  Grey  Wolf  Optimization  (GWO)  and  Flower  Pollination  Algorithm 
+(FPA) techniques to optimize the performance of solar panels in photovoltaic (PV) systems. The combination of 
+GWO and FPA forms an ideal combination that is beneficial for optimizing the performance of PV systems is 
+determined  in  this  work.  In  this  study  real  6*6  PV  array  string  and  irregular  PV  array  configuration  such  as 
+central and parallel-series PV string combination of various partial shading pattern is compared and found to be 
+effective for reducing the hotspots problems. The performance of these configuration under different shading 
+patterns  have  been  compared and  analyzed  with  the  different  parameters  like output  power,  conversion  effi-
+ciency and tracking efficiency. This article state about the influence of partial darkening and the crucial point 
+that  reduce  the  sensitivity  to  shading  heaviness.  For  better  understanding  for  reader  the  MATLAB/Simulink 
+software is used to validate the simulation result with real time data. Overall, this article states the BFT is an 
+efficient and reliable approach to improve the efficiency of PV systems, by combining two optimization tech-
+niques like GWO and FPA hybrid algorithm. This article gives clear insight to the researchers for choosing BFT- 
+GWO algorithm in order to decrease the cost and wastage of energy for achieving better solar panel performance.   
+
+1. Introduction 
+
+Nowadays, electricity requirement for domestic and industry keep on 
+increasing day by day. Conventional energy sources have the following 
+disadvantages like exhaustible, overpriced, and also pass off smoke and 
+
+slag. In [1-6], non-conventional energy resources including fuel cells, 
+wind, solar, and biogas are optimal for replacing conventional energy 
+sources. Compared to other renewable power, the solar energy has more 
+advantages. It produces no pollution, it needs minimal maintenance, no 
+cost for fuel. It is easily available in the environment. Among all note-
+worthy  facts  solar  panel  affect  by  external  factors  such  as  Lighting, 
+
+Abbreviations: MPE, Maximum Power Extraction; PV, Photovoltaic; BFT, Bayesian Fusion Technique; GWO, Grey Wolf Optimization; FPA, Flower Pollination 
+Algorithm; MP, Maximum power; FL, Fuzzy logic; ANN, artificial neural networks; SI, Swarm Intelligence; GBAS, Grouped Beetle Antennae Search; GA, Genetic 
+Algorithm; MPPT, Maximum Power Point Tracking; PSC, Partial shading conditions; BFT-MPP, Bayesian Fusion Technique Proposal Maximum Power; V-I, Voltage to 
+current; TCTPV, Total-Cross Tied PV; P-V, Power-Voltage; S-PV, Solar photovoltaic; PMW, Pulse with modulation; D, Diode; A, Amps; V-P, Voltage to power; IGBT, 
+Insulated-Gate Bipolar Transistor; CTP, Conditional probability table; MPP, Maximum Power Point; GMPP, Global maximum power point; BFOT, Bayesian Fusion 
+Optimization Technique; Ploss IGBT, Power losses in Insulated-Gate Bipolar Transistor; Plossinductor, Power losses in inductor. 
+
+* Corresponding author. 
+
+E-mail address: hodeeelabaffairs@stjosephstechnology.ac.in (H. S).  
+
+https://doi.org/10.1016/j.enconman.2023.117078 
+Received 7 January 2023; Received in revised form 15 April 2023; Accepted 17 April 2023   
+
+EnergyConversionandManagement286(2023)117078Availableonline26April20230196-8904/©2023ElsevierLtd.Allrightsreserved.H. S et al.                                                                                                                                                                                                                                         
+
+Nomenclature 
+
+List of Symbol 
+Symbols Meaning 
+W/m2 
+Radian meter square 
+DC-DC  Direct current to direct current 
+DC 
+IMPP 
+T 
+I 
+V 
+η 
+IPV 
+VPV 
+V0 
+I0 
+L 
+D 
+Cin 
+A 
+V 
+Vin 
+Vout 
+Ploss 
+Ic 
+IRMS 
+VCE 
+FSW 
+Ron 
+2 
+IC
+Qg 
+Coes 
+IRMSDIODE Root mean square current diode 
+Ploss diode Power loss diode 
+VF 
+
+Direct current 
+Maximum power point current 
+Time in seconds 
+Current in amps 
+Voltage in volts 
+Efficiency 
+Photovoltaic current 
+Photovoltaic voltage 
+Output Voltage 
+Output current 
+Inductor 
+Diode 
+Input capacitor 
+Ammeter 
+Voltmeter 
+Input voltage 
+Output voltage 
+Power loss 
+Collector current 
+Root mean square current 
+Collector to emitter voltage 
+Switching frequency 
+Resistance ON condition 
+Collector current 
+Total is total gate charge 
+Output capacitance co-efficient 
+
+Forward voltage 
+
+Power factor 
+pF 
+Gate emitter voltage 
+VGE 
+Fall time 
+tfall 
+Rfall 
+Raise time 
+Watts 
+W 
+KHz 
+kilohertz 
+W/m2  Watt meter square 
+Voc 
+Vsc 
+α 
+β 
+δ 
+D 
+Pmax 
+Pin 
+Gbest 
+TS 
+Ω 
+◦
+C 
+t 
+Isc 
+Ioc 
+Imp 
+PPV 
+P0 
+ns 
+nv 
+RDC 
+Γ(λ)
+XK 
+Xαk
+i 
+G 
+L 
+N 
+
+Open circuit voltage 
+Short circuit voltage 
+Alpha 
+Beta 
+Delta 
+Duty cycle 
+Maximum power 
+Input power 
+Global best 
+Sampling period 
+Ohm 
+Celsius 
+Time 
+Short circuit current 
+Open circuit current 
+Current at maximum power 
+Photovoltaic power 
+Output power 
+Nano seconds 
+Nano voltage 
+Resistance in direct current 
+Gamma function 
+Iteration candidate position(k) 
+, Xδk Wolves position in iteration (k) 
+
+Current best solution 
+Global best solution 
+Strength of the pollination 
+Group of flowers  
+
+, Xβk
+
+temperature,  and  dust  are  inevitable.  Therefore,  the  entire  research 
+world is trying to figure this out, traditional system more concern about 
+longevity. Impairment of this device are mainly affect by panel design, 
+which determine how much electricity a PV panel can produce. When 
+there  are  shading  circumstances,  among  the  section  of  the  different 
+panels  affected  by  trees,  castles,  dust  and  high  –  rise  buildings  to 
+complicate produce good efficiency.As a result, the panel generates the 
+minimum output power as well as more peak power [7]. Hence under 
+partial  shading  condition  the  extraction  of  maximum  power  (MP)  is 
+complicated from the solar panel. 
+
+To extract maximum power form Solar-PV (S-PV) under uniform and 
+PSC  (Partial  shading  conditions)  and  an  optimization  technique  is 
+necessary.  Various  optimization  techniques  have  been  created  and 
+tested throughout the years, based on convergence time and equipment 
+implementation. Perturb and Observe (P&O) and Incremental Conduc-
+tance  are  the  most  often  used  traditional  approaches  [7].  However, 
+many  techniques  are  user-friendly  of  straightforward  design.  When 
+there is a panel under PSC, it can be unable to locate the exact global 
+peak  output  and  local  peak  output.  The  performance  of  the  pumping 
+system is improved by combining Fuzzy Logic (FL) with artificial neural 
+networks (ANN)  [8]. According  to the literature,  this may not be the 
+circumstance  for  many  researchers  used  traditional  MPP  techniques 
+such Artificial Neural Networks (ANN) and Fuzzy Logic Control (FLC) to 
+solve extraction problems in PV panels, which is required fuzzification, 
+rule basis, and defuzzification processes. Following that, more number 
+of  Swarm  Intelligence  (SI)  approaches  are  described  and  established. 
+PSO was utilized as an optimization strategy in various solar irradiance 
+
+conditions [9], but the resulting outcome as longer convergence rate, 
+computational  speed/time  were  observed  [10]  and  also  poor  local 
+search capabilities are observed due to the lack of crossover and muta-
+tion  process.  Renewable  energy  is  being  encouraged  all  around  the 
+world due to the pollution generated by fossil fuels. Solar energy is one 
+of the most important of these energy sources. Since, it is cheap and does 
+not pollute the environment. The major advantage of solar photovoltaic 
+(PV)  technology,  which  is  immediately  turns  sunlight  into  the  power 
+without any disturbance. As per the result of input source, it is strongly 
+recommended and compared to other renewable energy sources. 
+
+The proposed BFT combines the advantages of GWO and FPA and 
+uses Bayesian theories to optimize their combination. The BFT approach 
+creates a new search space and then adjusts the parameters of GWO and 
+FPA to obtain the best optimization results for any given problem. When 
+a specific critical point is reached, hotspot arises. Among all notable fact, 
+this phenomenon occurs due to increases in temperature at shaded part 
+of PV module during the reverse bias condition.  Bayesian Fusion is a 
+technique  used  to  combine  probabilistic  models  of  different  types  of 
+sensor  data  to  provide  a  more  comprehensive  view  of  a  particular 
+environment. This technique is particularly useful in the field of solar 
+panel  design,  as  it  allows  for  the  combination  of  surveys  of  potential 
+locations  for  panels  with  satellite  imaging  to  better  assess  the  most 
+effective and efficient locations to install solar panels. 
+
+In the simulated annealing and the (FPA) Flower Pollination Algo-
+rithm  are  combined  to  enhance  the  PV  tracking  optimization  perfor-
+mance for improving the convergence rate. But, the FPA and Grey Wolf 
+Optimization (GWO) methods are used only for core architecture [11]. 
+
+EnergyConversionandManagement286(2023)1170782

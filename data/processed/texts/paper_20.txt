@@ -1,0 +1,312 @@
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 8 ( 2 0 2 3 ) 1 4 1 7 0 e1 4 1 9 1
+
+Available online at www.sciencedirect.com
+ScienceDirect
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / h e
+
+Techno-economic assessment of green hydrogen
+and ammonia production from wind and solar
+energy in Iran
+
+Ali Kakavand a, Saeed Sayadi a,*
+, George Tsatsaronis a, Ali Behbahaninia b
+a Technische Universit€at Berlin, Chair of Energy Engineering and Environmental Protection, Marchstr. 18, D-10587
+Berlin, Germany
+b Department of Energy Systems Engineering, Faculty of Mechanical Engineering, K. N. Toosi University of
+Technology, Tehran, Iran
+
+h i g h l i g h t s
+
+(cid:1) The minimum cost of green H2 in Iran was calculated to be between 2.94 and 3.32 USD/kgH2.
+(cid:1) The minimum cost of green NH3 in Iran was obtained between 580 and 641 USD/tNH3.
+(cid:1) H2 transportation via pipelines to the export harbor is the costliest scenario.
+
+(cid:1) More than two-thirds of the cost of NH3 is caused by the power generation system.
+
+(cid:1) Integrating green electricity into the Iranian grid is better than the P2A route.
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Article history:
+
+Received 27 October 2022
+
+Received in revised form
+
+15 December 2022
+
+This paper presents a comprehensive technical and economic assessment of potential
+
+green hydrogen and ammonia production plants in different locations in Iran with strong
+
+wind and solar resources. The study was organized in ﬁve steps. First, regarding the wind
+
+density and solar PV potential data, three locations in Iran were chosen with the highest
+
+Accepted 24 December 2022
+
+wind power, solar radiation, and a combination of both wind/solar energy. All these lo-
+
+Available online 12 January 2023
+
+cations are inland spots, but since the produced ammonia is planned to be exported, it
+
+Keywords:
+
+Solar energy
+
+Wind energy
+
+Water electrolysis
+
+Green ammonia
+
+Green hydrogen
+
+Seawater desalination
+
+must be transported to the export harbor in the South of Iran. For comparison, a base case
+
+was also considered next to the export harbor with normal solar and wind potential, but no
+
+distance from the export harbor. In the second step, a similar large-scale hydrogen pro-
+
+duction facility with proton exchange membrane electrolyzers was modeled for all these
+
+locations using the HOMER Pro simulation platform. In the next step, the produced
+
+hydrogen and the nitrogen obtained from an air separation unit are supplied to a Haber-
+
+Bosch process to synthesize ammonia as a hydrogen carrier. Since water electrolysis re-
+
+quires a considerable amount of water with speciﬁc quality and because Iran suffers from
+
+water scarcity, this paper, unlike many similar research studies, addresses the challenges
+
+associated with the water supply system in the hydrogen production process. In this re-
+
+gard, in the fourth step of this study, it is assumed that seawater from the nearest sea is
+
+treated in a desalination plant and sent to the site locations. Finally, since this study in-
+
+tends to evaluate the possibility of green hydrogen export from Iran, a detailed piping
+
+model for the transportation of water, hydrogen, and ammonia from/to the production site
+
+and the export harbor is created in the last step, which considers the real routs using
+
+* Corresponding author.
+
+E-mail address: s.sayadi@tu-berlin.de (S. Sayadi).
+
+https://doi.org/10.1016/j.ijhydene.2022.12.285
+0360-3199/© 2022 Hydrogen Energy Publications LLC. Published by Elsevier Ltd. All rights reserved.
+
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 8 ( 2 0 2 3 ) 1 4 1 7 0 e1 4 1 9 1
+
+14171
+
+satellite images, and takes into account all pump/compression stations required to
+
+transport these media. This study provides a realistic cost of green hydrogen/ammonia
+
+production in Iran, which is ready to be exported, considering all related processes
+
+involved in the hydrogen supply chain.
+
+© 2022 Hydrogen Energy Publications LLC. Published by Elsevier Ltd. All rights reserved.
+
+Nomenclature
+
+Roman Symbols
+C
+cp,mix
+
+cost [USD]
+speciﬁc heat capacity at constant pressure for the
+mixture of nitrogen and hydrogen [kJ/kg ,K]
+pipe outside diameter [m]
+electricity [kW ,h]
+Darcy friction factor [(cid:3)]
+modular factor for compressors, type factor for
+pumps [(cid:3)]
+design factor [(cid:3)]
+seam joint factor [(cid:3)]
+transmission factor [(cid:3)]
+standard gravity ¼ 9.81 [m/s2]
+pressure head [m]
+real interest rate [(cid:3)]
+nominal interest rate [(cid:3)]
+length [m]
+mass ﬂow rate [kg/s]
+project lifetime [year]
+number [(cid:3)]
+pressure [bar]
+power rate [kW]
+speciﬁc power rate [kW ,h/kg]
+volumetric ﬂow rate [m3/h]
+heat transfer rate [kW]
+inﬂation rate [(cid:3)]
+size factor [m3.5/h]
+speciﬁc gravity [(cid:3)]
+hoop stress [?]
+salvage value [USD]
+wall thickness of the pipes [m]
+temperature [K]
+velocity [m/s]
+
+D
+E
+f
+F
+
+Fd
+Fsj
+Ft
+g
+H
+i
+i0
+L
+_m
+n
+N
+p
+P
+P0
+Q
+_
+Q
+r
+S
+SG
+Sh
+SV
+t
+T
+v
+
+Greek Symbols
+h
+g
+r
+
+efﬁciency [(cid:3)]
+speciﬁc heat ratio [(cid:3)]
+density [kg/m3]
+
+Subscripts
+a
+A
+b
+B
+BM
+C
+CD
+
+annualized
+ammoniar
+base
+base (cost)
+bare module (cost)
+compressor
+compressor drive
+
+CS
+dis
+d
+DU
+E
+EL
+f
+H
+HST
+IC
+in
+k
+M
+n
+out
+P
+PS
+r
+s
+suc
+tot
+
+compressor station
+discharge
+design
+desalination unit
+electricity
+electrolyzer
+ﬂow
+hydrogen
+hydrogen storage tank
+intercooling
+inlet
+subscript for components
+material
+lifetime
+outlet
+pump
+pump station
+replacement
+isentropic
+suction
+total
+
+Ammonia Storage Tank
+Air Separation Unit
+
+Levelized Cost of Ammonia [USD=tNH3 ]
+Levelized Cost of Electricity USD/kW ,h
+Levelized Cost of Hydrogen [USD=kgH2
+]
+
+Abbreviations
+AST
+ASU
+CAPEX Capital Expenditure [USD]
+Chemical Engineering Plant Cost Index
+CEPCI
+Coefﬁcient of Performance [(cid:3)]
+COP
+Capital Recovery Factor [(cid:3)]
+CRF
+Higher Heating Value [kW ,h/kg]
+HHV
+IRENA International Renewable Energy Agency
+LCOA
+LCOE
+LCOH
+MAFV Maximum Allowable Fluid Velocity [m/s]
+MAOP Maximum Allowable Operating Pressure [bar]
+MVC
+NIOC
+NPV
+NOX
+OPEX
+PEM
+PV
+SCADA Supervisory Control and Data Acquisition
+SMR
+SMYS
+TDF
+
+Mechanical Vapor Compression
+National Iranian Oil Company
+Net Present Value
+Nitrogen Oxide
+Operational Expenditure [USD]
+Proton Exchange Membrane
+Photovoltaic
+
+Steam Methane Reforming
+Speciﬁed Minimum Yield Strength [bar]
+Temperature Derating Factor [(cid:3)]
+
+

@@ -1,0 +1,146 @@
+Environmental Chemistry Letters (2023) 21:2003–2039 
+https://doi.org/10.1007/s10311-023-01591-5
+
+REVIEW ARTICLE
+
+Strategies to save energy in the context of the energy crisis: a review
+
+Mohamed Farghali1,2 · Ahmed I. Osman3 
+Pow‑Seng Yap4 · David W. Rooney3
+
+ · Israa M. A. Mohamed2 · Zhonghao Chen4 · Lin Chen5,6 · Ikko Ihara1 · 
+
+Received: 28 February 2023 / Accepted: 8 March 2023 / Published online: 23 March 2023 
+© The Author(s) 2023
+
+Abstract
+New technologies, systems, societal organization and policies for energy saving are urgently needed in the context of accel-
+erated climate change, the Ukraine conflict and the past coronavirus disease 2019 pandemic. For instance, concerns about 
+market and policy responses that could lead to new lock-ins, such as investing in liquefied natural gas infrastructure and 
+using all available fossil fuels to compensate for Russian gas supply cuts, may hinder decarbonization efforts. Here we review 
+energy-saving solutions with a focus on the actual energy crisis, green alternatives to fossil fuel heating, energy saving in 
+buildings and transportation, artificial intelligence for sustainable energy, and implications for the environment and society. 
+Green alternatives include biomass boilers and stoves, hybrid heat pumps, geothermal heating, solar thermal systems, solar 
+photovoltaics systems into electric boilers, compressed natural gas and hydrogen. We also detail case studies in Germany 
+which is planning a 100% renewable energy switch by 2050 and developing the storage of compressed air in China, with 
+emphasis on technical and economic aspects. The global energy consumption in 2020 was 30.01% for the industry, 26.18% 
+for transport, and 22.08% for residential sectors. 10–40% of energy consumption can be reduced using renewable energy 
+sources, passive design strategies, smart grid analytics, energy-efficient building systems, and intelligent energy monitoring. 
+Electric vehicles offer the highest cost-per-kilometer reduction of 75% and the lowest energy loss of 33%, yet battery-related 
+issues, cost, and weight are challenging. 5–30% of energy can be saved using automated and networked vehicles. Artificial 
+intelligence shows a huge potential in energy saving by improving weather forecasting and machine maintenance and ena-
+bling connectivity across homes, workplaces, and transportation. For instance, 18.97–42.60% of energy consumption can 
+be reduced in buildings through deep neural networking. In the electricity sector, artificial intelligence can automate power 
+generation, distribution, and transmission operations, balance the grid without human intervention, enable lightning-speed 
+trading and arbitrage decisions at scale, and eliminate the need for manual adjustments by end-users.
+
+Keywords  Energy saving · Energy crisis · Green energy alternative · Artificial intelligence · Electric vehicles · Renewable 
+energy
+
+Mohamed Farghali, Ahmed I. Osman, Israa M. A. Mohamed, 
+Zhonghao Chen, Lin Chen have contributed equally to this work.
+
+Disclaimer The views and opinions expressed in this review do not 
+necessarily reflect those of the European Commission or the Special 
+EU Programmes Body (SEUPB).
+
+aosmanahmed01@qub.ac.uk
+
+ *  Ahmed I. Osman 
+ 
+ *  Lin Chen 
+ 
+ *  Pow-Seng Yap 
+ 
+
+chnlinchen@gmail.com
+
+PowSeng.Yap@xjtlu.edu.cn
+
+Extended author information available on the last page of the article
+
+Introduction
+
+Energy is required for several practical functions, including 
+transportation, mobility, food preparation, water purification, 
+communication, and others (Kalt et al. 2019; Vahidi and 
+Sciarretta 2018). Global population and economic expan-
+sion have contributed to increased energy use over time. The 
+efficiency of energy end-use services has gradually improved 
+due to technological advancement and energy efficiency 
+legislation. Nevertheless, this improvement has not always 
+been adequate to offset the increase in demand for energy 
+services, such as the production and consumption of com-
+modities. In addition, the ongoing conflict between Russia 
+and Ukraine has caused an energy crisis that has directly 
+
+Vol.:(0123456789)1 3 
+2004
+
+Environmental Chemistry Letters (2023) 21:2003–2039
+
+affected the heating, cooling, and transportation energy costs 
+of households. In 2021, the European Union imported over 
+45% of its gas and nearly 40% of its total gas consumption 
+(IEA 2022a).
+
+Indirectly, this crisis has increased the prices of addi-
+tional goods and services across global supply chains. In 
+addition to the current energy crisis, the predominant source 
+of carbon dioxide emissions, the primary greenhouse gas 
+responsible for global warming, is the widespread use of fos-
+sil fuels to produce energy (Farghali et al. 2022). Therefore, 
+scholars and decision-makers generally agree that carbon 
+neutrality by the middle of the century and other climate 
+targets outlined in the Paris Agreement can only be achieved 
+by gradually reducing global energy demand to a sustainable 
+level as well as using negative emissions technologies.
+
+Energy savings from energy efficiency and conserva-
+tion offer additional co-benefits and contribute to national 
+energy supply security and climate change mitigation. These 
+include reducing local pollution, enhancing business com-
+petitiveness, lowering household energy costs, boosting 
+productivity, enhancing occupant health in buildings, and 
+helping to lower energy poverty. A change in the behavior 
+and way of life of energy end-users is required to achieve 
+additional energy savings by reducing the need for services, 
+
+which goes beyond investments in energy efficiency tech-
+nologies, given the stringency and urgency of the climate 
+target and the current global increase in energy demand. 
+Energy performance criteria for vehicles, appliances, build-
+ings, and financial incentives for new technology, and others 
+have historically been the primary targets and promoters of 
+energy efficiency innovations, as shown in Fig. 1.
+
+In 2016, the combined building and transportation indus-
+tries of the European Union consumed over 652.1 million 
+tons of oil equivalent, accounting for more than 60% of total 
+energy  consumption  (European-Environmental-Agency 
+2018). Reducing energy usage and increasing efficiency 
+in these two sectors is crucial for achieving the European 
+Union’s 2050 roadmap goals, which require an 80% reduc-
+tion in overall emissions from 1990 levels. Therefore, the 
+review examines current and potential policy instruments to 
+promote energy sufficiency and conservation, including pro-
+gressive home appliances, buildings, and vehicle standards. 
+The review also examines the energy crisis and explores 
+the potential of renewable energy sources to address it. It 
+focuses on how energy can be saved in buildings and vehi-
+cles, including the use of electric and hydrogen-powered 
+vehicles. In addition, the review investigates the role of arti-
+ficial intelligence in assisting energy saving initiatives in 
+
+Fig. 1   Strategy  for  energy  saving.  The  review  discusses  current  and 
+new policies that address energy sufficiency and conservation, includ-
+ing  progressive  home  appliances,  buildings,  and  vehicle  standards. 
+First, the energy crisis and the potential of renewable energy as pro-
+viding energy sources are examined. Second, we discuss how to save 
+
+energy  from  buildings  and  vehicles,  as  well  as  the  uses  of  electric 
+and hydrogen-powered vehicles in energy saving. Lastly, we identify 
+the role of artificial intelligence in maximizing energy efficiency and 
+achieving significant savings across multiple sectors
+
+1 3

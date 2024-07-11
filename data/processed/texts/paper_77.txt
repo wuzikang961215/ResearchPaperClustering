@@ -1,0 +1,429 @@
+Article
+
+pubs.acs.org/cm
+
+†
+
+Rechargeable Zinc Alkaline Anodes for Long-Cycle Energy Storage
+†
+Damon E. Turney,*,†
+Sanjoy Banerjee,
+†
+Jinchao Huang,
+†
+Energy Institute, City University of New York, New York, New York 10031, United States
+‡
+National Synchrotron Light Source - II, Brookhaven National Laboratory, Upton, New York 11973, United States
+*S Supporting Information
+
+Joshua W. Gallaway,
+Yu-chen Karen Chen-Wiegart,
+and Xia Wei
+
+†
+Rodolfo Ramirez,
+Michael J. D’Ambrose,
+
+Gautam G. Yadav,
+Jun Wang,
+
+Michael Nyce,
+Snehal Kolhekar,
+
+†
+
+†
+
+†
+
+‡
+
+‡
+
+†
+
+†
+
+ABSTRACT: Zinc alkaline anodes command signiﬁcant share
+of consumer battery markets and are a key technology for the
+emerging grid-scale battery market. Improved understanding of
+this electrode is required for long-cycle deployments at kWh
+and MWh scale due to strict requirements on performance,
+cost, and safety. Here we give a modern literature survey of zinc
+alkaline anodes with levelized performance metrics and also
+present an experimental assessment of leading formulations.
+Long-cycle materials characterization, performance metrics, and
+failure analysis are reported for over 25 unique anode
+formulations with up to 1500 cycles and ∼1.5 years of shelf
+life per test. Statistical repeatability of these measurements is
+made for a baseline design (fewest additives) via 15 duplicates.
+Baseline design capacity density is 38 mAh per mL of anode
+volume, and lifetime throughput is 72 Ah per mL of anode volume. We then report identical measurements for anodes with
+improved material properties via additives and other perturbations, some of which achieve capacity density over 192 mAh per mL
+of anode volume and lifetime throughput of 190 Ah per mL of anode volume. Novel in operando X-ray microscopy of a cycling
+zinc paste anode reveals the formation of a nanoscale zinc material that cycles electrochemically and replaces the original anode
+structure over long-cycle life. Ex situ elemental mapping and other materials characterization suggest that the key physical
+processes are hydrogen evolution reaction (HER), growth of zinc oxide nanoscale material, concentration deﬁcits of OH− and
+ZnOH4
+
+2−, and electrodeposition of Zn growths outside and through separator membranes.
+
+■ INTRODUCTION
+
+Energy storage technology is expanding due to new
+applications with grid services, private homes, and microgrids.
+Nationally, GWh deployment of energy storage is necessary for
+the coming decade to stabilize the grid-penetration of wind and
+solar power.1,2 Market analysis suggests that economically
+viable price points for energy storage range from $30−$500 per
+kWh depending on the speciﬁc application.3 Fire safety is often
+in dense
+a deal breaker, particularly in household locations,
+urban environments, or near grid substation equipment.
+Lithium-ion technology remains a ﬁre hazard,4−6 which
+prohibits its use in some locations. It also has a price unlikely
+to fall below $200 per kWh,7 which limits its return-on-
+investment for many applications. Lead acid has poor cycle-life
+and a slow charge/discharge rate, making it a costly option.
+Alternative technologies are therefore in development,
+for example, Zn
+including much recent work with Zn,
+intercalation cathodes,8 novel Ni cathodes for NiZn cells,9
+shallow-cycle Mn cathodes for MnZn cells,10 high capacity Mn
+cathodes for MnZn cells,11,12 and ﬂow-assisted Zn technolo-
+gies.13,14 Several zinc-based battery startup companies are
+
+currently underway, and many recent high-proﬁle publications
+utilize Zn anodes.8,9,11,12,14,15
+
+Reviews of zinc alkaline electrodes by McLarnon and
+Cairns16 and Bass et al.17 form a database for design variations
+as known in the late 1980s, but they give scant performance
+appraisal. More recent reviews18−20 leave out most of the
+literature and do not compare performance with a rigorous
+levelized metric. Commercial and academic interest now
+warrants a new and thorough literature survey and a levelized
+performance comparison of all known designs. Therefore, we
+here assess known technologies by levelized and industrially
+relevant metrics and report a long-cycle testing program to
+validate the technologies and discover new ones. The metrics
+focus on cycle life and capacity density.
+
+Table 1 presents the literature review and performance
+comparison. It includes only studies that reported cycle testing
+and mostly excludes technologies that use Hg or Cd due to the
+impracticality of using these additives under modern
+
+Received: February 22, 2017
+Revised: May 2, 2017
+Published: May 3, 2017
+
+© 2017 American Chemical Society
+
+4819
+
+DOI: 10.1021/acs.chemmater.7b00754
+Chem. Mater. 2017, 29, 4819−4832
+
+Downloaded via UNIV OF ADELAIDE on June 29, 2024 at 09:02:17 (UTC).See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.Chemistry of Materials
+
+Article
+
+lifetimed Ah
+discharged
+per mL of
+anode
+volume
+--e
+--e,f
+--e
+--e
+17
+99
+26
+31
+58
+110
+112
+20
+2
+178
+43
+131
+32
+160f,g
+50h
+12
+--e
+88i
+103
+41
+--j
+72
+193k,h
+>24l
+25m
+48l
+192
+
+Table 1. Survey of Rechargeable Alkaline Zn Technologies That Mostly Avoid Use of Hg, in Chronological Order Beginning
+with Mid-1970s Technologies
+
+cycle
+lifea
+
+ref
+
+materials comprising the anode
+
+mL
+electrolyte
+per Ah
+cycled
+n.d.e
+∼10
+--e
+--e
+∼10
+∼10
+∼15
+∼30
+∼10
+∼20
+∼20
+∼30
+150
+∼10
+n.d.
+∼20
+∼10
+n.d.k
+∼50
+∼50
+660
+n.d.
+38
+n.d.
+ﬂoodedj
+45
+n.d.k,h
+n.d.l
+n.d.l
+n.d.l
+13
+
+mAh
+cycled per
+gram of
+anode
+mixtureb
+∼350
+∼250f
+--e
+--e
+112
+128
+127
+142
+123
+125
+91
+118
+11
+218
+n.d.
+170
+164
+174f
+127h
+192
+--e
+240i
+125
+200
+--j
+11
+200k,h
+∼100l
+∼50m
+∼250l
+58
+
+mAh
+cycled
+per mL of
+anode
+volumec
+--e
+>500e,f
+--e
+--e
+338
+330
+259
+242
+291
+364
+225
+168
+41
+396
+246
+340
+186
+428f,g
+498h
+403
+--e
+390i
+29
+588
+--j
+38
+242k,h
+∼600l
+31m
+∼600l
+192
+
+200
+>32
+--e
+--e
+∼50
+300
+100
+130
+200
+300
+500
+120
+50
+450
+175
+380
+170
+400f
+100
+30
+∼400e
+230
+3500
+70
+∼100
+2000
+800
+>40
+800
+∼80
+990
+
+Zn powder with 5−55% ﬂuoride salt (either KF or NaF) in electrolyte
+∼99% ZnO paste with ∼1% of Tl, Pb, Hg, Cd, In, or Ga, no binder, 42% KOH
+electrolyte contains ∼5 parts K3BO3, K3PO4, K3AsO4, or KF to 1 part KOH
+72% ZnO, 4% CdO, 1% PbO, 1% TiO, 2% PTFE, and 20% of either ZnF or ZnTiO3
+91% ZnO, 5% acetylene black, 2% HgO, 1% PTFE, 1% CMC, 6.9 M KOH
+68.5% ZnO, 8.6% Zn, 8.6% Bi2O3, 9.4% Ca(OH)4, 4.9% Teﬂon binder
+40% Zn−Hg amlgm; 3% starch; 6% MgO; 10% Cu-pwdr; 7% Carbowax; 35% KOH
+94% ZnO, 2% PbO, 4% PTFE, 15% KOH with 15% KF or 22% K3BO3 with 1% Li2BO3
+57% ZnO, 38% Ca(OH)2, 3.4%Pb3O4, 1.4% newsprint, 20% KOH
+56% ZnO, 39% Ca(OH)2, 3.9%Pb3O4, 1.1% newsprint, 30% KOH
+62.9% ZnO; 32.7% Ca(OH)2; 3.3% Pb3O4; 1.1% superwettable PP; 20% KOH
+71.5% ZnO, 21.5% Ca(OH)2, 2% PbO, 5% PTFE, 31% KOH, 1% LiOH, sat’d ZnO
+Zn, ZnO_polymer coatings, PTFE
+64.5% ZnO; 25% Ca(OH)2, 8% PbO, 2.5% PTFE binder
+∼85% ZnO, ∼5% PTFE, 10% cellulose ﬁbers
+93% ZnO, 2% PbO, 4% PTFE, 1% newsprint, 4 M KOH, 2 M KF, 2 M K2CO3, LiOH
+40% calcium zincate, 50% ZnO, 10% Ca(OH)2
+90% calcium zincate, 8% PTFE; 2% PbO; 4 M KOH sat’d with ZnO
+62% ZnO, 27% Ca(OH)2, 10% Bi2O3, ∼1% PVA binder
+90% Barium zincate; 10% Bi; 5 M KOH sat’d with ZnO
+∼90% ZnO, ∼5% Bi2O3, 1.5% binder, ∼3% ﬂuoride salt (e.g., NaF or KF)
+80% Ca−Zn; 5% Zn powder; 10% acetylene black, 5% PTFE, 6 M KOH sat’d ZnO
+37% KOH, 0.75 g/L zincate, electrodeposition from electrolyte
+80% ZnO coated in polypyrrole, 10% acetylene black, 10% PVA, 33% KOH
+hyper-dendritic zinc, ∼6 M KOH
+85% Zn, 10% ZnO, 5% PTFE
+85% ZnAl-X-LDH, 10% acetylene black, 5% PTFE, 6 M KOH sat’d with ZnO,
+zinc sponge in 6 M KOH
+6 M KOH sat’d with ZnO; electrodeposition on “backside” of current collector
+zinc sponge with 11 wt % Ca(OH)2 in 6 M KOH solution with 1 M LiOH
+64.5% ZnO, 25% Ca(OH)2, 8% Bi2O3, 2.5% Teﬂon binder, 25% KOH
+
+21
+22
+23, 24
+25, 26
+27
+28
+29
+30
+31
+32
+33
+34, 35
+36
+37
+38
+39
+40
+41
+42
+43
+44, 45
+46
+13, 47
+48
+49−51
+10, this work
+52, 53
+54
+55
+119
+this work
+aCycle life was deﬁned as the number of cycles until capacity drops below 75% of the average capacity or until Coulombic eﬃciency drops below
+75%. Many publications that reported low capacity (<20 mAh/mL) was not included. bCycle-average discharge capacity divided by grams of paste
+including binders, additives, and electrolyteignoring current collector. cCycle-average mAh discharge capacity, divided by total volume necessary
+(including excess electrolyte) for the anode to operate. dMultiplication of the mAh/mL and cycle life columns gives lifetime Coulombic output per
+volume required for the anode. eThese publications did not disclose suﬃcient information to calculate any rigorous performance metric. fThey did
+not measure cycle life. They saw Pb and Tl to improve gassing rate and shape change in cells purposefully dissected after 32 cycles. gApproximately
+half of their calcium zincate exists as Ca(OH)2 and ZnO. They get Coulombic eﬃciency near 75% for their initial cycles, and it drops to 72% by cycle
+500; therefore, we list this technology as capable of 400 cycles. hZhang et al.’s cell contained unrealistic excess of electrolyte, which warped their
+results. See Figure S25 of Supporting Information. iThe cyclic voltammograms and chronopotentiometry charge curves suggest ref 10’s active
+material was not calcium zincate. Instead, their evidence suggests zincate from their electrolyte was plating and deplating from the electrode surface
+as zinc metal. jInsuﬃcient information exists in refs 49−51 to calculate mAh/mL, mAh/g, or mAh/cm2 because porosity of the hyper-dendritic foam
+was not given, nor was the electrode size, charge density (mAh cycled per cm2 of electrode area), or electrolyte volume. kLikely operated in excess
+electrolyte (>100 mL per mAh cycled) such that Zn0 electrodeposition could be the dominant active material. lDid not clearly report anode
+thickness, porosity, or excess electrolyte. Porosity was estimated using available information in the paper. mOnly 1 mAh cm−2 was tested, which is
+∼15-times lower than a realistic battery. Backside plating from zincate solution requires extra volume for adequate mass transfer and for the low
+solubility of zincate in 6 M KOH. The practicality of backside plating is dubious.
+
+governmental regulations. The key performance metrics are (i)
+discharge capacity density (mAh per mL), (ii) discharge speciﬁc
+capacity density (mAh per gram), and (iii) lifetime total
+discharge capacity (Ah per mL), where mL and gram include all
+components of the anode, excluding the current collector, but
+including electrolyte used to operate the anode in each
+technology disclosure, for example, excess electrolyte enables
+room for dendritic structures or backside plating, and allows
+2− to form instead of zinc oxides. Cost per mAh and
+ZnOH4
+
+shelf life should be additional metrics but are not listed here
+because such data are so scarce in the literature.
+
+A graphical representation of the data from Table 1 is shown
+in Figure 1, alongside performance data from commercial lead
+acid batteries56 and cycle life of commercial designs of lithium-
+ion batteries based on cobalt oxide,57 iron phosphate lithium,58
+or nickel cobalt oxide.59 Except for lead-acid as a comparison,
+the data set excludes zinc anodes that use lead, mercury, or
+cadmium. The European Union prohibits the sale of batteries
+containing more than 0.0005% mercury or 0.002% cadmium by
+
+4820
+
+DOI: 10.1021/acs.chemmater.7b00754
+Chem. Mater. 2017, 29, 4819−4832
+
+

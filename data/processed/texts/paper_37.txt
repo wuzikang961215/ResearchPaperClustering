@@ -1,0 +1,177 @@
+Contents lists available at ScienceDirect 
+
+Energy Strategy Reviews 
+
+journal homepage: www.elsevier.com/locate/esr 
+
+A comprehensive study of renewable energy sources: Classifications, 
+challenges and suggestions 
+
+Tze-Zhang Ang a, Mohamed Salem a,*, Mohamad Kamarol a, Himadry Shekhar Das b, 
+Mohammad Alhuyi Nazari c, Natarajan Prabaharan d 
+a School of Electrical and Electronic Engineering, Universiti Sains Malaysia (USM), Nibong Tebal, 14300, Penang, Malaysia 
+b Department of Electrical and Computer Engineering, The University of Alabama, Tuscaloosa, 35401, AL, USA 
+c Faculty of New Sciences and Technologies, University of Tehran, Iran 
+d Department of Electrical and Electronics Engineering, School of Electrical and Electronics Engineering, SASTRA Deemed University, Thanjavur, India   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Renewable energy (RE) 
+Energy resources 
+Energy technologies 
+Hybrid renewable energy system 
+Review 
+
+Renewable energy (RE) is the key element of sustainable, environmentally friendly, and cost-effective electricity 
+generation. An official report by International Energy Agency (IEA) states that the demand on fossil fuel usage to 
+generate electricity has started to decrease since year 2019, along with the rise of RE usage to supply global 
+energy demands. Researches on RE technologies are continuously growing in order to enhance the performance 
+of RE generation, especially in term of energy conversion efficiency. The aim of this review paper is to under-
+stand and study further the current RE technologies such as solar energy, hydro energy, wind energy, bioenergy, 
+geothermal energy, and hydrogen energy. Several hybrid RE technologies have been also studied and compared, 
+to  improve  the  overall  performance  of  RE  in  generating  electricity.  Lastly,  suggestions  are  provided  for  the 
+purpose to solve and overcome the challenges and limitations of RE technologies in terms of economy, technical, 
+and energy conversion efficiency.   
+
+1. Introduction 
+
+Nowadays,  more  sustainable  energy  technologies  are  required  to 
+replace conventional electricity generation resources such as fossil fuel, 
+due to the worldwide demands especially in developed and developing 
+countries [1]. Fossil fuel-based energy sources are causing detrimental 
+environmental issues such as global warming and climate change [2]. 
+The greenhouse gas emission into the atmosphere from power genera-
+tion has increased exponentially in the past few decades [3]. Therefore, 
+Renewable  Energy  (RE)  technologies  such  as  solar,  wind,  hydro, 
+biomass,  geothermal  and  hydrogen  energies  have  been  introduced  to 
+generate electricity to overcome current environmental crisis [4–6]. Due 
+to their environmentally friendly characteristics and ability to generate 
+power with zero or almost nil emission of air pollutants, RE is getting 
+more  and  more  attention,  due  to  the  increasing  awareness  of  clean 
+environment among the society [7,8]. RE not only helps in sustainability 
+but also has economic importance. It benefits the economy by reducing 
+the cost of electricity generation, as it generates energy using natural, 
+renewable resources [9]. Also, it can be a secondary medium of income 
+
+as consumers can sell their generated electricity back to the power grid. 
+Although the adoption of RE sources for power generation is increasing, 
+majority of power generation is still performed by utilizing fossil fuel 
+due to the intermittency of RE and the high initial cost. For example, 
+photovoltaic system can only operate during daytime, wind turbine can 
+only operate when there is sufficient air flow, and hydro turbine only 
+operates when there is potential energy caused by water flow. Hence, 
+researchers around the world are performing researches rigorously to 
+improve the efficiency of RE, as well as overcoming their limitations. 
+
+The objective of  this article is to  present different RE sources and 
+their applications for power generation, and to promote/introduce the 
+latest RE technologies proposed by researchers around the world, as well 
+as discussing the limitations of current RE technologies. The rest of the 
+article  is  organized  in  the  following  manner:  Section  2  presents  the 
+current status of energy sector and the contribution of RE in it, Section 3 
+presents the various RE energy sources which are used/developed until 
+now. Energy Storage System has been considered in Section 4, Section 5 
+presents  different  hybridization  techniques  for  more  efficient  power 
+generation  using  RE,  Section  6  discusses  the  challenges  of  these 
+
+* Corresponding author. 
+
+E-mail address: salemm@usm.my (M. Salem).  
+
+https://doi.org/10.1016/j.esr.2022.100939 
+Received 4 November 2021; Received in revised form 4 August 2022; Accepted 12 August 2022   
+
+EnergyStrategyReviews43(2022)100939Availableonline27August20222211-467X/©2022TheAuthors.PublishedbyElsevierLtd.ThisisanopenaccessarticleundertheCCBYlicense(http://creativecommons.org/licenses/by/4.0/).T.-Z. Ang et al.                                                                                                                                                                                                                                  
+
+technologies and provides suggestions to overcome them, and finally, 
+Section 7 concludes this article. 
+
+2. Current status of energy resources 
+
+Even in this 21st century, most countries still depend on fossil fuel for 
+electricity generation, to lack of technologies, resources, and conditions 
+to  fully  utilize  RE  to  generate  electricity.  Nonetheless,  RE-generated 
+electricity in electric power sector is increasing rapidly nowadays due 
+to the awareness of society towards environmental concern. The figure 
+below presents an example of the data and analysis of fossil fuel usage, 
+comparison  of  fossil  fuel  generation  to  RE  generation,  and  trend  of 
+different types of RE usage for electricity generation. 
+
+Fig. 1 shows the total fossil fuel usage and the distributed sectors in 
+United  States  in  year  2020.  In  2020,  the  total  usage  of  fossil  fuel  in 
+United States was 21,365 TWh. Petroleum contributed the highest with 
+44% with a total of 9400.6 TWh. Natural gas contributed 9187 TWh, 
+which was 43%. The lowest was coal, with 2777 TWh used for power 
+generation. As shown in the figure, there are five sectors supplied with 
+power from fossil fuel resources. Transportation sectors used the most 
+fossil fuel, which was 6623.2 TWh, or 31% in 2020. Besides that, 90% of 
+coal contributed 2392 TWh of electricity compared to 36% of natural 
+gas to produce 3529.5 TWh electricity in the same year. 
+
+Fig. 2 shows the comparison of fossil fuel generation and renewables 
+generation growth from 2010 to 2019 [11]. Due to the outbreak of the 
+Corona virus pandemic, up-to-date data on global electricity generation 
+in  year  2021  is  still  unavailable  from  various  platforms.  The  gap  be-
+tween fossil fuel generation and RE generation has decreased from year 
+2010–2020.  The  fossil  fuel  usage  for  electricity  generation  slightly 
+increased from 121,531 TWh in 2010 to 136,131 TWh in 2019, but then 
+decreased  in  2020.  On  the  other  hand,  renewable  generation  has 
+significantly increased from 4098 TWh in 2010 to 7,140 TWh in 2019. 
+Compared with fossil fuel generation, RE generation was much lesser, 
+only  contributing  around  only  3.26–5.60%  of  electricity  generation 
+from  2010  to  2020.  In  2020,  RE  generation  surpassed  the  fossil  fuel 
+generation, particularly during the  pandemic. It is  believed that elec-
+tricity generation of residential area could be fully supplied by renew-
+able energy in the future. 
+
+Fig. 3 shows the total renewable energy usage for electricity gener-
+ation from 2010 to 2020 [12]. According to IEA’s global energy review 
+
+in  2021,  total  renewable  energy  usage  has  shown  a  significant  incre-
+ment,  from  4,098  TWh  in  2010  to  7,627  TWh  in  2020.  Hydropower 
+contributes the largest portion of renewable energy capacity around the 
+world  for  electricity  generation,  even  though  the  growth  rate  of  hy-
+dropower is the lowest compared with other renewable energies. On the 
+other hand, solar energy generation shows an elevating trend, particu-
+larly because solar energy technologies are progressively developed and 
+enhanced by researchers to obtain higher energy conversion efficiency. 
+Wind  energy  generation  also  shows  an  significant  increasing  trend. 
+Compared  to  the  three  major  renewable  resources,  bioenergy  and 
+geothermal energy have insignificant contribution since year 2010. This 
+is because only specific locations are suitable to implement geothermal 
+power  plant,  in  addition  to  the  complicated  process  of  producing 
+bioenergy. 
+
+Fig. 4 shows the worldwide weighted-average levelized cost of en-
+ergy  (LCOE)  between  2010  and  2020  [13].  Levelized  cost  of  energy 
+(LCOE) is generally known to assess the average cost of electricity per 
+kWh  for  a  generator  with  considering  all  the  expected  costs  of  the 
+generator from different renewable energies which including fuel, cap-
+ital, maintenance and electricity’s market price [14] According to IRE-
+NA’s  renewable  power  generation  costs  in  2020,  solar  energy  system 
+(photovoltaic and concentrating solar power) and wind system (onshore 
+and offshore) have shown a significant decrement in LCOE from year 
+2010–2020. Concentrating solar power system showed the largest drop 
+amongst all renewable energies which fell by 85% from 0.381 USD/KWh 
+to 0.057 USD/KWh throughout the year 2010–2020. This phenomenon 
+happened due to enhancement of the current technologies in concen-
+trating solar power system in term of economies of scales, competitive 
+supply  chains  and  developer’s  experiences  [13].  On  the  other  hand, 
+hydropower, biomass and geothermal system have shown insignificant 
+changes and maintaining in the low band of LCOE throughout the year 
+2010–2020.  Furthermore,  LCOE  of  hydrogen  energy  system  was  esti-
+mated below 0.05 USD/KWh [15]. It is considered one of the low LCOE 
+compared to other renewable energy. 
+
+3. Renewable energy technologies 
+
+Renewable energy is gaining wider use for power generation around 
+the world nowadays. This is particularly due to society’s concern about 
+environmental  issues  coming  from  the  conventional  method  of 
+
+Fig. 1. Fossil fuel usage for different sectors in U.S. (2020) [10].  
+
+EnergyStrategyReviews43(2022)1009392

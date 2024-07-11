@@ -1,0 +1,223 @@
+Contents lists available at ScienceDirect 
+
+Applied Energy 
+
+journal homepage: www.elsevier.com/locate/apenergy 
+
+Race to carbon neutrality in South Africa: What role does environmental 
+technological innovation play? 
+
+Festus Victor Bekun a, b, * 
+a Faculty of Economics Administrative and Social sciences, Istanbul Gelisim University, Istanbul, Turkey 
+b Adnan Kassar School of Business, Department of Economics, Lebanese American University, Beirut, Lebanon   
+
+H I G H L I G H T S  
+
+• This study explored nexus between environmental pollution, economic growth, and environmental technological innovation in South Africa 
+• Utilisation of Autoregressive distributed lag (ARDL) estimators were employed 
+• Agricultural activities dampens environmental sustainability in South Africa 
+• Green growth policies should be pursued in South Africa energy mix  
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+SDGs-13 
+Carbon neutrality 
+Sustainable development 
+EKC 
+Environmental sustainability 
+Carbon-reduction: econometrics 
+South Africa 
+
+Governments  worldwide  have  prioritized  carbon  reduction  and  neutrality  to  address  the  escalating  threat  of 
+climate change. These goals are in line with the United Nations Sustainable Development Goals (UNSDG-13). 
+These goals stress taking action on climate change to lessen the bad effects of human activities and using fossil 
+fuels for energy. To this end, the present study investigates the connection between conventional energy usage, 
+agricultural  practices,  economic  growth,  and  their  impact  on  environmental  sustainability  in  South  Africa. 
+Additionally, it explores the role of renewable energy consumption and environmental technological innovation 
+in mitigating these effects. To achieve the study objectives, a carbon-income function is fitted with an annual 
+frequency  data  from  1975  to  2020.  The  present  study  leverages  on  Pesaran's  Autoregressive  distributed  lag 
+(ARDL) method and for robustness analysis the dynamic ARDL simulations method to simultaneously explore the 
+short and long-run coefficients of the study's outlined variables. Empirical analysis, confirmed by bounds testing 
+for  cointegration, reveals  a long-term  equilibrium relationship among  the  variables considered.  Notably, eco-
+nomic growth, fossil fuel energy consumption, and agricultural activities have adverse effects on environmental 
+sustainability in South Africa, indicating a trade-off between economic growth and environmental quality. Dy-
+namic  ARDL  simulations  provide  further  evidence  of  an  Environmental  Kuznets  Curve  (EKC)  phenomenon. 
+However,  renewable  energy  consumption  and  environmental  technological  innovation  positively  influence 
+environmental quality. These findings highlight the imperative for South Africa and its stakeholders to adopt 
+green growth policies and transition to cleaner energy alternatives.   
+
+1. Introduction 
+
+The  world  faces  an  unprecedented  challenge  escalating  climate 
+change  resulting  from  a  surge  in  carbon  dioxide  (CO2) emissions  pri-
+marily  attributed  to  human  activities  [9,43].  Boden  et  al.  [13]  and 
+Adebayo  et  al.  [1]  reveal  that  global  CO2  emissions  have  surged  by 
+nearly 90% since 1970, with fossil fuel combustion and industrial ac-
+tivities  responsible  for  about  78%  of  this  increase.  Moreover, 
+
+agriculture, deforestation, and land-use alterations represent significant 
+contributors  to  greenhouse  gas  emissions  [10].  The  adverse  conse-
+quences  of  rising  CO2  levels  are  profound  and  include  air  pollution, 
+responsible  for  seven  million  premature  deaths  a  year,  and  environ-
+mental disasters like flooding and forest fires [27,81]. 
+
+Despite contributing only 3% of global CO2  emissions, African na-
+tions,  led  by  South  Africa,  bear  the  brunt  of  climate  change,  with 
+devastating  impacts  like  floods  [77].  Flooding,  resulting  from  CO2 
+
+* Corresponding author at: Faculty of Economics Administrative and Social sciences, Istanbul Gelisim University, Istanbul, Turkey. 
+
+E-mail address: fbekun@gelisim.edu.tr.  
+
+https://doi.org/10.1016/j.apenergy.2023.122212 
+Received 20 June 2023; Received in revised form 25 October 2023; Accepted 30 October 2023   
+
+AppliedEnergy354(2024)122212Availableonline6November20230306-2619/©2023ElsevierLtd.Allrightsreserved.F.V. Bekun                                                                                                                                                                                                                                        
+
+accumulation,  has  severely  impacted  the  economies  of  Mozambique, 
+Madagascar, and South Africa [69]. Additionally, South Africa's expo-
+sure to climate change is starkly evident; in 2019, 750,000 people were 
+affected  by  drought,  and  4500  were  displaced  due  to  floods  [82]. 
+Although the share of GDP lost to flooding in South Africa is minimal, 
+the monetary value of climate disasters amounts to an estimated $4.5 
+billion [82]. Therefore, the pursuit of carbon neutrality—a reduction in 
+technological 
+renewable 
+CO2 
+innovations—is vital for South Africa. 
+
+emissions  using 
+
+energy  and 
+
+South Africa's heavy reliance on fossil fuels, especially coal, further 
+exacerbates the carbon emissions problem [36,50]. In 2022, fossil fuels 
+accounted for approximately 94.24% of the country's energy consump-
+tion,  with  coal  alone  constituting  84.4%  [69].  This  reliance  on  coal 
+makes  South  Africa  a  major  contributor  to  Africa's  CO2  emissions 
+[45,48].  Unbridled  use  of  fossil  fuels,  such  as  oil,  coal,  and  gas,  in-
+tensifies CO2 emissions [47,48,77]. 
+
+Additionally,  the  agricultural  sector  has  been  scrutinized  as  a  sig-
+nificant  source  of  CO2  emissions  [16,67].  Agricultural  activities  like 
+deforestation,  mechanization,  and 
+the  destruction  of  carbon- 
+sequestering  trees  contribute  to  emissions  [71,73].  Notably,  South 
+Africa's agricultural sector, comprising both commercial and small-scale 
+agriculture, contributes approximately 10% of the nation's greenhouse 
+gas emissions (GHGs) [5]. High agricultural productivity in South Africa 
+necessitates energy-intensive processes powered by fossil fuels, further 
+increasing CO2 emissions [74]. 
+
+The relationship between economic growth and CO2  emissions is a 
+subject of debate, with the Environmental Kuznets Curve (EKC) theory 
+suggesting  that  as  GDP  grows,  CO2  emissions  initially  rise  before 
+declining with technological adoption [27,76]. South Africa's growing 
+economy, with the third-largest GDP in Africa, stands to expand further, 
+driven  by  industrialization  and  urbanisation  [69].  This  economic 
+growth,  while  promising  prosperity,  also  threatens  environmental 
+quality due to potential CO2 increases. 
+
+Despite  being  Africa's  leading  CO2  emitter,  South  Africa  has 
+committed  to  reducing  carbon  emissions  and  achieving  carbon 
+neutrality by 2050 to combat climate change . To attain this goal, South 
+Africa must transition to renewable energy sources and embrace eco- 
+friendly  innovations,  effectively  reducing  CO2  emissions  [21].  The 
+country boasts significant renewable energy potential, including solar 
+and  hydropower  opportunities  [7,8].  Embracing  environmentally 
+friendly  technologies  like  carbon  capture  and  energy-efficient  appli-
+ances will further support carbon reduction [23]. 
+
+Aligned  with  the  United  Nations'  Sustainable  Development  Goals 
+(SDGs), South Africa's commitment to sustainability necessitates a sub-
+stantial reduction in CO2 emissions [30,31,66]. Achieving the SDGs and 
+South Africa's National Development Plan requires a significant reduc-
+tion in CO2 emissions [61]. 
+
+This research investigates the combined impact of agriculture, fossil 
+fuels, and economic growth on carbon neutrality in South Africa. It also 
+explores  how  renewable  energy  consumption  and  environmental  and 
+technological  innovations  contribute  to  carbon  reduction.  Our  study 
+makes  a  holistic  assessment  of  the  drivers  of  CO2  emissions  in  South 
+Africa, an essential endeavour as the highest emitter in Africa. More-
+over, it evaluates the role of renewable energy and ecological technol-
+ogies  in  emissions  reduction.  Finally,  this  study  utilizes  the  Pesaran's 
+autoregressive distributed lag (ARDL) methodology combined with dy-
+namic ARDL simulations to provide short-term and long-term strategies 
+for carbon neutrality. 
+
+Therefore, the organisation of this paper follows thus; following the 
+introduction, part 2 is the literature review, part 3 is the methodology, 
+part  4  presents  empirical  analysis,  and  part  5  presents  the  research 
+conclusion and implications. 
+
+2. Literature review 
+
+2.1. Theoretical review 
+
+The theory that is relevant to our study is the Environmental Kuznet 
+Curve (EKC) theory based on the argument of Grossman and Krueger 
+[25]. According to the EKC theory, the quality of the environment and 
+real production have a non-linear connection that is defined by an up-
+ward curve and a falling curve. Dogan and Turkekul [19] noted that, up 
+until a particular GDP level, environmental degradation occasioned by 
+productivity first rises as economic activity (as measured by GDP) rises. 
+Beyond this point, continued economic expansion is linked to a reduc-
+tion in environmental damage [72]. The argument of the EKC indicates 
+that environmental disasters occasioned by CO2 have a quadratic func-
+tion with economic growth, which represents economic productive ac-
+tivities that need energy use [9]. 
+
+The EKC provides a theoretical understanding of the race towards 
+carbon  neutrality  by  adopting  renewable  energy  use,  environmental 
+technology,  and  innovation through  economic  growth,  fossil  fuel  and 
+agricultural productivity channels. Based on the assumption of the EKC, 
+the initial rise in environmental pollution due to excessive discharge of 
+CO2 because of output productivity can be driven by fossil fuel energy, 
+agricultural  productivity  and  overall  GDP  growth.  According  to 
+Mthembu [48] and Mesagan et al. [43], fossil fuel consumption releases 
+carbon  discharge  into  the  atmosphere,  negatively  affecting  environ-
+mental  quality.  Jahanger  et  al.  [31]  also  emphasised  that  carbon  is 
+present in substantial amounts in fossil fuels. For instance, carbon is the 
+main  component  of  coal.  When  these  substances  are  burned,  carbon 
+atoms join with oxygen to create CO2, which releases energy. Therefore, 
+since South Africa is a coal-dependent nation, the EKC provides insight 
+as to why it is the largest emitter of CO2  in Africa [48]. Furthermore, 
+agricultural productivity has been identified in the literature as a key 
+contributor to CO2 emission [16,67]. South Africa's agricultural sector 
+has evolved rapidly in recent years into a dual sector which is largely 
+mechanised. Tagwi [71] emphasised that mechanised farming requires 
+energy  intensity,  and  South  Africa  has  utilised  fossil  fuels  to  power 
+machines to increase productivity. Therefore, as farm operations rise, 
+emission from the process increases CO2 accumulation. Also, the overall 
+GDP growth will worsen pollution for South Africa since it is still in a 
+state of  convergence  with  the developed  economies,  as  argued in  the 
+EKC that, at the initial stage of growth, CO2 pollution rises [18]. 
+
+The EKC argued that environmental pollution reverses as economic 
+productivity increases in the long run. Jahanger et al. [31] noted that, at 
+this  stage,  the  incorporation  of  renewable  energy  and  environmental 
+technology and innovation in the production processes aids the decline 
+in pollution since they support energy and carbon efficiency. Moreover, 
+Ibekilo and Emmanuel [28] posited that technological innovation can 
+reverse  unpleasant  environmental  circumstances  that  emanate  from 
+production processes. Also, evidence from Feng [23] and Wen et al. [79] 
+supports the role of renewable energy use in lowering carbon releases. 
+Therefore,  incorporating  renewable  energy  and  environmental  tech-
+nology and innovation following the EKC argument can aid the analysis 
+of the significance of renewable energy use. Environmental technology 
+and innovation is driving carbon neutrality via fossil fuel energy, agri-
+cultural productivity and GDP growth in South Africa. 
+
+2.2. Empirical review 
+
+This section of the literature review explores related study areas. The 
+review is organised in two strands. The first strand reviews evidence that 
+has considered the effect of fossil fuel, agricultural output and economic 
+growth on CO2 release, while the second strand explores evidence on the 
+role of renewable energy consumption and environmental technology 
+
+AppliedEnergy354(2024)1222122

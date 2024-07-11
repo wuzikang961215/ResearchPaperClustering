@@ -1,0 +1,230 @@
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 8 ( 2 0 2 3 ) 9 1 3 9 e9 1 5 4
+
+Available online at www.sciencedirect.com
+ScienceDirect
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / h e
+
+Estimating global production and supply costs for
+green hydrogen and hydrogen-based green energy
+commodities
+
+Michael Moritz a,*
+, Max Sch€onﬁsch a, Simon Schulte b
+a Institute of Energy Economics at the University of Cologne (EWI), Vogelsanger Str. 321a, 50827 Cologne, Germany
+b Oxford Institute for Energy Studies (OIES), 57 Woodstock Road, Oxford, OX2 6FA, United Kingdom
+
+h i g h l i g h t s
+
+(cid:1) Comprehensive database for global production and supply costs with projections until 2050.
+(cid:1) Production costs are the signiﬁcant cost component for liquid or easily liqueﬁable energy commodities.
+(cid:1) Green hydrogen might be traded regionally via pipeline rather than shipped globally via LH2.
+(cid:1) Importing green ammonia is more cost-efﬁcient than importing green hydrogen for domestic ammonia production in Germany.
+(cid:1) Germany: Only if a low-cost European H2 pipeline grid exists could ammonia production from imported H2 be cost-effective.
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Available online 27 December 2022
+
+countries. Moreover, we evaluate total supply costs to Germany, considering both pipeline-
+
+Article history:
+
+Received 6 July 2022
+
+Received in revised form
+
+28 November 2022
+
+Accepted 4 December 2022
+
+Keywords:
+
+Green hydrogen
+
+Green ammonia
+
+Hydrogen derivates
+
+Techno-economic analysis
+
+Production cost
+
+Transport cost
+
+Green energy commodities are expected to be central in decarbonising the global energy
+
+system. Such green energy commodities could be hydrogen or other hydrogen-based en-
+
+ergy commodities produced from renewable energy sources (RES) such as solar or wind
+
+energy. We quantify the production cost and potentials of hydrogen and hydrogen-based
+
+energy commodities ammonia, methane, methanol, gasoline, diesel and kerosene in 113
+
+based and maritime transport. We determine production costs by optimising the invest-
+
+ment and operation of commodity production from dedicated RES based on country-level
+
+RES potentials and country-speciﬁc weighted average costs of capital. Analysing the
+
+geographic distribution of production and supply costs, we ﬁnd that production costs
+
+dominate the supply cost composition for liquid or easily liqueﬁable commodities, while
+
+transport costs dominate for gaseous commodities. In the case of Germany, importing
+
+green ammonia could be more cost-efﬁcient than domestic production from locally pro-
+
+duced or imported hydrogen. Green ammonia could be supplied to Germany from many
+
+regions worldwide at below the cost of domestic production, with costs ranging from 624 to
+874 $/t NH3 and Norway being the cheapest supplier. Ammonia production using imported
+hydrogen from Spain could be cost-effective if a pan-European hydrogen pipeline grid
+
+based on repurposed natural gas pipelines exists.
+
+© 2022 Hydrogen Energy Publications LLC. Published by Elsevier Ltd. All rights reserved.
+
+* Corresponding author.
+
+E-mail address: michael.moritz@ewi.uni-koeln.de (M. Moritz).
+
+https://doi.org/10.1016/j.ijhydene.2022.12.046
+0360-3199/© 2022 Hydrogen Energy Publications LLC. Published by Elsevier Ltd. All rights reserved.
+
+9140
+
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 8 ( 2 0 2 3 ) 9 1 3 9 e9 1 5 4
+
+Introduction
+
+Many countries decarbonise their energy systems by using
+renewable energies to mitigate climate change and achieve a
+sustainable energy supply. Renewable energy sources (RES), in
+particular wind and solar energy, can be used to produce
+green electricity. In addition to green electricity, hydrogen and
+hydrogen-based green energy commodities are projected to
+play a signiﬁcant role in the decarbonisation of so-called hard-
+to-abate sectors, where direct electriﬁcation is difﬁcult. Ap-
+plications for synthetic green energy commodities could be
+long-term energy storage, feedstock for industrial processes
+and use as fuel in heavy duty transport or aviation [1].
+
+Production potentials for green energy commodities are
+distributed unevenly around the globe. Countries with a high
+energy demand do not necessarily have access to large RES
+potentials. Germany, for example, would have to continue to
+rely on energy imports as part of a cost-effective decarbon-
+isation strategy [2e7]. Even in the long term, Germany will
+probably have to cover up to half of its energy demand using
+molecule-based energy carriers [3]. A considerable part of these
+molecule-based energy carriers might be synthetic green en-
+ergy commodities due to limited sustainable biomass poten-
+tials. Green hydrogen plays a central role. Hydrogen can be
+used energetically or as a feedstock for hydrogen-based com-
+modities such as ammonia, methane, methanol or Fischer-
+Tropsch fuels like synthetic kerosene, gasoline or diesel.
+
+Many hydrogen-based energy commodities have physical
+properties that make them easier to transport and store than
+hydrogen. At ambient conditions, gaseous energy carriers
+such as hydrogen and methane are more difﬁcult to transport
+than liquid, or easily liqueﬁable energy carriers such as
+methanol, kerosene, or ammonia. In addition, hydrogen has a
+volumetric energy density three times lower than methane.
+Both methane and hydrogen can be liqueﬁed for maritime
+transport. However, the temperatures required to liquefy
+hydrogen are signiﬁcantly lower than for methane, making
+the shipping of liquid hydrogen more energy-intensive and
+expensive. Furthermore, hydrogen-based commodities such
+as methane, methanol, ammonia or Fischer-Tropsch products
+are substitutes for fossil energy carriers and can use existing
+infrastructure for transport.
+
+The quantiﬁcation of supply costs requires an assessment
+of the entire supply chain. Several studies have analysed
+production and transport costs for hydrogen and hydrogen-
+based energy carriers. Fasihi et al. [8] investigate costs for
+renewable power-to-liquid (PtL) fuels from PV wind hybrid
+sources in 2030. They evaluate production costs by modelling
+approach an integrated 5 GWe plant consisting of electrolysis,
+direct air capture (DAC) as CO2 source, Fischer-tropsch syn-
+thesis and battery storage. In a ﬁrst step, the capacities of the
+plant components are optimised. Based on these optimal ca-
+pacities, the operation of the plant is then optimised to
+minimise the production costs. The authors analyse a poten-
+tial PtL supply chain from Patagonia to Rotterdam and ﬁnd
+that PtL supply costs are 84 $/MWh. They also investigate the
+sensitivity of investment risks on production costs: changing
+the weighted average costs of capital (WACC) from 5% to 7%
+increases the overall supply costs by 14.5%.
+
+Agora Verkehrswende, Agora Energiewende and Frontier
+Economics [9] published a study estimating supply costs for
+power-to-methane and PtL-fuels from North Africa, the Mid-
+dle East, Iceland and the North and Baltic Seas to Germany
+until 2050 for three different scenarios. While the study con-
+siders direct air capture (DAC) as a CO2 source, the corre-
+sponding spreadsheet model by Frontier Economics [10] also
+considers carbon capture from the cement industry as an
+alternative option.
+
+Another study by Frontier Economics [11] analyses global
+production and export potentials of hydrogen and hydrogen-
+based commodities. Countries are assessed based on three
+criteria: ﬁrstly, costs of generating RES electricity, secondly
+area-speciﬁc resource potentials, and thirdly political stabil-
+ity, energy political framework and trade. The study identiﬁes
+promising exporting countries to Europe and Germany based
+on these criteria. Detailed case studies are carried out for the
+exporter countries Norway, Chile, Morocco, Saudi Arabia,
+Australia and China. The study does not provide production or
+supply cost estimates.
+
+Hank et al. [12] investigate the costs and energy efﬁciency
+of hydrogen and hydrogen-based commodities methane,
+methanol and ammonia while also considering liqueﬁed
+hydrogen (LH2) and hydrogen bound in liquid organic
+hydrogen carriers (LOHC) for transport for a baseline and an
+optimistic scenario in 2030. The paper provides energy efﬁ-
+ciencies of the respective supply chains, including production
+from integrated plants (including excess heat integration) and
+long-distance maritime transport. Moreover, production and
+maritime transport costs from Morocco to Germany are eval-
+uated in detail. They ﬁnd that commodities with high energy
+efﬁciencies and low production costs are LH2 (52e60%, 149
+$/MWh) and ammonia (48e52%, 146 $/MWh). All other ana-
+lysed commodities are more costly in production and have a
+lower energy efﬁciency.
+
+Br€andle et al. [13] estimate the development of global
+production and supply cost of low-carbon hydrogen from
+wind and solar energy sources as well as from natural gas with
+carbon capture and storage (CCS) and methane pyrolysis in 90
+countries. An optimisation model minimises hydrogen pro-
+duction costs by determining optimal capacity ratios for
+electrolyse-RES systems. The results are accessible and cus-
+tomisable in a comprehensive spreadsheet model [14]. The
+authors ﬁnd that hydrogen supply costs are likely to vary
+substantially from country to country, depending on natural
+gas prices, RES potentials and access to existing pipeline
+networks which may be retroﬁtted to carry hydrogen. They
+conclude that due to the high costs of maritime hydrogen
+transport, international trade in pure hydrogen is more likely
+to develop along pipeline networks.
+
+Pfennig et al. [15] use a geospatial information system
+(GIS)-based approach to estimate production costs and po-
+tentials and their geographical location. The study covers
+hydrogen and hydrogen-based methanol, methane and PtL
+fuels. The authors use GIS to identify suitable areas for low-
+cost solar and wind energy production. Potentials are further
+reﬁned by applying criteria relating to land use, distance to
+settlements and infrastructure, and ecological restrictions.
+The authors evaluate cost-optimal production systems,
+including battery storage in exporting countries and the
+
+

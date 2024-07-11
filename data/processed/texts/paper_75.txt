@@ -1,0 +1,166 @@
+Review
+Solar Energy: Applications, Trends Analysis, Bibliometric
+Analysis and Research Contribution to Sustainable
+Development Goals (SDGs)
+
+Khaled Obaideen 1
+Mohammad Ali Abdelkareem 1,4,*
+
+, Abdul Ghani Olabi 1,2,*, Yaser Al Swailmeen 1, Nabila Shehata 3
+
+,
+
+, Abdul Hai Alami 1
+
+, Cristina Rodriguez 5
+
+and Enas Taha Sayed 4
+
+1
+
+3
+
+Sustainable Energy & Power Systems Research Centre, RISE, University of Sharjah,
+Sharjah P.O. Box 27272, United Arab Emirates
+
+2 Mechanical Engineering and Design, School of Engineering and Applied Science, Aston University,
+
+Aston Triangle, Birmingham B4 7ET, UK
+Environmental Science and Industrial Development Department,
+Faculty of Postgraduate Studies for Advanced Sciences, Beni-Suef University, Beni-Suef 65211, Egypt
+
+4 Chemical Engineering Department, Faculty of Engineering, Minia University, Minya 61517, Egypt
+5
+School of Computing, Engineering, and Physical Sciences, University of the West of Scotland,
+Paisley PA1 2BE, UK
+
+* Correspondence: aolabi@sharjah.ac.ae (A.G.O.); mabdulkareem@sharjah.ac.ae (M.A.A.)
+
+Abstract: Over the past decade, energy demand has witnessed a drastic increase, mainly due to
+huge development in the industry sector and growing populations. This has led to the global
+utilization of renewable energy resources and technologies to meet this high demand, as fossil fuels
+are bound to end and are causing harm to the environment. Solar PV (photovoltaic) systems are a
+renewable energy technology that allows the utilization of solar energy directly from the sun to meet
+electricity demands. Solar PV has the potential to create a reliable, clean and stable energy systems
+for the future. This paper discusses the different types and generations of solar PV technologies
+available, as well as several important applications of solar PV systems, which are “Large-Scale Solar
+PV”, “Residential Solar PV”, “Green Hydrogen”, “Water Desalination” and “Transportation”. This
+paper also provides research on the number of solar papers and their applications that relate to the
+Sustainable Development Goals (SDGs) in the years between 2011 and 2021. A total of 126,513 papers
+were analyzed. The results show that 72% of these papers are within SDG 7: Affordable and Clean
+Energy. This shows that there is a lack of research in solar energy regarding the SDGs, especially SDG
+1: No Poverty, SDG 4: Quality Education, SDG 5: Gender Equality, SDG 9: Industry, Innovation and
+Infrastructure, SDG 10: Reduced Inequality and SDG 16: Peace, Justice and Strong Institutions. More
+research is needed in these ﬁelds to create a sustainable world with solar PV technologies.
+
+Keywords: Sustainable Development Goals (SDGs); bibliometric analysis; solar energy; large-scale
+solar PV power plants; residential applications of solar PV; green hydrogen; water desalination
+
+1. Introduction
+
+The sun is a huge sphere of gases emitting light and energy towards our planet, and
+this energy received from the sun is a form of radiation best known as electromagnetic
+radiation [1]. It can be measured in the wavelength range of a measuring device, and it is
+called solar irradiance. The units used to measure this solar irradiance are W/m2 in the
+SI system of measuring units [2] and are the radiant energy emitted into the surrounding
+environment integrated over a speciﬁed time. Figure 1 shows the average of this irradiance
+around the planet. Sun irradiation, solar exposure, solar insolation or insolation and several
+other terms are all used for this combined solar irradiance.
+
+Citation: Obaideen, K.; Olabi, A.G.;
+
+Al Swailmeen, Y.; Shehata, N.;
+
+Abdelkareem, M.A.; Alami, A.H.;
+
+Rodriguez, C.; Sayed, E.T. Solar
+
+Energy: Applications, Trends
+
+Analysis, Bibliometric Analysis and
+
+Research Contribution to Sustainable
+
+Development Goals (SDGs).
+
+Sustainability 2023, 15, 1418. https://
+
+doi.org/10.3390/su15021418
+
+Academic Editors: Sergio Nardini
+
+and Attila Bai
+
+Received: 23 October 2022
+
+Revised: 8 December 2022
+
+Accepted: 26 December 2022
+
+Published: 11 January 2023
+
+Copyright: © 2023 by the authors.
+
+Licensee MDPI, Basel, Switzerland.
+
+This article is an open access article
+
+distributed under
+
+the terms and
+
+conditions of the Creative Commons
+
+Attribution (CC BY) license (https://
+
+creativecommons.org/licenses/by/
+
+4.0/).
+
+Sustainability 2023, 15, 1418. https://doi.org/10.3390/su15021418
+
+https://www.mdpi.com/journal/sustainability
+
+sustainabilitySustainability 2023, 15, 1418
+
+2 of 34
+
+Figure 1. Long-term average irradiance around planet earth (from www.smartenergyconsulting.com,
+accessed on 13 July 2022).
+
+Solar energy is the term for the energy collected from solar irradiance, and this energy
+can be in the form of heat (thermal energy), a chemical change or process or even pure
+electrical energy (electricity) [3,4]. The overall amount of solar energy that strikes the
+earth is much greater than all its current and future energy demands, so this highly
+distributed source could meet all of our energy demands if it is properly utilized. Solar
+energy, in contrast to common sources of energy such as coal, petroleum and natural
+gas, has become one of the most prominent and environmentally safe energy sources
+recently, which indicates that it will last millions if not billions of years. The sun is not
+just a tremendously strong energy source; its light is by far the most abundant source of
+energy received by the earth. However, its intensity at the surface is quite modest, which is
+mostly due to the distance between the earth and the sun, causing a vast radial dispersion
+of radiation along the way. The earth’s atmosphere and clouds absorb or scatter more
+than half of the incoming sunlight [5], resulting in a small extra loss. More than half of
+the sunlight received from the sun is called visible light, with the remaining consisting
+of infrared, ultraviolet and other kinds of electromagnetic radiation. The amount of raw
+energy received from the sun is more than enough to cover all the planet’s energy demands
+thousands of times over [6], so this is why solar energy possesses an incurable potential
+that needs to be explored thoroughly. Unfortunately, however, despite the fact that solar
+energy is a free and available almost everywhere on the planet, the high cost of collecting
+this energy and then converting it and storing it restricts its use in many regions all around
+the globe. Solar radiation can be turned into thermal energy (heat) or electrical energy, with
+the former being more straightforward [7], as the heat emitted from the sun is used directly
+for heating purposes for a long time. However, solar heat (thermal energy) can be used in
+so many different applications and ways in our current time, as the technology for solar
+collectors and dryers has improved drastically, as can be seen from the literature [4,8–11].
+Renewable energy has proven its ability to supply considerable amounts of energy for
+all sorts of different locations. Solar, wind and hydroelectric energy supply and consump-
+tion should be favored, especially given greater knowledge of the detrimental environmen-
+tal implications of oil and gas production. The need for renewable energy is expanding all
+around the world [12], as renewable energy adoption is crucial for the power industry all
+around the globe, enabling us to ﬁnally achieve sustainable energy development in our
+regions. Solar energy plays a major role in this development, as it can even challenge other
+renewable energy sources. Table 1 below shows a comparison between solar energy and
+other renewables [13].
+
+Sustainability 2023, 15, x FOR PEER REVIEW 2 of 36   environment integrated over a specified time. Figure 1 shows the average of this irradi-ance around the planet. Sun irradiation, solar exposure, solar insolation or insolation and several other terms are all used for this combined solar irradiance.  Figure 1. Long-term average irradiance around planet earth (from www.smartenergyconsult-ing.com, accessed on 13 July 2022). Solar energy is the term for the energy collected from solar irradiance, and this en-ergy can be in the form of heat (thermal energy), a chemical change or process or even pure electrical energy (electricity) [3,4]. The overall amount of solar energy that strikes the earth is much greater than all its current and future energy demands, so this highly dis-tributed source could meet all of our energy demands if it is properly utilized. Solar en-ergy, in contrast to common sources of energy such as coal, petroleum and natural gas, has become one of the most prominent and environmentally safe energy sources recently, which indicates that it will last millions if not billions of years. The sun is not just a tre-mendously strong energy source; its light is by far the most abundant source of energy received by the earth. However, its intensity at the surface is quite modest, which is mostly due to the distance between the earth and the sun, causing a vast radial dispersion of radiation along the way. The earth’s atmosphere and clouds absorb or scatter more than half of the incoming sunlight [5], resulting in a small extra loss. More than half of the sunlight received from the sun is called visible light, with the remaining consisting of in-frared, ultraviolet and other kinds of electromagnetic radiation. The amount of raw energy received from the sun is more than enough to cover all the planet’s energy demands thou-sands of times over [6], so this is why solar energy possesses an incurable potential that needs to be explored thoroughly. Unfortunately, however, despite the fact that solar en-ergy is a free and available almost everywhere on the planet, the high cost of collecting this energy and then converting it and storing it restricts its use in many regions all around the globe. Solar radiation can be turned into thermal energy (heat) or electrical energy, with the former being more straightforward [7], as the heat emitted from the sun is used directly for heating purposes for a long time. However, solar heat (thermal energy) can be used in so many different applications and ways in our current time, as the technology for solar collectors and dryers has improved drastically, as can be seen from the literature [4,8–11]. Renewable energy has proven its ability to supply considerable amounts of energy for all sorts of different locations. Solar, wind and hydroelectric energy supply and con-sumption should be favored, especially given greater knowledge of the detrimental envi-ronmental implications of oil and gas production. The need for renewable energy is ex-panding all around the world [12], as renewable energy adoption is crucial for the power industry all around the globe, enabling us to finally achieve sustainable energy develop-ment in our regions. Solar energy plays a major role in this development, as it can even 

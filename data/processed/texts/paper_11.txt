@@ -1,0 +1,276 @@
+Applied Energy 250 (2019) 1085–1098
+
+Contents lists available at ScienceDirect
+
+Applied Energy
+
+journal homepage: www.elsevier.com/locate/apenergy
+
+Assessing new transmission and energy storage in achieving increasing
+renewable generation targets in a regional grid
+
+T
+
+⁎
+Terence Conlon
+
+, Michael Waite, Vijay Modi
+
+Department of Mechanical Engineering, Columbia University, USA
+
+H I G H L I G H T S
+
+• Realistically-priced transmission upgrades are evaluated for a regional grid.
+• Infrastructure needs for renewable generation targets between 50 and 80% are presented.
+• Cost-benefits of renewable generation and integration measures are compared.
+
+A R T I C L E I N F O
+
+A B S T R A C T
+
+Keywords:
+Renewable energy resources
+Integration pathways
+Renewable generation targets
+Transmission
+Energy storage
+Wind generation
+
+This study evaluates generation, transmission, and storage capacity needs to achieve deep renewable energy
+penetration in a regional electricity grid with an average load of approximately 20 GW. Increasing renewable
+energy targets are analyzed to evaluate the effects of realistic regional transmission upgrade and energy storage
+cost assumptions on the cost-optimal mix of generation, transmission, and storage capacity. Contextual data is
+used for New York State’s grid to examine how electricity generation from renewable energy resources (wind,
+water, and solar power) can meet between 50% and 80% of electricity demand. A central finding of the study is
+that when realistic transmission upgrade costs are assumed, new interzonal transmission and battery storage are
+not needed to cost effectively meet near-term renewable energy goals. In fact, New York can achieve 50%
+renewable energy penetration with only a buildout of new generation capacity: Onshore wind (13.7 GW), off-
+shore wind (4.1 GW), and solar photovoltaics (3 GW). The presence of grid-scale battery storage, electric ve-
+hicles, or additional behind-the-meter solar capacity does not markedly change the model-selected generation
+mix. To achieve the 50% target, we compute a $52/MWh levelized cost of electricity for new renewable energy,
+which is in line with current generation costs.
+
+As the renewable generation target increases beyond 50%, the model begins to select transmission upgrades
+and new storage capacity, the latter particularly if battery costs continue to decline as anticipated. At deeper
+targets, marginal generation capacity would otherwise experience high curtailment primarily due to supply–-
+demand imbalances; we calculate the value of energy storage at a 65% renewable energy penetration level to be
+2.5–3 times higher than its value at a 50% level. However, the additional storage and generation – and trans-
+mission, to a lesser degree – needed to achieve longer-term renewable energy goals lead to a substantial rise in
+total investment. Between 50% and 55% targets, the computed marginal levelized cost of electricity for new
+variable renewable energy is $94/MWh, compared to $592/MWh between 75% and 80%, suggesting alternative
+integration measures are likely necessary at such high penetration rates.
+
+Note: All variables indexed by r vary by region; all variables indexed
+
+Nomenclature
+
+by t vary by time-step.
+
+Fixed Variables and Parameters
+
+AP
+
+capital annualization rate for annualization period P
+battery storage capital cost [$/MWh]
+onshore wind power capital cost [$/MW]
+offshore wind power capital cost [$/MW]
+
+capital cost of upgraded transmission from region r to adjacent region r’
+[$/MW-mi]
+existing hourly electricity demand [MW]
+
+average hourly electric vehicle demand [MW]
+
+⁎
+
+Corresponding author at: Mechanical Engineering Department, Columbia University, 220 S.W. Mudd Building, 500 West 120th Street, New York, NY 10027, USA.
+E-mail address: tmc2180@columbia.edu (T. Conlon).
+
+https://doi.org/10.1016/j.apenergy.2019.05.066
+Received 8 October 2018; Received in revised form 23 April 2019; Accepted 5 May 2019
+Available online 14 May 2019
+0306-2619/ © 2019 Elsevier Ltd. All rights reserved.
+
+CbattConCoffCtransrr,Delecrt,Devr,T. Conlon, et al.
+
+Applied Energy 250 (2019) 1085–1098
+
+distance between region r and adjacent region r’ [mi]
+fixed hydropower electricity generation [MW]
+
+total monthly hydropower electricity generation (fixed plus flexible)
+[MW]
+interest rate
+set of all onshore wind sites in region r
+existing transmission flow limit between region r and adjacent region r’
+[MW]
+transmission loss rate (constant for all transmission interfaces)
+nuclear-generated electricity [MW]
+
+annualization period [years]
+renewable electricity generation target: Fraction of total demand that
+must be met by renewable energy (combined wind, water, and solar
+power)
+set of all regions in study area
+solar photovoltaic-generated electricity [MW]
+
+total number of hourly time steps in analysis (T = 52608 for 6-year period
+simulated)
+potential offshore wind-generated electricity [dimensionless,
+MWgeneration/MWinstalled]
+potential onshore wind-generated electricity [dimensionless,
+MWgeneration/MWinstalled]
+electric vehicle charge rate under fixed charging constraints [MW]
+
+efficiency (applies to battery storage and electric vehicle charging)
+
+Decision Variables
+
+aggregate energy storage state of charge [MWh]
+
+flexible hydropower electricity generation [MW]
+
+net load [MW]
+
+utilized offshore wind-generated electricity [MW]
+
+utilized onshore wind-generated electricity [MW]
+
+capacity of onshore wind at site j [MW]
+
+total capacity of battery storage installed in region r [MWh]
+total capacity of offshore wind installed in region r [MW]
+
+total capacity of onshore wind installed in region r [MW]
+total capacity of new transmission from region r to adjacent region r’
+[MW]
+energy transmitted from region r to adjacent region r’ [MW]
+increase in battery storage state of charge [MW]
+
+decrease in battery storage state of charge [MW]
+
+electric vehicle charge rate under flexible charging constraints [MW]
+
+Subscripts and Superscripts
+battery storage
+batt
+daily
+daily
+individual onshore wind site index
+
+day index (ranges between 0 and
+
+)
+
+maximum
+
+max
+monthly monthly
+off
+on
+r
+r’
+t
+trans
+
+offshore wind
+onshore wind
+region
+region adjacent to r
+hourly time step
+transmission
+
+1. Introduction
+
+The use of variable renewable energy (VRE) technologies to de-
+crease fossil fuel usage and greenhouse gas (GHG) emissions is widely
+accepted [e.g. [1,2]]. However, the stochastic and intermittent nature
+of VRE supply is expected to require some suite of system integration
+measures at large installed capacities [3]. Such measures can include
+advanced grid monitoring, communication, and control [4]; expanded
+transmission capacity [5]; electrification of transportation and heating
+[6]; increased energy storage capacity [7]; and further interconnection
+among regional systems [8]. Two integration measures that could be
+achieved at large scale are the primary focus of this paper: expanded
+transmission and grid-scale battery storage.
+
+Researchers looking at transmission dynamics have shown that in-
+creased transmission is more effective than battery storage at lowering
+wind power curtailment [9]; curtailment is almost entirely due to
+to ease
+transmission constraints in some studies [10]. However,
+
+1086
+
+computational requirements or to standardize across large geographic
+regions, many energy system models do not account for the full set of
+constraints that face new transmission projects, instead assuming (a)
+costs below historical rates [5,11], (b) idealized network topologies
+[12], or (c) unlimited interregional transmission capacity [13,14].
+
+Previous analyses have modeled the ability of battery storage to
+improve VRE integration [15]. Storage is shown to be a valuable bal-
+ancing asset at high VRE penetration levels, but its deployment is often
+not a cost-effective method of reducing curtailment; system benefits
+diminish with increased adoption [16] and integration can become
+largely a seasonal issue with large VRE capacities, particularly in the
+case of wind power [17]. To date, energy storage has largely been used
+to provide energy system services other than VRE supply shifting (e.g.
+regulation services and peak load reduction) [18]. Evaluating storage
+adoption and transmission expansion together, researchers have found
+that in a transmission-constrained system, energy storage at generation
+sites allows for greater renewable power utilization compared to sto-
+rage at load centers [19]. Yet while co-locating storage with transmis-
+sion bottlenecks has shown to be an effective method of integrating
+VRE, such practice can also reduce the economic viability of the bat-
+teries [20]. A previous study by two of this paper’s authors further
+identified that large-capacity VRE supply variability is likely to be
+highest distant from the VRE resource; this finding implies distributed
+energy storage will have value for reliability services that may not be
+captured in capacity expansion models [21].
+
+In this study, we evaluate the cost-effectiveness of these two in-
+tegration measures (energy storage and transmission) to achieve re-
+newable generation targets (RGTs) in New York State’s (NYS) regional
+grid; the NYS grid aligns with the New York Independent System
+Operator (NYISO) control area. We perform simulations with and
+without electric vehicle (EV) adoption, as the presence of a sizable
+electric transportation load can influence how a system decarbonizes
+[22]. While this paper uses the NYS system as a case study, many states
+across the US have adopted RGTs [23], and all include some common
+characteristics: Spatially heterogeneous electricity demands, transmis-
+sion line limits, potential for battery storage, and existing fossil fuel-
+based transportation that may shift to some proportion of electric ve-
+hicles during a larger energy transition. Therefore, the approach de-
+scribed here can be applied to any regional electric grid after adjusting
+for domain-specific topologies.
+
+Previous work by two of the authors showed that up to 10 GW of
+onshore wind can be added to the NYS grid with minimal curtailment;
+beyond this point, curtailment is largely a seasonal issue with higher
+wind output and lower demand in the winter [24]. While this prior
+work identified transmission bottlenecks, it did not evaluate whether
+upgrades would be economical. A NYISO study evaluated the ability for
+NYS to integrate 8 GW of wind, finding that this capacity would have no
+adverse reliability impacts, would decrease total system costs, would
+result in less than 2% curtailment, and would create congestion only at
+local transmission facilities [25]; it remains to be seen whether these
+results hold at higher renewable penetrations. Similarly, large NREL
+studies investigated the integration of high levels of VRE in NYS as a
+portion of the larger Eastern Interconnection [13,14]. Yet these studies
+ignored intra-NYS transmission and did not quantify the cost-effec-
+tiveness of various flexibility measures. [11] considered the possibility
+of 100% decarbonization of all NYS energy infrastructure; however, in
+modeling the state’s electricity grid, this study both ignored intrastate
+transmission limits and underestimated the costs of state-specific
+transmission expansion. The current paper addresses the above-men-
+tioned gaps in previous NYS-specific work, and in doing so, presents a
+modeling framework translatable to other grid topologies.
+
+This paper makes two principal contributions to the literature on
+VRE integration. First, it examines the cost-effectiveness of transmission
+expansion in a regional grid with price assumptions based on historical
+projects. Related renewable penetration studies [5,11] have un-
+derstated the cost of transmission expansion, especially near high-
+
+drrHfixrt,Htotrmonthly,iJrLrrlNrtPRGTRSrtTWoffrt,Wonrt,fixrt,ErtHflexrt,NLrtUoffrt,Uonrt,xonj,Xbattr,Xoffr,Xonr,Xtransrr,Zrrrtrtflexrt,jm1T24

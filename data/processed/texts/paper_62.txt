@@ -1,0 +1,163 @@
+Chem Soc Rev
+
+REVIEW ARTICLE
+
+Electrochemical C–N coupling of CO2 and
+nitrogenous small molecules for the
+electrosynthesis of organonitrogen compounds
+
+Xianyun Peng,
+Zhongjian Li,
+
+ab Libin Zeng,ab Dashuai Wang,
+
+ab Bin Yang,ab Lecheng Lei,ab Liming Dai
+
+ab Zhibin Liu,ab Yan Li,ad
+*d and Yang Hou
+
+*abc
+
+Electrochemical C–N coupling reactions based on abundant small molecules (such as CO2 and N2) have
+attracted increasing attention as a new ‘‘green synthetic strategy’’ for the synthesis of organonitrogen
+
+compounds, which have been widely used in organic synthesis, materials chemistry, and biochemistry.
+The traditional technology employed for the synthesis of organonitrogen compounds containing C–N
+
+bonds often requires the addition of metal reagents or oxidants under harsh conditions with high energy
+
+consumption and environmental concerns. By contrast, electrosynthesis avoids the use of other redu-
+
+cing agents or oxidants by utilizing ‘‘electrons’’, which are the cleanest ‘‘reagent’’ and can reduce the
+
+generation of by-products, consistent with the atomic economy and green chemistry. In this study, we
+
+present a comprehensive review on the electrosynthesis of high value-added organonitrogens from the
+(cid:2), NH3, etc.) via the C–N coupling
+abundant CO2 and nitrogenous small molecules (N2, NO, NO2
+reaction. The associated fundamental concepts, theoretical models, emerging electrocatalysts, and
+value-added target products, together with the current challenges and future opportunities are dis-
+
+(cid:2), NO3
+
+cussed. This critical review will greatly increase the understanding of electrochemical C–N coupling
+
+Received 28th October 2022
+
+DOI: 10.1039/d2cs00381c
+
+rsc.li/chem-soc-rev
+
+reactions, and thus attract research interest in the fixation of carbon and nitrogen.
+
+1. Introduction
+
+The continuous combustion and utilization of natural fuels
+have resulted in numerous issues, including CO2 emission-
+induced global climate change, environmental destruction, and
+potential depletion of non-renewable resources. With the deple-
+tion of fossil energy and the increasing environmental issues, it
+is urgent to seek and develop clean, cheap, and eﬃcient renew-
+able energy sources. In this context, the direct transformation
+of earth-abundant small molecules, such as N2, CO2, and H2O,
+into high-value-added chemicals, fuels, and fertilizers has
+received extensive attention.1–3 However, the industrial synth-
+esis of high-value-added chemicals from earth-abundant small
+molecules requires harsh conditions with high energy con-
+sumption, exacerbating the energy crisis and environmental
+problems.4 In this case, electrocatalysis powered by renewable
+electricity can lower the energy barrier of the reaction, enabling
+
+a College of Chemical and Biological Engineering, Zhejiang University, Hangzhou
+310027, China. E-mail: yhou@zju.edu.cn
+b Institute of Zhejiang University - Quzhou, Quzhou, 324000, China
+c Donghai Laboratory, Zhoushan, China
+d Australian Carbon Materials Centre (A-CMC), School of Chemical Engineering,
+University of New South Wales, Sydney, NSW, 2052, Australia.
+E-mail: l.dai@unsw.edu.au
+
+the highly efficient synthesis of valuable chemicals under
+milder conditions.5–9 Currently, the research on electrosynth-
+esis focuses on the efficient resource utilization of abundant
+gaseous molecules through electrocatalytic activation and
+immobilization.10–13 For example, the electrocatalytic conversion
+of CO2 into fuels or value-added chemical products provides a
+carbon-neutral cycle, which can mitigate the rapid consumption
+of fossil resources and reduce CO2 emissions.14–19
+
+Based on the ‘‘carbon neutrality’’ policy, the capture, trans-
+formation, and utilization of CO2 have become a hot topic,
+which are also urgent problems to be solved. In particular, the
+electrochemical CO2 reduction reaction (ECRR) powered by
+renewable energy sources has attracted considerable interest,
+providing possibilities for energy storage and artificial closure
+of the carbon cycle under mild conditions.20–25 A large number
+of advantages have been envisioned for the wide and deep
+research on the electrocatalytic conversion of CO2 into chemi-
+cals and fuels via C–O, C–N, and C–C bond formation.26–30
+
+Compared to the pure ECRR technology, the combination of
+ECRR with the electrochemical N2 reduction reaction (ENRR)
+using earth-abundant and nitrogenous small molecules (N2,
+(cid:2), NH3, etc.) as a nitrogen source and renew-
+NO, NO2
+able energy has been demonstrated as a promising approach
+for the sustainable production of valuable organonitrogen
+
+(cid:2), NO3
+
+This journal is © The Royal Society of Chemistry 2023Chem. Soc. Rev., 2023, 52, 2193–2237 | 2193Cite this: Chem. Soc. Rev., 2023,52, 2193Published on 21 February 2023. Downloaded by UNIVERSITY OF ADELAIDE on 6/29/2024 10:28:40 AM. View Article OnlineView Journal | View IssueReview Article
+
+Chem Soc Rev
+
+Fig. 1 Schematic illustration of the electrosynthesis of organonitrogen compounds via C–N coupling reaction of CO2 and nitrogenous small molecules
+(N2, NO, NO2
+
+(cid:2), NH3, etc.) driven by renewable electricity. The black, blue, red, and white balls represent C, N, O, and H atoms, respectively.
+
+(cid:2), NO3
+
+compounds, as displayed in Fig. 1.29–32 Considering that N2
+(making up 80% of air) is an appealing nitrogen source, the
+ENRR driven by renewable electricity has been proposed as a
+promising alternative to the energy-intensive Haber–Bosch
+process for artificial N2 fixation to produce ammonia (NH3)
+by harnessing N2 and H2O feedstocks under mild conditions.
+its efficiency is severely limited by the intrinsic
+However,
+chemical
+low solubility of N2 (0.02 v/v, 298 K,
+inertness,
+1 atm), and high dissociation energy of the NRN triple bond
+(941 kJ mol(cid:2)1).33,34
+
+(cid:2), NO3
+
+Encouragingly, compared to the non-polar N2, its derivates
+(cid:2), etc.) have a relatively low dissociation energy
+(NO, NO2
+(cid:2): 207 kJ mol(cid:2)1) and high water-
+(NO3
+solubility,35,36 which are more suitable nitrogen sources for the
+
+(cid:2): 204 kJ mol(cid:2)1 and NO2
+
+(cid:2) and NO3
+
+electrosynthesis of organonitrogen compounds via the C–N
+coupling reaction. Alternatively, pesticide and fertilizer resi-
+dues and industrial wastewater contain large amounts of
+(cid:2)), which enter
+nitrogen pollutants (such as NO2
+the groundwater and human body, causing various diseases
+such as methemoglobinemia.37,38 The conventional way to
+remove nitrate from wastewater is to convert it to dinitrogen,
+which is known as ‘‘denitrification’’.39 However, the electro-
+chemical conversion strategy is more appealing, not only redu-
+cing the formation of acid rain, photochemical smog, and
+depletion of the ozone layer due to the presence of NO, but
+also avoiding the consumption of a reducing agent (NH3)
+during the selective catalytic reduction process, which is one
+of the state-of-the-art and widely commercialized technologies
+
+2194 | Chem. Soc. Rev., 2023, 52, 2193–2237This journal is © The Royal Society of Chemistry 2023Published on 21 February 2023. Downloaded by UNIVERSITY OF ADELAIDE on 6/29/2024 10:28:40 AM. View Article Online

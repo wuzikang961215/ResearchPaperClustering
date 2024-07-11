@@ -1,0 +1,230 @@
+Excellence in Energy
+
+Sodium-Ion Battery Materials and Electrochemical 
+Properties Reviewed
+
+Kudakwashe Chayambuka, Grietus Mulder, Dmitri L. Danilov, and Peter H. L. Notten*
+
+The demand for electrochemical energy storage technologies is rapidly 
+increasing due to the proliferation of renewable energy sources and the 
+emerging markets of grid-scale battery applications. The properties of 
+batteries are ideal for most electrical energy storage (EES) needs, yet, faced 
+with resource constraints, the ability of current lithium-ion batteries (LIBs) to 
+match this overwhelming demand is uncertain. Sodium-ion batteries (SIBs) 
+are a novel class of batteries with similar performance characteristics to LIBs. 
+Since they are composed of earth-abundant elements, cheaper and utility 
+scale battery modules can be assembled. As a result of the learning curve in 
+the LIB technology, a phenomenal progression in material development has 
+been realized in the SIB technology. In this review, innovative strategies used 
+in SIB material development, and the electrochemical properties of anode, 
+cathode, and electrolyte combinations are elucidated. Attractive performance 
+characteristics are herein evidenced, based on comparative gravimetric and 
+volumetric energy densities to state-of-the-art LIBs. In addition, opportunities 
+and challenges toward commercialization are herein discussed based on 
+patent data trend analysis. With extensive industrial adaptations expected, 
+the commercial prospects of SIBs look promising and this once discarded 
+technology is set to play a major role in EES applications.
+
+1. Introduction
+
+Following  the  successful  commercialization  of  lithium-ion 
+batteries  (LIBs)  by  the  Sony  corporation  in  1991,[1]  LIB  have 
+
+K. Chayambuka, G. Mulder
+VITO
+Boeretang 200, 2400 Mol, Belgium
+K. Chayambuka, G. Mulder
+EnergyVille
+Thor Park 8310, 3600 Genk, Belgium
+K. Chayambuka, Dr. D. L. Danilov, Prof. P. H. L. Notten
+Eindhoven University of Technology
+Postbus 513, 5600 MB, Eindhoven, The Netherlands
+E-mail: p.h.l.notten@tue.nl
+Dr. D. L. Danilov, Prof. P. H. L. Notten
+Forschungszentrum Jülich
+Fundamental Electrochemistry (IEK-9)
+D-52425 Jülich, Germany
+Prof. P. H. L. Notten
+University of Technology Sydney
+Broadway, Sydney, NSW 2007, Australia
+
+The ORCID identification number(s) for the author(s) of this article 
+can be found under https://doi.org/10.1002/aenm.201800079.
+
+DOI: 10.1002/aenm.201800079
+
+become  the  electricity  storage  system  of 
+choice  over  the  past  26  years,  combining 
+superb energy density, compact and light-
+weight designs, and outstanding cycle life 
+compared  to  other  rechargeable  battery 
+technologies.[2]
+
+Despite  the  commercial  success  and 
+proliferation  of  LIB  in  consumer  elec-
+tronics  and  recently  in  battery  electric 
+vehicles, LIBs are believed to be too expen-
+sive  for  stationary,  large-scale,  electrical 
+energy  storage  (EES)  and,  in  addition, 
+there  are  concerns  on  the  resource  avail-
+ability of LIB components.[3,4] Historically, 
+the  technology  of  choice  for  EES  applica-
+tions  is  pumped-hydro  which  continues 
+to  dominate  due  to  very  large  unit  sizes, 
+accounting for over 95% of the total rated 
+power  globally  (data  derived  from  the  US 
+DOE,  global  energy  storage  database).[5,6] 
+However,  the  number  of  new  pumped-
+hydro installations is dwindling as a result 
+of  its  specific  geographic  and  geological 
+requirements.[7]  A  technological  incentive 
+is therefore to find alternative EES options 
+that are installation flexible, cost effective, 
+energy efficient, and environmentally benign in order to match 
+the rapid growth in intermittent renewable energy sources.
+
+The  properties  of  electrochemical  energy  storage  technolo-
+gies are, in general, ideal for a grid scale EES. LIBs in particular 
+have the ability to respond rapidly to load changes, have a high 
+energy  density  combined  with  an  excellent  Coulombic  effi-
+ciency,  exhibit  low  standby  losses,  and  have  modular  designs 
+that facilitate upscaling.[7,8] Yet, faced with the aforementioned 
+resource  constraints  and  adverse  ecological  hazards  upon 
+disposal  (due  to  toxic  elements),  the  ability  of  LIBs  to  meet 
+large-scale EES demands, remains uncertain.[7] The needs and 
+challenges  outlined  above  have  motivated  the  research  for  an 
+alternative,  scalable  battery  technology,  composed  of  cheap, 
+abundant,  and environmentally benign  materials  to match  the 
+performance and economical success of LIBs.
+
+Given  the  relative  abundance  of  elemental  sodium  (com-
+pared  to  lithium  in  the  Earth’s  crust,  see  Figure  1)  and  the 
+low  electrochemical  potential  of  Na  (−2.71  V  vs  the  standard 
+hydrogen electrode, SHE), which is only 330 mV above that of 
+Li, rechargeable batteries based on sodium hold great promise 
+to  meet  large-scale  EES  demands.  For  example,  high-tempera-
+ture ZEBRA cells[9] based on the Na/NiCl2 system and sodium 
+sulfur  cells[10]  have  already  demonstrated  the  potential  of 
+sodium-based  electrochemical  energy  storage.  These  batteries 
+
+Adv. Energy Mater. 2018, 8, 1800079
+
+1800079  (1 of 49)
+
+© 2018 WILEY-VCH Verlag GmbH & Co. KGaA, Weinheim
+
+www.advenergymat.deReviewstorage systems such as Li-ion and NiMH batteries using 
+MATLAB and COMSOL Multiphysics.
+
+automotive applications like plugin hybrid vehicles and also 
+for the integration of photovoltaic energy in a smart grid 
+network. He also works on electrochemical modeling of bat-
+teries with the help of the COMSOL Multiphysics software.
+
+Kudakwashe Chayambuka 
+is a researcher at Energy 
+Technology unit (ETE) of 
+the Flemish Institute for 
+Technological Research 
+(VITO) and is Ph.D. candidate 
+at the Technical University 
+of Eindhoven (TU/e) Faculty 
+of Electrical Engineering. He 
+focuses on the electrochem-
+ical modeling of sodium-ion 
+batteries and other energy 
+
+Grietus Mulder is researcher 
+at the Flemish Technological 
+Institute VITO in the unit 
+Energy Technology with 
+a background in applied 
+physics. He specializes in 
+the field of electrical energy 
+storage for automotive and 
+renewable energy applications. 
+He developed battery testing 
+methods and software mar-
+keted as “BATAL,” used for 
+
+Peter H. L. Notten joined 
+Philips Research Laboratories 
+(Eindhoven, The Netherlands) 
+from 1975 to 2010. He 
+received his Ph.D. degree 
+from Eindhoven University in 
+1989. Since then he focused 
+on energy storage research, 
+including hydrogen and 
+lithium storage materials, 
+new battery technologies, 
+mod eling electrochemical 
+
+systems, and design of battery-management algorithms. In 
+2000 he was appointed as professor at TU/e where he now 
+heads the group Energy Materials and Devices. In 2014 
+he has been appointed as International Adjunct Faculty 
+at Amrita University, Coimbatore (India), as group leader 
+at Forschungszentrum Ju˝lich (Germany), and in 2018 as 
+honorary professor at University of Technology Sydney.
+
+therefore  complement  LIBs  in  stationary  and  large-scale  appli-
+cations. This is further expected to stabilize the costs of lithium-
+based batteries as they enter the mass market of electric vehicles 
+by  suppressing  Li,  Co,  and  Cu  resource  constraints.  In  this  
+
+Figure 1.  Abundance of elements in the Earth’s crust. The energy carrying 
+elements  for  comparison  are  highlighted  in  red  for  Na  and  blue  for  Li. 
+Adapted with permission.[17] Copyright 2014, American Chemical Society.
+
+have  already  been  commercialized  for  stationary  and  automo-
+tive  applications.[11–14]  Their  major  disadvantage,  however,  is  a 
+high  operating  temperature  of  ≈300  °C,  which  conjures  safety 
+hazards  and  reduces  the  round  trip  energy  efficiency  of  the 
+cells.[12,14]  A  room  temperature  battery  therefore  remains  the 
+only viable option to match the performance and characteristics 
+of state-of-the-art LIBs.
+
+The revival of room temperature sodium-ion batteries (SIBs), 
+based  on  intercalation  materials  analogous  to  the  current  LIB 
+technology,  has  thus  emerged  as  a  promising  strategy.  Revival 
+because up until the late 1980s, SIBs were fervently researched 
+alongside LIBs.[15,16] The discovery of graphite as a cheap, elec-
+trochemically  active  and  high-capacity  anode  in  LIB,  and  the 
+failure  of  sodium  insertion  in  graphite,  resulted  in  the  near 
+abandonment of the research in Na intercalation materials for 
+SIB application.[17] A decade later, in the year 2000, Stevens and 
+Dahn[18]  reported  the  successful  electrochemical  insertion  of 
+sodium in hard carbon (HC), at a specific capacity close to that 
+of lithium in graphite (≈372 mAh g−1). This discovery, coupled 
+with a growing need of a complementary technology to the LIB 
+became a major turning point in the rejuvenated interest in the 
+SIB concept.
+
+Since this discovery, the SIBs have increasingly gained trac-
+tion,  buoyed  by  further  discoveries  in  anodic  and  cathodic 
+materials. Much of this rapid progress in material development 
+is attributed to the similarities between SIBs and LIBs. Funda-
+mentally, the voltage range and operating principles of the SIBs 
+and  LIBs  are  identical.  This  similarity  has  allowed  the  years 
+of  conceptual  understanding  and  development  in  LIBs  to  be 
+directly transferred, thereby allowing a rapid growth in the SIB 
+technology.  Besides  borrowing  from  material  synthesis  routes, 
+the  same  production  lines  used  to  manufacture  LIB  cells  can 
+be used to make SIB cells without any modification.[19] Several 
+companies  such  as  Faradion  (UK)[20]  and  Sumitomo[21]  (Japan) 
+have  thus  announced  plans  to  commercialize  SIBs,  the  latter 
+having initially disclosed plans to start mass production as early 
+as 2016.[22]
+
+Although  SIBs  are  not  projected  to  compete  with  LIBs  for 
+volumetric and gravimetric energy density, they are expected to 
+leverage  their  resource  abundance  to  be  price  competitive  and 
+
+Adv. Energy Mater. 2018, 8, 1800079
+
+1800079  (2 of 49)
+
+© 2018 WILEY-VCH Verlag GmbH & Co. KGaA, Weinheim
+
+www.advenergymat.dewww.advancedsciencenews.com 16146840, 2018, 16, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/aenm.201800079 by University Of Adelaide, Wiley Online Library on [29/06/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

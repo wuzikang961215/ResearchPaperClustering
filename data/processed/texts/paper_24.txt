@@ -1,0 +1,251 @@
+Contents lists available at ScienceDirect 
+
+Applied Catalysis B: Environmental 
+
+journal homepage: www.elsevier.com/locate/apcatb 
+
+Co doping regulating electronic structure of Bi2MoO6  to construct dual 
+active sites for photocatalytic nitrogen fixation 
+
+Chunming Yang , Yuanyuan Zhang , Feng Yue , Rui Du , Taoxia Ma , Yujie Bian , Ruqi Li , Li Guo *, 
+Danjun Wang *, Feng Fu * 
+
+Yan’an Key Laboratory of Green Catalysis and Quality Improvement and Utilization of Low Rank Coal, College of Chemistry & Chemical Engineering, Yan’an University, 
+Yan’an 716000, PR China   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Co doping 
+Electronic structure regulation 
+Dual active sites 
+N6N bond adsorption/activation 
+
+Although photocatalytic nitrogen reduction reaction (PNRR) is a green ammonia synthesis technology, it still 
+encounters  low  adsorption/activation  efficiency  of  N2  and  lack  of  reaction  active  sites.  Element  doping  is  an 
+efficient strategy to regulate electronic structure of catalyst. Nevertheless, the mechanism of the effect of doping 
+elements on the N2 adsorption/activation, reaction active site and energy barriers is not well unraveled. Taking 
+Co  doped  Bi2MoO6  (Co-Bi2MoO6)  as  a  model  photocatalyst,  density  functional  theory  (DFT)  and  experiment 
+study were used to investigate the mechanism of Co doping on the PNRR performance over Bi2MoO6. DFT results 
+reveal that Co doping regulates the electronic structure, activates Bi sites of Co-Bi2MoO6  and provides new Co 
+active  sites,  thus  constructing  dual  active  sites  for  PNRR.  Benefited  from  dual  active  sites  for  effectively 
+adsorption/activation N2, the as-fabricated 3% Co-Bi2MoO6  exhibit the maximum NH3  generation rate of 95.5 
+(cid:0) 1 without sacrificial agents, which is 7.2 times that of Bi2MoO6. Furthermore, the detail mechanism 
+μmol⋅g
+of N–––N bond adsorption/activation and hydrogenation reaction on Co-Bi2MoO6 was also proposed according to 
+in-situ FTIR and DFT results. This study provides a promising strategy to design catalysts with dual active sites for 
+PNRR, which is of great significance to the popularization of other material systems.   
+
+(cid:0) 1⋅h
+
+1. Introduction 
+
+Ammonia (NH3) is a decisive component of the commercial synthesis 
+of fertilizers, refrigerants and military applications [1]. Besides, NH3 is 
+an ideal hydrogen storage material, as it can easily condense into liquid 
+for storage. Accordingly, it is assumed that NH3 may play an important 
+role in hydrogen economy and can be used as the power of fuel cells to 
+provide a good strategy to deal with the energy crisis [2–4]. Currently, 
+industrial ammonia is produced through Haber-Bosch process, which is 
+conditioned  by  high-purity  nitrogen  (N2)  and  hydrogen  (H2)  streams 
+under high pressure (15–25 MPa) and high temperature (400–500 
+C), 
+consuming a large amount of energy and capital [5]. These shortcom-
+ings  have  widely  aroused  interest  in  developing  sustainable  and 
+environment-friendly  strategies  of  ammonia  synthesis  to  reach  the 
+ambitious carbon peak and carbon neutrality objectives [6,7]. 
+
+◦
+
+Photocatalytic  nitrogen reduction reaction  (PNRR) is  an attractive 
+way to substitute for Haber-Bosch’s production of NH3 as it utilizes the 
+inexhaustible solar and water to directly provide electrons and protons 
+
+for N2 hydrogenation to NH3, instead of supply high purity hydrogen [8, 
+9]. The development of high-efficient PNRR catalysts has caused a range 
+of research activities [10,11]. Unfortunately, most of currently devel-
+oped photocatalytic materials still suffer from low adsorption/activation 
+efficiency  of  N2  and  lack  of  reaction  active  sites,  exhibiting  limited 
+conversion  efficiencies  for PNRR  [12].  So  far,  numerous  studies  have 
+been conducted to regulate the electronic structure of photocatalyst so 
+as to optimize its nitrogen fixation performance [13]. Transitional metal 
+element doping is widely used as an effective strategy to regulate the 
+electronic structure to strengthen the N2 adsorption/activation [14–17]. 
+Xiong’s group reported that Mo doping can efficiently enhance the N2 
+adsorption/activation on the surface of W18O49 ultrathin nanowires, in 
+which the coordinatively unsaturated metal atoms with oxygen defects 
+serve as the sites for N2  adsorption/activation [14]. Recently, Yin and 
+co-works created new active sites on MoS2 for the adsorption of N2 and 
+dissociation of nonpolar N–––
+N bond by Mn doping, in which the expo-
+sure of Mo edge sites is higher due to the formation of S vacancies [16]. 
+Although the effect of element doping on regulation electronic structure 
+
+* Corresponding authors. 
+
+E-mail addresses: guoli20052017@163.com (L. Guo), wangdj761118@163.com (D. Wang), yadxfufeng@126.com (F. Fu).  
+
+https://doi.org/10.1016/j.apcatb.2023.123057 
+Received 5 May 2023; Received in revised form 19 June 2023; Accepted 27 June 2023   
+
+AppliedCatalysisB:Environmental338(2023)123057Availableonline28June20230926-3373/©2023ElsevierB.V.Allrightsreserved.C. Yang et al.                                                                                                                                                                                                                                    
+
+and creation of defective-type active sites of photocatalyst has been well 
+researched, the effect of doped element on inherent active sites, as well 
+as act as new active sites on N2  adsorption/activation and energy bar-
+riers over photocatalyst is not well unraveled. 
+
+In  this  work,  taking  Co  doped  Bi2MoO6  (Co-Bi2MoO6)  as  a  model 
+photocatalyst, density functional theory (DFT) was used to investigate 
+the effect of Co-doping on partial density of states (DOS), differential 
+charge density and energy barrier of Bi2MoO6. DFT results reveal that Co 
+doping not only regulates the electronic structure, but also activates Bi 
+sites of Co-Bi2MoO6 and provides new Co active sites, thus constructing 
+dual  active  sites  for  PNRR.  Under  the  guidance  of  DFT  results,  Co- 
+Bi2MoO6 was synthesized by a facile solvothermal process. Ascribed to 
+Co-doping  regulated  the  electronic  structure  of  Bi2MoO6  to  construct 
+dual  active  sites  for  effectively  adsorption/activation  N2,  the  as- 
+fabricated  3%  Co-Bi2MoO6  achieved  the  maximum  NH3  generation 
+(cid:0) 1  under visible light irradiation without sacri-
+rate of 95.5 μmol⋅g
+ficial agents, which is 7.2 times that of Bi2MoO6. Furthermore, the detail 
+steps for N–––
+N bond adsorption/activation and hydrogenation reaction 
+pathway on Co-Bi2MoO6 are depicted according to DFT and in-situ FTIR 
+results. This study provides fresh insights into design catalysts with dual 
+active sites for PNRR and reaffirms the versatility of subtle electronic 
+structure modulation in tuning catalytic activity. 
+
+(cid:0) 1⋅h
+
+2. Experimental and computational section 
+
+2.1. Preparation of Bi2MoO6 
+
+Pure  Bi2MoO6  was  prepared  by  solvothermal  method.  Typically, 
+under intense stirring, 1.94 g of Bi(NO3)3•5 H2O (4 mmol) and 0.484 g 
+of  Na2MoO4•2  H2O  (2  mmol)  were  dissolved  in  a  mixed  solution  of 
+glycol  (40  mL)  and  ethanol (10  mL)  to  obtain  transparent  liquid  and 
+transfer  to  a  65  mL  autoclave  lined  with  polytetrafluoroethylene  for 
+solvothermal reaction at 190 
+C for 2 h. The yellow precipitation was 
+then  separated, washed  with  ethanol  and  deionized  water  for several 
+times, and dried to obtain Bi2MoO6 product. 
+
+◦
+
+2.2. Preparation of Co-Bi2MoO6 
+
+◦
+
+The  Co-Bi2MoO6  photocatalyst  was  prepared  by  hydrothermal 
+(cid:0) 1  CoCl2⋅6  H2O 
+method.  In  a  typical  process,  40  mL  of  0.0005  mol•L
+solution was taken into a 100 mL beaker, and 1 g of Bi2MoO6 was added 
+to the solution, and stirred for 1 h. Finally, the homogeneous solution 
+was transferred into a 65 mL Teflon-lined stainless steel autoclave and 
+maintained at 160 
+C for 5 h. The product was separated by centrifu-
+gation, washed with ethanol and deionized water for several times and 
+then  dried  overnight.  The  obtained  product  was  marked  as  0.5%  Co- 
+Bi2MoO6. The change in CoCl2⋅6 H2O (0.001, 0.002, 0.003, 0.004, 0.006 
+(cid:0) 1)  concentration  was  used  to  create  a  series  of  samples  for 
+mol•L
+experimental optimization, which were referred to as X% Co-Bi2MoO6 
+(X  = 0.5,  1,  2,  3,  4,  6,  X  means  the  mass  ratio  of  CoCl2⋅6  H2O  and 
+Bi2MoO6). 
+
+2.3. Photocatalysis nitrogen reduction reaction 
+
+The photocatalytic activity of nitrogen fixation was evaluated under 
+visible light. Generally, in a quartz reaction, add photocatalyst (100 mg) 
+to ultrapure water (150 mL). Before irradiation, to eliminate dissolved 
+oxygen, the suspension was rapidly agitated in the dark for 30 min and 
+bubbled in high purity nitrogen. During irradiation, 7 mL of solution was 
+taken out every 30 min, and then centrifuged at 11000 rpm for 5 min to 
++
+remove  photocatalyst  for  the  following  NH3/NH4
+concentration 
+analysis. 
+
+2.4. Theoretical calculations 
+
+The DOS, differential charge density and energy barrier of Bi2MoO6 
+
+and  Co-Bi2MoO6  were  performed  through  the  spin-polarized  density 
+functional theory (DFT) as implemented by the Vienna ab initio simu-
+lation  package  (VASP).  Perdew-Burke-Ernzerhof  (PBE)  generalized 
+gradient  approximation  (GGA)  was  used  to  describe  the  exchange- 
+correlation energy functional. Projected augmented wave (PAW) pseu-
+dopotential  was  used  for  depicting  the  ion  core  and  the  periodic 
+boundary  condition.  Spin  polarization  was  also  considered.  A  2  × 1 
+supercell, three layers of pristine Bi2MoO6 (010) and Co-Bi2MoO6 (010) 
+surface  were  chosen  to  construct  the  investigated  models.  Geometry 
+optimizations,  DOS,  differential  charge  density  and  free  energy  were 
+(cid:0) 5 eV in energy and 0.05 
+performed with a convergence threshold of 10
+eV/Å for the force. A vacuum of 15 Å along the z-direction was used, 
+which was large enough to minimize the interactions between periodic 
+images. The free energy of PNRR was calculated by using the equation:  
+
+ΔG=Esurface+adsorbate-Esurface-Eadsorbate+ΔEZPE-TΔS,                                    
+
+where G, E, ZPE and TS represent the free energy, total energy from DFT 
+calculations, zero point energy and entropic contributions, respectively. 
+
+3. Results and discussion 
+
+3.1. DFT calculation for catalysts design 
+
+The key step in the PNRR process is known to be adsorption/acti-
+vation  of  N2  on  catalyst surface.  During the  N2  adsorption/activation 
+process,  the  electrons  on  bonding  orbital  (highest  occupied  molecule 
+orbital, HOMO, 2δg) of N2 interact with the d-orbital of catalyst active 
+site to form the adsorption state. Then the d-orbital electrons of catalyst 
+active site feedback to anti-bonding orbital (lowest unoccupied mole-
+cule orbital, LUMO, 1πg) of the N2 to activate the N–––
+N bond to form N2 
++
+active state (⋅N2), and then⋅N2 reacts with the H
+and photo-generated 
+electrons  to  form  NH3  (Fig.  1a).  Hence,  it  is  crucial  that  catalytic 
+active  site  provide  symmetric  orbit  matching  with  the  anti-bonding 
+orbital of the N2. 
+
+Bismuth  molybdate  (Bi2MoO6)  is  a  typical  Aurivillius  oxide, 
+composed  of  a  layered  structure  with  alternate  stacking  of  (Bi2O2)2+
+sheets interleaved with [MoO4]2- layer [18]. The hybridization of Bi 6 s 
+and O 2p orbit constitute its valence band (VB), Mo 4d (4d5) constitute 
+its conduction band (CB) (Fig. 1b and c) [19,20]. Thermodynamic, the 
+energy band structure of Bi2MoO6  meets the potential requirement of 
+the PNRR [21]. Theoretically, the structure of Bi2MoO6 determines that 
+Bi sites (Bi2MoO6-Bi) is responsible for N2 molecule adsorption/activa-
+tion other than Mo sites in the PNRR. Nevertheless, the Bi 6 s orbit is 
+difficult to form adsorption states with the N2 molecules. The Co atoms 
+possesses ideal d-band electronic structure (3d7) that spatially matches 
+the anti-bonding orbital of N2 [22]. As shown in Fig. 1d, the high overlap 
+of  N,  Bi,  and  Co  peaks  in  the  PDOS indicates  that the  Co-Bi2MoO6  is 
+propitious to accept electrons from N2  HOMO (2δg) to form adsorbed 
+state  N2,  and  then  electrons  transfer  from  the  Co  d-orbital  to  the 
+anti-bonding orbital (LUMO, 1πg) of N–––
+N to activate N2. Furthermore, 
+Co  doping  induces an impurity  energy level near  the top of  Bi2MoO6 
+valence band, which is beneficial for electron excitation [23]. According 
+to the differential charge density (Fig. 1e), it is clear that the electrons 
+transfer  from  d-orbital  Co  sites  (Co-Bi2MoO6-Co)  to  the  anti-bonding 
+orbital  of  adsorbed  N2.  Therefore,  the  essence  of  the  N2  adsorptio-
+n/activation on the surface  of transition metal site (Co and Bi) is the 
+“acceptance  donation”  of  electrons,  where  the  electron  structure  of 
+d orbitals determines the energy barriers of PNRR. 
+
+The DFT calculations were further performed to gain insight into the 
+effect  of  Co  doping  on  N2  adsorption/activation  as  well  as  reveal 
+inherent  mechanism  of  PNRR  activity  [24–26].  Fig.  2a  exhibited  the 
+d-orbital DOS of Co-Bi2MoO6 and Bi2MoO6 to examine the influence of 
+Co doping on the electronic structure. The d-band centers of Co-Bi2MoO6 
+and Bi2MoO6  are (cid:0) 3.1 and (cid:0) 2.7 eV, respectively. Co-doping resulted 
+in  shifting  up  d-band  center  of  Bi2MoO6,  which  may  be  in  favor  of 
+
+AppliedCatalysisB:Environmental338(2023)1230572

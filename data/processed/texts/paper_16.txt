@@ -1,0 +1,248 @@
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 7 ( 2 0 2 2 ) 2 4 1 3 6 e2 4 1 5 4
+
+Available online at www.sciencedirect.com
+ScienceDirect
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / h e
+
+The economics and the environmental benignity of
+different colors of hydrogen
+
+A. Ajanovic
+
+*
+, M. Sayer, R. Haas
+
+Vienna University of Technology (TU WIEN), Vienna, Austria
+
+h i g h l i g h t s
+
+(cid:1) Technical, economics and environmental discussion on green hydrogen.
+(cid:1) Different colors of hydrogen provide different environmental beneﬁts.
+(cid:1) To date, grey hydrogen production is still the most economical way to produce hydrogen.
+(cid:1) With technological learning, costs for green hydrogen will substantially decrease.
+(cid:1) Green hydrogen could support ﬂexibility and decarbonization of the whole energy system.
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Article history:
+
+Received 3 January 2022
+
+Received in revised form
+
+3 February 2022
+
+Accepted 11 February 2022
+
+Available online 4 March 2022
+
+Keywords:
+
+Hydrogen production
+
+Cost investigation
+
+Environmental analysis
+
+Vehicle deployment
+
+Due to the increasing greenhouse gas emissions, as well as due to the rapidly increasing
+
+use of renewable energy sources in the electricity generation over the last years, interest in
+
+hydrogen is rising again. Hydrogen can be used as a storage for renewable energy balancing
+
+the whole energy systems, and contributing to the decarbonization of the energy system,
+
+especially of the industry and the transport sector.
+
+The major objective of this paper is to discuss various ways of hydrogen production
+
+depending on the primary energy sources used. Moreover, the economic and environ-
+
+mental performance of three major hydrogen colors, as well as major barriers for faster
+
+deployment in fuel cell vehicles, are analyzed.
+
+The major conclusion is that the full environmental beneﬁts of hydrogen use are highly
+
+dependent on the hydrogen production methods and primary sources used. Only green
+
+hydrogen with electricity from wind, PV and hydro has truly low emissions. All other
+
+sources like blue hydrogen with CCUS or electrolysis using the electricity grid have sub-
+
+stantially higher emissions, coming close to grey hydrogen production. Another conclusion
+
+is that it is important to introduce an international market for hydrogen to lower costs and
+
+to produce hydrogen where conditions are best.
+
+Finally, the major open question remaining is whether e including all external costs of
+all energy carriers, hydrogen of any color may become economically competitive in any
+
+sector of the energy system. The future success of hydrogen is very dependent on tech-
+
+nological development and resulting cost reductions, as well as on future priorities and the
+
+corresponding policy framework. The policy framework should support the shift from grey
+
+to green hydrogen.
+© 2022 The Author(s). Published by Elsevier Ltd on behalf of Hydrogen Energy Publications
+LLC. This is an open access article under the CC BY license (http://creativecommons.org/
+
+licenses/by/4.0/).
+
+* Corresponding author. Vienna University of Technology (TU WIEN), Vienna, Austria.
+
+E-mail address: ajanovic@eeg.tuwien.ac.at (A. Ajanovic).
+
+https://doi.org/10.1016/j.ijhydene.2022.02.094
+0360-3199/© 2022 The Author(s). Published by Elsevier Ltd on behalf of Hydrogen Energy Publications LLC. This is an open access article under the CC BY
+license (http://creativecommons.org/licenses/by/4.0/).
+
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 7 ( 2 0 2 2 ) 2 4 1 3 6 e2 4 1 5 4
+
+24137
+
+Abbreviations:
+
+CCUS
+CLR
+
+ALK
+ATR
+BEV
+C
+CCS
+
+Alkaline water electrolysis
+Autothermal reforming
+Battery electric vehicle
+Carbon
+Carbon capture and storage CCU Carbon
+capture and utilization
+Carbon capture, utilization and storage
+Chemical looping reforming CO Carbon
+monoxide
+Carbon dioxide
+Carbon dioxide equivalent
+Electric vehicle
+Fuel cell vehicle
+Greenhouse gas
+Hydrogen
+Internal combustion engine
+Polymer electrolyte membrane
+Partial oxidation of methane
+partial oxidation of oil products
+Renewable energy sources
+Sorption enhanced reforming
+Steam reforming of natural gas
+Solid oxide electrolyzer cell
+
+CO2
+CO2 eq
+EV
+FCV
+GHG
+H2
+ICE
+PEM
+POM
+POX
+RES
+SER
+SMR
+SOEC
+TTW Tank-to Wheel
+WTT Well-to-Tank
+WTW Well-to-Wheels
+
+Introduction
+
+The current energy system is facing serious challenges and
+needs signiﬁcant transformations. Over the last decades, it
+can be noticed continuously increasing use of renewable en-
+ergy sources (RES) all over the world. A combination of
+renewable energy with energy-efﬁcient technologies should
+allow decreasing greenhouse gas (GHG) emissions and local
+air pollution.
+
+Hydrogen is like electricity, a secondary energy carrier,
+but it is also an energy vector, which can be used to convert,
+store and release energy. With the increasing electricity
+production from variable renewable sources such as wind
+and PV, hydrogen is becoming an interest as a long-term
+storage option for surplus electricity. Currently, hydrogen
+is mostly used in various industrial applications, such as
+reﬁning, steel-, ammonia- and methanol production, and
+over the past years, demand for hydrogen was continuously
+increasing. In 2020 the overall demand accounted for roughly
+90 Mt, from which a little over 70 Mt were utilized as pure
+hydrogen and 20 Mt were combined with other gases for
+methanol and steel production [1].
+
+In the future, it can be expected that demand will be much
+higher in all applications. Due to the increasing emissions
+from the transport sector, as well as due to the rapidly
+increasing use of RES in electricity generation over the last
+years, interest in hydrogen use for mobility is rising again
+since green hydrogen can contribute to the decarbonization of
+the transport sector.
+
+However, until now, hydrogen was mostly produced using
+the cheapest production processes without consideration of
+the impact on the environment. Since steam reforming of
+natural gas is the most developed and cheapest commercial
+method for hydrogen production, the largest amount of
+hydrogen is produced in this way. Overall, around 900 Mt of
+CO2 emissions per year are released into the atmosphere by
+worldwide hydrogen production [1]. With the pressing envi-
+ronmental problems, interest in low-carbon hydrogen pro-
+duction is increasing. However, this increase is still very slow
+due to higher hydrogen production costs. Fig. 1 shows the
+historical development of the low-carbon hydrogen produc-
+tion for the period 2010 to 2020 (data for 2020 are announced).
+To differ various ways of hydrogen production depending
+on the primary energy sources, different colors are used. With
+the increasing challenges to integrate variable renewables in
+power systems, hydrogen production by electrolysis, so-called
+green hydrogen, is becoming more relevant.
+
+Over the last few years, hydrogen has increasingly been the
+subject of various aspects of research. In general, the technical
+papers can be divided into those dealing with different pro-
+duction possibilities for hydrogen (colors) and speciﬁc tech-
+nical aspects. Another strain of literature discusses the role of
+hydrogen in the overall energy system, the costs of production
+and the environmental impact.
+
+One paper giving a comprehensive analysis of different
+production methods is Dawood et al. [3]. In addition, they
+criticize that the current color scheme does not specify the
+exact amount of emissions generated by low carbon hydrogen
+and present a new color spectrum approach. El-Shaﬁe et al. [4]
+give a thorough analysis of different fossil and non-fossil pro-
+duction methods. They further research the use of ammonia
+decomposition and ﬁnd that it will be a commercial hydrogen
+production method in the future. Ratnakar et al. [5] also list all
+main hydrogen production methods and explain them in
+detail. One of the main research dealing with the production
+methods and all aspects from economic to environmental
+impacts is done by Newborough and Cooley [6]. They ﬁnd that
+green hydrogen will be the production method of the future as
+it will become cheaper than the alternatives like blue hydrogen
+caused by cheaper renewable electricity and electrolyzers.
+
+Other authors focus on one production method or area, with
+Midilli et al. [7] and Li and Cheng [8] on coal gasiﬁcation, Kho-
+jasteh Salkuyeh et al. [9] on reforming of natural gas, Bauer et al.
+[10], Howarth and Jacobson [11] and Ali Khan et al. [12] on blue
+hydrogen, Amin et al. [13], Schneider et al. [14] and Leal P(cid:1)erez
+et al. [15] on turquoise hydrogen and Gerloff [16] and Chi and Yu
+[17] on green hydrogen production, which all will be further
+
+

@@ -1,0 +1,142 @@
+Contents lists available at ScienceDirect 
+
+Heliyon 
+
+journal homepage: www.cell.com/heliyon 
+
+Research article 
+
+Investigating the role of nuclear power and battery storage in 
+Hungary’s energy transition using hourly resolution electricity 
+market simulations 
+
+Bence Bir´o *, Attila Asz´odi 
+Institute of Nuclear Techniques, Faculty of Natural Sciences, Budapest University of Technology and Economics, M˝uegyetem rkp. 9, H-1111, 
+Budapest, Hungary   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Grid scale battery storage 
+Hourly power system simulation for Central 
+Europe 
+Nuclear energy 
+Renewable energy 
+Sensitivity analysis on effects of weather data 
+Technical and economic data on power plants 
+
+Electricity supply in European countries faces a number of challenges, such as achieving carbon 
+neutrality,  tackling  rising  prices,  reducing  dependence  on  fossil  fuels,  including  fossil  fuel  im-
+ports. To achieve these goals, the electricity systems of all European countries will have to un-
+dergo major changes, while taking into account technical, environmental, economic and social 
+objectives. Our simulations provide essential data for this transition by analyzing different power 
+plant portfolios and electricity consumption scenarios. The analyses focus on the cooperation of 
+nuclear power and weather-dependent renewables, and on the possible role that battery-based 
+electricity storage can play in the Hungarian electricity system. 
+
+In this paper, we present the experience gained in setting up an electricity market model and 
+the results of running the model on the electricity systems of Hungary and its six neighboring 
+countries  (Slovakia,  Romania,  Serbia,  Croatia,  Slovenia  and  Austria),  taking  into  account  the 
+constraints  of  the  cross-border  capacities.  The  results  of  the  sensitivity  analysis  for  the  2030 
+power plant portfolios, battery capacities and renewables analyzed in this paper cover Hungary’s 
+import/export position, the energy source structure of its electricity generation, battery opera-
+tion, CO2 emissions from electricity generation, expected prices in the system and the utilization 
+parameters of nuclear power plants.   
+
+1. Introduction 
+
+The energy supply faces many challenges in the short and long term. The main aspects of these challenges are tackling climate 
+change, achieving sustainability, while ensuring affordable and secure energy supply. The European Union has set a target for the 
+decarbonization of the energy sector under the European Green Deal [1], which means that countries’ electricity systems should be net 
+zero carbon by 2050 [2]. 
+
+To achieve the decarbonization targets, the electricity system in European countries will have to undergo significant changes, 
+taking  into  account  technical,  environmental,  economic  and  social  aspects.  The  path  to  achieving  the  targets  will  be  further 
+complicated by the ongoing Russian-Ukrainian war, which has led to a rise in energy prices and has led European countries to set 
+themselves the objective of reducing their dependence on Russian fossil energy imports. Taking all these factors into account, it can be 
+
+* Corresponding author. 
+
+E-mail address: biro.bence@reak.bme.hu (B. Bir´o).  
+
+https://doi.org/10.1016/j.heliyon.2024.e29841 
+Received 15 December 2023; Received in revised form 28 March 2024; Accepted 16 April 2024   
+
+Heliyon10(2024)e29841Availableonline18April20242405-8440/©2024TheAuthors.PublishedbyElsevierLtd.ThisisanopenaccessarticleundertheCCBY-NClicense(http://creativecommons.org/licenses/by-nc/4.0/).B. Bir´o and A. Asz´odi                                                                                                                                                                                                 
+
+concluded that the most important task for European countries is to replace fossil fuels, reduce Russian energy source imports and keep 
+prices at affordable levels. 
+
+According to the analysis of several authors, such as Buongiorno et al. [3], Dincer et al. [4] and the ENTSO-E and ENTSOG joint 
+report [5], renewable energy, nuclear energy, grid-scale electricity storage and hydrogen technology can play a major role in this 
+challenge. However, these technologies are either still in the demonstration phase (grid-scale battery based storage, hydrogen) or there 
+is  little  data  on  their  stable  and  sustainable  cooperation  (e.g.  weather-dependent  renewables  and  nuclear  power),  so  a  detailed 
+technical, economic and environmental analysis of the systems composed of these technologies is essential. 
+
+In order to achieve decarbonization targets, the European Union has required member states to prepare a National Energy and 
+Climate Plan (NECP) [6], which outlines the country’s path towards a net zero-emission energy system. Following the publication of 
+each country’s plan, a number of studies have been carried out to analyses them. Simoglou and Biskas [7], for example, evaluate the 
+Greek NECP and demonstrates that the plan to phase out lignite and deploy renewables on a large scale will lead to a gradual but 
+radical transformation of the energy mix, in which pumped-storage hydro power plants are expected to play a key role in mitigating the 
+negative effects of intermittent renewable generation. Williges and colleagues [8] point out that the implementation of NECPs may 
+lead to underestimation  of impacts, failure to reduce  greenhouse gas emissions  or increased resistance to climate  policies due to 
+neglecting key aspects ("efficiency, effectiveness and feasibility"). 
+
+The role of nuclear energy in the decarbonization process has been the subject of several recent studies. Kindi and colleagues [9] 
+have shown that linking nuclear power plants to thermal energy storage could ensure the continued operation of nuclear power plants 
+and make their operation more flexible. Duan et al. in a similar paper [10] concluded that in a highly decarbonized system, nuclear 
+power will be economically viable in countries with low wind energy potential (Hungary is one of these countries). In his study [11], 
+Cepin demonstrated that replacing a nuclear power plant with wind power plants of five times the nuclear capacity causes a reduction 
+in the reliability of the electricity system. The above articles demonstrate that, despite the energy policy debates, nuclear power has 
+important role to play in future low-emission electricity systems, and that it is essential to examine their effective cooperation with 
+renewable energy sources. 
+
+Beyond nuclear energy, grid-scale energy storage will also play a significant role in achieving net-zero emission electricity systems. 
+There are a number of technologies for energy storage [12], of which battery storage has been playing an increasingly important role in 
+recent  years.  However,  most  of  the  research  on  these  storage  systems  [13,14]  approaches  the  issue  from  a  capacity  expansion 
+perspective rather than from the point of view of the market behavior of batteries at hourly resolution. Those that focus on the latter 
+have concluded that short-term electricity storage can provide cheap and fast energy supplies to compensate daily fluctuations [15, 
+16]. 
+
+In our previous study [17], detailed power system models were developed at the Budapest University of Technology and Economics 
+to  analyze  the  future  (2030,  2040)  power  system  of  19  European  countries  using  the  Energy  Scenarios  Simulation  Tool  (ESST) 
+developed by the International Atomic Energy Agency. The study has shown that the reference day modelling approaches used for the 
+development of the National Energy and Climate Plans of the individual governments cannot describe the electricity system with 
+sufficient accuracy, and that system modelling with at least hourly resolution is essential for the development of appropriate strategies 
+and the analysis of impacts and consequences. The model used in the study is capable of hourly-resolution simulations, taking into 
+account the hourly pattern of consumption and renewable generation, but this modelling environment is not able to model the more 
+subtle technical characteristics and constraints that affect cross-border capacity, electricity storage and other factors that limit the 
+electricity generation of different power plants. Based on the lessons learned from the previous study, we concluded that more so-
+phisticated  electricity  market  models  should  be  used  to  model  low-carbon  electricity  systems  at  the  appropriate  level,  for  which 
+purpose we chose the Energy Exemplar’s PLEXOS [18] code. 
+
+The main topic of this paper is the modelling of the Hungarian electricity system together with its neighbors, so it is important to 
+review the literature on this topic. Kiss et al. [19] have performed hourly resolution simulations of the Hungarian electricity system 
+using EnergyPRO [20] software, which was used to study 3 power plant portfolios. Their results show that the portfolio chosen by the 
+authors would have a higher fuel diversification, a higher share of renewables, lower emissions, but much higher costs. Campos et al. 
+[21] built 2033 models of the Hungarian electricity system using EnergyPLAN software and examined the compatibility of wind and 
+solar with projections of future electricity demand in Hungary, and estimated the excess generation. In their study, they found that 46 
+% of electricity consumption could be produced by wind and solar PV technology, with less than 5 % of annual overproduction. It 
+should be noted that the models presented in the [19,21] studies are not able to model the detailed technological parameters of 
+cross-border capacities and neighboring countries, power plants, and the hourly inputs of renewable energy sources are only based on a 
+few years of data, so it can be stated that the model presented in this study has a much higher resolution and gives a much more 
+detailed picture of the possible future of Hungary’s electricity system compared to these models. 
+
+Based on the literature study, it can be concluded that our present paper is the first to model the combined electricity system of 
+Hungary and its neighboring countries with a high time resolution, describing the elements of the electricity system in great detail, and 
+to use the model to assess the situation of nuclear, renewables and grid-scale battery storage in the Hungarian electricity system. The 
+main contribution of the research presented in this paper to the results in the literature in this field is as follows:  
+
+-  a model is proposed for the Hungarian and neighboring countries’ electricity systems in year 2030 in the PLEXOS to perform hourly 
+
+-  guidance and extensive literature study is provided on the technical and economic parameters of power plants and electricity 
+
+resolution simulations,  
+
+storage units,  
+
+-  results of the impact of new nuclear units are given, 
+
+Heliyon10(2024)e298412

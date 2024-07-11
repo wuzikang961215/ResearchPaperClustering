@@ -1,0 +1,161 @@
+A
+r
+t
+c
+l
+e
+
+i
+
+www.acsnano.org
+
+Bacterial Growth-Induced Tobramycin Smart
+Release Self-Healing Hydrogel for
+Pseudomonas aeruginosa-Infected Burn
+Wound Healing
+Ying Huang, Lei Mu, Xin Zhao, Yong Han, and Baolin Guo*
+
+Cite This: ACS Nano 2022, 16, 13022−13036
+
+Read Online
+
+ACCESS
+
+Metrics & More
+
+Article Recommendations
+
+*sı Supporting Information
+
+ABSTRACT: Burns are a common health problem worldwide and are
+highly susceptible to bacterial infections that are difficult to handle with
+ordinary wound dressings. Therefore, burn wound repair is extremely
+challenging in clinical practice. Herein, a series of self-healing hydrogels
+(QCS/OD/TOB/PPY@PDA) with good electrical conductivity and
+antioxidant activity were prepared on the basis of quaternized chitosan
+(QCS), oxidized dextran (OD), tobramycin (TOB), and polydopamine-
+coated polypyrrole nanowires (PPY@PDA NWs). These Schiff base cross-
+links between the aminoglycoside antibiotic TOB and OD enable TOB to
+be slowly released and responsive to pH. Interestingly,
+the acidic
+substances during the bacteria growth process can induce the on-demand
+release of TOB, avoiding the abuse of antibiotics. The antibacterial results showed that the QCS/OD/TOB/PPY@PDA9
+hydrogel could kill high concentrations of Pseudomonas aeruginosa (PA), Staphylococcus aureus, and Escherichia coli in a short
+time and showed a bactericidal effect for up to 11 days in an agar plate diffusion experiment, while showing good in vivo
+antibacterial activity. Excellent and long-lasting antibacterial properties make it suitable for severely infected wounds.
+Furthermore, the incorporation of PPY@PDA endowed the hydrogel with near-infrared (NIR) irradiation assisted bactericidal
+activity of drug-resistant bacteria, conductivity, and antioxidant activity. Most importantly, in the PA-infected burn wound
+model, the QCS/OD/TOB/PPY@PDA9 hydrogel more effectively controlled wound inflammation levels and promoted
+collagen deposition, vascular generation, and earlier wound closure compared to Tegaderm dressings. Therefore, the TOB
+smart release hydrogels with on-demand delivery are extremely advantageous for bacterial-infected burn wound healing.
+KEYWORDS: antibiotic smart release hydrogel, burn wound healing, bacterial growth response, on-demand delivery, antibacterial infection
+
+B urns are the fourth most common destructive trauma
+
+worldwide and are prevalent
+in both military and
+civilian populations.1,2 Healing of burn wounds requires
+the substitution of inactivated tissue, and this is a more delicate
+and complex process than other wound repair processes.3,4
+Furthermore, burn injuries are highly vulnerable to invasive
+microbial
+infections before complete epithelialization, with
+Pseudomonas aeruginosa (PA) and Staphylococcus aureus (SA)
+infections.1,2,5 Wound
+being the most prevalent microbial
+infection will seriously affect the process of wound healing,
+such as inflammation resolution, epidermal maturation, and
+neovascularization.2 Severe infections can even cause compli-
+cations such as sepsis, which can be life-threatening.6,7
+Therefore,
+require immediate
+to prevent complications.2 The
+antimicrobial
+process of healing a burn wound is a lengthy and arduous
+one. Although many kinds of different wound dressings have
+
+susceptible burn wounds
+
+treatment
+
+been developed for burns in recent years with obvious healing-
+promoting effects, most of
+them do not have excellent
+antibacterial ability to prevent burn wound infection and
+cannot cope with infected burn wounds.8−14 Therefore,
+developing an ideal dressing that can effectively deal with
+infected burn wounds remains a challenge.
+
+Tobramycin (TOB) can treat various bacterial infections,
+clinically mainly for serious infections caused by sensitive
+bacteria, especially those due to Gram-negative bacteria, such
+
+June 7, 2022
+
+Received:
+Accepted: August 1, 2022
+Published: August 3, 2022
+
+© 2022 American Chemical Society
+
+13022
+
+https://doi.org/10.1021/acsnano.2c05557
+ACS Nano 2022, 16, 13022−13036
+
+Downloaded via UNIV OF ADELAIDE on June 29, 2024 at 09:25:18 (UTC).See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.ACS Nano
+
+www.acsnano.org
+
+Article
+
+Figure 1. (a) Synthesis of QCS. (b) Synthesis of OD. (c) Synthesis of PPY@PDA NWs. (d) Diagram of QCS/OD/TOB/PPY@PDA hydrogel
+formation.
+
+as burn infections caused by PA.15−17 TOB exerts
+its
+bactericidal effect by inhibiting bacterial protein synthesis
+and damaging bacterial cell membranes.18−20 Although TOB
+exhibits excellent antibacterial effects,
+it is a concentration-
+dependent antibiotic and incorrect or uncontrolled use may
+cause serious irreversible side effects.16,18,21 Therefore, the
+development of a bacterially induced on-demand release TOB
+hydrogel system is promising for burn wound healing.
+
+On the other hand, chitosan, with good biocompatibility, has
+abundant medical advantages, such as hemostasis and wound
+healing ability.22−24 Quaternized chitosan (QCS) makes up for
+the poor water solubility of chitosan and provides the ability to
+resist drug-resistant bacteria.25−28 In addition, dextran can
+trigger the body’s immune system,29,30 and it
+is rich in
+aldehyde groups after oxidation and can react with QCS to
+form self-healing hydrogels by Schiff base reaction. TOB
+belongs to the aminoglycoside antibiotics, and it can be reacted
+
+with oxidized dextran (OD) to forming a cross-linked network
+through Schiff base reaction. Therefore, we hypothesize that
+loading TOB into the QCS/OD hydrogel system can realize
+the slow and sustained release of TOB in the physiological
+environment. Furthermore, the bacteria release acidic sub-
+stances such as lactic acid and carbonic acid as they grow.
+Therefore, in the process of bacterial multiplication, the pH-
+responsive Schiff base hydrogel will rapidly release TOB to
+eliminate bacteria and protect the wound from infection.31,32
+The bacterial response behavior can precisely control TOB
+release, which meets the requirement for on-demand drug
+delivery. Moreover, the incorporation of PPY@PDA nanowires
+with good electrical conductivity, antioxidant activity, and
+photothermal behavior further enhanced the wound-healing-
+promoting ability of the hydrogel.33−38 Therefore, TOB smart
+release hydrogels based on QCS and OD and combined with
+in the repair of PA-
+PPY@PDA have significant potential
+
+13023
+
+https://doi.org/10.1021/acsnano.2c05557
+ACS Nano 2022, 16, 13022−13036
+
+

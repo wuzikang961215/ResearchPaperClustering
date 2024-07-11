@@ -1,0 +1,221 @@
+Contents lists available at ScienceDirect 
+
+Applied Energy 
+
+journal homepage: www.elsevier.com/locate/apenergy 
+
+The economics of global green ammonia trade – “Shipping Australian wind 
+and sunshine to Germany” 
+
+Jonas Egerer , Veronika Grimm *, Kiana Niazmand , Philipp Runge 
+Friedrich-Alexander-Universit¨at Erlangen-Nürnberg (FAU), Chair of Economic Theory, Lange Gasse 20, 90403 Nürnberg, Germany   
+
+H I G H L I G H T S  
+
+• Optimization model for the integrated assessment of the green ammonia value chain. 
+• Case study for ammonia trade between Australia and Germany in 2030. 
+• Sensitivity analysis on ammonia prices for technical and economic parameters. 
+• Cost comparison of conventional and green ammonia production.  
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Green ammonia 
+Ammonia trade 
+Optimization model 
+Case study Australia to Germany 
+
+This  paper  contributes  to  understanding  the  transformation  of  global  energy  trade  to  green  energy  carriers, 
+focusing on green ammonia as the foreseeable first green hydrogen carrier. We provide a comprehensive over-
+view  of  today’s  ammonia  trade  and  assess  scaling  options  for  the  trade  of  green  ammonia.  To  that  aim,  we 
+develop an optimization model for the integrated assessment of the green ammonia value chain that covers all 
+steps  from  green  ammonia  production  in  an  exporting  country,  up  to  delivery  to  a  harbor  in  an  importing 
+country.  The  model  endogenously  chooses  among  different  technology  options  and  determines  cost  minimal 
+operation. In a case study, we apply the model to the large-scale import of ammonia from Australia to Germany 
+in a scenario for 2030. The results show that green ammonia can reach cost parity with gray ammonia even for 
+moderate gas prices (but not necessarily with blue ammonia) if CO2  prices are high enough. We also provide a 
+sensitivity analysis with respect to the interest rate and other key technical and economic parameters and show 
+that cracking ammonia to provide pure hydrogen comes at a 45 % cost markup per MWh at the destination.   
+
+1. Introduction 
+
+To mitigate climate change effectively and timely, rapid decarbon-
+ization  of  the  global  economies  is  required.  The  transformation  is 
+already well advanced in the electricity sector of various industrialized 
+countries,  where  competitive  renewable  energy  technologies  increas-
+ingly  replace  coal-  and  gas-fired  power  plants.  Climate-neutral  elec-
+tricity  will  now  be  used  directly  or  indirectly  –  via  hydrogen  and  its 
+derivatives – to decarbonize all remaining sectors of the economy [46]. 
+In this context, the production and transport of hydrogen and energy 
+carriers  is  getting  increasing  attention,  as  they  have  the  potential  to 
+replace fossil coal, oil, and gas as a global energy commodity. Global 
+hydrogen  trade  allows  import-dependent  countries  with  limited  and 
+
+mediocre potential for renewable energies, to replace fossil fuel imports 
+by imports of sustainable hydrogen based energy carriers. In turn, export 
+opportunities are opening up for many countries that have high poten-
+tial for renewable energy [31,32]. 
+
+Various  options  are  being  discussed  for  the  overseas  transport  of 
+hydrogen,  among  them  the  transport  of  cryogenic  hydrogen,  liquid 
+organic hydrogen carriers (LOHCs) or energy carriers like ammonia or 
+methanol [44,52,31,51,53]. In the short term, the transport of ammonia 
+is particularly attractive, since ammonia and its derivates are already 
+traded worldwide and therefore existing infrastructure can be used [60]. 
+Furthermore,  all  links  in  the  process  chain  of  large-scale  renewable 
+ammonia  production  are  already  established  and  have  a  very  high 
+technology readiness level [56]. Ammonia today is mainly used for the 
+
+* Corresponding author. 
+
+(P. Runge).  
+
+E-mail  addresses:  jonas.egerer@fau.de  (J.  Egerer),  veronika.grimm@fau.de  (V.  Grimm),  kiana.niazmand@fau.de  (K.  Niazmand),  philipp.runge@fau.de 
+
+https://doi.org/10.1016/j.apenergy.2023.120662 
+Received 10 August 2022; Received in revised form 9 December 2022; Accepted 6 January 2023   
+
+AppliedEnergy334(2023)120662Availableonline28January20230306-2619/©2023TheAuthors.PublishedbyElsevierLtd.ThisisanopenaccessarticleundertheCCBY-NC-NDlicense(http://creativecommons.org/licenses/by-nc-nd/4.0/).J. Egerer et al.                                                                                                                                                                                                                                   
+
+production  of  fertilizers  but  also for  other industrial  applications  like 
+explosives and textiles [3]. It is currently produced from fossil energy 
+sources, either upstream near gas or coal extraction sites or downstream 
+from imported fossil energy sources [59]. Global annual ammonia pro-
+duction of about 180 Mt in 2019 emitted about 0.45 Gt carbon dioxide 
+(CO2).1  Existing production capacity, if plants are run until the end of 
+their lifetime (20–50 years), would result in locked-in CO2 emissions of 
+4.4 to 15.5 Gt CO2. Projections for net zero emission scenarios in 2050 
+[34] see a 25 % increase of global ammonia demand for existing users 
+and additional energy demand for maritime fuel and power generation 
+in the range of twice the global ammonia demand of today. 
+
+Ammonia  production  with  green  hydrogen  (electrolysis  with 
+renewable  energy sources),  and  with  blue  hydrogen  (fossil  fuels  with 
+carbon capture technologies) during a transition period, could allow for 
+significant emissions reductions in a timely manner by satisfying pro-
+jected increases in global demand and by replacing existing ammonia 
+production [21,52,34]. While there are still plans for the expansion of 
+fossil ammonia production in some regions, with related greenhouse gas 
+emissions, projects of several megatons in annual capacity will use low- 
+carbon  technologies  until  2030  and  mark  the  first  step  towards  the 
+defossilization or decarbonisation of ammonia production [34,35,58]. 
+High  fossil  fuel  prices  resulting  from  Russia’s  war  of  aggression  on 
+Ukraine could accelerate this transition from fossil to green ammonia. 
+During the transition to carbon neutrality, ammonia production is 
+likely to shift, at least in part, to regions with the most favorable con-
+ditions  for  renewable  electricity  generation,  which  would  lead  to  a 
+redirection and possibly an increase in global ammonia trade [27]. This 
+development  will  also  affect  the  production  and  trade  of  important 
+ammonia  derivates,  such  as  urea  and  ammonium  nitrate  [34].  The 
+transition  will  therefore  likely  require  investment  in  new  vessels  for 
+ammonia transport, new infrastructure at ports for loading, unloading, 
+and storage, as well as downstream integration into consumption cen-
+ters  [38,18].  Incentivizing  these  investments  requires  an  appropriate 
+regulatory framework that, among others, internalizes external costs of 
+fossil  fuels,  reduces  climate-damaging  subsidies,  and  allows  for  the 
+certification of CO2-reduced derivatives. 
+
+This paper contributes to understanding the challenges and oppor-
+tunities  that  arise  from  the  transformation  of  global  energy  trade  to 
+green energy carriers. We focus on green ammonia production and long- 
+distance transportation, which is likely to be of high relevance for early 
+global green energy trade. We first describe the current global ammonia 
+trade and outline which parts of the value chains could continue to be 
+used in the context of the transition to green ammonia. We then develop 
+a  comprehensive  techno-economic  model  for  green  ammonia  value 
+chains,  which  can  be  applied  for  a  wide  range  of  technologies  and 
+production  processes  that  could  become  relevant  for  global  ammonia 
+trade. Based on input cost assumptions, the model provides assessments 
+of  the  future  levelized  cost  of  green  ammonia  –  i.e.,  as  feedstock  for 
+industry  or  for  direct  energy  usage  –  and  the  levelized  cost  after  an 
+optional conversion back to hydrogen. In particular, the model endog-
+enously  derives  optimal  investment  levels  and  operation  for  different 
+technologies of renewable energy supply, hydrogen and nitrogen pro-
+duction,  ammonia  synthesis,  storage,  transport,  and  (optional)  recon-
+version of ammonia back to hydrogen. This holistic view along the entire 
+value  chain  in  one  model  enables  us  to  analyze  explicitly  the  in-
+terdependencies  between energy supply, the  various production  steps 
+for ammonia, and transportation to the demand centers. Decisions on 
+the selection of different technologies for power generation, hydrogen 
+production,  heat  integration,  storage  units,  etc.,  and  their  optimal 
+operation are endogenous in our model. 
+
+We  apply  our  model  to  a  case  study  exploring  trade  of  green 
+ammonia  from  Australia  to  Germany  and  analyze  the  results  with 
+
+1  Global production figures vary by source. 173 Mt [58] and 182 Mt [35]: no 
+
+public data per country). 
+
+respect to various parameter uncertainties. The case study for Australia 
+is  particularly  well  suited  because,  first,  the  continent  will  export 
+increasing amounts of green energy due to its immense renewable en-
+ergy potential and, second, its long distance from Germany allows us to 
+assess the importance of transportation costs relative to the production 
+costs of green ammonia. The results with different parameter sensitiv-
+ities  for  2030  indicate  that  green  ammonia  is  on  the  way  to  become 
+competitive  to  gray  ammonia  production  well  before  the  end  of  this 
+decade. In addition to decreasing cost for green ammonia, this devel-
+opment  could  accelerate  by  the  fact  that  the  price  for  ammonia  pro-
+duction  from  fossil  fuels  is  likely  to  increase  due  to  higher  costs  for 
+carbon  emissions  and  uncertainty  on  fuel  fossil  prices.  Thus,  green 
+ammonia can contribute to timely decarbonization of the feedstock for 
+several  industry sectors  and  become  a  green  energy  carrier  for direct 
+energy applications or reconversion into hydrogen. Depending on the 
+assumption  for  economic  and  technical  parameters,  the  technologies 
+used and their operational management of an ammonia process chain 
+differs  significantly.  Transportation  costs  account  for  only  a  small 
+portion of the levelized cost of imported ammonia. However, ammonia 
+loses some of  its cost advantage when  it has  to be converted back to 
+hydrogen for specific applications. The energetic usage of ammonia will 
+therefore likely depend on technological advances in its direct utiliza-
+tion as maritime fuel and in power and heat generation plants. 
+
+Recent literature provides a wide range of cost analyses for green and 
+blue ammonia. Often simplified models are used, which can provide a 
+good  approximation  but  do  not  allow  endogenous  decisions  about 
+optimal technology choices. Possible synergies between different tech-
+nologies are often not modeled and the dynamic operational manage-
+ment  inherent  for  volatile  renewable  production  is  not  accurately 
+represented. Several among the existing studies focus only on the pro-
+duction  of  green  ammonia,  but  not  on  its  storage,  transport  or  usage 
+[45,21,15]. Other studies go beyond this and look at the storage and 
+transport of ammonia. For example, Hank et al. [31] estimates the cost 
+of  production  and  long-distance  transport  of  green  ammonia  from 
+Morocco to Germany in 2030. Similarly, Ishimoto et al. [38] conduct a 
+case study to determine the levelized cost of supplying hydrogen to the 
+European market based on the production of blue and green ammonia in 
+Norway  and  subsequently  ammonia  transport  and  decomposition  to 
+hydrogen. In contrast, Salmon and Ba˜nares-Alc´antara [52], Li et al. [39], 
+Ik¨aheimo et al. [36], Del Pozo and Cloete [22], Fasihi et al. [27], Nayak- 
+Luke  and  Ba˜nares-Alc´antara  [43]  present  dynamic  models  of  green 
+ammonia production by fluctuating renewables. Salmon and Ba˜nares- 
+Alc´antara [52] show economies of scale for green ammonia production 
+and focus on land availability for large-scale ammonia production. Li 
+et al. [39] compare different supply modes for energy from wind plants, 
+for  ammonia  production  plants  in  China  including  onsite  production, 
+supply via trucks transporting gaseous hydrogen, and energy transport 
+via transmission lines. Ik¨aheimo et al. [36] also model the application of 
+ammonia  and  compare  costs  for  ammonia-based  district  heating  in 
+different northern European countries. Del Pozo and Cloete [22] focus 
+on the production costs of various processes for the production of blue 
+ammonia and set these in relation to the production of green ammonia. 
+Fasihi et al. [27] and Nayak-Luke and Ba˜nares-Alc´antara [43] examine a 
+large  number  of  possible  production  sites  for  green  ammonia,  with 
+Fasihi et al. [27] also providing an overview of the transport costs of the 
+derivative. 
+
+In the above-mentioned publications, the authors make various ex- 
+ante  decisions  about  technology  choices  and  apply  cost-optimized 
+models with linear constraints to the configuration of green ammonia 
+supply  chain  components  [27,43,52].  The  optimization  model  in  this 
+paper relates to these studies and extends the literature with endogenous 
+decisions on investment and operation for different technologies along 
+the entire value chain of green ammonia. This includes seawater desa-
+lination,  renewable  energy  supply,  electrolysis,  ammonia  synthesis, 
+large-scale long-distance transport of green ammonia, and its possible 
+application as hydrogen carrier by including later reconversion. 
+
+AppliedEnergy334(2023)1206622

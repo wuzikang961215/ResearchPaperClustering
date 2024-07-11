@@ -1,0 +1,132 @@
+Contents lists available at ScienceDirect
+
+Information  Sciences
+
+journal homepage: www.elsevier.com/locate/ins
+
+Semi-supervised adversarial discriminative learning approach for 
+intelligent fault diagnosis of wind turbine
+Te Han a,b, Wenzhen Xie c,∗, Zhongyi Pei d,e
+a Center for Energy and Environmental Policy Research, Beijing Institute of Technology, Beijing, 100081, China
+b School of Management and Economics, Beijing Institute of Technology, Beijing, 100081, China
+c Department of Energy and Power Engineering, Tsinghua University, Beijing, 100084, China
+d National Engineering Research Center for Big Data Software, Beijing, 100084, China
+e School of Software, Tsinghua University, Beijing, 100084, China
+
+A  R  T  I  C  L  E 
+
+I  N  F  O
+
+A  B  S  T  R  A  C  T
+
+Keywords:
+Wind turbine
+Data-driven
+Intelligent diagnosis
+Semi-supervised adversarial learning
+Metric learning
+
+Wind turbines play a crucial role in renewable energy generation systems and are frequently 
+exposed to challenging operational environments. Monitoring and diagnosing potential faults 
+during  their  operation  is  essential  for  improving  reliability  and  reducing  maintenance  costs. 
+Supervised  learning  using  data-driven  techniques,  particularly  deep  learning,  oﬀers  a  viable 
+approach for developing fault diagnosis models. However, a signiﬁcant challenge in practical 
+wind power equipment lies in the scarcity of annotated samples required to train these models 
+eﬀectively. This paper proposes a semi-supervised fault diagnosis approach speciﬁcally designed 
+for  wind  turbines,  aiming  to  address  this  challenge.  Initially,  a  semi-supervised  deep  neural 
+network  is  constructed  using  adversarial  learning,  where  a  limited  set  of  annotated  samples 
+is used in conjunction with a vast amount of unannotated samples. The health status features 
+present in the unannotated samples are leveraged to capture a generalized representation of the 
+underlying features. Subsequently, a metric learning-guided discriminative features enhancement 
+technique is employed to improve the separability of diﬀerent manifolds, thereby enhancing the 
+performance of the semi-supervised training process. By employing this methodology, it becomes 
+possible to develop a fault diagnosis model with superior accuracy using only a limited amount of 
+annotated samples. Comprehensive fault diagnosis experiments were conducted on a wind turbine 
+fault dataset, revealing the eﬃcacy and superiority of the presented methodology.
+
+1.  Introduction
+
+Wind energy for power generation has seen tremendous growth in recent decades around the world. The wind turbine is the 
+critical energy conversion device in wind power generation. However, the mechanical structure of wind turbine is complex, and 
+its working conditions are also harsh and complex. Therefore, mechanical failure of wind turbine often occurs (including bearings, 
+coupling, pedestal, etc.). Health monitoring and diagnosis are essential for enhancing the dependability of wind turbines, minimizing 
+operation and maintenance expenses, and preventing severe accidents [1]. At the heart of this process lies the development of 
+
+* Corresponding author.
+
+E-mail address: xwz18@tsinghua.org.cn (W. Xie).
+
+https://doi.org/10.1016/j.ins.2023.119496
+Received 22 May 2023; Received in revised form 20 July 2023; Accepted 7 August 2023
+
+InformationSciences648(2023)119496Availableonline14August20230020-0255/©2023PublishedbyElsevierInc.T. Han, W. Xie and Z. Pei
+
+an intelligent diagnosis model that can automatically learn fault feature representation from monitoring data and make informed 
+decisions [2,3].
+
+In light of the swift advancements made in artiﬁcial intelligence (AI) in recent years, there have been numerous endeavors aimed 
+at leveraging this technology in the area of intelligent fault diagnosis. AI-assisted diagnosis approaches can signiﬁcantly reduce 
+the reliance on prior knowledge of physical fault mechanisms [4,5]. As industries generate vast amounts of big data, conventional 
+manual methods for feature extraction and classiﬁcation in intelligent fault diagnosis have become increasingly complex [6]. To 
+address this, deep learning methods are gaining popularity due to their ability to learn features adaptively [7–9]. Deep learning 
+models, with their multi-layered structures, facilitate hierarchical feature representation, enabling more accurate fault diagnosis 
+decisions [10,11]. These models have already demonstrated successful applications in practical industrial scenarios, including fault 
+diagnosis [12–14], prognosis and remaining life prediction of wind turbine components [15].
+
+Undoubtedly, deep learning provides a new framework for intelligent fault diagnosis in wind power generation devices. However, 
+there are challenges associated with the practical implementation of these methods. One notable challenge is the requirement for a 
+signiﬁcant number of annotated samples to train deep learning models for fault diagnosis [16]. In the case of industrial wind turbine 
+equipment, acquiring a suﬃcient number of annotated fault samples is often a challenging task. Many wind turbine companies have 
+limited fault data accumulated for critical components, and even when extensive data are collected by sensors, manually labeling 
+them is resource-intensive. Consequently, the majority of the data remains unannotated, with only a few samples assumed to be 
+annotated. Therefore, eﬀectively utilizing the available unannotated practical data remains crucial for improving the performance of 
+training models. To this end, semi-supervised learning has a potential prospect in the practical diagnosis applications.
+
+In the ﬁeld of semi-supervised learning, several common mainstream methods have emerged, including self-training [17,18], 
+graph-based methods such as label propagation [19], and generative methods such as generative adversarial network (GAN) [20]
+or variational autoencoders (VAE). Recently, researchers have been exploring and proposing adaptive methods speciﬁcally tailored 
+for semi-supervised model training in the context of fault diagnosis [21–24].  Chen et al.  introduced a semi-supervised random 
+forest within the framework of graph-based methods to eﬀectively diagnose gearbox faults in industrial systems [25]. Zhang et 
+al. proposed a VAE based semi-supervised diagnosis network, which was evaluated for fault diagnosis performance using diﬀerent 
+numbers of annotated samples [26]. Moradi et al. presented a semi-supervised deep model tailored for extracting a health indicator 
+from structural health monitoring (SHM) data, with a particular focus on monitoring fatigue-induced loading in materials [27]. Zhou 
+et al. designed a semi-supervised GAN approach to eﬀectively leverage the rich fault features present in unannotated data, thereby 
+achieving accurate diagnosis of gear faults in scenarios with limited supervision [28].
+
+Undoubtedly, maximizing the utilization of health status features present in both the limited annotated data and abundant unan-
+notated data is crucial for enhancing the diagnostic capability of models. Although numerous approaches have been designed to 
+leverage unannotated data to improve learning performance, the fundamental problem of sampling bias in semi-supervised learning 
+has received limited attention in the existing literatures. Indeed, the observed distribution of the ﬁnite number of annotated samples 
+may diverge from the true underlying distribution [29]. In this context, the integration of annotated and unannotated sample dis-
+tributions through alignment emerges as a potent approach in semi-supervised learning. Adversarial learning, primarily employed 
+in transfer learning to facilitate cross-domain knowledge transfer by minimizing domain shift and extracting domain-invariant fea-
+tures [30,31], has also demonstrated its eﬀectiveness in semi-supervised learning. Wang et al. ﬁrstly considered the sampling bias 
+problem by proposing a semi-supervised learning approach that incorporates adversarial distribution alignment [29]. Si et al. con-
+ducted a study in which they employed a tightly coupled approach of adversarial learning and semi-supervised learning to align 
+the distributions between annotated and unannotated data, resulting in improved accuracy for 3D action recognition [32]. Mayer et 
+al. employed adversarial semi-supervised learning to enhance the performance across a range of computer vision tasks [33]. While 
+adversarial-based semi-supervised learning shows great potential, it is important to acknowledge the limited research conducted on 
+its application in the domain of fault diagnosis. As a result, there is a promising opportunity to investigate the integration of anno-
+tated and unannotated samples through adversarial learning, aiming to enhance the diagnostic capabilities of models speciﬁcally for 
+wind turbine fault diagnosis.
+
+Semi-supervised learning is premised on the manifold assumption, which posits that samples belonging to the same health condi-
+tion are distributed within a shared manifold [34]. Unlike supervised training, where the distributions of diﬀerent health conditions 
+can typically be separated, semi-supervised learning leverages unannotated samples to better exploit the underlying structure of data 
+manifold. However, when handling the diagnosis task with extremely limited annotated samples, it is diﬃcult to achieve eﬃcient 
+decision boundary of diﬀerent manifolds/distributions for deep learning model. The eﬀectiveness of semi-supervised learning may 
+deteriorate. To mitigate this issue, it is crucial to capture a more discriminative decision boundary in deep models. Metric learning 
+techniques hold great promise in facilitating this objective by increasing the distance between the samples from diﬀerent manifolds 
+in the deep feature embedding space, and reduce the distance between the samples from the same manifold [35,36]. In this manner, 
+the learned deep models are more discriminative for the wind turbines with diﬀerent faults.
+
+Based on the problems mentioned above, a semi-supervised approach using discriminative features and adversarial learning is 
+introduced for the purpose of detecting faults in wind turbines. The proposed semi-supervised approach can achieve highly accurate 
+diagnosis decisions of wind turbine faults with only limited labeled samples, which shows strong robustness and generalization 
+ability. The major contributions of this research are outlined below:
+
+1) An adversarial semi-supervised learning framework is introduced, which allows the full utilization of health status information 
+contained in unlabeled samples during the training process, leading to the extraction of a more generalized feature representation 
+and improved diagnostic performance.
+
+InformationSciences648(2023)1194962

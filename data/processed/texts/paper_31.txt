@@ -1,0 +1,195 @@
+Contents lists available at ScienceDirect 
+
+Renewable and Sustainable Energy Reviews 
+
+journal homepage: www.elsevier.com/locate/rser 
+
+Environmental impact of renewable energy source based electrical power 
+plants: Solar, wind, hydroelectric, biomass, geothermal, tidal, ocean, 
+and osmotic 
+
+Abidur Rahman a, Omar Farrok a,*, Md Mejbaul Haque b,c 
+a Department of Electrical and Electronic Engineering, Ahsanullah University of Science and Technology, Dhaka, Bangladesh 
+b Research School of Engineering, The Australian National University, Canberra, ACT, 2601, Australia 
+c School of Engineering and Technology, Central Queensland University, Rockhampton, QLD, 4701, Australia   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Biomass 
+Energy 
+Environmental impact 
+Geothermal 
+Hydroelectric 
+Ocean energy 
+Renewable energy source 
+Solar energy 
+Tidal energy 
+Wind energy 
+
+1. Introduction 
+
+Renewable energy source (RES) based electrical power plants are widely considered green and clean due to their 
+contribution  to  decarbonizing  the  energy  sectors.  It  is  apparent  that  RESs  do  not  produce  carbon  dioxide, 
+however  their  significant negative  impacts on the  environment are still  found  and cannot be  ignored.  In this 
+paper,  the  environmental  impacts  of  RES  based  power  plants  are  analyzed  through  a  comprehensive  review 
+considering  solar  thermal,  solar  photovoltaic,  wind,  biomass,  geothermal,  hydroelectric,  tidal,  ocean  current, 
+oceanic  wave,  ocean  thermal,  and  osmotic  effects.  Solar  thermal  power  is  well  known  as  concentrated  solar 
+power. A strength, weakness, opportunity, and threat (SWOT) analysis is carried out and discussed for all RES 
+based power plants. Comparative SWOT analyses for solar photovoltaic and concentrated solar power plants are 
+presented. The comparative environmental impact analyses for all existing RES based power plants are tabulated 
+for various attributes. These attributes include but are not limited to human health, noise, pollution, greenhouse 
+gas emission, ozone layer depletion, toxification, flooding, impact on inhabitants, eutrophication, dried up rivers, 
+and deforestation. Based on the analysis, it is found that careful selection of RES for electrical power plants is 
+necessary because improper utilization of RES could be very harmful for the environment.   
+
+The conventional energy sources such as coal, oil, and natural gas, 
+also known as fossil fuels, have been explored and exploited for power 
+generation  in  power  plants  through  the  past  few  centuries.  The  most 
+significant benefit of these energy sources is that they have high energy 
+density. However, they emit carbon and other greenhouse gases when 
+they are used. The global energy demand is rising each year and it is 
+forecasted  that  the  energy  demand  will  have  increased  by  56%  from 
+2010 levels by 2040 [1]. To reduce carbon emissions and fight global 
+warming,  it  is  essential  to reduce  the  consumption  of  fossil fuels  and 
+increase the utilization of the more readily exploitable renewable energy 
+sources  (RESs)  in  the  energy  sector.  RESs  are  often  considered  to  be 
+emission  free  and  environmentally  friendly  energy  sources.  Although 
+RESs are far better than fossil fuels, research shows that they can have 
+adverse effects on the environment. If the whole idea of adopting RES is 
+
+to save the environment, their improper handling may do the opposite. 
+Many research articles have been published in the literature that have 
+discussed the negative environmental impacts of a few specific RESs [2]. 
+However, there is a lack of research that focuses on all the RESs and 
+demonstrates  their  potential  impacts  on  the  environment.  This  paper 
+illustrates the environmental impacts of all RESs with a SWOT analysis 
+and provides some guidance on how to alleviate those adverse impacts. 
+With the arrival of the industrial revolution, the amount of green-
+house gases started to rise in the atmosphere. Over the last century, the 
+global temperature has increased because of greenhouse gas emissions 
+[3].  At  present,  the  earth  is  getting  progressively  warmer  over  time. 
+Extensive  use  of  fossil  fuels  is  one  of  the  main  reasons  for  global 
+warming. Carbon dioxide (CO2) and other greenhouse gases are released 
+into  the  environment  from  fossil  fuels-based  power  plants.  Approxi-
+mately  35%  of  greenhouse  gases  are  emitted  because  of  the  existing 
+power plants [4]. A study shows that, approximately 42% of NOx  and 
+
+* Corresponding author. 
+
+m.haque@cqu.edu.au (M.M. Haque).  
+
+E-mail addresses: abidr92@gmail.com, abid.eee@aust.edu (A. Rahman), omarruet@gmail.com, omar.eee@aust.edu (O. Farrok), mdmejbaul.haque@anu.edu.au, 
+
+https://doi.org/10.1016/j.rser.2022.112279 
+Received 27 May 2021; Received in revised form 10 February 2022; Accepted 13 February 2022   
+
+RenewableandSustainableEnergyReviews161(2022)112279Availableonline10March20221364-0321/©2022ElsevierLtd.Allrightsreserved.A. Rahman et al.                                                                                                                                                                                                                                
+
+38%  of  SO2  were  emitted  from  coal-based  power  plants  in  China  in 
+2015. Around 40% of the total greenhouse gases were produced due to 
+coal-based power plants [5]. These gases are responsible for entrapping 
+heat  in  the  atmosphere  which  increases  the  global  temperature.  It  is 
+imperative  to  accept  that  our  planet  will  become  less  livable  if  the 
+temperature  continues  to  rise  at  its  current  rate.  The  increased  tem-
+perature  melts glacier  ice  which  increases  the  sea  level  height.  Many 
+islands as well as parts of many countries will drown, and catastrophic 
+droughts and conflagrations will occur in many dry regions. To mitigate 
+these problems, fast decarbonization of the power sector is required to 
+◦
+achieve the 2 
+C warming target discussed in the Paris Agreements [4,6]. 
+Moreover, usage of alternative sources of energy are being adopted. An 
+annual investment of US$3.5 trillion is required in the renewable and 
+sustainable energy sector until 2050 [7]. Power plants that use natural 
+gas emit 50% less CO2 than that of other fossil fuel-based power plants. 
+Hence, natural gas could be used as a transition fuel until RESs become 
+more secure and sustainable [8]. The UN has proposed seventeen sus-
+tainable development goals for a green environment where affordable 
+and clean energy is at seventh position. RESs are considered as emission 
+free  and  are  also  readily  accessible  in  nature.  Fig.  1  illustrates  the 
+amount of electrical power generated by each type of RES based power 
+plant [9]. It is evident that hydropower provides the highest proportion 
+compared to any other RESs. Both solar PV and wind power each ac-
+count for a quarter of the total share. Other RESs such as geothermal, 
+concentrated  solar  thermal,  ocean,  and  bio-power  together  constitute 
+the  remaining  percentage  which  is  just  over  6%.  The  contribution  of 
+ocean power is only 0.02% although it has higher potential to increase 
+this  outcome  compared  to  all  other  RESs.  The  utilization  of  RESs  for 
+electricity production throughout the world is presented in Fig. 2 [10]. 
+Overall,  many  nations in  Africa  and  the  Middle East  have  shares less 
+than 20% whereas many countries in Europe and South America along 
+with  Canada  are  above  60%.  Some  major  countries  such  as  the  US, 
+Mexico, China, Australia, Russia, etc., have proportions between 20 and 
+40%.  Many  countries  are  determined  to  reduce  their  dependence  on 
+fossil fuels and adopt RESs to protect the environment. The European 
+Union has set a target to become the world leader in RESs by 2030 [11]. 
+Approximately 28% of the total demand of the UK can be fulfilled by 
+tidal energy alone [12]. The concept of an energy hub where energy can 
+be  generated,  utilized,  and  stored  is  being  explored  in  some  of  the 
+published literatures [13–15]. 
+
+While the use of RESs is essential for decarbonizing the power sector 
+and to combat global warming, an obvious question arises as to whether 
+this has any negative consequences on the environment. Research shows 
+that many RESs have some adverse effects that are detrimental to the 
+environment and nature. RESs are used to reduce harmful emissions for 
+the betterment of the environment. However, the same environment can 
+be harmed if the adverse effects of RESs are ignored. There is a dilemma 
+
+where reliance on fossil fuels increases global warming and improperly 
+regulated RESs can be detrimental for the environment. 
+
+Environmental impacts for few RESs are assessed in the literature. 
+Impacts related to decommissioned wind turbines are demonstrated in 
+Ref.  [16].  Life  cycle  analysis  confirms  that  approximately  70–80%  of 
+environmental impacts caused by wind turbines are due to the materials 
+which are used for manufacturing purposes. A RES site selection process 
+is  discussed  in  Ref.  [17],  where  economical,  technical,  and  environ-
+mental criteria are defined. The study only focuses on photovoltaic (PV) 
+modules and wind farms. Additionally, wave and tidal power plants are 
+briefly  discussed. In  Ref.  [18],  various  electrochemical  effects  on  soil 
+caused by wastewater from solar PV, wind, and biomass power plants 
+are  studied.  The  study  presents  current  technologies  to  abate  these 
+concerns.  However,  it  falls  short  in  regard  to  focusing  on  other  RES 
+based power plants. Environmental impacts of biomass and wind power 
+plants are analyzed in Ref. [19] using life cycle analysis, and the impacts 
+are compared with each other. The study proposes that the most suitable 
+location for a wind power plant is the desert. However, the study does 
+not analyze other RESs. 
+
+It should be noted that many research articles in the literature which 
+focus  on  the  positive  prospects  of  RESs  tend  to  portray  the  negative 
+impacts of fossils fuels on the environment. Thus, it often appears that 
+the reduction of carbon emissions is the only solution to save the envi-
+ronment. Additionally, RESs are often assumed to have no demerits. The 
+number  of  research  papers  that  discuss  the  adverse  effects  of  RESs  is 
+insignificant as compared to those where RESs are exalted. Hence, there 
+should be a study where the negative impacts of all RESs are studied and 
+discussed adequately. Therefore, this is considered as a most significant 
+research  gap  that  needs  to  be  addressed  to  explore  the  full  range  of 
+negative environmental impacts associated with all RESs. To the best 
+knowledge of the authors, most studies cover the impacts of only a few 
+RESs.  In  this  paper,  all  available  RESs  are  incorporated,  and  their 
+negative impacts are discussed. The impacts of different RESs are sum-
+marized and presented in a tabular format for convenience. Finally, the 
+proper implementation approaches of the RESs to alleviate the negative 
+environmental impacts are discussed. 
+
+The  rest  of  the  paper  is  organized  as  follows.  Harmful  impacts  of 
+different  RESs  are  described  in  the  following  sections.  The  terrestrial 
+RESs  are  discussed  from  section  2  to  5  whereas  sources  that  rely  on 
+water are investigated from section 6 to 9. Section 2 describes the impact 
+from  solar  based  power  plants.  Wind  related  issues  are  illustrated  in 
+Section 3. The subsequent section discusses biomass related concerns. 
+Impacts caused by geothermal power plants are described in Section 5. 
+Section  6  explains  the  impact  caused  by  hydroelectric  power  plants. 
+Section  7  provides  insights  regarding  the  effect  of  using  tidal  power 
+plants. Impacts of ocean power plants are described in the next section. 
+Effects  of  osmotic  power  plants  are  described  in  Section  9.  A  brief 
+
+Fig. 1. Electrical power generation by RES based power plants [9].  
+
+RenewableandSustainableEnergyReviews161(2022)1122792

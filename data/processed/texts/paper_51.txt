@@ -1,0 +1,244 @@
+IEEE TRANSACTIONS ON INDUSTRIAL ELECTRONICS, VOL. 70, NO. 3, MARCH 2023
+
+2199
+
+Model Predictive Current Control of Nine-Phase
+Open-End Winding PMSMs With an Online
+Virtual Vector Synthesis Strategy
+
+Haifeng Wang , Graduate Student Member, IEEE, Xinzhen Wu , Xiaoqin Zheng , Member, IEEE,
+and Xibo Yuan , Senior Member, IEEE
+
+Abstract—The current error is hard to avoid for ﬁnite
+control set model predictive current control (FCS-MPCC)
+in nine-phase open-end winding permanent magnet syn-
+chronous motors. To overcome this problem, an online vir-
+tual voltage vector (V3) synthesis strategy is proposed in
+this article. First, a group of V3 s without harmonic voltage
+components are designed as the basic vectors for online
+synthesis. Then, two adjacent basic V3 s and a zero vector
+are used to synthesize a new V3, which can output arbi-
+trary amplitude and phase angle in the fundamental space.
+The two basic V3 s are directly selected from the located
+sector of the predicted reference voltage vector (RVV), and
+their duration ratio can be simply calculated according to
+the angle of the RVV in the sector. In this way, the zero
+error is realized between the new V3 and RVV. Moreover,
+an online pulse generation algorithm corresponding to the
+new V3 is proposed, which can calculate the symmetrical
+pulse sequences in real-time for the multiphase OW drive
+system without the space vector modulator. Finally, exper-
+imental results have veriﬁed the effectiveness and superi-
+ority of the proposed strategy, in comparison to existing
+FCS-MPCC in multiphase OW motor drive systems.
+
+Index Terms—Model predictive control
+
+(MPC), nine-
+phase permanent magnet synchronous motors (PMSM), on-
+line synthesis, open-end winding, virtual vector, zero con-
+trol error.
+
+I. INTRODUCTION
+
+O WING to a higher dc-link voltage utilization, control
+
+ﬂexibility and fault tolerance, multiphase permanent mag-
+net synchronous motors with open-end winding (OW-PMSMs)
+have been considered as promising candidates in high-power
+
+Manuscript received 22 February 2022; revised 25 April 2022; ac-
+cepted 29 April 2022. Date of publication 17 May 2022; date of current
+version 16 November 2022. This work was supported by the National
+Natural Science Foundation of China under Grant 52037005, Grant
+U2106217 and Grant 51907093. (Corresponding author: Xinzhen Wu.)
+Haifeng Wang, Xinzhen Wu, and Xiaoqin Zheng are with the College
+of Electrical Engineering, Qingdao University, Qingdao 266071, China
+(e-mail: 2018010022@qdu.edu.cn; wuxinzhen@qdu.edu.cn; zhengxi-
+aoqin@qdu.edu.cn).
+
+Xibo Yuan is with the College of Electrical Engineering, Qingdao
+University, Qingdao 266071, China, and also with the Department of
+Electrical and Electronic Engineering, University of Bristol, BS8 1UB
+Bristol, U.K. (e-mail: xibo.yuan@bristol.ac.uk).
+
+Color versions of one or more ﬁgures in this article are available at
+
+https://doi.org/10.1109/TIE.2022.3174241.
+
+Digital Object Identiﬁer 10.1109/TIE.2022.3174241
+
+high-reliability electric propulsion applications [1]–[3]. In ad-
+dition, ﬁnite control set model predictive control (FCS-MPC)
+has received great attention in multiphase motor drive systems
+thanks to the increasing computational capability of micropro-
+cessors [4]. Compared with conventional control strategies, such
+as ﬁeld-oriented control and direct torque control, FCS-MPC
+has fast dynamic response and it is easy to include nonlinear
+constraints [5], [6]. Especially, for multivariable control in mul-
+tiphase drives, FCS-MPC can be implemented simply without
+adding new controllers [7].
+
+The classic FCS-MPC strategy evaluates all candidate voltage
+vectors through the predictive model, and selects the vector
+that makes the control variable closest to the reference value.
+Thus, the inverter is directly driven by applying the switching
+state corresponding to the optimal vector without an external
+modulator [8]. Among various kinds of FCS-MPC strategies,
+model predictive current control (MPCC) is one of the most
+popular and classical solutions in three-phase machine drives
+because the weighting factor is intrinsically absent. However, in
+multiphase drives, where multiple planes must be regulated at the
+same time, the weighting factor must be considered. Meanwhile,
+the discrete and single voltage vector output limits the improve-
+ment of operation performance. In particular, according to the
+extended vector space decomposition (VSD) theory, there are
+harmonic subspaces in the multiphase system, which introduces
+the low-order harmonic currents that cannot be neglected [9],
+[10]. Obviously, using only a single voltage vector during the
+whole control period cannot regulate all subspace components
+at the same time, and the control error always exists due to the
+discretization of voltage vector.
+
+Aiming to eliminate the inﬂuence of voltage vector in har-
+monic subspaces, the virtual voltage vector (V3) is proposed
+by the means of voltage vector synthesis [11]. In ﬁve- and
+six-phase PMSM drives, the V3 is synthesized by two or more
+voltage vectors to obtain zero average amplitudes in the har-
+monic subspace [12], [13]. For the back electromotive force
+(EMF) odd harmonics created by nonsinusoidal ﬂux, Xiong et
+al. [14] proposed the method that can simultaneously control
+the fundamental plane current and harmonic plane current in the
+ﬁve-phase PMSM, so the stator current harmonics can be sup-
+pressed effectively. Gonçalves et al. [15] presented a multistage
+predictive current control strategy, which contains fundamental
+and secondary control stages that are responsible for tracking the
+reference currents in both subspaces separately. However, the
+ﬁxed amplitude of the V3 deteriorates the steady-state perfor-
+mance. In addition, an observer-based predictive vector-resonant
+
+0278-0046 © 2022 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.
+
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:22:49 UTC from IEEE Xplore.  Restrictions apply. 
+
+2200
+
+IEEE TRANSACTIONS ON INDUSTRIAL ELECTRONICS, VOL. 70, NO. 3, MARCH 2023
+
+control scheme is proposed in [16] to suppress periodic distur-
+bances resulting from converter dead-time effect and rotor ﬂux
+harmonics. In order to output the V3 with ﬂexible amplitude,
+Xue et al. [17] reported a FCS-MPCC scheme with optimal duty
+ratio, which combines the selected V3 and zero vector in each
+control cycle. Besides, Saeed et al. [18] proposed a deadbeat
+FCS-MPCC with duty ratio. In this method, the deadbeat current
+control (DBCC) is introduced to obtain the reference voltage
+vector (RVV), and then the optimal V3 is directly selected
+according to the located sector of the RVV. It not only improves
+the control accuracy with the duty ratio optimization, but also
+reduces the computational burden signiﬁcantly. However, the
+control sets in the abovementioned methods are composed of
+the discrete voltage vectors calculated ofﬂine. Although the
+amplitude of the output vector is variable, the error between
+the output vector and RVV is still difﬁcult to eliminate.
+
+An effective way to reduce and eliminate the control error is to
+dynamically synthesize the V 3 in real time according to the con-
+trol requirement [19], [20]. An online vector synthesis scheme is
+proposed in [21], which synthesizes multiple vectors in the sec-
+tor where the RVV is located, and selects the optimal one as the
+output by the cost function. Nevertheless, the synthesized vector
+points are limited and unable to cover the whole synchronous
+space frame. In [22], a dynamic voltage vectors (DVV) strategy
+is proposed further. The V3 are constantly changing to search
+for the optimal combination in each control cycle. However, the
+vector preselection and amplitude optimization processes are
+complicated with an increased computational burden. In [23],
+the smart voltage vector (SVV) is synthesized by three vectors
+to realize that the output vector covers the whole surface in
+α − β plane. However, the selection of three optimal vectors
+still requires a lot of online iterative search, and the optimal
+dwell time of each vector is searched in 12 discrete values
+according to the predeﬁned interval. To remove the control error
+in FCS-MPCC, Zhao et al. [24] and Song et al. [25], respectively,
+proposed a continued modulation V3 scheme without using
+a modulator for ﬁve-phase drive systems. In [24], a cascaded
+optimization procedure is introduced to determine the voltage
+vectors participating in the synthesis, the phase angle of the
+synthesized new V3, and the duty ratio. This optimization strat-
+egy requires two duty ratio calculations and two cost function
+exploration processes. In [25], the synthesis results of each set
+of adjacent V3 s is evaluated, and then, the optimal new V
+3 is realized by substituting the precalculated duty ratio into
+the dwell time calculation of each leg. Therefore, the repeated
+evaluation process cannot be absent. Also, in [26], the modulated
+MPC (M2 PC) uses four active vectors to improve further the
+steady-state error of the stator currents tracking in d − q plane.
+However, the modulation method is not applicable to open-end
+winding multiphase motors with H-bridge converters.
+
+In nine-phase OW-PMSM drives, the online V3 synthesis
+faces new challenges. First, more harmonic subspaces than ﬁve-
+and six-phase drives means that more voltage vectors need to
+participate in the synthesis. Then, different from star-connected
+motor drives, the synthesized vector is the result of the simul-
+taneous action by the dual inverter. Consequently, it is a real
+challenge to generate the new pulse sequences online in the
+multiphase OW drives without using a space vector modulator,
+although some efforts on virtual vector output method have been
+made recently for multiphase machines [27]–[29]. Moreover, the
+computational burden needs to be further reduced to adapt to the
+complexity of the system.
+
+Fig. 1. Schematic of the nine-phase OW-PMSM drive system.
+
+In this article, an online V3 synthesis strategy-based FCS-
+MPCC for nine-phase OW-PMSMs is ﬁrst proposed. The ﬁrst
+objective is to establish the discrete basic V3 set that can
+eliminate the voltage components in the harmonic subspaces.
+The second objective is to synthesize a new V3 online using two
+adjacent V3 s and a zero vector, so that the output V3 covers any
+amplitude and phase angle in the whole fundamental subspace.
+The third objective is the online generation of the symmetrical
+pulses, namely the corresponding duty ratio of each leg of the
+new synthesized V3 in the nine-phase OW drive system. Finally,
+the steady-state and dynamic performances of the proposed
+strategy are evaluated, in comparison to the existing V3 with
+duty ratio optimization-based FCS-MPCC strategy. The main
+contributions of this article are as follows.
+
+1) The synthesized new V3 realizes the zero control error
+and improves the steady-state performance by 56%.
+2) A switching pulse synthesis algorithm is designed for
+nine-phase OW drives, which can realize the online gen-
+eration of symmetrical pulses.
+
+3) The process of vector selection and duration calculation
+does not need any weighting factor and enumeration
+process, which reduces the computational burden by 13%.
+The rest of this article is organized as follows. Section II
+introduces the nine-phase OW-PMSM system and the current
+predictive model. In Section III, the design method of basic V3
+is described in detail, which takes into account multiple har-
+monic subspaces (3rd, 5th, and 7th order). Section IV proposes
+the online V3 synthesis strategy and the corresponding pulse
+generation algorithm in the OW drive. Section V veriﬁes the
+effectiveness of the proposed FCS-MPCC through experiments.
+Finally, Section VI concludes this article.
+
+II. NINE-PHASE OW-PMSM SYSTEM MODELING
+
+The symmetrical nine-phase OW-PMSM drive system with
+nine sets of H-bridge converters is shown in Fig. 1. For the
+studied PMSM, the shape of the magnets has been optimized to
+reduce the harmonics, so the harmonic in the magnetic ﬁeld in
+the air-gap is very small (<4%), and the inﬂuence of back-EMF
+odd harmonics in the PMSM can be neglected. The switching
+state Sx1(x = a, b, . . ., i) is deﬁned as the left leg state of the
+H-bridge, and the one with Sx2 is the right leg state of the H-
+bridge. Employing the dc-link voltage (Vdc) and the switching
+
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:22:49 UTC from IEEE Xplore.  Restrictions apply. 
+
+

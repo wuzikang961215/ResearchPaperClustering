@@ -1,0 +1,191 @@
+Gondwana Research 127 (2024) 88–99
+
+Contents lists available at ScienceDirect
+
+Gondwana Research
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / g r
+
+Toward fostering environmental innovation in OECD countries: Do ﬁscal
+decentralization, carbon pricing, and renewable energy investments
+matter?
+Shujaat Abbas a, Zahoor Ahmed b,c,⇑
+
+, Avik Sinha d,e, Oleg Mariev a, Faisal Mahmood f
+
+a Graduate School of Economics and Management, Ural Federal University, Russian Federation
+b Department of Accounting and Finance, Faculty of Economics and Administrative Sciences, Cyprus International University, Mersin 10, Haspolat 99040, Turkey
+c Department of Business Administration, Faculty of Management Sciences, ILMA University, Karachi, Pakistan
+d Centre for Excellence in Sustainable Development, Goa Institute of Management, India
+e Adnan Kassar School of Business, Lebanese American University, Beirut 1102 2801, Lebanon
+f Department of Management Sciences, Al-Hamd Islamic University, Islamabad, Pakistan
+
+a r t i c l e
+
+i n f o
+
+a b s t r a c t
+
+Article history:
+Received 6 November 2022
+Revised 19 January 2023
+Accepted 1 March 2023
+Available online 7 March 2023
+
+Keywords:
+Environmental innovation
+Sustainable development
+Environmental sustainability
+Renewable energy investments
+Fiscal decentralization
+
+Environmental innovation is an integral part of sustainable development goal (SDG) 9. It also provides the
+foundation for green energy production, and thus, indirectly supports the accomplishment of SDG 7.
+Notably, the energy transition from fossil fuel to renewables is critical for achieving sustainable develop-
+ment and a cleaner environment. Therefore, this study explores the major driving forces of environmental
+innovation in 29 OECD countries from 1993 to 2019 by incorporating environmental taxation, carbon
+pricing policy, budget for renewable energy development and demonstration, regional authority, ﬁnan-
+cial development, and globalization. The recently proposed Quantile via Movements methodology is
+employed to address the spiral dependence of explanatory variables and obtain results at different quan-
+tiles. The ﬁndings of Quantile via movements reveal that enhancing environmental taxation and
+strengthening carbon pricing policies encourage environmental innovation. Moreover, these countries
+should decentralize policymaking and delegate authority to regions. Alongside this, policymaking for
+encouraging the private sector budgets for renewable energy development and demonstration is neces-
+sary. The stringent policy regulations at the regional level can enhance the innovation of domestic indus-
+tries concerning the development, adoption, and commercial competitiveness of environment-friendly
+technologies. Furthermore, the ﬁnancial sector’s development enhances environmental innovation, while
+globalization needs to be properly regulated.
+(cid:1) 2023 International Association for Gondwana Research. Published by Elsevier B.V. All rights reserved.
+
+1. Introduction
+
+The unprecedented upsurge in environmental deterioration and
+climatic changes pose a grave threat to this planet and human life
+(Abbas, 2022; Abbas et al., 2022; Shahbaz et al., 2021; Sinha, 2017;
+Sinha et al., 2022). Therefore, a major contemporary challenge for
+the global community is to keep temperature rise below 2 degrees
+Celsius above the pre-industrial level by 2050 (United Nations,
+2022). This challenge entails almost net-zero greenhouse gases
+emission. Thus, the major focus of the Sustainable Development
+
+⇑ Corresponding author at: Department of Accounting and Finance, Faculty of
+Economics and Administrative Sciences, Cyprus International University, Mersin 10,
+Haspolat 99040, Turkey.
+
+E-mail addresses: shujaat.abbass@gmail.com (S. Abbas), Zahoorahmed83@ya-
+
+hoo.com (Z. Ahmed), f11aviks@iimidr.ac.in (A. Sinha).
+
+Goals (SDGs) of the United Nations is to achieve sustainable and
+clean economic growth. For instance, SDG-7 (affordable and clean
+energy) and SDG-13 (climatic actions) urge for energy transition
+toward clean sources and the adoption of various adaptative and
+mitigation strategies to cope with environmental degradation
+and climatic changes. Progress on these SDGs cannot be achieved
+without innovation as innovation can impact both SDG-7 and
+SDG-13. Hence, innovation is kept as an integral component of
+SDG-9, which focuses on innovation, infrastructure, and industrial-
+ization. Therefore, sustainable development requires transforming
+the energy sector, industrialization, and infrastructure through
+innovation.
+
+Policymakers at
+
+the COP26 summit urge technologically
+advanced OECD countries to focus on the development of environ-
+mentally friendly technologies to realize environmental and eco-
+logical sustainability (OECD, 2021). The global progress on SDGs
+
+https://doi.org/10.1016/j.gr.2023.03.002
+1342-937X/(cid:1) 2023 International Association for Gondwana Research. Published by Elsevier B.V. All rights reserved.
+
+S. Abbas, Z. Ahmed, A. Sinha et al.
+
+Gondwana Research 127 (2024) 88–99
+
+is dependent on the innovative capacity of OECD countries con-
+cerning environment-friendly technologies (Harrabin, 2021). Envi-
+ronmental innovation depends on the efﬁcient management of
+economic, social, societal, and governance drivers to facilitate tech-
+nological efﬁciency and energy transition (Khan et al., 2022). For
+instance, environmental taxation and carbon pricing policies can
+encourage environmental innovation by increasing the cost of
+carbon-intensive technologies (Saha et al., 2022). Furthermore,
+the private sector budgets for renewable energy development
+and demonstration (BRDD) along with ﬁnancial development and
+globalization can also inﬂuences environmental innovation for
+energy transition (Bilal et al., 2022). The plausible importance of
+these factors in environmental sustainability and energy transition
+urges for constructing a comprehensive model that could be used
+to analyze their impacts on environmental
+innovation. Fig. 1
+depicts environmental innovation in OECD on the map while
+Fig. 2 reveals that the innovative capacity of sampled OECD coun-
+tries is restricted below 4 percent of total environmental innova-
+the behavior of
+tion. Therefore,
+this study aims to model
+environmental
+leading
+countries.
+
+technological
+
+innovations
+
+in global
+
+The prior empirical studies have mainly focused on determi-
+nants of environmental degradation along with exploring the
+impacts of environmental innovation on the environment and cli-
+matic conditions (Bilal et al., 2022; Hassan et al., 2023, 2022a,
+2022b; Mongo et al., 2021; Tauseef Hassan et al., 2022). However,
+insufﬁcient investigations have focused on drivers of environmen-
+tal innovation. Among these works, literature that focuses on ﬁrm-
+level drivers for environmental innovation, following the Porter
+(1991) hypothesis, urges for the imposition of environmental reg-
+ulations to enhance innovative efﬁciency and commercial compet-
+itiveness (Bauer et al., 2012; Blind, 2012; Horbach, 2008; Liao et al.,
+
+2018). While, the aggregate country or regional-level studies on
+drivers of environmental innovation have focused mainly on envi-
+ronmental regulations, environmental taxation, and gender bias
+(Horbach, 2008; Irfan et al., 2022; Saha et al., 2022). Prior literature
+has largely overlooked the impacts of carbon pricing policy, budget
+for renewable energy development and demonstration (BRDD), ﬁs-
+cal decentralization, ﬁnancial development, and globalization on
+environmental innovation.
+
+Therefore, this research increases the scope of available litera-
+ture by including these important drivers to explain environmental
+innovation in OECD countries. The major research questions are
+summarized below.
+
+What are the major drivers of environmental innovation across
+
+OECD countries?
+
+Several strains of factors motivated authors to conduct this
+econometric inquiry. First, the shift from fossil fuel to clean energy,
+which comprises three stages: invention, innovation, and diffusion,
+is crucial to address environmental deterioration and related cli-
+matic changes (Saha et al., 2022). This process of the energy tran-
+sition is dependent on the innovative capacity of advanced
+countries in the OECD (OECD, 2020). Given the urgency of the clean
+energy transition, OECD countries have implemented numerous
+policy measures to foster environmental innovation, such as the
+imposition of taxes on environmental emissions and the adoption
+of a carbon pricing policy. The imposition of environmental taxa-
+tion and carbon pricing can enhance environmental innovation
+by increasing the cost of environment-polluting industries/tech-
+nologies. Second, the development of new technologies requires
+considerable budgetary allocation for research and development
+activities. The private sector BRDD plays a very important role in
+the development of renewable energy technologies. Moreover,
+the ﬁndings of Lee and Min (2015) reveal that the BRDD can con-
+
+Fig. 1. Environmental innovation in selected OECD countries.
+
+89
+
+

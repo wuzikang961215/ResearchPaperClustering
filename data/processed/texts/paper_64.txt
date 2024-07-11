@@ -1,0 +1,162 @@
+Perspective
+A Perspective on the Overarching Role of Hydrogen, Ammonia,
+and Methanol Carbon-Neutral Fuels towards Net Zero Emission
+in the Next Three Decades
+
+Haifeng Liu 1
+and Shuaishuai Wang 4,5
+
+, Jeffrey Dankwa Ampah 1,*
+
+, Yang Zhao 2, Xingyu Sun 3, Linxun Xu 3, Xueli Jiang 3
+
+1
+
+3
+
+2
+
+State Key Laboratory of Engines, Tianjin University, Tianjin 300072, China
+Tianjin Yuetai Petroleum Technology Ltd., Co., Tianjin 300384, China
+Shandong Chambroad New Energy Co., Ltd., Binzhou 256500, China
+School of Future Technology, Tianjin University, Tianjin 300072, China
+Tianjin Xuandao Technology Co., Ltd., Tianjin 300384, China
+* Correspondence: jeffampah@live.com or jeffampah@tju.edu.cn
+
+5
+
+4
+
+Abstract: Arguably, one of the most important issues the world is facing currently is climate change.
+At the current rate of fossil fuel consumption, the world is heading towards extreme levels of global
+temperature rise if immediate actions are not taken. Transforming the current energy system from
+one largely based on fossil fuels to a carbon-neutral one requires unprecedented speed. Based on the
+current state of development, direct electriﬁcation of the future energy system alone is technically
+challenging and not enough, especially in hard-to-abate sectors like heavy industry, road trucking,
+international shipping, and aviation. This leaves a considerable demand for alternative carbon-neutral
+fuels such as green ammonia and hydrogen and renewable methanol. From this perspective, we
+discuss the overarching roles of each fuel in reaching net zero emission within the next three decades.
+The challenges and future directions associated with the fuels conclude the current perspective paper.
+
+Keywords: carbon-neutral fuels; decarbonization; hydrogen; ammonia; methanol
+
+1. Introduction
+
+As the catalyst for economic expansion and urbanization, industrialization has led
+to the substantial development of several sectors of the global economy in conjunction
+with a growth in world population and wealth [1,2]. The world population is projected
+to grow to 9.9 billion in 2050 from 7.8 billion in 2020, creating an environment where
+energy requirements increase by 80% [3,4]. The historical patterns of growth in human
+population, activities, and energy demands have had a huge inﬂuence on the environment.
+The Mauna Loa Observatory in Hawaii’s latest data suggests that the carbon dioxide (CO2)
+in the atmosphere as of 2022 had exceeded 415 ppm, which represents approximately a
+14% increase in less than 25 years when compared to the levels in 1997 [5]. It has been
+projected that by 2050, greenhouse gas (GHG) emissions will increase by 50%, mainly as a
+consequence of the expected 70% increase in energy-related CO2 emissions [4,6]. At the
+current rate of emission increase, the carbon cycle is likely to be pushed out of its dynamic
+equilibrium, causing an irreversible change to the climate system [7].
+
+Against this backdrop, several rounds of climate negotiations to tackle climate change
+have been carried out by the international community. The adoption and signing of a series
+of international treaties such as the Kyoto Protocol and the 2015 Paris Agreement has led to
+real progress toward national climate change mitigation commitments. The Paris Agree-
+ment for instance aims to limit global warming to 1.5 °C above pre-industrial levels [8].
+However, compared to where current policies stand, a median warming of 2.6–3.1 degrees
+Celsius by 2100 is more likely even if all parties were to deliver on their climate pledges [9].
+
+Citation: Liu, H.; Ampah, J.D.; Zhao,
+
+Y.; Sun, X.; Xu, L.; Jiang, X.; Wang, S.
+
+A Perspective on the Overarching
+
+Role of Hydrogen, Ammonia, and
+
+Methanol Carbon-Neutral Fuels
+
+towards Net Zero Emission in the
+
+Next Three Decades. Energies 2023,
+
+16, 280. https://doi.org/10.3390/
+
+en16010280
+
+Academic Editor: Attilio Converti
+
+Received: 7 December 2022
+
+Revised: 23 December 2022
+
+Accepted: 23 December 2022
+
+Published: 27 December 2022
+
+Copyright: © 2022 by the authors.
+
+Licensee MDPI, Basel, Switzerland.
+
+This article is an open access article
+
+distributed under
+
+the terms and
+
+conditions of the Creative Commons
+
+Attribution (CC BY) license (https://
+
+creativecommons.org/licenses/by/
+
+4.0/).
+
+Energies 2023, 16, 280. https://doi.org/10.3390/en16010280
+
+https://www.mdpi.com/journal/energies
+
+energiesEnergies 2023, 16, 280
+
+2 of 15
+
+Thus, more long-term stringent measures have to be put forward. According to the Inter-
+governmental Panel on Climate Change (IPCC), the 1.5 °C goal requires a global realization
+of net zero CO2 emissions by 2050—a goal collectively termed “reaching carbon neutrality”.
+Carbon neutrality refers to the balance between CO2 emissions and absorptions within a
+speciﬁc period to achieve “net zero emissions of carbon dioxide” [10]. Carbon neutrality
+means the output of CO2 is offset by other approaches and thus has neutral effects on
+the environment. Today, a total of 194 countries have joined the Paris Agreement [11].
+Countries like the United Kingdom, Germany, Canada, France, South Africa, South Korea,
+and Denmark have pledged to reach carbon neutrality by 2050, Iceland and Sweden by
+2040 and 2045, respectively, China by 2060, India by 2070, and more countries are expected
+to make similar pledges in the near future [12,13].
+
+The development of carbon-neutral fuels is very crucial in reaching carbon neutral-
+ity, especially in decarbonizing the major energy-consuming sectors such as heavy-duty
+transport, power, industry, etc. [14–16]. Carbon-neutral fuels are carbon-based fuels that
+do not increase the atmospheric CO2 when combusted. A net zero amount of atmospheric
+carbon is achieved from the combustion of these fuels in the sense that they are typically
+produced with CO2 as a key component in the process—implying that there is no net gain
+of carbon in the atmosphere. There are several carbon-neutral fuels and all these fuels are
+important to the realization of a net zero future. However, the remaining discussions in this
+perspective paper are limited to green hydrogen, green ammonia, and renewable methanol.
+There are several existing reviews on their production technologies and pathways such as
+hydrogen [17–19], ammonia [20–22], and methanol [23–25]. Despite the key contributions
+of such reviews, there is a limited holistic summary of the role of these fuels in reaching a
+net zero future. Our current perspective is thus developed to provide a brief overview of
+the interconnected roles of all three fuels. These are arguably the three most often consid-
+ered carbon-neutral fuels to signiﬁcantly contribute to the realization of carbon neutrality
+within the next three decades, especially in hard-to-abate sectors like long-range transport,
+energy-intensive industry, and parts of residential heating. The coupling of these sectors
+with the power sector through the production and consumption of these fuels helps solve
+one of the most challenging tasks with renewable electricity generation (i.e., matching time
+of generation to time of load consequently leading to energy curtailment), especially from
+intermittent sources such as solar and wind energy. The technologies for their production
+stage to end-use are well understood and have been around for quite some time albeit with
+certain inherent challenges such as commercialization and large scale-up. Undoubtedly,
+these three carbon-neutral fuels considered in this perspective have a crucial role to play
+in reaching the 1.5 °C target by mid-century, and these roles and potential applications
+will become apparent in the subsequent sections. Figure 1 highlights the energy transition
+from today’s fossil fuel-dominated system to tomorrow’s net zero carbon emissions system
+powered mainly by renewable energies and carbon-neutral fuels.
+
+

@@ -1,0 +1,181 @@
+Article
+Challenges and Mitigation Measures in Power Systems with
+High Share of Renewables—The Australian Experience
+
+Felipe Arraño-Vargas *
+
+, Zhiwei Shen , Shan Jiang
+
+, John Fletcher
+
+and Georgios Konstantinou
+
+School of Electrical Engineering and Telecommunications, UNSW Sydney, Kensington,
+NSW 2052, Australia; zhiwei.shen@unsw.edu.au (Z.S.); shan.jiang4@unsw.edu.au (S.J.);
+john.ﬂetcher@unsw.edu.au (J.F.); g.konstantinou@unsw.edu.au (G.K.)
+* Correspondence: f.arranovargas@unsw.edu.au
+
+Abstract: Australia is one of the leading countries in energy transition, and its largest power system
+is intended to securely operate with up to 75% of variable renewable generation by 2025. High-inertia
+synchronous condensers, battery energy storage systems, and grid-forming converters are some of
+the technologies supporting this transformation while facilitating the secure operation of the grid.
+Synchronous condensers have enabled 2500 MW of solar and wind generation in the state of South
+Australia, reaching minimum operational demands of ≈100 MW. Grid-scale battery energy storage
+systems have demonstrated not only market beneﬁts by cutting costs to consumers but also essential
+grid services during contingencies. Fast frequency response, synthetic inertia, and high fault currents
+are some of the grid-supporting capabilities provided by new developments that strengthen the
+grid while facilitating the integration of new renewable energy hubs. This manuscript provides a
+comprehensive overview, based on the Australian experience, of how power systems are overcoming
+expected challenges while continuing to integrate secure, low cost, and clean energy.
+
+Keywords: inverter-based resource (IBR); low-inertia system; weak grid; system strength; synchronous
+condenser (SynCon); battery energy storage system (BESS); grid-forming converter; Australian
+National Electricity Market (NEM)
+
+1. Introduction
+
+Investment in large-scale renewable generation has accounted more than 60% of
+new global power generation in the last couple of years [1]. Multiple policy objectives,
+such as reducing greenhouse gas emissions and cost reduction trends, are expected to
+drive large-scale renewable generation investments to continue to grow faster than other
+energy generation technologies [2]. However, renewable energy zones (REZs), large-scale
+geographic areas with high-quality renewable energy resources, are generally situated
+in remote areas. These locations usually lack nearby synchronous generation and strong
+transmission connections, which, when combined, result in areas with low fault current
+and low system strength levels. As a result, the integration of REZ generation projects is
+limited by existing/planned grid infrastructure, in addition, to new operational challenges.
+Since many of REZ projects connect via power electronics converters, their continuous
+connection further weakens the area. This results in a series of additional challenges if
+no appropriate measures are taken. Traditional stability (rotor angle, frequency, and volt-
+age), resonance and converter-driven stability, power system protection and coordination,
+and black-start are some of the technical challenges faced by modern power systems [3,4].
+Reinforcing and upgrading the grid is an alternative to overcome with these issues
+while strengthening the area. However, planning, approving, and building a transmission
+project to support the integration of new REZs may take several more years when com-
+pared with the development of a solar or wind power plant [5]. As a result, and without
+considering joint network planning, other alternatives are needed to host and support
+
+Citation: Arraño-Vargas, F.; Shen, Z.;
+
+Jiang, S.; Fletcher, J.; Konstantinou, G.
+
+Challenges and Mitigation Measures
+
+in Power Systems with High Share of
+
+Renewables—The Australian
+
+Experience. Energies 2022, 15, 429.
+
+https://doi.org/10.3390/en15020429
+
+Academic Editor: Javier Contreras
+
+Received: 13 December 2021
+
+Accepted: 5 January 2022
+
+Published: 7 January 2022
+
+Publisher’s Note: MDPI stays neutral
+
+with regard to jurisdictional claims in
+
+published maps and institutional afﬁl-
+
+iations.
+
+Copyright: © 2022 by the authors.
+
+Licensee MDPI, Basel, Switzerland.
+
+This article is an open access article
+
+distributed under
+
+the terms and
+
+conditions of the Creative Commons
+
+Attribution (CC BY) license (https://
+
+creativecommons.org/licenses/by/
+
+4.0/).
+
+Energies 2022, 15, 429. https://doi.org/10.3390/en15020429
+
+https://www.mdpi.com/journal/energies
+
+(cid:1)(cid:2)(cid:3)(cid:1)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:1)(cid:1)(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7)energiesEnergies 2022, 15, 429
+
+2 of 22
+
+these projects and the network to which they connect. Some grid upgrades include ﬂexible
+ac transmission systems (FACTS), synchronous condensers (SynCons) [6], battery energy
+storage systems (BESSs) [7], or a combination of them [8].
+
+The Australian National Electricity Market (NEM) is one of the world’s leading power
+systems for both large-scale and distributed IBR integration [9,10]. As of November 2021,
+the NEM presents more than 15 GW of installed capacity between large-scale solar PV
+and wind, representing near 25% of the total generation capacity [11]. Furthermore, the
+NEM has more than 10 GW of distributed solar (as at May 2020) [12]. The amount of
+instantaneous generation from these variable energy resources that can operate on the NEM
+at any time depends on system conditions (e.g., network congestion, system curtailment,
+and self-curtails) [13]. In particular, system curtailment limits renewables to preserve the
+security of NEM by managing frequency and maintaining system strength. Some of the
+actions that can result in managing power system requirements include the utilization of a
+range of ﬂexible devices such as high-inertia SynCons and BESSs. Targeted actions together
+with suitable investments in infrastructure can allow the NEM to operate securely with up
+to 75% of variable renewable generation by 2025 and near 90% by 2035 [14].
+
+Motivated by the above discussion, this work aims to summarize existing and most
+common challenges and mitigation measures in modern power systems with a high share
+of renewable energy. A comprehensive overview, based on the Australian experience,
+is provided to illustrate how power systems can overcome expected challenges while
+continuing to integrate secure, low-cost, and clean energy.
+
+The rest of the manuscript is organized as follows. Section 2 provides a summary
+of challenges in actual power systems and their mitigation measures. Issues observed in
+Australia are also included in the Section. Trending technologies and how Australia is
+facilitating the integration of IBRs are presented in Section 3, while their impact in the
+system is discussed in Section 4. Finally, Section 5 concludes the paper.
+
+2. Challenges in Power Systems with High Share of Renewable Generation
+
+The decrease in short-circuit ratio (SCR) and system strength may result in several
+undesired operations of inverter-based resources (IBRs) and/or adverse power system
+conditions that require new mitigation measures. This Section ﬁrst provides a deﬁnition
+of SCR and system strength. Later, challenges and solutions in power systems with large
+participation of renewable energy are described to ﬁnally provide some of the challenges
+faced in Australia.
+
+2.1. Deﬁnition of Short-Circuit Ratio and System Strength
+
+SCR is a metric that describes the voltage stiffness of the grid. It is used to characterize
+grid strength and screen for system stability risks close to (new) power electronics convert-
+ers such as in IBRs and non-synchronous generation power plants [15]. Conventionally,
+SCR is deﬁned as the ratio of the short-circuit MVA capacity (SCCMVA) at the bus to which
+the new generation source will connect to the MW rating of the new source (PMW).
+
+SCCMVA
+PMW
+Even though SCR limits are not prescriptive and they need to be evaluated on a
+
+SCR =
+
+(1)
+
+.
+
+case-by-case basis, a SCR < 5 is considered low, and the system is considered weak [16].
+
+In order to better estimate system strength in weak systems with multi-infeed and
+high penetration of IBRs, other system strength index methods have been proposed. GE’s
+composite short-circuit ratio (CSCR) and ERCOT’s weighted short-circuit ratio (WSCR)
+take into account the effects of all electrically close converters. For GE’s CSCR, the total
+rating of all local and close converters is included [17]. Additionally, the calculation of
+SCC considers a three-phase fault under low load conditions and no contribution from
+converters. ERCOT’s WSCR, on the other hand, assumes that all converters are connected
+
+

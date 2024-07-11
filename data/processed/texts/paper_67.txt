@@ -1,0 +1,196 @@
+Biological Trace Element Research (2024) 202:360–386
+https://doi.org/10.1007/s12011-023-03645-9
+
+Applications of Green Synthesized Metal Nanoparticles — a Review
+
+Seerengaraj Vijayaram1 · Hary Razafindralambo2,3 · Yun‑Zhang Sun1 · Seerangaraj Vasantharaj4 · 
+Hamed Ghafarifarsani5 · Seyed Hossein Hoseinifar6 · Mahdieh Raeeszadeh7
+
+Received: 10 December 2022 / Accepted: 20 March 2023 / Published online: 13 April 2023 
+© The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2023
+
+Abstract
+Green nanotechnology is an emerging field of science that focuses on the production of nanoparticles by living cells through 
+biological pathways. This topic plays an extremely imperative responsibility in various fields, including pharmaceuticals, 
+nuclear energy, fuel and energy, electronics, and bioengineering. Biological processes by green synthesis tools are more 
+suitable to develop nanoparticles ranging from 1 to 100 nm compared to other related methods, owing to their safety, eco-
+friendliness, non-toxicity, and cost-effectiveness. In particular, the metal nanoparticles are synthesized by top-down and 
+bottom-up approaches through various techniques like physical, chemical, and biological methods. Their characterization is 
+very vital and the confirmation of nanoparticle traits is done by various instrumentation analyses such as UV–Vis spectro-
+photometry (UV–Vis), Fourier transform infrared spectroscopy (FT-IR), scanning electron microscope (SEM), transmis-
+sion electron microscopy (TEM), X-ray diffraction (XRD), atomic force microscopy (AFM), annular dark-field imaging 
+(HAADF), and intracranial pressure (ICP). In this review, we provide especially information on green synthesized metal 
+nanoparticles, which are helpful to improve biomedical and environmental applications. In particular, the methods and 
+conditions of plant-based synthesis, characterization techniques, and applications of green silver, gold, iron, selenium, and 
+copper nanoparticles are overviewed.
+
+Keywords  Plants · Metal/metal oxide nanoparticles · Antimicrobial · Anticancer · Dye degradation · Wastewater treatment
+
+jmusunyunzhang@163.com
+
+ *  Yun-Zhang Sun 
+ 
+ *  Hamed Ghafarifarsani 
+ 
+
+hamed_ghafari@alumni.ut.ac.ir
+
+1  Fisheries College, Jimei University, Xiamen 361021, China
+2  ProBioLab, Teaching and Research Centre, Gembloux 
+Agro-Bio Tech, University of Liege, Liège, Belgium
+3  BioEcoAgro Joint Research Unit, TERRA Teaching 
+
+and Research Centre, Microbial Processes and Interactions, 
+Gembloux AgroBio Tech/Université de Liège, Gembloux, 
+Belgium, University of Liege, Liège, Belgium
+
+4  Department of Biotechnology, Hindusthan College of Arts 
+and Science, Coimbatore 641028, Tamil Nadu, India
+5  Department of Fisheries, Faculty of Natural Resources, 
+
+Urmia University, Urmia, Iran
+
+6  Department of Fisheries, Faculty of Fisheries 
+
+and Environmental Sciences, Gorgan University 
+of Agricultural Sciences and Natural Resources, Gorgan, Iran
+
+7  Department of Basic Sciences, Sanandaj Branch, Islamic 
+
+Azad University, Sanandaj, Iran
+
+Introduction
+
+Green synthesis of nanoparticles using living cells through 
+biological pathways is more efficient techniques and yields 
+a higher mass when compared to other related methods. 
+Plants are the sources of several components and biochemi-
+cals that can role as stabilizing and reducing agents to syn-
+thesize green nanoparticles. The green synthesized methods 
+are eco-friendly, non-toxic, cost-effective, and also more 
+stable when compared to other biological, physical, and 
+chemical methods [1]. Green synthesis of nanoparticles is 
+categorized into three groups, viz. extracellular, intracellu-
+lar, and phytochemicals. The nanoparticle synthesis from 
+plant extract is an inexpensive process and it results in higher 
+yield due to the huge quantity of phytochemical components 
+in the plant extract that can also act as reducing and stabiliz-
+ing agents converting metal ions into metal nanoparticles 
+[2]. Green synthesized metal and metal oxide nanoparticles 
+have emerging applications in the biomedical sector like 
+diagnostics, wound healing, tissue treatment, immunother-
+apy,  regenerative  medicine,  dentistry,  and  biosensing 
+
+Vol:.(1234567890)1 3Applications of Green Synthesized Metal Nanoparticles — a Review  
+
+361
+
+platforms. Biotoxicology and its antimicrobial, antifungal, 
+and antiviral characteristics were passionately contested [3]. 
+Plant-mediated copper oxide nanoparticles synthesized from 
+various plant extracts play a various role like diverse biologi-
+cal activities, environmental remediation, photocatalysis, 
+catalytic reduction, sensing, energy storage, and several 
+organic transformations such as coupling, reduction, and 
+multicomponent reactions [4]. Green synthsized selenium 
+nanoparticles are helpful to improve the activity in antioxi-
+dant, catalysis, anticancer, photocopiers, xerography, recti-
+fiers, and solar cells [5]. Green synthesized cerium oxide 
+nanoparticles have potential photocatalytic dye degradation, 
+antioxidant activity, antidiabetic, anticancer antibacterial, 
+and antifungal activity properties [6]. Green synthesized 
+stannic oxide nanoparticles have potential photocatalytic, 
+antioxidant, and antibacterial activity, and these nanoparti-
+cles are helpful to enhance the environment and human 
+health applications [7].Green synthesized silver chloride 
+nanoparticles are used to develop environmental and bio-
+medical applications [8]. Green synthesized metal nanopar-
+ticles are produced from different parts of the plants and also 
+these methods are eco-friendly, non-toxic, and cost-effective 
+method. Green synthesized nanoparticles have more active 
+performance to remove dyes, antibiotics, and metal ions 
+compared to other physical and chemical methods [9]. Green 
+synthesis method is the best method for the preparation of 
+nanoparticles, and these methods are helpful to reduce the 
+toxicity, increase the stability, eco-friendly, and cost-effec-
+tive methods. Green synthesis methods have more beneficial 
+response in environmental and biomedical applications [10]. 
+Plants contain many types of phytochemical compounds like 
+phenolics, terpenoids, polysaccharides, and flavonoids that 
+possess oxidation–reduction capabilities. Thus, they are 
+preferably utilized for the green synthesis of nanoparticles 
+[11]. Phytochemical compound synthesis of nanoparticles 
+is not a general procedure as essential knowledge of the 
+exact phytochemical components is needed for the synthesis 
+of stabilized nanoparticles [12]. It is a general point of view 
+that plants’ secondary metabolites (polyphenols) are the 
+mainly significant elements playing a very important func-
+tion in the progression of the green synthesis of nanoparti-
+cles. The green synthesis practice is more advanced, safe and 
+cost-effective, easily reproduce, and stable [13]. There are 
+some positive impacts on the plant-based green synthesis of 
+nanoparticles when compared to the other related biological 
+methods using bacteria, fungi, actinomycetes, and algae 
+[14]. Diverse plant parts (roots, stem, leaf, seed, and fruit) 
+are concerned with such synthesized green nanoparticles 
+because of the presence of notable phytochemicals [15]. 
+Plant-synthesized nanoparticles in dissimilar parts of plants 
+involve washing the particular part with tap or distilled water 
+followed by squeezing, filtering, and adding particular salt 
+solutions. Then, metallic salt was added and nanoparticles 
+
+are extracted. A variety of metallic nanoparticles are synthe-
+sized by this method. The green nanoparticles are used in 
+personal care, medicine, nano-enabled devices, food, aqua-
+culture sciences, and agricultural products. Green synthesis 
+of nanoparticles is eco-friendly; this method is generally 
+used for the industrial production of metal nanoparticles. 
+Green synthesized metal nanoparticles are produced from 
+physicochemical methods [16]. A biosynthesis approach is 
+a vital mechanism to avoid harmful by-products via eco-
+friendly and sustainable development. The biosynthesis pro-
+cess is involved in several biological structures, namely plant 
+extracts, bacteria, yeast, seaweeds, and algae to produce 
+metal and metal oxide nanoparticles [17]. Sharma et al. 
+(2015) reported the green synthesis, characterization, and 
+application of a variety of metal nanoparticles, which can 
+eliminate pollutant dyes from water such as azo dyes, acid 
+dyes, and cationic dyes. The metallic nanoparticles are used 
+to remove water pollutants from water bodies such as rivers, 
+lakes, and other water streams, thereby enhancing aquatic 
+life. Green synthesized nanoparticles can be applied to treat 
+environmental pollutants. Earlier studies report that the cata-
+lytic characteristics of some nanoparticles can reduce the 
+toxicity of environmental pollutants [18, 19]. Green synthe-
+sis processes to metal nanoparticles are eco-friendly, non-
+toxic, and cost-effective. Also, these methods are playing a 
+very significant role in the pharmaceutical industry [20]. The 
+broad application of metallic nanoparticles utilized in vari-
+ous fields like biology, medicine, pharma, and other fields 
+has led to high demand for these nanoparticles and thereby 
+resulting in a significant need for better production of such 
+nanoparticles. The efficiency of metallic nanoparticles used 
+against human pathogenic microbes has made nanoparticles 
+attractive in biomedical fields [21]. Particularly, metal nano-
+particles have elevated outside the region and more attractive 
+sites to support quicker response which enhances production 
+yields. These metallic nanoparticles are generally divided 
+into  two  groups,  namely  noble  and  non-noble  metallic 
+groups based on nanoparticle types. The metallic nanopar-
+ticles are inexpensive, eco-friendly, non-toxic, and reduce 
+the accumulation of hazardous wastes. Green syntheses of 
+metallic nanoparticles are safer for biomedical and environ-
+mental applications [22, 23]. A notable perspective of dif-
+ferent metal nanoparticles is to be used as antimicrobial 
+medicine (antiviral, antibacterial, fungicidal, antiparasitic, 
+and pesticide agents, etc.) alongside some plant diseases 
+[24]. A cancer nanobullet is significant in treating cancer 
+because it is very effective and safe. The use of cancer nan-
+odrugs considerably increased drug delivery to the target 
+when compared to the conventional drug administration 
+system. It notably improves the safety and competence of the 
+regularly  utilized  anticancer  drugs.  Effective  targeting, 
+delayed release, long-lasting half-life, and reduced toxicity 
+are  the  major  positive  effects  of  nanomedicine  delivery 
+
+1 3

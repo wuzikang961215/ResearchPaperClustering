@@ -1,0 +1,269 @@
+Contents lists available at ScienceDirect 
+
+Energy and Climate Change 
+
+journal homepage: www.sciencedirect.com/journal/energy-and-climate-change 
+
+Using electrolytic hydrogen production and energy storage for balancing a 
+low carbon electricity grid: Scenario assessments for India 
+
+Rupsha Bhattacharyya a,b, *, KK Singh a, b, K Bhanja b, RB Grover a 
+a Applied Systems Analysis, Homi Bhabha National Institute (HBNI), India 
+b Chemical Engineering Group, Bhabha Atomic Research Centre (BARC), India   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Battery storage system 
+Demand management 
+Fuel cells 
+Hydrogen 
+Water electrolysers 
+
+Nuclear reactors and variable renewables will play a significant role in the global energy transition as providers 
+of low carbon electricity to various end use sectors. Real time balancing of power demand and supply without 
+modulation or curtailment is possible using electrolytic hydrogen plants and energy storage systems. The gen-
+eration mix adopted and load profiles are unique to a country and this study considers the specific case of India. 
+This work analyses the use of grid connected water electrolysers, grid scale battery storage, hydrogen storage and 
+fuel cells as flexible loads and dispatch schemes for grid balancing. Based on postulated long term power gen-
+eration  scenarios  for  India,  the  minimum  required  system  sizes  for  grid  balancing  are  estimated  and  techno- 
+economic uncertainties are assessed. The use of water electrolysers is prioritized to make use of excess power, 
+while minimizing battery storage requirement. This scheme can potentially produce a substantial share of low 
+carbon hydrogen in India for use in industrial decarbonization, thus reducing the need for additional generation 
+infrastructure.   
+
+1. Introduction 
+
+The global low carbon energy transition for climate change mitiga-
+tion will require extensive clean electrification of fossil fuel dependent 
+sectors  like  transportation  and  building  energy  systems.  Industrial 
+decarbonization will need carbon free energy carriers/raw materials like 
+hydrogen and its derivatives, many of which will be produced by elec-
+trochemical routes. To cater to all-round increased electricity demand, 
+particularly in rapidly developing nations and emerging markets such as 
+India,  all  available  low  carbon  electricity  generation  technologies 
+including  renewables  and  nuclear  will  need  to  be  harnessed  and 
+deployed in an optimal configuration, depending on the projected en-
+ergy  needs,  growth  trajectories,  resource  availability,  reliability  of 
+supply, and economic considerations [1]. 
+
+At  present,  the  route  adopted  by  most  nations  including  India  to-
+wards meeting these objectives is deploying variable renewables (VREs) 
+such as solar PV and wind farms and integrating them into their national 
+grids. The deployment of large shares of renewables in the electricity 
+generation mix creates significant diurnal variation in the output power 
+dispatched through the grid due to inherent intermittency. This leads to 
+periods when generation exceeds demand or vice versa, requiring load 
+
+* Corresponding author. 
+
+E-mail address: rupsha@barc.gov.in (R. Bhattacharyya).  
+
+https://doi.org/10.1016/j.egycc.2024.100131    
+
+management or backup generators (often fossil fired) to be brought on 
+line. Under net zero scenarios involving phase out of fossil-based gen-
+eration, the role of nuclear power plants is likely to become extremely 
+important, as baseload generators providing reliability and grid stability 
+[2–5]. Several studies have also established that the least system-level 
+cost  of  electricity  supply  with  a  high  degree  of  reliability  would 
+benefit  from  having  a  significant  contribution  from  nuclear  reactors 
+alongside  variable  renewables  [6].  A  low  carbon  energy  mix  should 
+ideally consist of nuclear, renewables, fossil fuels with carbon capture, 
+production and storage of hydrogen and use of hydrogen and captured 
+carbon. Therefore, looking at electricity storage as the only solution for 
+balancing supply and demand is not a cost-effective approach. One has 
+to integrate hydrogen generation with the system in a manner that en-
+ables  baseload  operation  of  fossil  and  nuclear  power  plants,  avoids 
+curtailment of renewable generators, leads to production of hydrogen, 
+and minimizes storage capacity needs. 
+
+1.1. Dispatchable loads for electric power grids 
+
+Energy conversion and storage technologies are expected to have a 
+substantial role in providing flexibility and other ancillary services to-
+wards stable grid performance in low carbon electricity systems. Both 
+
+EnergyandClimateChange5(2024)100131Availableonline28March20242666-2787/©2024ElsevierLtd.Allrightsreserved.R. Bhattacharyya et al.                                                                                                                                                                                                                        
+
+Nomenclature 
+
+BESm 
+BES(t) 
+CAC 
+
+Battery storage capacity installed, MWh(e) 
+Energy stored in battery at time t, MWh(e) 
+Cost of avoiding curtailment of one unit of electricity, 
+$/kWh(e) 
+
+CapexDM Annualized capital cost of hardware deployed for demand 
+
+management, $/y 
+Total capital cost of installed battery storage system, $ 
+Cbattery 
+Carbon capture, utilization, and storage 
+CCUS 
+CFC 
+Total capital cost of installed fuel cell, $ 
+CH2 
+Total capital cost of installed water electrolyser, $ 
+CPR 
+Cost per unit of power ramp up capacity, $/kWh(e) 
+CRF 
+Capital recovery factor, dimensionless 
+Csp,battery  Specific capital cost of battery storage, $/kWh(e) 
+Csp,FC 
+Csp,  H2 
+Csp,tank 
+Ctank 
+d 
+E 
+Ebattery 
+Esp,  H2 
+
+Specific capital cost of fuel cell, $/kWh(e) 
+Specific capital cost of electrolyser plant, $/kW(e) 
+Specific capital cost of hydrogen storage tank, $/kg H2 
+Total capital cost of installed hydrogen storage tank, $ 
+Discount rate per annum, fraction 
+Electrolyser rated capacity, MW(e) 
+Electrical energy stored in battery, MWh(e) 
+Specific energy consumption of electrolyser plant, kWh(e)/ 
+Nm3 H2 
+Fuel cell stack installed capacity, MW(e) 
+Lower heating value of hydrogen, MJ/kg H2 (= 120 MJ/kg 
+
+FCm 
+LHV 
+
+n 
+pi 
+
+PE(t) 
+
+H2) 
+Life time of a given component, y 
+Fraction of electrical energy generated by generator i, 
+dimensionless 
+Power input to electrolyser under part load operation, MW 
+(e) 
+Input power to water electrolyser, MW(e) 
+Electrolyser installed capacity, MW(e) 
+Excess electric power available at time t, MW(e) 
+Shannon-Wiener Index, dimensionless 
+Power demand at time t, MW(e) 
+Hydrogen production rate at time t, Nm3/h 
+Total hydrogen produced in a day, Nm3 
+Residual power at time t sent to battery storage, MW(e) 
+Time of day, h 
+
+PH2 
+Pm 
+SP(t) 
+SW 
+Pt 
+q(t) 
+Q 
+R(t) 
+t 
+Tramp,battery Time of discharge of fully charged battery, h 
+Tramp,FC  Time of power discharge of hydrogen storage + fuel cell 
+
+system, h 
+VRE 
+Variable Renewable Energy 
+Vstorage  Hydrogen storage tank installed, Nm3 
+Δt 
+ηFC 
+
+Time interval, h 
+Efficiency of fuel cell (hydrogen to electricity conversion), 
+dimensionless 
+Round trip efficiency of the battery system, dimensionless 
+Hydrogen gas density, kg/m3  
+
+ηRT 
+ρH2 
+
+short and long duration energy storage and associated technologies are 
+required  to  provide  several  grid  services  over  different  time  scales, 
+ranging from fraction of a second to hours, extending to days or weeks 
+[7]. 
+
+Among well proven and mature alternatives currently available, grid 
+scale batteries and grid connected water electrolysers are two mature 
+alternatives. While battery storage systems currently have higher round 
+trip energy efficiency than a power-to-hydrogen-to-power arrangement, 
+batteries are suitable for shorter duration energy storage (typically 2 to 6 
+h). The power-to-hydrogen route enables longer duration storage, as it is 
+possible to store hydrogen without losses over substantially longer du-
+rations [8]. The hydrogen can be used for industrial applications or can 
+be re-converted to electricity when renewables might not be available 
+for a duration beyond what has been planned for in the design of storage 
+capacity. Producing hydrogen when electricity supply exceeds demand 
+not only avoids curtailment or power ramp downs, but also contributes 
+to meeting the requirement for hydrogen in industrial sectors. Setting up 
+additional  renewable  generation  capacity  dedicated  exclusively  to 
+hydrogen production may not be the most feasible option in India and 
+elsewhere and hence this needs reconsideration. 
+
+Lithium-ion batteries represent grid scale energy storage technolo-
+gies that can store excess power available from the grid. With the current 
+grid scale battery chemistries commercially available, they can provide 
+high discharge  rates (thereby  making them better  suited for  ramp up 
+services) but there are constraints on their charging rates, depending on 
+instantaneous  state  of  charge  (SOC).  This  can  impact  their  ability  to 
+absorb excess power at all rates as well as their degradation rates and 
+overall useful lives. Various redox flow batteries have also been devel-
+oped  and  commercial  scale  demonstration  projects  have  also  been 
+initiated in several countries. Even though their round-trip efficiencies 
+are somewhat lower, they are much less dependent on critical minerals 
+and are intended to be used for longer duration storage (6 to 11 h) than 
+is currently achievable with lithium-ion batteries [9,10]. 
+
+Water  electrolysers  (coupled  with  hydrogen  storage  and  fuel  cell 
+systems)  have  also  been  proposed  as  flexible  loads.  Hovsapian  [11] 
+presents a list of grid services that water electrolysers can potentially 
+
+provide through their dynamic operation and extremely fast responses 
+to  changes  in  input  power.  Tuinema  et  al.  [12]  have  studied  the  po-
+tential  for  using  grid  scale  electrolyser  systems  for  frequency  control 
+applications. Using a 1 MW(e) PEM electrolyser stack, their field tests 
+demonstrate very high ramp up rates between 0.2 MW/s (during system 
+start up) and 0.5 MW/s (during normal operation) and ramp down rates 
+of 0.4 MW/s. The overall dynamic response is found to be controlled by 
+the  power  electronic  components  and  the  AC-DC  power  conversion 
+system. They estimate that larger electrolyser plants containing multiple 
+electrolysis modules will be capable of sustaining similar overall ramp 
+rates  in  proportion  to  their  total  capacities.  Varela  et  al.  [13]  have 
+developed an optimal scheduling model for flexible operation of alkaline 
+water electrolysers, considering various operational states and practical 
+constraints  for  dynamic  operation  such  as  ramp  rates  and  operating 
+power range. They provide estimates of the optimal sizes and number of 
+electrolysers  to  be  deployed  to  manage  variable  power  inputs  from 
+renewable generators. Zenith et al. [14] consider the diversion of excess 
+wind  and  hydel  power  in  selected  European  countries  towards  water 
+electrolysers such that their spare capacity may be used and monetized 
+while providing grid balancing services (both up- and down-regulation). 
+
+1.2. The context for India 
+
+In the Indian power sector, there has been rapid renewable capacity 
+addition in the last few years in keeping with goals of reducing emissions 
+intensity of the economy, but there has been inadequate storage tech-
+nology deployment. As a result, for demand-supply matching, conven-
+tional coal-fired generators have been forced to operate flexibly (with 
+ramp down to about 55 % of the rated output) [15]; this has adversely 
+affected the economics of power production by these generators. 
+
+As coal-based generation is phased down in pursuit of net zero tar-
+gets by 2070, power balancing mechanisms without the need for output 
+modulation from base load nuclear reactors or renewables’ curtailment 
+must be established and evaluated. Thus, attention to the role of demand 
+side measures (flexible loads and power dispatch schemes) is needed. 
+Some of the demand side options that enable demand-supply balancing 
+
+EnergyandClimateChange5(2024)1001312

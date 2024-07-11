@@ -1,0 +1,226 @@
+Contents lists available at ScienceDirect 
+
+Chemical Engineering Journal 
+
+journal homepage: www.elsevier.com/locate/cej 
+
+Novel Pt-carbon core–shell decorated hierarchical CoMo2S4  as efficient 
+electrocatalysts for alkaline/seawater hydrogen evolution reaction 
+
+Subramanian Vijayapradeep a, Natarajan Logeshwaran a, Shanmugam Ramakrishnan a, b, 
+Ae Rhan Kim a, Prabhakaran Sampath d, Do Hwan Kim a, c, Dong Jin Yoo a, e, * 
+a Graduate School, Department of Energy Storage/Conversion Engineering (BK21 FOUR), Hydrogen and Fuel Cell Research Center, Jeonbuk National University, 567 
+Baekje-daero, Deokjin-gu, Jeonju-si, Jeollabuk-do 54896, Republic of Korea 
+b School of Engineering, Newcastle University, Merz Court, Newcastle Upon Tyne, NE17RU, United Kingdom 
+c Division of Science Education and Institute of Fusion Science, Jeonbuk National University, 567 Baekje-daero, Deokjin-gu, Jeonju-si, Jeollabuk-do 54896, Republic of 
+Korea 
+d Department of Nano Convergence Engineering, Jeonbuk National University, 567 Baekje-daero, Deokjin-gu, Jeonju-si, Jeollabuk-do 54896, Republic of Korea 
+e Department of Life Science, Jeonbuk National University, 567 Baekje-daero, Deokjin-gu, Jeonju-si, Jeollabuk-do 54896, Republic of Korea   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Heterogeneous electrocatalyst 
+Pt-C core–shell 
+Hydrogen evolution reaction 
+Density functional theory calculations 
+Seawater electrolysis 
+
+Electrochemical  water  electrolysis  is  a  prominent  method  of  green-hydrogen  fuel  production.  Tailored  nano-
+structures of Pt-based electrocatalysts have high priority in hydrogen production. Herein, we fabricated carbon- 
+encapsulated Pt core–shell supported CoMo2S4-NGNF as an efficient electrocatalyst for the hydrogen evolution 
+reaction (HER). The novel carbon-encapsulated Pt core shells improved the long-term durability. The Pt@Co-
+(cid:0) 2 in 1.0 M 
+Mo2S4-NGNF hybrids displayed overpotentials of 27 mV to achieve a current density of 10 mA cm
+KOH  and  outstanding  durability  of  100  h.  When  Pt@CoMo2S4-NGNF‖IrO2  was  employed  in  overall  seawater 
+(cid:0) 2 current density. Additionally, we evaluated 
+electrolysis applications, it required 1.54 V to achieve a 10 mA cm
+the electronic structure and HER mechanism of Pt@CoMo2S4 & CoMo2S4 using density functional theory (DFT) 
+calculations.  This  work  illustrates  the  possibility  of  designing  an  effective,  long-lasting,  and  scalable  electro-
+catalyst for the electrolysis of alkaline and seawater to produce pure hydrogen.   
+
+1. Introduction 
+
+Exponential increases in environmental pollution and rapid energy 
+demand require alternative sustainable, clean energy resources to con-
+trol carbon footprints [1–4]. Hydrogen is one of the best green energy 
+reservoirs  in  transport  and  large  energy  applications  [5,6].  Water- 
+splitting  catalysis  has  been  acknowledged  as  a  promising  potential 
+technology to produce hydrogen in large quantities [7,8]. Water elec-
+trolysis  involves  two  core  reactions:  the  oxygen  evolution  reaction 
+(OER) at the cathode and the hydrogen evolution reaction (HER) at the 
+anode  [9,10].  Various  concerns  have  limited  heterogeneous  catalysis 
+hydrogen  production,  such  as  sluggish  reaction  kinetics,  inadequate 
+catalyst  optimization,  and  significant  energy  consumption  in  alkaline 
+media [11,12]. Platinum (Pt)-based electrocatalysts have drawn a lot of 
+interest  for  large-scale  affordable  pure  hydrogen  generation  because 
+they  can  be  used  in  interface  engineering  and  active  crystalline  facet 
+
+engineering  [13–17].  Still,  Pt  is  a  state-of-the-art  material  choice  in 
+alkaline HER due to the preferred Pt-Had formations for proficient water 
+dissociation.  Rational  structural  Pt-based  electrocatalysts  with  unique 
+enhanced catalytic activity, excellent capacity, and longer stability are 
+of special interest [18,19]. Long-term durability issues of Pt-based het-
+erogeneous water electrolysis can be improved by the incorporation of 
+chemical-resistant supports. Carbon matrices such as graphene, carbon 
+nanofibers,  and  fullerenes  can  significantly  mitigate  Pt  nanoparticle 
+agglomeration and improve electrical conductivity. Encapsulation of Pt 
+nanoparticles using various carbon sources like melamine, aniline, and 
+glucose has numerous advantages of oxidation tolerance, metal corro-
+sion resistance, and electrical conductivity [20–23]. The thickness of the 
+encapsulation  carbon  matrix  would  either  increase  or  decrease  the 
+active Pt site exposure for enhanced electrical conductivity. Optimiza-
+tion of carbon matrix thickness is essential in unique Pt-carbon encap-
+sulation material construction [24]. 
+
+* Corresponding  author  at:  Graduate  School,  Department  of  Energy  Storage/Conversion  Engineering  (BK21  FOUR),  Hydrogen  and  Fuel  Cell  Research  Center, 
+
+Jeonbuk National University, 567 Baekje-daero, Deokjin-gu, Jeonju-si, Jeollabuk-do 54896, Republic of Korea. 
+
+E-mail address: djyoo@jbnu.ac.kr (D. Jin Yoo).  
+
+https://doi.org/10.1016/j.cej.2023.145348 
+Received 26 February 2023; Received in revised form 9 July 2023; Accepted 8 August 2023   
+
+ChemicalEngineeringJournal473(2023)145348Availableonline9August20231385-8947/©2023ElsevierB.V.Allrightsreserved.S. Vijayapradeep et al.                                                                                                                                                                                                                         
+
+The combination of parallelly active Pt and earth-abundant transi-
+tion metals has been proposed as an effective strategy in efficient het-
+erogeneous  water  electrolysis  applications  [25,26].  As  recently 
+reported,  Pt-supported  with  MoS2  [27],  CoO  [28],  MoC  [29], 
+Ti0.7Mo0.3O2  [30],  and  CoS2  [31]  nanostructures  displayed  superior 
+catalytic  activity  with  enhanced  durability.  Strong  metal–metal  in-
+teractions  (SMMI)  [32]  and  interfacial/electronic  interactions  from 
+combining Pt with transition metal alloys are of interest. Ternary tran-
+sition  metal  sulfides  such  as  Mox-Sx-Mx  (M  = Co,  Ni,  and  Fe)  have 
+excellent  capacity  and  electrocatalytic  activity  with  improved  redox 
+properties than binary metal sulfides due to multiple oxidation states. 
+Molybdenum disulfide (MoS2) alone possesses comparable HER energy 
+profiles (ΔGH*) and high theoretical exchange current density (j0) to Pt 
+[33]. Hence, it has the promising ability of replacing Pt-based material, 
+though limited intrinsic active sites and electrical conducting properties 
+make its utility doubtful. Efforts such as defect engineering, structural 
+optimization, and regulating metal composition have been made to in-
+crease active site exposures. Cobalt (Co) elemental doping is a promising 
+choice to provide additional active sites and enhance the overall HER 
+performance  [34,35].  Co-Mo-S  doping  can  also  influence  the  charge 
+carrier density in MoS2. The presence of Co dopants alters the balance 
+between electrons and holes in the material, leading to a higher con-
+centration  of  either  carriers  depending  on  the  specific  doping  condi-
+tions.  This  modulation  of  carrier  density  can  further  enhance  the 
+electrical conductivity of Co-Mo-S compared to undoped MoS2 [36,37]. 
+Even  an  additional  carbon  matrix-assisted  Co-Mo-S  would  provide 
+multiple advantages for practical HER applications [38]. 
+
+Herein,  we  fabricated  carbon-encapsulated  Pt-carbon  core–shell 
+deposited  on  self-supported  CoMo2S4  hierarchically  grown  N-doped 
+graphene  nanofibers  (Pt-C@CoMo2S4-NGNF)  as  efficient  and  scalable 
+electrocatalysts  for  HER  in  alkaline  and  seawater  media.  Initially, 
+typical CoMo2S4  nanosheets were hierarchically grown on uniform N- 
+doped conducting GNF using a facile hydrothermal technique. Then, Pt- 
+carbon core shells were separately developed using a Pt-aniline complex 
+in a simple thermal reduction method. Specific ratios of aniline complex 
+and  Pt  ions  were  maintained  to  deliver  the  optimal  carbon  layer 
+thickness-coated  shell  formation  on  Pt  nanoparticles.  Then,  typically 
+prepared CoMo2S4-NGNF and Pt-aniline complexes were sintered under 
+an inert environment. The obtained Pt-C@CoMo2S4-NGNF hybrid elec-
+trocatalysts with ternary transition metal sulfides resulted in effective 
+activities  of  Pt,  while  N-atoms  interacted  with  various  carbon  matrix 
+supports.  This  can  facilitate  SMMI  and  electronic/interfacial  hetero-
+junction interactions to help tune the adsorption activity and electron 
+delocalization  capacity.  Due  to  the  previously  mentioned  physico-
+chemical  features,  fabricated  Pt-C@CoMo2S4-NGNF  hybrids  showed 
+overpotentials of 27 mV and 79 mV to obtain an HER current density of 
+(cid:0) 2,  respectively,  in  1.0  M  KOH.  Promi-
+10  mA  cm
+nently, Pt-C@CoMo2S4-NGNF delivers high stability and retains ~ 95% 
+operating current density after a 100 h durability test. We carried Pt- 
+C@CoMo2S4-NGNF||IrO2  as  cathodic  and  anodic  electrodes  in  the 
+overall water electrolysis system. The system required 1.52 V to obtain a 
+(cid:0) 2  in 1.0 M KOH solution. This novel Pt- 
+current density of 10 mA cm
+C@CoMo2S4-NGNF hybrid significantly increased catalytic activity and 
+long-term durability compared to Pt-C. Additionally, we evaluated HER 
+activities  of  Pt-C@CoMo2S4-NGNF  in  an  alkaline  seawater  medium, 
+which  displayed  an  overpotential  of  1.54  V  and  1.67  V  to  obtain 
+(cid:0) 2. We also 
+respective current densities of 10 mA cm
+studied the adsorption energy profiles of Pt@CoMo2S4, CoMo2S4, and Pt 
+using first-principle density functional theory calculations. As a proof of 
+concept,  these  findings  demonstrate  the  unusual  HER  activity  of  Pt- 
+C@CoMo2S4-NGNF hybrids in both alkaline and seawater conditions. 
+
+(cid:0) 2  and  100  mA  cm
+
+(cid:0) 2 and 200 mA cm
+
+2. Experimental section 
+
+2.1. Synthesis of CoMo2S4@NGNF 
+
+Raw commercial GNFs powder was immersed in 13.0 M HNO3 for 48 
+h  to  remove  the  metal  impurities,  which  were  then  filtered  out.  The 
+resulting product was washed with deionized water (DI)/ethanol until it 
+reached a neutral pH condition. A typical CoMo2S4@NGNF hierarchical 
+structure  was  prepared  using  a  facile  hydrothermal  method.  Briefly, 
+nitrogen-functionalized  graphene  nanofiber  (NGNF)  powder  was 
+dispersed in 15 mL of deionized water and ultrasonicated for 2 h at room 
+temperature.  Then,  0.1:0.2:0.4  mmol  ratio  of  Co(NO3)2⋅6H2O: 
+Na2MoO4⋅2H2O: C2H5NS precursors was dissolved in 5 mL of DI water 
+separately with mechanical stirring for 1 h. The above solutions were 
+added dropwise to the GNF solution under controlled magnetic stirring 
+conditions. Then, the final mixture was transferred into a 100 mL Teflon 
+autoclave vessel and was maintained at a heating temperature of 200 ℃ 
+for 12 h. The resulting product was washed several times with DI water 
+and ethanol. The obtained product was then dried overnight at 60 ℃ in a 
+vacuum oven. 
+
+2.2. Synthesis of Pt-C@CoMo2S4-NGNF 
+
+The  Pt-aniline  complex  was  prepared  by  placing  0.12  g  of 
+H2PtCl6⋅6H2O  in  35  mL  of  aniline  with  stirring  for  6  h  at  room  tem-
+perature.  Then,  the  mixture  was  filtered  using  0.2  M  HCl  in  a  rotary 
+vacuum pump to remove the excess unreacted aniline and dry it in a 
+vacuum oven at 60 ℃ to obtain the dark purple color of the Pt-aniline 
+complex. Then, typically obtained CoMo2S4-NGNF and Pt-aniline com-
+plex was dissolved in 50 mL of ethanol and stirred for 30 min. The rotary 
+vacuum pump was employed to evaporate the ethanol solution. Finally, 
+the resulting Pt-aniline complex-coated CoMo2S4-NGNF was sintered in 
+a tubular furnace at 500 ℃ under an inert N2 atmosphere for 1 h. 
+
+3. Results and discussion 
+
+3.1. Morphological and structural investigations of CoMo2S4-NGNF/Pt- 
+C@CoMo2S4-NGNF nanohybrids 
+
+The  synthesis  procedures  of  CoMo2S4-NGNF  and  Pt-carbon  core–-
+shell on CoMo2S4-NGNF are illustrated in Fig. 1. Pt-carbon nanoparticle 
+encapsulation on the CoMo2S4@NGNF nanohybrids was achieved by a 
+facile,  cost-effective,  single-step  in-situ  hydrothermal  and  calcination 
+process. A strong bond between a metal–metal formation with carbon 
+results in high synergistic interactions of CoMo precursors and graphene 
+nanofiber (GNF). The ability of the carbon matrix to act as an electron 
+mediator to transfer electrons from the catalyst surface to the H2  evo-
+lution is a fascinating function of GNFs [39]. During the hydrothermal 
+reaction, the generated H2S gas effectively converted metal oxides into 
+their  corresponding  sulfides.  Also,  the  released  NH3  gas  effectively 
+doped  nitrogen into  the  graphene  nanofiber skeleton  [40].  which  en-
+sures the formation of flower-like CoMo2S4  on GNF during the hydro-
+thermal reactions, In the subsequent thermal reduction process of Pt- 
+carbon  core–shell  formation,  aniline  complexes  provide  nitrogen  for 
+the carbon sources. During the inert (N2) environment graphitization, 
+sintering process, carbon skeletons from aniline provide additional ni-
+trogen supports on individual Pt particles as well as the CoMo2S4-NGNF 
+surfaces.  This  intrinsic  synergy  of  N  atom  doping  can  influence  the 
+durability,  capability  of  Pt-C@CoMo2S4-NGNF  (PC@CMS-NG)  nano-
+hybrids and their HER performances. Morphological and structural in-
+vestigations  of  prepared  electrocatalysts  were  evaluated  using  field 
+emission  scanning  electron  microscopy  (FE-SEM)  and  high-resolution 
+transmission  electron  microscopy  (HR-TEM).  Fig.  2a  represents  FE- 
+SEM images of CoMo2S4-NGNF (CMS-NG) nanohybrids, which exhibit 
+consistent growth of hierarchical CoMo2S4 nano petals on the skeleton of 
+N-doped  carbon  nanofiber.  The  high-resolution  elemental  color 
+
+ChemicalEngineeringJournal473(2023)1453482

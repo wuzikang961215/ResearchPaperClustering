@@ -1,0 +1,240 @@
+- Revised: 3 September 2023
+
+- Accepted: 27 September 2023
+
+Received: 5 March 2023
+
+DOI: 10.1049/stg2.12142
+
+R E V I E W
+
+- IET Smart Grid
+
+Impacts of grid‐scale battery systems on power system operation,
+case of Baltic region
+
+Roya AhmadiAhangar1,2
+Tarmo Korotko1,2 | Argo Rosin1,2
+
+| Freddy Plaum1,2 | Tobias Haring1,2 | Imre Drovtar1,2 |
+
+1Smart City Center of Excellence (Finest Twins),
+Tallinn, Estonia
+
+2Department of Electrical Power Engineering and
+Mechatronics, Tallinn University of Technology,
+Tallinn, Estonia
+
+Correspondence
+
+Roya AhmadiAhangar.
+Email: roya.ahmadi@taltech.ee
+
+Funding information
+
+Estonian Ministry of Education and Research and
+European Regional Development Fund, Grant/
+Award Number: 2014‐2020.4.01.20‐0289; Estonian
+Research Council, Grant/Award Number: PSG739;
+European Commission through the H2020 project
+Finest Twins, Grant/Award Number: 856602;
+Increasing the knowledge intensity of Ida‐Viru
+entrepreneurship co‐funded by the European Union,
+Grant/Award Number: 2021‐2027.6.01.23‐0034
+
+Abstract
+Grid stability can be affected by the large‐scale utilisation of renewable energy sources
+because there are fluctuations in generation and load. These issues can be effectively
+addressed by grid‐scale battery energy storage systems (BESS), which can respond quickly
+and provide high energy density. Different roles of grid‐scale BESS in power systems are
+addressed, following optimal operation approaches classification. Furthermore,
+inte-
+grating BESSs into distribution grids is discussed to manage challenges from distributed
+generation. BESSs aid in voltage control, enhance frequency regulation, and offer black‐
+start services. Aggregating distributed BESSs can provide ancillary services and improve
+grid economics. For consumers, BESSs optimise energy costs, enhance reliability, and
+support self‐consumption from renewables. Novel BESS services include congestion
+relief, system adequacy, and power quality enhancement. Moreover, the ancillary services
+provided in different European countries through BESS are analysed. Finally, a case study
+was conducted among three Baltic DSOs to analyse the required amendments to Grid
+Codes and Electricity Market Acts for the integration of grid scale BESS.
+
+K E Y W O R D S
+energy storage, power distribution control
+
+| ROLES OF GRID‐SCALE BESS IN
+
+1
+POWER SYSTEMS
+
+1.1
+impact
+
+| Grid reliability and power quality
+
+Grid‐scale BESS can be utilised for many different purposes in
+electricity systems. At its core, BESS provides means to store
+electrical energy for later usage; large grid‐scale storage can
+have a substantial impact on grid performance. This energy
+could be used to improve the grid reliability and power quality
+by providing ancillary services such as frequency regulation.
+Additionally, BESS can provide virtual
+inertia, which will
+become especially relevant in future largely RES‐dominated
+grids. The stored energy can be used even out the daily po-
+wer curve by reducing the peak power. Furthermore, it can
+enable renewable integration in current grids and postpone
+grid reinforcement that will inevitably be needed. In this sec-
+tion these roles have been studied further.
+
+1.1.1 | Ancillary service provision
+
+Ancillary services are supportive services that enable the
+transmission of electrical power from generation to con-
+sumption by ensuring that the grid parameters are kept in safe
+viable ranges. The term ancillary service can refer to a variety
+of different services but from the perspective of grid‐scale
+BESS what are interesting and what are currently widely be-
+ing researched are the frequency regulation, voltage regulation,
+and black start services.
+
+The ancillary service market designs and product de-
+scriptions vary from country to country as illustrated by the
+ancillary services procurement and electricity balancing market
+
+This is an open access article under the terms of the Creative Commons Attribution‐NonCommercial‐NoDerivs License, which permits use and distribution in any medium, provided the
+original work is properly cited, the use is non‐commercial and no modifications or adaptations are made.
+
+© 2024 The Authors. IET Smart Grid published by John Wiley & Sons Ltd on behalf of The Institution of Engineering and Technology.
+
+IET Smart Grid. 2024;7:101–119.
+
+wileyonlinelibrary.com/journal/stg2
+
+101
+
+-
+
+102
+
+-
+
+design survey [1] conducted by the European Network of
+Transmission System Operators for Electricity (ENSTO‐E).
+These discrepancies could stem from the historic development
+of ancillary service markets or the generation mix of these
+nations. However, the EU has moved towards harmonising the
+ancillary service markets with the energy balancing guideline
+regulation [2], which entails that at one point all of the EU
+member states should start to provide three balancing reserve
+products: namely the automatic Frequency Restoration Reserve
+(aFRR), manual Frequency Restoration Reserve (mFRR), that
+is, secondary and tertiary reserves respectively, and Replace-
+ment Reserve (RR). The provision of the primary reserve, that
+is, the Frequency Containment Reserve (FCR), has not been
+made mandatory; despite that many nations across Europe are
+voluntarily implementing it. An illustration of different fre-
+quency reserve products is given in Figure 1.
+
+The purpose of the primary control reserve, that is, FCR
+service is to be the first response to the sudden occurrence of
+imbalance. Assets that provide FCR activate automatically
+within 30 s in the entire synchronous are. The activation signal
+for FCR does not come from the TSO, rather it is based on the
+continuous measurements of the grid frequency. Adjustments
+to the production and consumption of FCR providing assets
+are done proportionally to the grid frequency deviation from
+the norm. If the frequency deviation persists then the aFRR is
+subsequently activated [3].
+
+The secondary reserve, that is, the aFRR service will begin
+to replace the FCR gradually 30 s after the imbalance occurs
+and reaches the full activation within 5 min. If the grid
+imbalance persists after 12.5 min of occurring then the mFRR
+service, that is, the tertiary reserve, starts gradually activating
+reaching the full activation at the 15‐min mark and has a
+minimum delivery period of 5 min [3].
+
+The last source of reserves, that is, the replacement reserve
+(RR) uses generators with longer start‐up time to either
+complement the previous reserves or to release them back into
+their state of readiness. The RR has to reach full activation
+within 30 min of the disturbance and has a minimum delivery
+period of 15 min [3]. An alternative could be to instead use
+large grid‐scale BESS. Battery storage can be a good alternative
+
+F I G U R E 1
+on ENTSO‐E grid codes.
+
+Illustration of frequency reserve product activations based
+
+AHMADIAHANGAR ET AL.
+
+due to its fast reaction speed, and environmental friendliness
+when used in combination with RES.
+
+From the experience of the operation of Zurich 1 MW
+BESS that is used for FCR, peak shaving, and islanded oper-
+ation; the main challenge for the provision of FCR is the
+management of the state of the charge (SOC) shifting, which is
+complicated by the internal losses of the battery and the acti-
+vation signals that are generally not zero‐mean [4]. The relation
+between the required energy capacity with respect to power
+capacity was found to be around 220 kWh per MW for FCR
+provision [5]. The effectiveness of BESS to provide ancillary
+services is investigated within the PRESTO (Primary REgu-
+lation of STOrage) research project [6], in particular by man-
+aging the storage SOC with variable droop control.
+
+The profitability of grid‐scale battery systems for purposes
+of Primary Containment Reserve (PCR), peak‐shaving (PS),
+and Enhanced Frequency Response (EFR) was analysed in Ref.
+[7]. It was found that EFR purpose has the highest profitability
+of the three; however, combining EFR and PS applications
+improves the profitability even further.
+
+Grid‐scale BESS usage for FCR in a low inertia grid using
+grid‐forming and grid‐following methods was investigated in
+Ref. [8]. It was found that large‐scale BESS can significantly
+improve system frequency containment, especially in the grid‐
+forming converter control mode. Future smart grids will also
+inevitably encompass smaller distributed battery systems. The
+authors of Ref. [9] combined smaller BESS, RES, and flexible
+loads to create one large virtual energy storage system (VESS)
+for the purpose of voltage regulation. An overview of ancillary
+service provision with different types of ESS including BESS is
+given in Ref.
+the overall
+deployment cost of microgrids is reduced with the utilisation
+of ESS for ancillary services.
+
+[10], where it was found that
+
+1.1.2 | Virtual inertia emulation
+
+With the increasing RES penetration, the conventional syn-
+chronous generation is starting to be phased out. The future
+grids will undoubtedly have more converter interfaced gener-
+ation which will result in the reduction of grid inertia. The grid
+needs to have an adequate level of inertia to maintain a stable
+grid voltage and frequency. With a low level of inertia, the
+imbalance between the generation and consumption will start
+to negatively affect the grid parameters much sooner than in
+the case with higher levels of inertia. Ensuring an acceptable
+balance will be even more difficult on a smaller microgrid scale.
+One novel technique to increase the grid inertia would be to
+perform virtual inertia emulation with large grid‐scale BESS.
+inertia emulation works by imitating the inertial
+response of traditional synchronous generators (SG). The
+implementation of virtual
+inertia is based on the swing
+equation of SG that is incorporated into the inverter control
+so that the typical
+inertia less inverter could emulate the
+inertial characteristics of SG. It is considered “virtual” since
+the inertia is emulated without the utilisation of any rotating
+mass [11].
+
+Virtual
+
+ 25152947, 2024, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/stg2.12142 by University Of Adelaide, Wiley Online Library on [29/06/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

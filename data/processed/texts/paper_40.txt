@@ -1,0 +1,212 @@
+Energy Reports 9 (2023) 1535–1548
+
+Contents lists available at ScienceDirect
+
+Energy Reports
+
+journal homepage: www.elsevier.com/locate/egyr
+
+Research paper
+
+An improved genetic algorithm based fractional open circuit voltage
+MPPT for solar PV systems
+Aakash Hassan a,∗
+
+, Octavian Bass a, Mohammad A.S. Masoum b
+
+a School of Engineering, Edith Cowan University, Joondalup, 6027, WA, Australia
+b Department of Engineering, Utah Valley University, Orem, UT 84058, USA
+
+a r t i c l e
+
+i n f o
+
+a b s t r a c t
+
+Article history:
+Received 6 August 2022
+Received in revised form 22 November 2022
+Accepted 23 December 2022
+Available online 2 January 2023
+
+Keywords:
+Fractional Open Circuit Voltage
+Genetic Algorithm
+MPPT
+Solar PV
+
+To extract the maximum power from solar PV, maximum power point tracking (MPPT) controllers
+are needed to operate the PV arrays at their maximum power point under varying environmental
+conditions. Fractional Open Circuit Voltage (FOCV) is a simple, cost-effective, and easy to implement
+MPPT technique. However, it suffers from the discontinuous power supply and low tracking efficiency.
+To overcome these drawbacks, a new hybrid MPPT technique based on the Genetic Algorithm (GA)
+and FOCV is proposed. The proposed technique is based on a single decision variable, reducing the
+complexity and convergence time of the algorithm. MATLAB/Simulink is used to test the robustness
+of the proposed technique under uniform and non-uniform irradiance conditions. The performance
+is compared to the Perturb & Observe, Incremental Conductance, and other hybrid MPPT techniques.
+Furthermore, the efficacy of the proposed technique is also assessed against a commercial PV system’s
+power output over one day. The results demonstrate that the proposed GA-FOCV technique improves
+the efficiency of the conventional FOCV method by almost 3%, exhibiting an average tracking efficiency
+of 99.96% and tracking speed of around 0.07 s with minimal steady-state oscillations. Additionally, the
+proposed technique can also efficiently track the global MPP under partial shading conditions and offers
+faster tracking speed, higher efficiency, and fewer oscillations than other hybrid MPPT techniques.
+
+© 2022 The Author(s). Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND
+license (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+1. Introduction
+
+Solar PV output directly depends upon the solar irradiance
+intensity and temperature, which are intermittent and make so-
+lar PV output highly non-linear, as illustrated in Figs. 1 and 2.
+Therefore, to harvest the maximum power from solar PV systems,
+a control unit is needed to track the maximum power point
+(MPP) under varying environmental conditions. Improving the
+maximum power point tracking (MPPT) algorithms is one of the
+easiest ways to improve solar PV system performance (Masoum
+et al., 2002).
+
+During the previous decade, substantial efforts were made to
+develop new MPPT techniques (De Brito et al., 2013). A compre-
+hensive review on the classification and performance of different
+MPPT techniques is presented in Karami et al. (2017), Bollipo
+et al. (2021). MPPT techniques can be broadly classified into three
+groups: offline, online, and hybrid (Reza et al., 2013). The offline
+methods, including constant voltage, short circuit current, and
+open circuit voltage track the MPP using predefined parame-
+ters calculated from PV panel characteristics and do not actually
+
+∗
+
+Corresponding author.
+E-mail address: aakashh@our.ecu.edu.au (A. Hassan).
+
+measure the PV power output during operation. Although offline
+methods are simple, economical, and easy to implement, they of-
+fer low tracking efficiency as they assume some parameters to be
+constant even under varying environmental conditions (Karami
+et al., 2017; Reza et al., 2013).
+
+The lookup table technique, one of the offline MPPT methods,
+uses pre-saved parameters for each corresponding solar irra-
+diance and temperature value, resulting in improved tracking
+speed and efficiency (Bollipo et al., 2021). In Kota and Bhukya
+(2016), a 2-D lookup table with maximum power point voltages
+for 77 combinations of irradiance and temperature levels was
+developed. The results demonstrated a higher tracking speed and
+reduced oscillations with almost the same tracking efficiency
+(95%) compared to the Perturb and Observe (P&O) technique.
+However, this technique required large memory to set up the
+database with 77 combinations. A comparative analysis between
+the lookup table and P&O was performed in Udavalakshmi and
+Sheik (2018). The lookup table was formed by saving the corre-
+sponding DC/DC converter’s duty cycles for 70 different irradiance
+and temperature levels. It was found that the proposed technique
+exhibits a faster response than P&O with almost zero oscillations
+at MPP but needs large memory to save the required parameters.
+A hybrid variable step P&O and lookup table based MPPT tech-
+nique was proposed in Sarika et al. (2020) to overcome the large
+
+https://doi.org/10.1016/j.egyr.2022.12.088
+2352-4847/© 2022 The Author(s). Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-
+nc-nd/4.0/).
+
+A. Hassan, O. Bass and M.A.S. Masoum
+
+Energy Reports 9 (2023) 1535–1548
+
+drawbacks. For instance, P&O leads to oscillations around MPP
+even after MPP has been found and results in unnecessary power
+loss. Additionally, it may lose its tracking direction under rapidly
+changing environmental conditions and is also prone to a trade-
+off between accuracy and speed (Desai and Patel, 2007; Jain
+and Agarwal, 2007). Whilst the IC technique has demonstrated
+better performance than P&O and exhibits very low steady-state
+oscillations, it requires an expensive floating-point core controller
+to solve the differential equations (De Brito et al., 2013). To
+overcome these drawbacks, some authors have reported modified
+P&O techniques with improved MPPT performance.
+
+Variable perturbation steps were introduced in Wolfs and Tang
+(2005), Patel et al. (2009), but these techniques are not genuinely
+adaptive and depend on the initial user-defined step constants.
+In Ali et al. (2018), a modified P&O was proposed, which works
+by dividing the P–V curve into four regions and then adjusting
+the step size according to the distance from MPP. Although the
+tracking speed gets improved, steady-state oscillations are not
+fully eliminated. Additionally, tracing the operating point in one
+of the four sectors is challenging, especially during a rapid change
+in irradiance. In Ahmed and Salam (2015), an adaptive perturba-
+tion step was proposed to reduce the steady-state oscillations in
+the conventional P&O. At the start, an initial perturbation step
+size of 2% of open circuit voltage (Voc ) is applied, which is then
+gradually reduced by 0.5% during each step until 0.5% of Voc is
+reached. Moreover, to overcome the loss of tracking direction un-
+der rapidly varying irradiance, boundary limits of ±5% of Voc were
+imposed on the operating MPP. Despite some improvements in
+the tracking efficiency and steady-state oscillations, this approach
+slows down the tracking speed due to the added complexity
+in the conventional algorithm. Additionally, as Voc varies with
+varying irradiance and temperature, adjusting the perturbation
+step size and boundary limits on the basis of a fixed Voc may lead
+to divergence from the true MPP. To avoid the drift problem in
+the conventional P&O, an extra checking condition of change in
+current along with the change in power was proposed in Killi and
+Samanta (2015). Nonetheless, this technique reduces the tracking
+speed due to added conditional statements and is not entirely free
+from steady-state oscillations.
+
+The hybrid MPPT techniques are well-known for tracking the
+MPP with higher accuracy as compared to the offline or online
+methods. The hybrid techniques perform MPPT in two steps and
+employ more advanced tools such as fuzzy logic, Artificial Neural
+Networks, and optimization algorithms (Reza et al., 2013). During
+the first step, the desired parameters are first optimized using
+one of the previously mentioned advanced techniques. In the
+second step, obtained optimum parameters are used to accurately
+track the MPP using conventional MPPT methods. In Harrag and
+Messalti (2015), an improved P&O algorithm with adjustable step
+size was proposed, where GA was employed to tune the PID
+parameters such that the power output from the DC/DC converter
+is optimized through an adaptive duty cycle. A similar approach
+of optimizing PID controller parameters have also been reported
+in other studies (Badis et al., 2018; Lasheen et al., 2016). Although
+these studies reported improved performance in terms of ripple
+factor, response time, and overshoot, the MPPT accuracy was only
+marginally improved as these studies focused only on optimizing
+the PID controller parameters but did not consider improving
+the MPPT algorithm. A real-time GA based MPPT technique was
+developed in Hadji et al. (2018). In comparison with the con-
+ventional techniques, it was found that the proposed approach
+performs better in terms of accuracy, speed, and convergence.
+However, this technique requires the continuous measurements
+of both Voc and short circuit current (Isc ) to perform the MPPT
+and thus needs extra sensors and pilot PV modules, incurring
+additional costs. In Senthilkumar et al. (2022), a comparative
+
+Fig. 1. I–V and P–V characteristic curves of selected PV module (MonoX
+LG265S1W-B3) at different irradiance levels (Electronics, 2014).
+
+Fig. 2. I–V and P-V characteristic curves of selected PV module at different
+temperatures (Electronics, 2014).
+
+memory requirement issue. Although this technique required
+relatively less memory, tracking speed and MPPT efficiency were
+also improved; the proposed algorithm depicted large oscilla-
+tions, particularly at low irradiance levels. In Banakhr and Mosaad
+(2021), an adaptive MPPT based on a lookup table compris-
+ing PI controller parameters optimized through the Harmony
+Search (HS) algorithm was proposed. The results demonstrated
+that the proposed technique offers better performance than the
+conventional P&O and Incremental Conductance (IC) techniques,
+however, it also suffers from large memory requirement problem.
+Online techniques such as P&O, Hill Climbing (HC), and IC
+trace the MPP by continuously adjusting the converter’s duty
+cycle based on real-time PV power measurements (Reza et al.,
+2013). These techniques have been more extensively used in
+the literature as they provide better solution to the manufactur-
+ers. However, these techniques also suffer from some significant
+
+1536
+
+

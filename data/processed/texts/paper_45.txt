@@ -1,0 +1,246 @@
+RESEARCH ARTICLE
+
+www.advmat.de
+
+Arming Ru with Oxygen-Vacancy-Enriched RuO2
+Sub-Nanometer Skin Activates Superior Bifunctionality for
+pH-Universal Overall Water Splitting
+
+Yapeng Li, Wentao Wang, Mingyu Cheng, Yafei Feng, Xiao Han, Qizhu Qian, Yin Zhu,
+and Genqiang Zhang*
+
+Water electrolysis has been expected to assimilate the renewable yet
+intermediate energy-derived electricity for green H2 production. However,
+current benchmark anodic catalysts of Ir/Ru-based compounds suﬀer severely
+from poor dissolution resistance. Herein, an eﬀective modiﬁcation strategy is
+proposed by arming a sub-nanometer RuO2 skin with abundant oxygen
+vacancies to the interconnected Ru clusters/carbon hybrid microsheet
+(denoted as Ru@V-RuO2/C HMS), which can not only inherit the high
+hydrogen evolution reaction (HER) activity of the Ru, but more importantly,
+activate the superior activity toward the oxygen evolution reaction (OER) in
+both acid and alkaline conditions. Outstandingly, it can achieve an ultralow
+overpotential of 176/201 mV for OER and 46/6 mV for the HER to reach 10 mA
+cm−2 in acidic and alkaline solution, respectively. Inspiringly, the overall water
+splitting can be driven with an ultrasmall cell voltage of 1.467/1.437 V for
+10 mA cm−2 in 0.5 m H2SO4/1.0 m KOH, respectively. Density functional
+theory calculations reveal that armoring the oxygen-vacancy-enriched RuO2
+exoskeleton can cooperatively alter the interfacial electronic structure and
+make the adsorption behavior of hydrogen and oxygen intermediates much
+close to the ideal level, thus simultaneously speeding up the hydrogen
+evolution kinetics and decreasing the energy barrier of oxygen release.
+
+Y. Li, M. Cheng, Y. Feng, Q. Qian, Y. Zhu, G. Zhang
+Hefei National Research Center for Physical Sciences at the Microscale
+CAS Key Laboratory of Materials for Energy Conversion
+Department of Materials Science and Engineering
+University of Science and Technology of China
+Hefei, Anhui 230026, P. R. China
+E-mail: gqzhangmse@ustc.edu.cn
+W. Wang
+Guizhou Provincial Key Laboratory of Computational Nano-Material
+Science
+Guizhou Education University
+Guiyang 550018, P. R. China
+X. Han
+Center of Advanced Nanocatalysis (CAN)
+Department of Applied Chemistry
+University of Science and Technology of China
+Hefei, Anhui 230026, P. R. China
+
+The ORCID identiﬁcation number(s) for the author(s) of this article
+can be found under https://doi.org/10.1002/adma.202206351
+
+DOI: 10.1002/adma.202206351
+
+1. Introduction
+
+The goal of CO2 neutralization leverages the
+exploitation of renewable energy,[1] while
+water electrolysis has been expected as a
+promising manner to store the clean but
+intermittent electricity from wind, solar,
+tide, and so on, into the chemical bond,
+thus could meet the diverse applications
+in the future H2 economy.[2,3] However,
+the core electrocatalysts are still unsophis-
+ticated, which is mainly hindered by the
+kinetics-sluggish oxygen evolution reaction
+(OER) on the anode side.[4–6]
+
+Although the earth-abundant, ﬁrst row
+(3d) transition metal (oxy)hydroxides, and
+metal–organic frameworks (MOFs) have
+garnered intense interest
+for their en-
+couraging activity, such as FeNi-LDH,[7]
+FeCoW oxyhydroxide,[8] (Ni2Co1)0.925Fe0.075-
+MOF-NF,[9]
+the active dissolvability and
+degradability in the acidic solution over-
+shadow their competitiveness. On the
+other hand, hydrogen evolution reaction
+(HER) activity of
+the state-of-the-art Pt
+decreases to ≈2 to 3 orders of magnitude
+in the alkaline media than that in the proton-rich environment
+(only needs (tens of) millivolts of overpotential to reach the cur-
+rent density of 10 mA cm−2
+geo).[10] These pH-sensitive catalysts
+burden the integrated water electrolysis system, further stress-
+ing the necessity of developing stable electrocatalysts in the pH-
+universal condition.[11]
+
+Metallic Ru-based compounds possess favorable binding en-
+ergy with H, robust thermostability, good anticorrosion ability, as
+well as cost eﬃciency (about 1/5 price of Pt), thus have recently
+gained ever-increasing interest as pH-universal electrocatalysts
+for HER.[12] For example, Ru nanoparticles dispersed in nitro-
+genated holey 2D carbon structure (Ru@C2N) exhibit outstand-
+ing activity (13.5/17 mV@10 mA cm−2 in 0.5 m H2SO4/1.0 m
+KOH) for HER.[13] Ideally, it is highly desired if functionaliza-
+tion can be exerted to endow Ru with promising catalytic activity
+for OER while simultaneously inheriting its HER capacity, which
+could be a kind of superior candidates for overall water splitting
+catalysts. Constructing core/shell conﬁguration has been demon-
+strated as a powerful tactic, which can incorporate the strain and
+ligand eﬀect to steer its adsorption/desorption kinetics with the
+
+Adv. Mater. 2023, 35, 2206351
+
+2206351 (1 of 10)
+
+© 2023 Wiley-VCH GmbH
+
+www.advancedsciencenews.com
+
+www.advmat.de
+
+intermediates for optimizing the activity.[14,15] For example, Qiao
+et al. have successfully armed the Ru core with the acid/alkaline-
+stable IrOx skin (Ru@IrOx), the charge redistribution and strain
+eﬀect induced by the highly strained ruthenium core and the
+partially oxidized iridium shell across the metal-metal oxide het-
+erojunction enhance the OER activity (𝜂
+10 = 282 mV) and stabil-
+ity (90% retentivity@24 h).[16] However, the interfacial electronic
+redistribution and strain eﬀect activated by the core–shell het-
+erostructure are short-range,[17] which means the sub-nanometer
+skin with several atomic layers is essential to exert the syner-
+getic eﬀect, thus imposing stringent constraints on the delicate
+assembly of the ultrathin armor via facile yet better methods. Be-
+sides, digging out the water electrolysis potentiality of the Ru-
+based materials as much as possible, especially improving its us-
+ability and buﬀering capacity in the pH-wide range is of much
+necessary to increase the material’s survivability in the practical
+working conditions.
+
+Herein, we present a functionalization strategy by arming
+Ru nanoclusters with sub-nanometer RuO2 skin enriched with
+oxygen vacancy (Ov), that can activate the superior OER cat-
+alytic activity, and simultaneously inherit the HER performance,
+thus achieving the impressive catalytic activity with the ultra-
+small overpotentials of 176 and 201 mV at 10 mA cm−2 for
+OER in acidic and alkaline solution, also possessing the supe-
+rior HER performance (47 mV@10 mA cm−2 in 0.5 m H2SO4;
+6 mV@10 mA cm−2 in 1.0 m KOH). Theoretical calculation dis-
+closes that strengthening the Ru with Ov enriched RuO2 can op-
+timize the electronic structure to make a more thermoneutral H
+adsorption/desorption for HER and reduce the energy barrier to-
+ward OER. Therefore, the Ru@V-RuO2/C HMS integrates and
+enlarges the respective advantages of the HER/OER active com-
+ponents for expressing the extraordinary bifunctionality toward
+water electrolysis, which only needs the low working voltage of
+1.467/1.437 V in 0.5 m H2SO4/1.0 m KOH to reach 10 mA cm−2,
+consequently realizing the obvious H2 generation driving by one
+AA battery.
+
+2. Results and Discussion
+
+The synthetic procedures are cost-eﬀective and scalable, as illus-
+trated in Figure 1a, including the formation of Ru/C hybrid mi-
+crosheet via thermal annealing of Ru3+-melamine precursor in
+inert gas, followed by covering Ov enriched RuO2 sub-nanometer
+skin on Ru surface to obtain the ﬁnal product. Speciﬁcally, the
+precursor of Ru3+-melamine (Figure S1, Supporting Informa-
+tion) can be formed via the electrostatic interaction between the
+N atom in the melamine molecule and the Ru3+ ion. Then,
+the carbothermal reduction forms the carbon-based hybrid mi-
+crosheet decorated with the dense Ru nanoclusters (denoted as
+Ru/C HMS, Figure S2, Supporting Information ) owing to the
+“self-templating” of melamine crystal.[18] Then, low-temperature
+oxidation in the air can skillfully arm the sub-nanometer skin of
+RuO2 for the Ru core. The morphology (Figure 1b and Figure S3,
+Supporting Information ) of the ﬁnal product inherits the orig-
+inal sheet-like morphology decorated with lots of tiny nanoclus-
+ters. The enlarged transmission electron microscopy (TEM) im-
+age (Figure 1c) displays that uniform clusters centered at 4.9 nm
+(Figure S4, Supporting Information ) distribute on the matrix or-
+derly, which balances the high density and good dispersion. Be-
+
+sides, the X-ray diﬀraction (XRD) pattern (Upper in Figure 1d)
+reﬂects the existence of RuO2 (PDF#43-1027) and Ru (PDF#70-
+0274). The Raman spectrum (Bottom in Figure 1d) contains the
+classical signals of the D band and G band, supporting the con-
+servation of carbon. The Brunauer–Emmett–Teller (BET) analy-
+sis suggests the surface area of this microsheet is as high as 193
+m2 g−1, along with a large number of mesopores concentered
+at 3 nm (Figure S5, Supporting Information ), which is easier
+for the free diﬀusion of oxygen and hydrogen gas molecules.[19]
+The aberration-corrected high-angle annular dark-ﬁeld scanning
+transmission electron microscopy (HAADF-STEM) image in Fig-
+ure 1e presents that the core–shell clusters widely exist in the
+porous microsheet. Some nanopores are visual from the mi-
+crosheet, coinciding with the BET result. Notably, the existence
+of graphitic carbon marked with the yellow arrow in Figure 1f
+and Figure S6, Supporting Information supports the above Ra-
+man analysis, which may serve as the electron reservoir for pro-
+viding electrons to the Ru-based constitute, thus can intensify its
+anticorrosion ability and relieves its overoxidation for improving
+the stability.[20] Its role in the hybrid will be discussed later. The
+aberration corrected HAADF-STEM analysis portrayed in Fig-
+ure 1g display a clear core–shell nanostructure with the diﬀerent
+Z-contrast. To know the precise composition of the core–shell
+nanostructure, two diﬀerent regions containing core and shell
+were analyzed in detail. As shown in Figure 1h,i, the inner core
+with the interplanar distances (d-space) of 2.17 and 2.08 Å can
+be indexed as the (002) and (101) planes of hexagonal Ru phase,
+while the outer shell with the d-space of 3.15 and 2.50 Å belong
+to the (110) and (101) planes of tetragonal RuO2 phase, demon-
+strating that the inner core of Ru has been clothed with several
+atomic layers RuO2 shell. The sub-nanometer skin can not only
+protect the Ru core for avoiding overoxidation but also change
+the interface strain and receive the electronic regulation from the
+inner core to boost the reactivities eﬃciently. Strikingly, the in-
+versed fast Fourier transform images (Figures S7, Supporting In-
+formation) present the distorted atomic arrangement in the inner
+core and the broken atomic arrangement integrity in the outer
+shell, implying the possible existence of strain eﬀect at the core–
+shell interface.[21,22] This phenomenon widely exists in this kind
+of core–shell structure (Figure S8, Supporting Information). Vi-
+sually, the geometric phase analysis (GPA) showcases the asym-
+metrical distribution of strains centered at the interface of the
+Ru and RuO2 microregion (Figure 1j), indicating the existence
+of the strong strain eﬀect in this core@shell heterostructure,
+which may be beneﬁcial to optimize the kinetics and expose more
+extra active sites.[23,24] Besides, the low-magniﬁcation HAADF-
+STEM image and the corresponding elemental mapping results
+(Figure S9, Supporting Information) portray the uniform pres-
+ence of C, N, Ru, and O elements in this composite. Next, the
+complexity and subtlety of arming the sub-nanometer skin for
+the core to form the metal@metal oxide heterostructure have
+been discerned carefully by altering the oxidation temperature.
+At 150 °C, the oxygen almost cannot combine with Ru to form
+the corresponding oxide (Figure S10, Supporting Information),
+and the nanoparticles with nearly unchanged size disperse on
+the mainland uniformly (Figure S11, Supporting Information).
+At the higher temperature of 250 °C, only the cracked microsheet
+decorated with slightly aggregated oxides can be obtained. Thus,
+the temperature of 200 °C is critical to precisely arm the
+
+Adv. Mater. 2023, 35, 2206351
+
+2206351 (2 of 10)
+
+© 2023 Wiley-VCH GmbH
+
+ 15214095, 2023, 24, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/adma.202206351 by University Of Adelaide, Wiley Online Library on [29/06/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

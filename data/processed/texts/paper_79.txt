@@ -1,0 +1,202 @@
+pubs.acs.org/JACS
+
+Article
+
+Potential-Driven Restructuring of Cu Single Atoms to Nanoparticles
+for Boosting the Electrochemical Reduction of Nitrate to Ammonia
+Xiaoyan Liu, Xiaofeng Yang,* Shengxin Zhang, Qiao Zhao, Qike Jiang,
+Ji Yang,
+Yang Su, Leilei Zhang, Jian-Feng Li,* Zhong-Qun Tian, Wei Liu,* Aiqin Wang,* and Tao Zhang
+
+Haifeng Qi,
+
+Anqi Li,
+
+⊥
+
+⊥
+
+⊥
+
+Cite This: J. Am. Chem. Soc. 2022, 144, 12062−12071
+
+Read Online
+
+ACCESS
+
+Metrics & More
+
+Article Recommendations
+
+*sı Supporting Information
+
+ABSTRACT: Restructuring is ubiquitous in thermocatalysis and
+of pivotal importance to identify the real active site, yet it is less
+explored in electrocatalysis. Herein, by using operando X-ray
+absorption spectroscopy in conjunction with advanced electron
+microscopy, we reveal the restructuring of the as-synthesized Cu−
+N4 single-atom site to the nanoparticles of ∼5 nm during the
+electrochemical reduction of nitrate to ammonia, a green ammonia
+production route upon combined with the plasma-assisted
+oxidation of nitrogen. The reduction of Cu2+ to Cu+ and Cu0
+and the subsequent aggregation of Cu0 single atoms is found to
+occur concurrently with the enhancement of the NH3 production
+rate, both of them are driven by the applied potential switching
+−1 h−1)
+from 0.00 to −1.00 V versus RHE. The maximum production rate of ammonia reaches 4.5 mg cm−2 h−1 (12.5 molNH3 gCu
+with a Faradaic eﬃciency of 84.7% at −1.00 V versus RHE, outperforming most of the other Cu catalysts reported previously. After
+electrolysis, the aggregated Cu nanoparticles are reversibly disintegrated into single atoms and then restored to the Cu−N4 structure
+upon being exposed to an ambient atmosphere, which masks the potential-induced restructuring during the reaction. The
+synchronous changes of the Cu0 percentage and the ammonia Faradaic eﬃciency with the applied potential suggests that the Cu
+nanoparticles are the genuine active sites for nitrate reduction to ammonia, which is corroborated with both the post-deposited Cu
+NP catalyst and density functional theory calculations.
+
+■ INTRODUCTION
+
+Metal ions doped into porous nitrogen-doped carbon (M−N−
+C), also called M−N−C single-atom catalysts (SACs), is a
+class of promising electrocatalysts alternative to scarce and
+unaﬀordable noble metals in a variety of energy-related
+important transformations (e.g., oxygen and carbon dioxide
+reduction reactions).1,2 The high activity of M−N−C is
+generally attributed to the M−Nx site whose exact structure,
+however, remains elusive. Especially, under working con-
+the preformed M−Nx may undergo structural
+ditions,
+transformation driven by the applied potential and/or the
+interaction with reactants or electrolytes, which not only
+complicates the understanding of the structure−performance
+relationship but also signiﬁcantly impedes the rational design
+of eﬃcient catalysts. Therefore, unveiling the dynamic
+evolution of the M−Nx structure during electrolysis is of
+pivotal importance to identify the real active site. Recently,
+with the advance of operando characterization techniques, in
+particular operando X-ray absorption spectroscopy, there have
+been increasing examples showing that the M−Nx single-atom
+site structure was labile under electrochemical conditions.3 For
+instance, Yao and co-workers reported the transformation of
+the as-synthesized Co−N4 planar structure into a high-valence
+
+HO−Co−N2 moiety by interacting with the electrolyte
+hydroxide during the alkaline hydrogen evolution reaction
+(HER),4 while Jaouen and co-workers observed the trans-
+formation of the preformed FeN4C12 into iron oxide during the
+oxygen reduction reaction (ORR) and this structural change
+was the main reason for performance degradation.5 Compared
+with Co−Nx and Fe−Nx moieties, the Cu−Nx appears more
+susceptible to restructuring due to the more positive standard
+electrode potential of Cu2+/Cu0 and Cu+/Cu0. Indeed, the
+reduction of Cu cations together with the morphology change
+was reported for various Cu-based catalysts during the
+reduction,6−8 and the restructuring-
+electrochemical CO2
+induced activity enhancement was also observed.9,10 Very
+recently, we have reported the dynamic evolution of Cu−N−C
+SAC during ORR from the original Cu2+−N4 to Cu+−N3 and
+to the HO−Cu+−N2 structure with the applied
+further
+
+Received: March 1, 2022
+Published: June 29, 2022
+
+© 2022 American Chemical Society
+
+12062
+
+https://doi.org/10.1021/jacs.2c02262
+J. Am. Chem. Soc. 2022, 144, 12062−12071
+
+Downloaded via UNIV OF ADELAIDE on June 29, 2024 at 09:00:14 (UTC).See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.Journal of the American Chemical Society
+
+pubs.acs.org/JACS
+
+Article
+
+Figure 1. Structural characterizations of Cu−N−C SAC. (a) Atomic-resolution HAADF-STEM image. (b) FT-EXAFS spectra of the Cu−N−C
+catalyst and reference samples including Cu foil, Cu2O, CuO, and CuPc. (c) Cu K-edge XANES spectra of Cu−N−C and reference samples
+including Cu foil, Cu2O, CuO, and CuPc. (d) Comparison between the experimental spectrum of Cu−N−C (black line) and the theoretical
+spectrum of the Cu−N4 model (red line, inset, Cu−N4 structure).
+
+potential switching from 1.1 to 0.1 V, and identiﬁed the latter
+two structures were more favorable to ORR.11
+
+Electrochemical ﬁxation of nitrogen (N2) powered by
+renewable energy has emerged as a promising approach
+toward green ammonia synthesis alternative to conventional
+high energy-consuming12,13 and CO2-emission14 Haber−
+Bosch process. Nevertheless, the high dissociation energy of
+NN (941 kJ mol−1) and the limited solubility of nitrogen in
+the aqueous solution lead to unacceptably low ammonia
+selectivity and productivity in electrochemical nitrogen
+ﬁxation.15,16 To overcome the intrinsic barrier of the direct
+electrolysis of N2, we recently proposed a “plasma-electro-
+catalysis” strategy17 by mimicking one of the natural nitrogen
+cycles, in which the nitrogen is ﬁrst oxidized by non-thermal
+plasma to reactive nitrogen species (RNS) which is usually
+presented as water-soluble nitrate/nitrite species in aqueous
+electrolytes,18 and then, the produced RNS is converted into
+ammonia with a high selectivity and eﬃciency via electro-
+chemical reduction. Therefore, it is keenly desired to develop
+highly selective and durable electrocatalysts for RNS reduction
+to ammonia. However, one challenge associated with this
+electrochemical transformation involving the 8e−/9H+ transfer
+process is the selectivity control because the reduction reaction
+may stop at any intermediate step depending on the catalyst
+structure as well as the applied potential.19−21 M−N−C SACs
+with a well-deﬁned M−Nx structure have shown great
+potentials in steering the nitrate reduction toward ammonia
+based on recent reports.22−26 However, it remains an open
+question whether the pre-formed M−Nx structure is stable at
+highly reducing conditions applied, and if not, what is the
+genuine active site structure for
+this demanding electro-
+chemical process?
+
+Herein, with Cu−N−C SAC as a model catalyst and
+operando X-ray absorption spectroscopy as the technique, we
+present a detailed study on the evolution of active sites during
+
+the electrochemical reduction of nitrate. With the applied
+potential moving from 0.00 to −1.00 V versus RHE, the as-
+synthesized Cu−N4 structure underwent successive trans-
+formations from Cu−N3 to near-free Cu0 single atoms and
+eventually to aggregated Cu0 nanoparticles. Concomitantly, the
+ammonia production rate was steadily enhanced until the
+−1 h−1) with a
+maximum of 4.5 mg cm−2 h−1 (12.5 molNH3 gCu
+Faradaic eﬃciency (FE) of 84.7% was reached at −1.00 V
+versus RHE. The synchronous change of the Cu0 percentage
+with the ammonia production rate suggests the potential-
+induced evolution of Cu0 nanoparticles are the genuine active
+sites, which is further supported by both the post-deposited Cu
+NPs catalyst and density functional theory (DFT) calculations.
+Moreover, the as-evolved Cu0 nanoparticles can be disinte-
+grated into single atoms and again restored to the Cu−N4
+structure upon being exposed to an ambient atmosphere after
+the electrolysis, which highlights the great importance of the
+operando characterizations.
+
+■ RESULTS AND DISCUSSION
+
+Synthesis of Cu−N−C SAC and Electrochemical
+Performance. The Cu−N−C SAC was synthesized with a
+modiﬁed procedure according to our previously reported two-
+step approach (Figure S1).11 The as-synthesized Cu−N−C is
+featured with a large surface area (1065 m2 g−1), a high N
+content (10.23 at. % N), and a mesoporous structure (Table
+S1 and Figures S2 and S3). The Cu concentration in the Cu−
+N−C is determined to be 1.0 wt % by inductively coupled
+plasma optical emission spectroscopy. The single-atom
+dispersion of Cu is visualized by aberration-corrected high-
+angle annular dark-ﬁeld scanning transmission electron
+microscopy (HAADF-STEM) imaging (Figure 1a and more
+images see Figure S4), which is further corroborated with the
+absence of the Cu−Cu scattering path in the extended X-ray
+absorption ﬁne structure (EXAFS) spectrum (Figure 1b). The
+
+12063
+
+https://doi.org/10.1021/jacs.2c02262
+J. Am. Chem. Soc. 2022, 144, 12062−12071
+
+

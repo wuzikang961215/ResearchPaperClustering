@@ -1,0 +1,240 @@
+Sodium-Ion Batteries
+
+Recent Progress in Rechargeable Sodium-Ion Batteries: 
+toward High-Power Applications
+
+Xiangjun Pu, Huiming Wang, Dong Zhao, Hanxi Yang, Xinping Ai, Shunan Cao, 
+Zhongxue Chen,* and Yuliang Cao*
+
+The increasing demands for renewable energy to substitute traditional fossil 
+fuels and related large-scale energy storage systems (EES) drive developments 
+in battery technology and applications today. The lithium-ion battery (LIB), the 
+trendsetter of rechargeable batteries, has dominated the market for portable 
+electronics and electric vehicles and is seeking a participant opportunity in 
+the grid-scale battery market. However, there has been a growing concern 
+regarding the cost and resource availability of lithium. The sodium-ion battery 
+(SIB) is regarded as an ideal battery choice for grid-scale EES owing to its 
+similar electrochemistry to the LIB and the crust abundance of Na resources. 
+Because of the participation in frequency regulation, high pulse-power 
+capability is essential for the implanted SIBs in EES. Herein, a comprehensive 
+overview of the recent advances in the exploration of high-power cathode and 
+anode materials for SIB is presented, and deep understanding of the inherent 
+host structure, sodium storage mechanism, Na+ diffusion kinetics, together 
+with promising strategies to promote the rate performance is provided. This 
+work may shed light on the classification and screening of alternative high 
+rate electrode materials and provide guidance for the design and application 
+of high power SIBs in the future.
+
+can  provide  both  high  energy  density 
+and  large  output  power,  accordingly  has 
+captured  the  markets  of  portable  elec-
+tronics  (W  level)  and  electrical  vehicles 
+(KW  level).  Nevertheless,  the  implemen-
+tation  of  LIB  into  grid-scale  ESS  (MW) 
+is  constantly  postponed  due  to  cost  and 
+safety  issues.  Although  the  lithium  iron 
+phosphate  (LiFePO4)  battery  is  seeking  a 
+participant  opportunity  in  the  grid-scale 
+battery  market,  the  rising  cost  of  lithium 
+resources,  as  opposed  to  their  reserves, 
+is  likely  to  be  the  primary  concern  for  its 
+potential application. Recently, sodium-ion 
+battery (SIB) emerges as an attractive and 
+promising alternative because of the prac-
+tically  inexhaustible,  ubiquitous  and  low 
+cost sodium resources.
+
+1. Introduction
+
+The exhaustion of fossil fuels has accelerated advancements in 
+exploiting renewable energy sources; to cope with ever-growing 
+energy  demand  and  better  make  use  of  sustainable  energy, 
+multiscale energy storage systems (ESSs) have been intensively 
+developed in recent years. Among various candidates, lithium-
+ion battery (LIB) is considered as the pioneer technology which 
+
+X. Pu, H. Wang, D. Zhao, Prof. S. Cao, Dr. Z. Chen
+Key Laboratory of Hydraulic Machinery Transients
+Ministry of Education
+School of Power and Mechanical Engineering
+Wuhan University
+Wuhan 430072, China
+E-mail: zxchen_pmc@whu.edu.cn
+Prof. H. Yang, Prof. X. Ai, Prof. Y. Cao
+Hubei Key Laboratory of Electrochemical Power Sources
+College of Chemistry and Molecular Sciences
+Wuhan University
+Wuhan 430072, China
+E-mail: ylcao@whu.edu.cn
+
+The ORCID identification number(s) for the author(s) of this article 
+can be found under https://doi.org/10.1002/smll.201805427.
+
+DOI: 10.1002/smll.201805427
+
+Despite  the  similar  electrochemistry  to 
+the well-established LIBs technology, SIBs 
+exhibit lower specific capacity and working 
+potential  than  LIBs,  thus  demonstrating 
+inferior  energy  density.  For 
+instance, 
+the  most  advanced  full  sodium-ion  bat-
+tery  based  on  O3-Na0.9[Cu0.22Fe0.30Mn0.48]O2  cathode  and  hard 
+carbon anode developed by Hu and co-workers delivered a prac-
+tical  energy  density  of  100  Wh  kg−1  with  an  average  operation 
+voltage of 3.2 V, far lower than the energy density and working 
+potential  (>200  Wh  kg−1,  3.7  V)  achieved  for  present  LIBs. 
+Overall, the SIBs are almost impossible to enter the market for 
+portable electronics and electric vehicles. The good news is that 
+both  LIBs  and  SIBs  technologies  for  electricity  storage  system 
+are currently at much earlier stages of development, therefore, 
+SIBs  still  hold  a  great  chance  in  case  their  electrochemical 
+performance  is  enormously  improved  and  their  cost  is  largely 
+reduced.
+
+The  primary  technology  characteristics  used  in  assessing  a 
+battery’s  potential  for  use  in  grid-scale  energy  storage  applica-
+tions include storage and operation properties, such as energy 
+and power density, efficiency, scale, response time, lifetime and 
+cost.  Up  to  date,  over  10  000  papers  on  SIBs  have  been  pub-
+lished,  implying  SIBs  are  attractive  and  full  of  promise.  How-
+ever, most of these works focused on the design, synthesis and 
+modification  of  new  electrode  materials  with  enhanced  oper-
+ating voltage and energy density, few of them paid attention to 
+the power capability of the batteries. In practical terms, power 
+density  rather  than  energy  density  is  often  a  more  important 
+parameter  for  SIBs  in  electricity  storage  system.  Apart  from 
+
+Small 2019, 15, 1805427
+
+1805427  (1 of 33)
+
+© 2019 WILEY-VCH Verlag GmbH & Co. KGaA, Weinheim
+
+reviewwww.small-journal.comthe  general  function  for  smoothing  out  the  fluctuations 
+from renewable energy sources (wind, solar, etc.) and reducing 
+the  need  for  “peaker”  plants,  grid-level  battery  also  provides 
+short-term  emergency  backup  power,  and  contributes  in  fre-
+quency regulation by delivering active power when the grid fre-
+quency is dropping below a certain lower threshold and charge 
+when  the  frequency  is  above  a  certain  upper  threshold.  The 
+amount  of  energy  charged  and  discharged  is  proportional  to 
+the frequency deviation, and the discharge duration time varies 
+from 1 to 15 min, with shallow charge and discharge for 20 to 
+40  cycles  per  day.  In  this  context,  power  capability  of  SIBs  is 
+essential  for  their  successful  applications  in  electricity  storage 
+system (Figure 1).
+
+Generally,  the  power  capability  of  a  SIB  depends  critically 
+on the speed at which Na+ ions and electrons migrate through 
+the electrolyte and bulk electrode. For a long time, sodium ion 
+is  widely  recognized  as  having  sluggish  movement  compared 
+with lithium ion due to its large ionic radius. However, recent 
+studies  have  revealed  that  there  are  a  great  number  of  SIBs, 
+either half or full cells, exhibit high power characteristics, thus 
+providing  a  compelling  rationale  to  enable  SIBs  to  serve  as  a 
+high  power  supply  when  proper  material  and  rational  design 
+are  elaborately  established.  Unfortunately,  there  is  no  evident 
+borderline  between  high  energy  and  high  power  batteries; 
+accordingly,  no  common  standard  that  defines  high  power 
+battery  is  given  until  now.  Particularly,  most  previous  works 
+only  investigate  the  rate  performance  of  a  single  electrode 
+(cathode or anode), this will bring out relatively great deviation 
+in evaluating the power capability of a full battery since all the 
+factors related to the power performance should be considered, 
+such  as  the  voltage  gap  between  the  cathode  and  anode,  the 
+electrochemical  kinetics  of  both  electrodes,  battery  design  and 
+manufacture,  and  so  on.  Nonetheless,  the  power  output  of  a 
+full SIB depends mostly on  the electrochemical characteristics 
+of its cathode and anode, in this sense, the property of a single 
+electrode can be assessed to predict its potential application in 
+high power SIBs.
+
+Now,  there  is  no  commonly  accepted  standard  with  which 
+to define high power electrode materials; this will bring a chal-
+lenge  to  select  practicable  alternative  electrodes  for  grid-scale 
+SIBs  from  a  vast  number  of  cathodes  and  anodes  reported  so 
+far.  Despite  this,  we  can  still  gauge  their  application  prospect 
+according  to  the  requirements  of  current  electricity  storage 
+system. In this context, electrode materials which are capable of 
+discharging  in  1–15  min  and  cycling  shallowly  for  20–40  times  
+a day are included within the scope of this review. Specifically, 
+an  output  power  density  of  at  least  2  KW  kg−1  is  essential  for 
+a  single  cathode  in  a  half  cell  with  sodium  metal  as  anode 
+(strictly speaking, power density could only be used to evaluate 
+full  batteries,  but  we  can  still  get  a  hint  about  their  rate  capa-
+bilities by half cell’s data in massively published works, so  the 
+power  density  provided  below  is  calculated  based  on  the  mass 
+of  cathode  if  it  is  not  specified),  considering  the  capacity  of 
+most state-of-art cathode materials are around 100 mAh g−1, the 
+operating voltage of the cathodes at 10 C (≈1000 mA g−1) should 
+be kept above 2.0 V. For anode materials, it is logically required 
+that  the  working  potentials  should  be  low,  generally  in  the 
+range of 0−1.0 V (vs Na/Na+). Especially for high power appli-
+cation, anode materials should be able to tolerate high current 
+
+Xiangjun Pu received his 
+B.Sc. degree in 2016 in energy 
+chemical engineering from 
+Wuhan University, China. 
+Now, he is pursuing a Ph.D. 
+degree in energy storage 
+and conversion science. 
+His research objective is to 
+design green and sustain-
+able materials, and advanced 
+electrolytes for rechargeable 
+batteries.
+
+Zhongxue Chen received 
+his B.Sc. degree in 2007 
+and Ph.D. degree in 2012 
+from Wuhan University, and 
+worked as a visiting scholar 
+in the Pennsylvania State 
+University from 2010 to 2011. 
+Currently, he is an associate 
+professor in the School 
+of Power and Mechanical 
+Engineering in Wuhan 
+University. His research 
+
+interests focus on energy storage/conversion materials  
+and devices.
+
+Yuliang Cao received his Ph.D. 
+degree in 2003 from Wuhan 
+University, and then he worked 
+as a visiting scholar in Pacific 
+Northwest National Laboratory 
+from 2009 to 2011. He is now 
+a professor in the college 
+of chemistry and molecular 
+sciences, Wuhan University. 
+His research interests focus 
+on developing advanced 
+energy storage materials (e.g., 
+carbonous materials, alloy nanocomposite anodes, transition 
+metal oxide cathodes, phosphate framework materials, and 
+novel safety electrolytes) for lithium/sodium ion batteries.
+
+impulses (10 C) and eliminate the sodium-dendrite hazard. Up 
+to date, there have been many review papers published on elec-
+trode  materials  and  full  cells  of  SIBs.  However,  to  the  best  of 
+our knowledge, there is no special review on high power SIBs 
+as well as high rate electrode materials. In this review, we will 
+present  the  most  recent  progress  on  high  power  cathode  and 
+anode materials for sodium-ion batteries, focusing on the fun-
+damental  aspects  of  synthesis,  structure  and  electrochemistry. 
+Special  attention  is  given  to  the  discussions  of  crystal  struc-
+ture characteristics, and sodium storage mechanisms of typical 
+electrode  materials,  also  the  effects  of  their  intrinsic  structure 
+features  and  nonstructural  engineering  on  the  sodium  ion 
+
+Small 2019, 15, 1805427
+
+1805427  (2 of 33)
+
+© 2019 WILEY-VCH Verlag GmbH & Co. KGaA, Weinheim
+
+www.advancedsciencenews.comwww.small-journal.com 16136829, 2019, 32, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/smll.201805427 by University Of Adelaide, Wiley Online Library on [29/06/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

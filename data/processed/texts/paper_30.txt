@@ -1,0 +1,248 @@
+Contents lists available at ScienceDirect 
+
+Renewable and Sustainable Energy Reviews 
+
+journal homepage: www.elsevier.com/locate/rser 
+
+Data-driven probabilistic machine learning in sustainable smart energy/ 
+smart energy systems: Key developments, challenges, and future research 
+opportunities in the context of smart grid paradigm 
+
+Tanveer Ahmad a, *, Rafal Madonski a, Dongdong Zhang b, Chao Huang c,d, Asad Mujeeb e 
+a Energy and Electricity Research Center, International Energy College, Jinan University, Zhuhai, Guangdong Province, 519070, China 
+b School of Electrical Engineering, Guangxi University, Nanning, 530004, China 
+c School of Computer and Communication Engineering, University of Science and Technology Beijing, Beijing, 10083, China 
+d Shunde Graduate School, University of Science and Technology Beijing, Guangdong, 528399, China 
+e Department of Electrical Engineering, Tsinghua University, Beijing, 100084, PR China   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Data-driven probabilistic machine learning 
+Energy distribution 
+Discovery and design of energy materials 
+Big data analytics and smart grid 
+Strategic energy planning and smart 
+manufacturing 
+Energy demand-side response 
+
+The current trend indicates that energy demand and supply will eventually be controlled by autonomous soft-
+ware that optimizes decision-making and energy distribution operations. New state-of-the-art machine learning 
+(ML) technologies are integral in optimizing decision-making in energy distribution networks and systems. This 
+study was conducted on data-driven probabilistic ML techniques and their real-time applications to smart energy 
+systems and networks to highlight the urgency of this area of research. This study focused on two key areas: i) the 
+use of ML in core energy technologies and ii) the use cases of ML for energy distribution utilities. The core energy 
+technologies include the use of ML in advanced energy materials, energy systems and storage devices, energy 
+efficiency,  smart  energy  material  manufacturing  in  the  smart  grid  paradigm,  strategic  energy  planning,  inte-
+gration of renewable energy, and big data analytics in the smart grid environment. The investigated ML area in 
+energy distribution systems includes energy consumption and price forecasting, the merit order of energy price 
+forecasting, and the consumer lifetime value. Cybersecurity topics for power delivery and utilization, grid edge 
+systems and distributed energy resources, power transmission, and distribution systems are also briefly studied. 
+The primary goal of this work was to identify common issues useful in future studies on ML for smooth energy 
+distribution operations. This study was concluded with many energy perspectives on significant opportunities 
+and challenges. It is noted that if the smart ML automation is used in its targeting energy systems, the utility 
+sector and energy industry could potentially save from $237 billion up to $813 billion.   
+
+1. Introduction 
+
+Today, while countries seek to restructure their energy strategies and 
+make cleaner energy more dependent, one major challenge remains [1]. 
+Both  wind  and  solar  power  are,  by  definition,  intermittent  nature  of 
+sources  of  electricity  [2].  The  power  output  of  a  solar  panel  or  wind 
+turbine is never constant; it is determined by external variables such as 
+cloud cover intensity, solar radiation, and wind speed, all of which are 
+uncontrollable [3]. When wind and solar farms generate less electricity, 
+grid operators must switch to traditional power plants to balance energy 
+supply and demand. Alternatively, after 90% of their electricity needs 
+for the day have been met on windy and sunny days, operators must 
+decrease gas-fired and coal power plant production to prevent a power 
+
+overload allowing the whole grid to suffocate or be damaged. Grid op-
+erators have to compensate energy providers for making changes to their 
+supplies (i.e., power system infrastructure), saving German consumers, 
+for example, about $553 million a year [4]. 
+
+Besides, electric utilities generate excessive carbon dioxide emissions 
+when their excess electricity is dissipated [5]. All this contributes to the 
+complexities  of  accurately  forecasting  the  industry’s  health  status  of 
+energy distribution infrastructure. In general, keeping the demand and 
+supply  of  energy  balanced  will  turn  into  a  constant  operational  and 
+technological struggle. This leads us to the potential that ML has and to 
+the major impact it could have on the energy spectrum as a whole [6]. 
+Even  though  ML  is  in  its  early  stages  of  deployment,  it  could  funda-
+mentally transform how we communicate with resources [7]. Its effect 
+could be far-reaching in renewable energy distribution and forecasts and 
+
+* Corresponding author. 
+
+E-mail addresses: tanveer.ahmad.pk11@gmail.com, tanveerahma@jnu.edu.cn (T. Ahmad).  
+
+https://doi.org/10.1016/j.rser.2022.112128 
+Received 23 March 2021; Received in revised form 5 December 2021; Accepted 10 January 2022   
+
+RenewableandSustainableEnergyReviews160(2022)112128Availableonline5March20221364-0321/©2022ElsevierLtd.Allrightsreserved.T. Ahmad et al.                                                                                                                                                                                                                                 
+
+Abbreviations 
+
+Machine learning 
+ML 
+TWh 
+Terawatt-hours 
+REmap  Renewable energy map 
+Photovoltaics 
+PV 
+Return on investment 
+ROI 
+Department of Energy 
+DOE 
+International Business Machines 
+IBM 
+ASEA Brown Boveri 
+ABB 
+British Petroleum 
+BP 
+Artificial intelligence 
+AI 
+Support vector machine 
+SVM 
+Convolution neural networks 
+CNN 
+Deep belief neural networks 
+DBNN 
+Deep Boltzmann machine 
+DBM 
+Recurrent neural networks 
+RNN 
+Deep reinforcement learning 
+DRL 
+Short for long-range 
+LoRa 
+Point of common coupling 
+PCC 
+
+the implementation of smart grids. 
+
+The aim and objective of this study: Right now, ML is considered a “hot 
+topic” in a variety of research fields, and it is currently the most rapidly 
+developing sector in high-tech. Data processing and interpretation are 
+becoming  increasingly  important,  even  for  engineers,  due  to  energy 
+digitalization. Smart grids are a term used to describe various new data- 
+based  services  in  renewable  energy  supply,  marketing,  storage,  and 
+usage.  This  study  covers  recent  advances  and  fundamental  ML  tech-
+niques in energy distribution. ML assists in the fast and efficient pro-
+cessing of this data in energy distribution (e.g., the energy distribution is 
+the last stage of energy delivery, it carries out the energy from trans-
+mission  systems,  conventional  grid  or  smart  grid  infrastructure,  indi-
+vidual consumers, transmission and distribution infrastructure, energy 
+devices and materials, big data analytics, etc.). To start, we identify the 
+numerous  potential  challenges  that  ML  tries  to  solve,  review  recent 
+advances in the field, and analyze ML’s effect on the energy sector. The 
+introduction  of  different  ML  model  classes  to  solve  such  complex 
+problems is briefly examined. Eight various aspects of ML in core energy 
+technologies are discussed. Five use cases of ML in energy distribution 
+are briefly covered. The used software for ML models in energy distri-
+bution, challenges, ML opportunities towards a smart and sustainable 
+future, and recent progress on discovery and properties of ML models 
+aim to strengthen the core theme of this study. 
+
+The  Framework  and  Structure  of  this  Study:  The  description  of  the 
+performed study has been arranged into eight sections. The paper opens 
+with a general introduction of the study, including four subsections. The 
+process of energy conversion (supporting shift towards 100% renewable 
+energy) is discussed in the first subsection. The main idea and concept of 
+ML,  historical  overview  of  ML  methods,  list  of  ML  models  and  their 
+usage in the smart energy systems, as well as the role of ML in the dis-
+tribution of energy are described in Sects. 1.2 to 1.5, respectively. Then, 
+Sect. 2 follows the core concept of energy technologies using ML, which 
+discusses the use of ML in various areas. The use of ML for energy dis-
+tribution  utilities  is  elaborated  in  Sect.  3,  with  its  five  subsections 
+dedicated to accurate energy price forecasting, keeping the merit order 
+of accurate energy prices, predicting consumer life values, probability 
+assessment of winning consumers, and making good offers to the energy 
+consumers. Sect. 4 highlights various uses of ML tools for energy dis-
+tribution systems and introduces different software used by organiza-
+tions that deal with ML techniques. Sect. 5 describes the analysis of the 
+existing challenges of ML in the context of energy distribution systems. 
+We  then  go  on  to  identify  ML  opportunities  towards  a  smart  and 
+
+Home energy management 
+Electric vehicles 
+Energy storage system 
+Renewable energy source 
+The United States of America 
+Active building energy performance contracting 
+Carbon dioxide 
+The United States dollar 
+Internet of Things 
+
+HEM 
+EV 
+ESS 
+RES 
+US 
+AEPC 
+CO2 
+USD 
+IoT 
+SCADA  Supervisory control and data acquisition control system 
+RTUs 
+GIS 
+CLV/LTV Consumer lifetime value 
+TEASER  Energy analysis and simulation for efficient retrofit 
+RL 
+EDLC 
+SMES 
+V2G 
+TESS 
+
+Reinforcement learning 
+Electric double-layer capacitors 
+Superconducting magnetic energy storage 
+Vehicle-to-grid 
+Thermal energy storage system  
+
+Remote terminal unit 
+Geographic information system 
+
+sustainable future in Sect. 6. Recent progress on properties and discov-
+ery  of  ML  is  described  in  Sect.  7.  Finally,  Sect.  8  concluded  the  con-
+ducted study. 
+
+Fig. 1 shows the results of an analysis of search queries on ML in the 
+subject area, article type, and area of research in engineering and energy 
+distribution. The analysis is divided into three major parts: including i) 
+document by subject area on ML models (e.g., published research arti-
+cles in all areas of research but with the use of ML models), ii) document 
+by subject area on ML in engineering (e.g., published research articles in 
+the engineering field); iii) and document by subject area on ML in en-
+gineering and energy (e.g., published research articles in the engineer-
+ing field, particularly in energy). Overall, the United States is leading in 
+publishing  research  articles  in  all  fields.  China  is  number  one  in  the 
+World  for  publishing  research  articles  in  the  engineering  and  energy 
+fields. Fig. 1 shows the data clusters result from Scopus. 
+
+1.1. Energy conversation: moving 100% towards clean and renewable 
+energy 
+
+Globally, a total of 376 TW-hours (TWh) of renewable energy was 
+produced in 2018, a rise of 6.1% relative to the previous year (2017) [8]. 
+Wind and solar production rose by 11% and 28%, respectively, in 2018 
+[8].  In  2018,  Asia  accounted  for  much  of  the  increase  in  renewable 
+energy production, increasing generation by a total of 219 TWh. Asia’s 
+volume of world renewable generation also rose, increasing to 40% of 
+overall renewable generation. North America and Europe together hold 
+40% of the shares, led by Eurasia (5%) and South America (12%) [8]. 
+The United States’  clean energy initiative is becoming more asser-
+tive:  more  groups  target  a  rise  in  renewable  energy  use  and  carbon 
+emissions decrease [9]. Many states have recently declared a target to 
+increase their current renewable portfolio requirements to incorporate a 
+100%  renewable  energy  standard  (e.g.,  New  Mexico,  Washington, 
+Nevada, and Colorado) [10]. A rising number of power companies are 
+now  making  enormous  commitments  to  reduce  greenhouse  emissions 
+and increase sustainable energy usage [11]. At least ten publicly listed 
+utility  companies  have  declared  100%  decarbonization  targets,  and  a 
+large portion of these utilities have established goals to minimize carbon 
+
+RenewableandSustainableEnergyReviews160(2022)1121282

@@ -1,0 +1,231 @@
+Contents lists available at ScienceDirect 
+
+Results in Engineering 
+
+journal homepage: www.sciencedirect.com/journal/results-in-engineering 
+
+Early prediction of battery degradation in grid-scale battery energy storage 
+system using extreme gradient boosting algorithm 
+
+Chico Hermanu Brillianto Apribowo a,b, Sasongko Pramono Hadi a, Franscisco Danang Wijaya a, 
+Mokhammad Isnaeni Bambang Setyonegoro a, Sarjiya a, c,* 
+a Department of Electrical and Information Engineering, Universitas Gadjah Mada, Yogyakarta, 55281, Indonesia 
+b Department of Electrical Engineering, Universitas Sebelas Maret, Surakarta, 57126, Indonesia 
+c Center for Energy Studies, Universitas Gadjah Mada, Yogyakarta, 55281, Indonesia   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Battery energy storage system 
+Battery degradation 
+Remaining useful life 
+Extreme gradient boosting algorithm 
+Hyperparameter tuning 
+
+The growth of battery energy storage systems (BESS) is caused by the variability and intermittent nature of high 
+demand  and  renewable  power  generation  at  the  network  scale.  In  the  context  of  BESS,  Lithium-ion  (Li-ion) 
+battery occupies a crucial position, although it is faced with challenges related to performance battery degra-
+dation over time due to electrochemical processes. This battery degradation is a crucial factor to account for, 
+based on its potential to diminish the efficiency and safety of electrical system equipment, thereby contributing 
+to increased system planning costs. This implies that the health of battery needs to be diagnosed, particularly by 
+determining  remaining  useful  life  (RUL),  to  avoid  unexpected  operational  costs  and  ensure  system  safety. 
+Therefore, this study aimed to use machine learning models, specifically extreme gradient boosting (XGBoost) 
+algorithm,  to  estimate  RUL,  with  a  focus  on  the  temperature  variable,  an  aspect  that  had  been  previously 
+underemphasized. Utilizing XGBoost model, along with fine-tuning its hyperparameters, proved to be a more 
+accurate and efficient method for predicting RUL. The evaluation of the model yielded promising outcomes, with 
+a root mean square error (RMSE) of 90.1 and a mean absolute percentage error (MAPE) of 7.5 %. Additionally, 
+the results showed that the model could improve RUL predictions for batteries within BESS. This study signif-
+icantly contributed to optimizing planning and operations for BESS, as well as developing more efficient and 
+effective maintenance strategies.   
+
+1. Introduction 
+
+Approximately 80 % of the world’s energy supply is derived from 
+fossil fuels, including coal, oil, and natural gas. The combustion of these 
+fuels  is  a  significant  contributor  to  greenhouse  gas  emissions  (GHG), 
+especially carbon dioxide (CO2), a significant driver of climate change 
+[1]. In response, there has been a collaborative global effort to increase 
+the utilization of renewable energy sources (RES) as a critical strategy to 
+support  Net  Zero  Emission  (NZE)  initiatives  [2].  This  shift  towards 
+renewable energy not only aims to address the pressing environmental 
+concerns but also aligns with the broader international commitments, 
+such as the 2015 Paris Agreement and the United Nations’ Sustainable 
+Development Goals (SDG), which underline the need for sustainable and 
+environmentally friendly energy solutions [3]. 
+
+Electricity  is  very  important in  achieveing  the  world’s  sustainable 
+development goals. The reliable, sustainable, and clean production of 
+
+energy has a positive impact on the global economy and development 
+and also benefits the environment. In the industrialized era, the increase 
+in fossil fuel combustion and its decreasing availability have compelled 
+the industry to turn towards renewable energy (RE), including photo-
+voltaic (PV) and wind power [4]. However, there are continuous chal-
+lenges in electrical grids relying on renewable energy (RE) and ensuring 
+the reliability of energy supply. The variations and uncertainties in RE 
+sources, especially during peak generation periods, can lead to changes 
+in power flow directions, causing voltage spikes in the grid [5]. Differ-
+ences  between  energy  demand  and  thermal  generator  output  further 
+increase the peak-to-average demand ratio, significantly affecting total 
+energy  costs  [6,7].  In  this  scenario,  adopting  battery  energy  storage 
+systems (BESS) technology serves as a practical solution to solve these 
+challenges. 
+
+To increase the integration of RE, BESS proves to be an ideal tech-
+nology, aiding power system in managing fluctuations and interruptions 
+
+* Corresponding author. Department of Electrical and Information Engineering, Universitas Gadjah Mada, Yogyakarta, 55281, Indonesia. 
+
+E-mail address: sarjiya@ugm.ac.id (Sarjiya).  
+
+https://doi.org/10.1016/j.rineng.2023.101709 
+Received 14 November 2023; Received in revised form 16 December 2023; Accepted 21 December 2023   
+
+ResultsinEngineering21(2024)101709Availableonline23December20232590-1230/©2024TheAuthors.PublishedbyElsevierB.V.ThisisanopenaccessarticleundertheCCBY-NC-NDlicense(http://creativecommons.org/licenses/by-nc-nd/4.0/).C.H. Brillianto Apribowo et al.                                                                                                                                                                                                               
+
+in grid-scale and high-demand generation [8,9]. BESS is typically con-
+nected to the network through converter power electronics, facilitating 
+rapid and flexible control. Furthermore, it finds application in various 
+network  functions,  including  voltage  and  frequency  support,  load 
+shifting, transmission and distribution interruption, and peak shaving 
+[10,11].  Large-scale  BESS  can  store  energy  from  renewable  sources, 
+transforming the power grid into an adaptable and flexible system [12, 
+13]. At the grid level, BESS efficiently manages energy by meeting both 
+high  and  low-demand  storage  needs.  Moreover,  battery,  being  faster 
+than many other energy storage devices, can be strategically installed in 
+diverse locations for various purposes [14]. 
+
+The  phenomenon  of  electromigration  (EM),  comprising  material 
+migration induced by an electric field, has been investigated for a cen-
+tury, initially discovered by French scientist M. Gerardin [15]. EM has 
+been recognized as a major contributor to the failure of integrated cir-
+cuits  (ICs)  interconnects  since  the  advent  of  packaged  ICs  in  the  late 
+1960s.  This  phenomenon  significantly  impacts  the  reliability  of  elec-
+tronic  system,  particularly  in  modern  power  electronics  applications 
+such  as  computer-controlled  machinery,  telecommunications,  and 
+mechatronics  [16].  Advances 
+in  nanomaterials,  exemplified  by 
+environmentally-friendly  synthesis  methods  such  as  Nd2Sn2O7  nano-
+structures  and  the  development  of  high-efficiency  photocatalysts 
+namely CoFe2O4@SiO2@Dy2Ce2O7 nanocomposites, have made sub-
+stantial progress in improving environmental sustainability and energy 
+storage efficiency [17,18]. The synthesis of nanocrystalline neodymium 
+zirconate  and  heterojunctions  of  WO3–SrTiO3  further  shows  the  sig-
+nificance  of  advanced  materials  for  environmental  management  and 
+efficient energy applications [19,20]. Additionally, the enhanced stor-
+age  capacity  of  lanthanum  zirconium  oxide  ceramics  signifies  in-
+novations in energy storage technologies [21]. In the context of BESS, 
+EM  phenomenon  can  have  profound  implications.  Various  factors, 
+including  variations  in  current  densities,  temperature  distributions, 
+material  changes,  manufacturing  tolerances,  and  existing  damages, 
+must be considered to ensure the efficient and cost-effective design of 
+this technology. These studies collectively describe the critical role of 
+material  science  in  advancing  the  efficiency,  reliability,  and  sustain-
+ability of modern power electronics and BESS. 
+
+BESS configurations can contain lithium-ion (Li-Ion) battery or other 
+battery  technology  panels,  depending  on  network  and  microgrid 
+voltage, current, and energy requirements [22]. Although lithium bat-
+tery is widely used in BESS applications in numerous industrial system 
+and network, unexpected failures can lead to catastrophic occurrence, 
+such as performance degradation, operational problems, and disasters. 
+Therefore, accurately and swiftly predicting the health of lithium bat-
+tery is crucial [23]. According to Cardoso et al. battery age also impacts 
+the cost of power system planning. The study suggested that considering 
+battery  degradation  limits  could  reduce  the  annual  total  savings  for 
+photovoltaic and storage system from 5 to 12 % [24]. 
+
+When examining the degradation in BESS using lithium-ion battery, 
+a crucial mechanism to consider is the development of the solid elec-
+trolyte interface (SEI) layer. This layer is obtained from side reactions 
+between  the  electrolyte  and  anode,  creating  an  exceedingly  thin 
+passivation  layer  on  the  graphite  anode  particles,  typically  a  few 
+nanometers thick. In addition, the SEI layer, formed during the initial 
+usage cycle, contributes to permanent capacity loss [25,26]. It is crucial 
+to  be aware that the  phenomenon of  lithium plating (LP) also affects 
+battery  performance,  primarily  triggered  by  factors  including  1)  the 
+chemical composition of the electrolyte, 2) the capacity ratio between 
+the anode and cathode, as well as 3) operational conditions namely low 
+temperatures and high charging rates. Another crucial fact to be aware 
+of is that the unmodified graphite electrodes at the anode are especially 
+susceptible to LP, and it is irreversible [27]. Previously, LP can evolve 
+into dendritic structures that might damage the cell separator, resulting 
+in  a  series  of  internal  short  circuits.  This  scenario  leads  to  localized 
+heating in the cell and can potentially cause thermal runaway, battery 
+failure, and fire outbreak. 
+
+Fig. 1 shows the relationship between battery degradation models 
+and  optimal  energy  system  planning.  Typically,  battery  degradation 
+models serve as constraints in optimization planning, and also influence 
+the balance of grid power distribution. Simultaneously, the penetration 
+of renewable energy system (RES) and the annual increase in load, in 
+accordance with national RE regulations, are considered in the system 
+inputs.  This  planning  affects  the  life  cycle  of  BESS,  which  may  need 
+replacement after optimization in a specific year. 
+
+Based  on  the  above  discussion,  battery  degradation  needs  to  be 
+considered,  with  factors  including  state  of  charge  (SOC),  depth  of 
+discharge  (DOD),  life  cycle,  and  temperature.  In  addition,  the  degra-
+dation impacts the total cost of planning, capacity (electricity and en-
+ergy),  and  the  optimal  location  of  BESS.  Investigation  of  battery 
+degradation  models  is  expected  to  enhance  the  flexibility  of  conven-
+tional  and  RES  generators,  increase  system  load  factors,  and  reduce 
+system planning costs due to intermittency. 
+
+Several  elements  in  the  usage  process,  including  chemicals  and 
+environmental  conditions,  contribute  to  battery  degradation.  When 
+battery  fails  to  meet  specific  energy  and  capacity  requirements,  it  is 
+considered  to  have  reached  the  end  of  life  (EOL).  Therefore,  battery 
+degradation should be considered for safety reasons, in order to prevent 
+explosions [28]. Damage to battery system also results in performance 
+degradation or damage to battery system equipment, thereby leading to 
+higher repair costs. It is also important to be aware that battery degra-
+dation  significantly  impacts  system  costs,  state  of  health  (SOH),  and 
+remaining  useful  life  (RUL),  thereby  serving  as  critical  measures  of 
+battery health and performance. SOH reveals aging rates, total reduced 
+capacity, and increased resistance, while RUL shows the current time 
+and EOL [23]. The main factors contributing to BESS capacity degra-
+dation  include  nonlinear  voltage,  current, temperature,  fast  charging, 
+slow discharge, and extended battery life [29]. Due to battery inherent 
+nonlinearity,  estimating  RUL  of  BESS  system  is  challenging.  The  ma-
+chine  learning  RUL  estimation  method  proves  more  flexible  and 
+nonlinear compared to a method based on a failure physical model. 
+
+Early  prediction  of  SOH  and  RUL  is  critical  areas  of  exploration 
+aimed at improving battery reliability and lifespan. The impact of bat-
+tery degradation is primarily evident in changes in battery capacity and 
+efficiency. In general, the capacity, energy, and power of both SOH and 
+RUL are influenced by battery age [30]. In addition, the degradation of 
+lithium  battery  performance  is  dependent  on  charging  behavior, 
+discharge, and temperature fluctuations [31]. SOH diagnostics show a 
+decline  in  performance,  prompting  preventive  measures  to  avoid  po-
+tential accidents [32]. Accurate SOH estimation is crucial for predicting 
+RUL  as  a  capacity  indicator.  Previous  literature  [30]  showed  the  ne-
+cessity for precise and accurate predictions of SOH and RUL to overcome 
+limitations imposed by battery degradation, improve performance, and 
+optimize battery operation. 
+
+Fig. 2 shows the relationship between battery degradation modeling, 
+RUL, and SOH. According to a previous study [30], battery degradation 
+process model was developed in the combined framework of SOH and 
+RUL.  The  framework  addresses  factors  contributing  to  battery  degra-
+dation and failure in SOH assessment model. Diagnosing and estimating 
+SOH aids in modeling RUL battery by determining the time or cycles 
+required to reach 80 %. To model battery degradation accurately, pre-
+cise calculations of SOH and RUL are essential. 
+
+Methods for early prediction and estimation are broadly categorized 
+into three groups, namely direct measurement, modeling, and data as 
+shown  in  Fig.  3.  Direct  measurement  method,  such  as  open  circuit 
+voltage  to  calculate  capacity  and  electronic  circuit  impedance  spec-
+troscopy  to  measure  impedance,  are  used  for  direct  measurement  of 
+battery capacity or impedance [34]. Model-based SOH estimation use 
+electrochemical  processes  or  similar  electrical  circuits  to  simulate 
+mathematical  or  stochastic  models  representing  battery  degradation 
+events. These models estimate battery capacity or resistance by deter-
+mining  model  parameters.  Various  algorithms,  including  Kalman 
+filtering, double sliding mode observers, and particle filtering (PF) [35, 
+
+ResultsinEngineering21(2024)1017092

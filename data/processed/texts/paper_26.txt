@@ -1,0 +1,291 @@
+Renewable Energy 94 (2016) 629e636
+
+Contents lists available at ScienceDirect
+
+Renewable Energy
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / r e n e n e
+
+Wind speed forecasting based on the hybrid ensemble empirical mode
+decomposition and GA-BP neural network method
+
+Shouxiang Wang a, *
+, Na Zhang b, Lei Wu c, Yamin Wang c
+a Key Laboratory of Smart Grid of Ministry of Education (Tianjin University), Tianjin 300072, China
+b Hulunbuir University, Hailaer 021008, China
+c Electrical and Computer Engineering Department, Clarkson University, Potsdam, NY 13699, USA
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Article history:
+Received 31 August 2015
+Received in revised form
+9 March 2016
+Accepted 27 March 2016
+Available online 6 April 2016
+
+Keywords:
+EMD
+EEMD
+GA
+BP neural network
+Wind speed forecasting
+
+Wind speed is the major factor that affects the wind generation, and in turn the forecasting accuracy of
+wind speed is the key to wind power prediction. In this paper, a wind speed forecasting method based on
+improved empirical mode decomposition (EMD) and GA-BP neural network is proposed. EMD has been
+applied extensively for analyzing nonlinear stochastic signals. Ensemble empirical mode decomposition
+(EEMD) is an improved method of EMD, which can effectively handle the mode-mixing problem and
+decompose the original data into more stationary signals with different frequencies. Each signal is taken
+as an input data to the GA-BP neural network model. The ﬁnal forecasted wind speed data is obtained by
+aggregating the predicted data of individual signals. Cases study of a wind farm in Inner Mongolia, China,
+shows that the proposed hybrid method is much more accurate than the traditional GA-BP forecasting
+approach and GA-BP with EMD and wavelet neural network method. By the sensitivity analysis of pa-
+rameters, it can be seen that appropriate settings on parameters can improve the forecasting result. The
+simulation with MATLAB shows that the proposed method can improve the forecasting accuracy and
+computational efﬁciency, which make it suitable for on-line ultra-short term (10 min) and short term
+(1 h) wind speed forecasting.
+
+© 2016 Elsevier Ltd. All rights reserved.
+
+1. Introduction
+
+Wind energy, being economically competitive and environmen-
+tally friendly, has become the fastest growing renewable energy
+resource for electricity generation. The wind speed forecast is of great
+importance for predicting the power output of wind energy systems.
+However, the biggest challenge in forecasting wind speed is its
+intermittency and uncertainty. Many forecasting methods have
+been proposed recently to predict wind speeds over different time-
+scales. They include physical models, time series method, grey
+model method, artiﬁcial neural network, support vector machine
+(SVM) method, the wavelet transform method, empirical mode
+decomposition method, etc. Each method has its own advantages
+and limitations. For instance, the complex physical models always
+rely on the numeric weather prediction (NWP) system and the
+required input data are usually difﬁcult to obtain [1,2]. Statistical
+forecasting models, such as autoregressive moving average (ARMA)
+
+* Corresponding author.
+
+E-mail address: sxwang@tju.edu.cn (S. Wang).
+
+http://dx.doi.org/10.1016/j.renene.2016.03.103
+0960-1481/© 2016 Elsevier Ltd. All rights reserved.
+
+models, were described in Ref. [3]. The parameters could be a
+function of time and the performance of ARMA forecast models
+would vary when applied to different time periods. A grey model
+GM (1, 1) based technique was presented in Ref. [4] for one hour
+ahead wind speed forecasting. However, this model may be suitable
+for certain sites with speciﬁc wind characteristics, but would not be
+generalizable to other locations. Artiﬁcial neural network was
+applied in wind speed forecasting in Refs. [5,6]. Three different
+neural networks including BP, adaptive linear element, and RBF for
+1-h ahead wind speed forecasting were compared in Ref. [7]. These
+methods could approximate complex nonlinear functions, but with
+a complex network structure, the training time would be very long
+and more liable to fall into local minimum value. In order to
+improve the performance of artiﬁcial neural network, some re-
+searchers applied genetic algorithm to update its learning rule and
+the network weights, which improves the learning rate and the
+ability to approach to global optimality. On the other hand, the
+wavelet transform can provide the frequency of signals and the
+time associated with those frequencies, which makes it very
+convenient for the application in forecasting ﬁelds, but the fore-
+casting accuracy depends on the choice of base functions [8,9].
+
+630
+
+S. Wang et al. / Renewable Energy 94 (2016) 629e636
+
+Based on SVM-enhanced Markov model, the short-term distribu-
+tional forecasts and point forecasts were also derived in Ref. [10].
+Hybrid methods, such as the combined fuzzy logic and artiﬁcial
+neural network approach, were established in Ref. [11], which may
+outperform individual methods.
+
+Empirical mode decomposition (EMD) has been applied exten-
+sively for analyzing nonlinear stochastic signals. Compared with
+wavelet transformation and Fourier transformation, it has many ad-
+vantages such as good multi-resolution and wide applicability. How-
+ever, the most signiﬁcant drawback of EMD is mode mixing. To
+overcome this problem, a new noise-assisted data analysis method
+called ensemble empirical mode decomposition (EEMD) was pro-
+posed. The superiority of EEMD has been tested in many ﬁelds [12e15].
+This paper proposes a novel wind speed forecasting method
+based on a hybrid EEMD and GA-BP neural network method. The
+original wind speed data is decomposed into certain signals by
+EEMD. Then, each signal is taken as an input data to establish the
+GA-BP neural network forecasting model. The ﬁnal wind speed
+forecast is obtained by aggregating the predicted data of individual
+signals. The applicability of the proposed hybrid method for
+different time-scale wind speed forecasting is also discussed.
+
+The paper is organized as follows. Section 2 presents the prin-
+ciples of EMD and EEMD. Section 3 introduces the GA-BP neural
+network. The proposed hybrid model is described in Section 4. Case
+studies and conclusions are drawn in Section 5 and Section 6,
+respectively.
+
+separating c1 from the rest of the data (3). Then, take r1 as the new
+original signal x(t), repeat the operations in Step (a) and Step (b)
+until the second IMF c2 is obtained. In order to get all IMFs, the
+above operations should be taken j times until rj is smaller than the
+predetermined threshold or rj becomes a monotone function.
+Finally, a series of IMFs and the residue r can be obtained.
+
+r1 ¼ xðtÞ (cid:2) c1
+
+(3)
+
+2.2. Ensemble empirical mode decomposition
+
+Mode mixing is the most signiﬁcant drawback of EMD, which
+implies that a single IMF consists of signals with dramatically
+disparate scales or a signal of the same scale appears in different
+IMF components. This usually causes intermittency when using
+EMD to analyze signals.
+
+To solve the mode mixing problem in EMD, a new noise-assisted
+data analysis method EEMD is proposed. In EEMD, the true IMF
+components are deﬁned as the mean of an ensemble of trails. Each
+trail consists of the decomposition results of the signal plus a white
+noise of ﬁnite amplitude [17]. EEMD beneﬁts from recent studies on
+white noises, which showed that EMD is an effective self-adaptive
+dyadic ﬁlter bank when applied to white noises [18,19]. The results
+demonstrate that noise can help data analysis in the EMD method.
+The EEMD algorithm is described as follows:
+
+2. Principles of empirical mode decomposition and ensemble
+empirical mode decomposition
+
+1) Add a white noise series to the original wind speed signal.
+2) Decompose the signal with added white noise into IMFs using
+
+2.1. Empirical mode decomposition
+
+Hilbert-Huang transform, developed by Huang et al., in 1998, is
+an adaptive and efﬁcient method for analyzing nonlinear and non-
+stationary signals and its key part is EMD [16]. Since the wind speed
+is a kind of nonlinear and non-stationary signal, this method is
+efﬁcient to analyze the wind speed signal. A series of intrinsic mode
+functions (IMFs) is extracted from the original signal by sifting stage
+by stage. An IMF is a function that satisﬁes the following two
+conditions: (1) in the entire data set, the number of extrema and
+the number of zero crossings must either be equal or differ at most
+by one; and (2) at any point, the mean value of the envelopes
+deﬁned by the local maxima and the local minima must be zero.
+
+With the above deﬁnitions for IMF, a signal could be decom-
+
+posed through the following steps [16]:
+
+For wind speed signal x(t), identifying all local maxima and
+minima. Connect all maxima by a cubic spline line to produce the
+upper envelop, and connect all minima by another cubic spline line
+to produce the lower envelop. The mean value of the upper and the
+lower envelops is deﬁned as m, and the difference between x(t) and
+m is deﬁned as h.
+
+h ¼ xðtÞ (cid:2) m
+
+Take h as the new original signal x(t), and repeat Step (a) k times
+until h is an IMF. The criterion (2) is used to determine whether h is
+an IMF.
+
+¼
+
+Dk
+
+P
+T
+t¼0
+P
+T
+t¼0
+
+(cid:2)
+(cid:2)
+(cid:2)hðk(cid:2)1ÞðtÞ (cid:2) hk
+(cid:2)
+(cid:2)
+2
+(cid:2)
+
+(cid:2)
+(cid:2)
+(cid:2)hðk(cid:2)1ÞðtÞ
+
+(cid:2)
+(cid:2)
+(cid:2)
+
+2
+
+ðtÞ
+
+EMD.
+
+3) Repeat Steps (1) and (2) with different white noises and obtain
+the corresponding IMF components. The number of repeated
+procedures is called the ensemble number.
+
+4) Take the mean of all IMF components and the mean of residue
+
+components as the ﬁnal results.
+
+In EMD, the combination of all IMFs and the residue r is the
+original data. However, in EEMD, the combination is no longer the
+original data because of added white noises. When applying EEMD,
+one may argue that the forecasting results will become worse
+because the original data have been changed. On the contrary, the
+truth is that as better decomposed IMFs can be obtained by EEMD
+and the signals of IMFs become smooth, the accuracy of forecasting
+results has been signiﬁcantly enhanced. More detailed discussion
+on this is provided in Section 4.
+
+2.3. Comparison between EMD and EEMD
+
+To better illustrate the superiority of EEMD over EMD, a simple
+example is shown below. In Fig. 1, signal y1 denotes a sinusoid
+signal y1 ¼ sin(20pt), y2 denotes an intermittent
+signal
+
+(1)
+
+y2 ¼
+
+8
+<
+
+:
+
+0:4 sinð100ptÞ 0:05 (cid:3) t (cid:3) 0:15
+(cid:2)0:2 sinð300ptÞ 0:2 (cid:3) t (cid:3) 0:25
+0 others
+
+, and y denotes y ¼ y1 þ y2.
+
+signal y in Fig. 1 is decomposed by EMD and EEMD. The ﬁrst and the
+second IMFs of EMD are shown in Fig. 2 and those of EEMD are
+shown in Fig. 3. In Fig. 2, it is obvious that signals with different
+frequencies exit in IMF1. However, in Fig. 3, it is observed that this
+mode mixing problem is solved by EEMD and the two signals with
+different frequencies have been successfully separated.
+
+(2)
+
+Here, if Dk is smaller than the predetermined value, hk can be
+
+3. The GA-BP neural network
+
+considered as an IMF. Designate the ﬁrst IMF as c1 ¼ hk.
+
+Once c1 is determined, the residue r1 can be obtained by
+
+Genetic Algorithm (GA) is a powerful stochastic algorithm based
+
+

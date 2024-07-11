@@ -1,0 +1,217 @@
+Review
+A Prompt Decarbonization Pathway for Shipping: Green
+Hydrogen, Ammonia, and Methanol Production and Utilization
+in Marine Engines
+
+Jie Shi 1, Yuanqing Zhu 1,*
+
+, Yongming Feng 1
+
+, Jun Yang 2 and Chong Xia 1
+
+1 College of Power and Energy Engineering, Harbin Engineering University, Harbin 150001, China
+2 Weichai Power Co., Ltd., Weifang 261001, China
+* Correspondence: zhuyuanqing@hrbeu.edu.cn; Tel.: +86-151-2451-1231; Fax: +86-451-8256-8384
+
+Abstract: The shipping industry has reached a higher level of maturity in terms of its knowledge
+and awareness of decarbonization challenges. Carbon-free or carbon-neutralized green fuel, such
+as green hydrogen, green ammonia, and green methanol, are being widely discussed. However,
+little attention has paid to the green fuel pathway from renewable energy to shipping. This paper,
+therefore, provides a review of the production methods for green power (green hydrogen, green
+ammonia, and green methanol) and analyzes the potential of green fuel for application to shipping.
+The review shows that the potential production methods for green hydrogen, green ammonia, and
+green methanol for the shipping industry are (1) hydrogen production from seawater electrolysis
+using green power; (2) ammonia production from green hydrogen + Haber–Bosch process; and
+(3) methanol production from CO2 using green power. While the future of green fuel is bright, in
+the short term, the costs are expected to be higher than conventional fuel. Our recommendations
+are therefore as follows: improve green power production technology to reduce the production cost;
+develop electrochemical fuel production technology to increase the efﬁciency of green fuel production;
+and explore new technology. Strengthening the research and development of renewable energy and
+green fuel production technology and expanding fuel production capacity to ensure an adequate
+supply of low- and zero-emission marine fuel are important factors to achieve carbon reduction
+in shipping.
+
+Keywords: green hydrogen; green ammonia; green methanol; green power; ship carbon emission
+reduction
+
+1. Introduction
+
+Marine engines mainly use low-quality fuel with high sulfur content, high viscosity,
+and heavy metals, such as cadmium, vanadium, and lead. The complexity of low-quality
+fuel components leads to more exhaust pollutants from ships. The substances represented
+by nitrogen oxides (NOx), sulfur oxides (SOx), particulate matter (PM), and carbon dioxide
+(CO2) have a great impact on human health, the environment, and the climate [1]. After-
+treatment technology is often used to purify exhaust gas, such as selective catalytic reduc-
+tion (SCR) technology or exhaust gas recirculation (EGR) technology to purify NOx [2–5],
+exhaust gas cleaning (EGC) technology to purify SOx [6], and carbon capture technology
+to purify CO2 [7]. In 2018, the International Maritime Organization (IMO) adopted a
+preliminary strategy for reducing greenhouse gas (GHG) emissions from ships, proposing
+to reduce carbon emissions in the global shipping industry 50% by 2050 (based on carbon
+emissions in 2008) and to achieve zero carbon emissions in the global shipping industry
+in the 21st century [8]. Dong et.al. [9] reviewed the decarbonization laws and policies
+introduced by the IMO, by the European Union, and at the national levels. More ambitious
+emission control efforts are needed to achieve the climate goals.
+
+Citation: Shi, J.; Zhu, Y.; Feng, Y.;
+
+Yang, J.; Xia, C. A Prompt
+
+Decarbonization Pathway for
+
+Shipping: Green Hydrogen,
+
+Ammonia, and Methanol Production
+
+and Utilization in Marine Engines.
+
+Atmosphere 2023, 14, 584. https://
+
+doi.org/10.3390/atmos14030584
+
+Academic Editor: László Bencs
+
+Received: 26 January 2023
+
+Revised: 11 March 2023
+
+Accepted: 13 March 2023
+
+Published: 17 March 2023
+
+Copyright: © 2023 by the authors.
+
+Licensee MDPI, Basel, Switzerland.
+
+This article is an open access article
+
+distributed under
+
+the terms and
+
+conditions of the Creative Commons
+
+Attribution (CC BY) license (https://
+
+creativecommons.org/licenses/by/
+
+4.0/).
+
+Atmosphere 2023, 14, 584. https://doi.org/10.3390/atmos14030584
+
+https://www.mdpi.com/journal/atmosphere
+
+atmosphereAtmosphere 2023, 14, 584
+
+2 of 29
+
+From the perspective of energy technology, since fossil fuel are used, internal com-
+bustion engines inevitably emit a large amount of CO2. It is difﬁcult to achieve carbon
+emission reduction development strategies and goals by relying solely on existing energy
+efﬁciency improvement methods [10]. The maritime industry is paying increasing attention
+to the development and application of low-carbon marine fuel. Wang et al. [11] summa-
+rized and analyzed the use potential of low-carbon alternative fuel for ships. At present,
+the alternative fuels available for ships include liqueﬁed natural gas, liqueﬁed petroleum
+gas, methanol, biodiesel, hydrogen, and ammonia. In the short term, liqueﬁed natural
+gas, liqueﬁed petroleum gas, and methanol technologies are relatively mature and can be
+applied to shipping. In the long run, biodiesel, hydrogen, and ammonia will inevitably
+become the mainstream alternative fuels for ships. Among these, ammonia, hydrogen, and
+methanol are the most investigated alternative marine fuels. If renewable resources are
+used for production, low or zero emissions can be achieved, creating what is called green
+fuel. Ammonia, hydrogen, and methanol are at different stages of development, as shown
+in Table 1. If produced from fossil fuel, hydrogen and ammonia are not clean compared to
+marine gas oil (MGO) when assessed over the entire life cycle.
+
+Table 1. Compared with standard MGO, whole-life-cycle GHG emissions of ammonia, hydrogen,
+and methanol [12].
+
+Fuel
+
+Hydrogen
+(liquid, −253 ◦C)
+Ammonia
+(liquid, −33 ◦C)
+Methanol
+
+Proportion of GHG over Whole
+Life Cycle Compared to MGO
+Renewable
+Energy
+
+Fossil Fuel
+
+Energy
+Density (MJ/L)
+
+166%
+
+140%
+
+101%
+
+0%
+
+6%
+
+1%
+
+8.5
+12.7 (−33 ◦C)
+10.6 (45 ◦C)
+14.9
+
+Emission Reduction Compared to
+Conventional Fuel
+
+SOx
+
+100%
+
+100%
+
+100%
+
+NOx
+
+Varies according to
+engine design
+Potential for more
+emissions
+30–50%
+
+PM
+
+100%
+
+100%
+
+90%
+
+The shipping industry has high hopes for carbon-free or carbon-neutral green fuel.
+The use of carbon-free or carbon-neutral green fuel is an effective way to fundamentally
+solve carbon emissions [13,14]. Carbon-free green fuels include green hydrogen and
+green ammonia. Carbon-neutral fuels include renewable methanol, renewable natural
+gas, bioethanol, bio-dimethyl ether, and biodiesel. Producing green fuel from renewable
+energy, especially by converting CO2 into fuel using renewable energy, has attracted great
+interest for the following reasons [15–19]: (1) it can achieve large-scale, long-term energy
+storage to meet the seasonal, long-distance demand for renewable energy, which becomes
+a commodity in international energy trade; (2) the production technology and end-use
+technology are mature, and existing fuel distribution infrastructure can be used to meet the
+renewable energy needs of transport, mobile devices, and construction machinery; (3) the
+whole-life-cycle resource consumption is less, and the understanding of its environmental
+impact is clearer, which can reduce the increase of CO2 concentration in the atmosphere
+and ocean acidiﬁcation.
+
+Green hydrogen, green ammonia, and green methanol are being widely discussed for
+shipping [20]. Because green methanol and ammonia have higher energy densities and
+are relatively easier to transport and store on ships, they have become the most promising
+near-zero-emission marine fuel for the next decade. In the long run, hydrogen can be a
+more advantageous zero-emission solution, and it poses the least potential threat to the
+environment when it leaks.
+
+Interest in using renewable energy to reduce carbon emissions from shipping has
+in-creased signiﬁcantly in recent years [21]. Although it is possible to achieve carbon
+reduction by directly employing renewable energy sources such as wind, solar, and wave
+energy during a ship’s voyage at sea, their indirect nature means uncertainty regarding
+the emission reduction effect, which is undesirable for ship operators. Another pathway is
+
+

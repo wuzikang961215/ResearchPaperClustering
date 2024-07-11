@@ -1,0 +1,332 @@
+Contents lists available at ScienceDirect 
+
+Energy Conversion and Management 
+
+journal homepage: www.elsevier.com/locate/enconman 
+
+Techno-economic evaluation of hydrogen and ammonia as energy carriers 
+in a multi-generation system 
+
+Du Wen a,b,*, Shicheng Liu c, Zhiyuan Ning c, Muhammad Aziz b, * 
+a Department of Mechanical Engineering, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan 
+b Institute of Industrial Science, The University of Tokyo, 4-6-1 Komaba, Meguro-ku, Tokyo 153-8505, Japan 
+c State Key Laboratory of Multiphase Flow in Power Engineering, Xi’an Jiaotong University, Xi’an 710049, China   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Carbon neutrality 
+Energy storage 
+Hydrogen and ammonia 
+Optimal planning 
+
+Green hydrogen is suitable for grid-scale energy storage to increase the penetration of renewable energy, and it is 
+also  an alternative to fossil fuels. However, it still suffers from storage problems owing to its low volumetric 
+energy density, embrittlement, and very low boiling point. To improve safety and reduce cost, green ammonia 
+has been proposed as a substitute for hydrogen and has attracted considerable attention. In this study, a multi- 
+generation system was proposed to compare green hydrogen and green ammonia as energy carriers. Four sce-
+narios are discussed and the performances under different energy carriers, constant and time-of-use electricity 
+prices, and on-grid and off-grid operations are compared. The optimal planning of the system was formulated as a 
+mixed-integer linear programming problem and was evaluated using supply and demand profiles hourly over a 
+year. The objective was to maximize profitability, which is reflected by the cumulative cash position and payback 
+period. The results revealed that the hydrogen-based system was superior to the ammonia-based system. In the 
+hydrogen-based scenario, the cumulative cash position was 83.43 MUSD and the payback period was 14 years. 
+The cumulative cash position and payback period were 12.78 MUSD and 22 years, respectively, in the ammonia- 
+based  scenario.  To  improve  profitability,  it  is  recommended  to  increase  the  capacity  for  hydrogen/ammonia 
+production and reduce the capacity for backup power generation.   
+
+1. Introduction 
+
+Since signing the Paris Agreement in 2016, several countries have 
+included carbon neutrality on the agenda, pledged to achieve it by 2050, 
+and proposed relevant policies, regulations, and schemes. Currently, the 
+efforts are focused on the energy sector, which contributes to the highest 
+carbon emissions. Promoting further electrification and expanding the 
+penetration  of  renewable  energy  have  been  identified  as  the  most 
+promising solutions for achieving low-carbon emissions in the energy 
+sector.  However,  the  intermittent  nature  of  renewable  energy  is  the 
+main difficulty faced by grids that are not designed for renewable en-
+ergy. Energy storage technologies have attracted considerable attention 
+as a solution to this problem; however, not all of them are suitable for 
+grids  in  terms  of  technical  and  economic  aspects.  Green  hydrogen  is 
+
+suitable for bulk energy storage because of its high gravimetric energy 
+density,  favorable  cradle-to-grave  characteristics,  and  lack  of  carbon 
+emissions during power generation [1]. In addition to energy storage, it 
+has versatile applications. For example, it can replace coke as a reducing 
+agent  in  the  iron  industry;  it  is  an  important  feedstock  in  chemical 
+production and a clean fuel. Moreover, the existing natural gas infra-
+structure is compatible with hydrogen and hence requires less invest-
+ment for upgrading. Considering the global energy crisis and depletion 
+of fossil fuel reservoirs, alternative fuels are urgently required to ensure 
+energy  security,  as  the  predictions  from  different  institutes  have 
+revealed that the production of oil is approaching or has already reached 
+its peak. Therefore, researchers have envisioned a hydrogen economy 
+[2] in which green hydrogen, produced using water electrolysis based 
+on renewable energy, is not only used in the electricity and heat sectors 
+but also in the industry and transportation sectors, which are difficult to 
+
+Abbreviations: AS, Ammonia synthesis; CAPEX, Capital expenditure; CCP, Cumulative cash position; EMS, Energy management system; MILP, Mixed integer linear 
+programming; MUSD, Million U.S. dollar; OPEX, Operational expenditure; PBP, Payback period; PV, Solar photovoltaic; SoC, State of charge; SOEL, Solid oxide water 
+electrolysis; SOFC, Solid oxide fuel cell; SOFCA, Ammonia based SOFC; SOFCH, Hydrogen based SOFC; STA, Ammonia storage tank; STH, Hydrogen storage tank; 
+WT, wind turbine. 
+
+* Corresponding authors. 
+
+E-mail addresses: wendu@g.ecc.u-tokyo.ac.jp (D. Wen), maziz@iis.u-tokyo.ac.jp (M. Aziz).  
+
+https://doi.org/10.1016/j.enconman.2023.116670 
+Received 8 July 2022; Received in revised form 5 January 2023; Accepted 6 January 2023   
+
+EnergyConversionandManagement277(2023)116670Availableonline12January20230196-8904/©2023ElsevierLtd.Allrightsreserved.D. Wen et al.                                                                                                                                                                                                                                     
+
+Nomenclature 
+
+electricity price at time t, (USD) 
+hydrogen price, (USD) 
+annual depreciation cost, (USD) 
+annual interest rate, (%) 
+
+Symbols 
+CAPEX  CAPEX of the system, (USD) 
+Cbyproduct  price of byproduct, (USD) 
+Ct
+ele 
+CH2 
+dj 
+i 
+MH2,max  maximum capacities of the hydrogen storage tank, (t) 
+MH2,min  minimum capacities of the hydrogen storage tank, (t) 
+mt
+mt
+mt
+mt
+˙mH2,SOEL  hydrogen production rate of SOEL in the simulation, 
+
+byproduct  net production rate of byproduct, (kg⋅h
+net production rate of hydrogen, (kg⋅h
+amount of hydrogen loss, (kg⋅h
+H2,loss 
+H2,SOEL  hydrogen production rate of SOEL, (kg⋅h
+
+(cid:0) 1) 
+(cid:0) 1) 
+
+(cid:0) 1) 
+
+(cid:0) 1) 
+
+H2 
+
+(kg⋅h
+
+(cid:0) 1) 
+
+H2,SOFC  hydrogen consumption rate of SOFC, (kg⋅h
+
+mt
+˙mH2,SOFC  hydrogen consumption rate of SOFC in the simulation, 
+
+(cid:0) 1) 
+
+(cid:0) 1) 
+
+(cid:0) 1) 
+
+(cid:0) 1) 
+
+(cid:0) 1) 
+
+(cid:0) 1) 
+
+(kg⋅h
+amount of hydrogen sold to the market, (kg⋅h
+amount of hydrogen storage at time t, (kg⋅h
+amount of hydrogen storage at time t-1, (kg⋅h
+net production rate of ammonia, (kg⋅h
+installed number of solar cells, (–) 
+number of wind turbines, (–) 
+system lifetime, (y) 
+annual OPEX of the system, (USD) 
+OPEX at time t, (USD) 
+OPEX of the energy storage system, (USD) 
+OPEX of the hydrogen storage system, (USD) 
+OPEX of the renewable farm, (USD) 
+output power of ammonia synthesis, (kW) 
+
+H2,sold 
+
+H2,sto 
+
+H2,sto 
+
+mt
+mt
+mt(cid:0) 1
+mt
+NH3 
+NPV 
+NWT 
+n 
+OPEX 
+OPEXt 
+opext
+es 
+opext
+hs 
+opext
+rf 
+Pt
+AS 
+
+input power of the ammonia storage system, (kW) 
+input or output power of the battery, (kW) 
+rated power of the battery, (kW) 
+output power of compression, (kW) 
+
+output power of compression in the simulation, (kW) 
+output power of a solar cell, (kW) 
+rated power of a solar cell, (kW) 
+curtailment of renewable energy, (kW) 
+electricity demand, (kW) 
+input or output power of the energy storage system, (kW) 
+imported electricity from the grid, (kW) 
+
+Pt
+as 
+Pt
+B 
+PB,rated 
+Pt
+C 
+˙
+PC 
+Pt
+cell 
+Pcell,rated 
+Pt
+cur 
+Pt
+demand 
+Pt
+es 
+Pt
+g 
+Pt
+hs 
+Pt
+PV 
+Pt
+rf 
+Pt
+SOEL 
+˙
+PSOEL 
+PSOEL,rated
+Pt
+SOFC 
+˙
+PSOFC 
+PSOFC,rated
+Pt
+turbine 
+Pt
+WT 
+PWT,rated 
+REV 
+REVt 
+SoCmax  maximum SoC, (–) 
+SoCmin  minimum SoC, (–) 
+SoCt 
+t 
+v 
+xSOEL 
+xSOFC 
+
+SoC of the battery, (–) 
+tax rate, (%) 
+(cid:0) 1) 
+wind speed, (m⋅s
+binary variable, (–) 
+binary variable, (–)  
+
+power of the hydrogen storage system 
+power of PVs, (kW) 
+power of the renewable farm, (kW) 
+power of SOEL, (kW) 
+
+power of SOEL in the simulation, (kW) 
+rated power of SOEL, (kW) 
+power of SOFC, (kW) 
+
+power of SOFC in the simulation, (kW) 
+rated power of SOFC, (kW) 
+power of a wind turbine, (kW) 
+power of wind turbines, (kW) 
+rated power of a wind turbine, (kW) 
+annual revenue of the system, (USD) 
+revenue at time t, (USD) 
+
+electrify and decarbonize. Thus, green hydrogen exhibits a cross-sector 
+decarbonization  potential.  Several  studies  have  been  conducted  on 
+green  hydrogen  production  [3],  storage  [4],  and  utilization  [5]  to 
+progress towards a hydrogen-based economy. 
+
+However, hydrogen storage has some limitations in terms of cost and 
+safety. Greater space and larger devices are required to achieve a lower 
+volumetric  energy  density  for  the  same  unit  of  energy  stored,  which 
+results  in  a  cost  penalty.  It  necessitates  investments  on  safety  pre-
+cautions  because  the  high  flammability  of  hydrogen  expedites  its 
+deflagration,  and  detecting  the  nearly  invisible  and  smoke-free 
+hydrogen  flames  is  difficult.  To  counter  the  low  volumetric  density, 
+high flammability, and energy loss of hydrogen storage [6], researchers 
+have proposed other renewable synthetic fuels, such as ammonia [7], to 
+replace  hydrogen  as  an  energy  carrier.  Ammonia  has  a  high  energy 
+density  and  hydrogen  content  and  is  a  zero-carbon  fuel.  It  is  also  an 
+important  chemical  widely  used  in  fertilizers,  acid  gas  removal,  re-
+frigerants,  synthetic  fibers,  and  explosives  [8].  To  use  ammonia  as  a 
+more efficient energy carrier, researchers have investigated ammonia- 
+to-power  technologies  using  electrochemical  and  thermochemical 
+methods, including fuel cells [9], internal combustion engines [10], and 
+gas  turbines  [11].  According  to  a  report  [12],  ammonia  is  a  cost- 
+competitive fuel for heavy mining trucks and container ships. 
+
+Considering the advantages of green hydrogen/ammonia in attaining 
+a low-carbon environment, particularly its cross-sector decarbonization 
+potential,  various  multi-generation  systems  that  use  green  hydrogen/ 
+ammonia  as  the  energy  carrier  have  been  proposed  and  discussed  in 
+various  studies.  Thermodynamic  analyses  have  been  conducted  on 
+
+various hydrogen- and ammonia-based systems, which involve different 
+green  hydrogen/ammonia  production,  storage,  and  utilization  tech-
+niques.  Lutman  et  al.  [13]  proposed  a  sustainable  multi-generation 
+system  based  on  solar  and  wind  energy,  which  provides  electricity, 
+heating, cooling, and water desalination for remote areas. Both thermal 
+energy  and  hydrogen  storage  units  (water  electrolysis  and  hydrogen 
+combustor) were used to ensure continuous operation. The overall en-
+ergy and exergy efficiencies were 50 % and 34 %, respectively. In [14], 
+green  hydrogen  was  directly  used  for  ammonia  synthesis  (AS)  in  an 
+ammonia-based system without storage, and ammonia-fed solid oxide 
+fuel cells (SOFCs) were used to compensate for any electricity shortage. 
+The system performance was evaluated hourly for a year via a dynamic 
+simulation.  The  overall  energy  efficiency  varied  between  46.1  %  and 
+53.3 %, whereas the overall exergy efficiency varied between 34 % and 
+41.5  %.  Other  studies  have  proposed  multi-generation  systems  with 
+different  renewable  energy  sources  [15],  green  hydrogen  production 
+methods  [16],  hydrogen[16]/ammonia[17]  utilization  methods,  and 
+system integration [18]. All of the studies mentioned above prove the 
+technical feasibility of hydrogen- and ammonia-based systems. 
+
+A techno-economic analysis of a system using hydrogen or ammonia 
+as energy carriers was conducted. Anand et al. [19] conducted a case 
+study on an academic research building. A standalone hybrid renewable 
+energy system equipped with hydrogen fuel cells and a battery bank was 
+proposed to achieve 100 % renewable energy penetration at a cost of 
+(cid:0) 1. A case study conducted on a university campus [20] 
+0.203 USD⋅kWh
+investigated a grid-connected hybrid system consisting of photovoltaic 
+(PV)  cells,  gas-fired  trigeneration,  and  hydrogen  production.  The 
+
+EnergyConversionandManagement277(2023)1166702

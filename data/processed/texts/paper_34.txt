@@ -1,0 +1,250 @@
+Materials Today d Volume 69 d October 2023
+
+RESEARCH
+
+Electrocatalytic seawater splitting: Nice
+designs, advanced strategies, challenges
+and perspectives
+Jie Liang a, Zixiao Li a, Xun He a, Yongsong Luo a, Dongdong Zheng a, Yan Wang a,
+Tingshuai Li a, Binwu Ying a, Shengjun Sun b, Zhengwei Cai b, Qian Liu c, Bo Tang b,d,⇑,
+Xuping Sun a,b,⇑
+
+w
+e
+i
+v
+e
+R
+
+:
+
+H
+C
+R
+A
+E
+S
+E
+R
+
+a Institute of Fundamental and Frontier Sciences, University of Electronic Science and Technology of China, Chengdu 610054, Sichuan, China
+b College of Chemistry, Chemical Engineering and Materials Science, Shandong Normal University, Jinan 250014, Shandong, China
+c Institute for Advanced Study, Chengdu University, Chengdu 610106, Sichuan, China
+d Laoshan Laboratory, Qingdao 266237, Shandong, China
+
+H2 has a sufﬁciently high energy density and a combustion process that emits no carbon, therefore
+being an appealing storable alternative to fossil fuels. With evident advantages of seawater resources
+available worldwide, electrochemically making H2 from seawater holds a great development prospect
+towards the global deployment of H2-based energy plants. However, with current water splitting
+technologies, this is not an easy task, and the primary obstacle is impurities in natural seawater
+including halide salts, magnesium salts, organic matter, etc., which readily cause the electrocatalysis
+systems to shut down. We herein present a timely review of seawater electrolysis systems at both lab-
+scale fundamental research and pilot-scale reactor level on the basis of most representative studies. We
+analyze some of the crucial experimental details that are frequently ignored, such as seawater
+treatments, product detection, electrode assembly, reactors, electrolyte feeding modes, etc. We then
+systematically emphasize the latest and representative strategies and catalytic materials designs as well
+as whether corresponding electrodes are genuinely stable as two key quests to ﬁnd out truly reliable
+and exploitable electrode engineering. Gas release behaviors/kinetics at high reaction rates are
+highlighted as well. In addition, we introduce valuable contents like how to learn from ocean life for
+electrocatalytic system design. We conclude by taking a look at the future research directions and
+opportunities
+systems/
+technologies.
+
+for encouraging more practical applications of
+
+seawater electrolysis
+
+Keywords: Green hydrogen economy; Seawater electrolysis; Electrocatalysts; Self-reconstruction; Membrane
+
+Introduction
+Limited fossil fuel (LFF) supplies and ecological damages that
+their exploitation causes are calling for gradual upgrades of our
+energy landscape, which is currently dominated by the LFF, to
+renewable energy source-based production of chemicals and
+
+⇑ Corresponding authors.
+
+(xpsun@sdnu.edu.cn).
+
+E-mail addresses: Tang, B. (tangb@sdnu.edu.cn), Sun, X. (xpsun@uestc.edu.cn), Sun, X.
+
+fuels (e.g., through Power-to-X) [1]. Hydrogen (H2) is a key feed-
+stock to various sectors including Haber-Bosch process, petro-
+leum reﬁning, steelmaking, etc., and is a widely accepted
+energy carrier with clean combustion [2–5]. While the H2
+demand has soared since 2000 and was approximately 90 million
+metric tons in 2020, over 90% of that H2 has came from energy-
+intensive and carbon-emitting technologies like natural gas
+reforming [3]. The hard trade-off between the current unsustain-
+
+1369-7021/(cid:1) 2023 Elsevier Ltd. All rights reserved. https://doi.org/10.1016/j.mattod.2023.08.024
+
+193
+
+RESEARCH
+
+Materials Today d Volume 69 d October 2023
+
+R
+E
+S
+E
+A
+R
+C
+H
+
+:
+
+R
+e
+v
+i
+e
+w
+
+able H2 production for the increasing H2-related market and fast
+LFF depletion lead us to develop low-carbon H2-based energy
+transition. Electrosynthesis of H2 directly from ultra-high-
+purity water, powered by renewable energy, is green enough
+[6], but even if generating H2 from water permits small water
+demand ((cid:1)9 kg H2O/kg H2) [3], the Net zero Emissions Scenario
+in the future will result in an enormous rise in the volume of
+fresh water consumed for water splitting activities. It is known
+that although water covers about 70% of our planet, a tiny frac-
+tion of just (cid:1) 2.5% is freshwater, and two thirds of that is either
+frozen in glaciers or inaccessible to humans in some other ways.
+Moreover importantly, fresh water resources are not evenly dis-
+tributed around the world. The spatial distribution of rainfall
+(Fig. 1a) and the local climate type are the key determinants of
+the distribution of water resources [7]. One of the primary prob-
+lems in numerous countries across the world, including Kuwait,
+Libya, Saudi Arabia, Jordan, the Republic of Yemen, Israel, Tuni-
+sia, Algeria, Burundi, etc., is a lack of water. Since lots of desalina-
+tion plants have been built at great cost in the countries that lack
+freshwater resources (Fig. 1b) [8], it will be scarcely possible to
+electrolyze hard-won freshwater to make H2 there.
+
+Electrolysis of seawater to make H2 (Fig. 1e) is a viable option
+in that vast seawater resources guarantee a solid foundation for
+such conversion. Moreover, many countries, including China,
+USA, India, Australia, and others, are developing renewable
+energy sources such as solar, wind, and geothermal energy
+(Fig. 1c) [9]. These countries have broad coastlines and lots of
+coastal cities, making large-scale seawater electrolysis powered
+by renewable energy highly attractive and easier to achieve. In
+fact, in addition to these countries, other countries with seawater
+resources can also rely on electrolysis to produce H2, since
+deploying H2 energy plants along the coast will signiﬁcantly
+lower overall infrastructure and transportation costs. In addition,
+the locations and distribution of hydrogen ﬁlling stations around
+the world are not uniform, with the majority being centered in
+the United States and Japan (Fig. 1d) [10]. One the other hand,
+although water crisis is merely a vague idea to some people,
+the scarcity of life-sustaining water is putting people in water
+shortage regions at risk. In fact, seawater electrolysis, coupled
+with H2-O2 fuel cell technologies, are sustainable when used as
+an alternative possible solution for future on-site desalinizing
+saltwater into pure water. Accordingly, success in efﬁciently elec-
+trolyzing seawater would be a vital step in the worldwide deploy-
+ment of clean energy technologies by exploiting ocean as the
+globe-spanning H2 resources. Before starting this review, good
+review papers that are already available in this ﬁeld are recom-
+mended for readers [11–21]. This article gives a summary of the
+most recent advances in the ﬁeld as well as previously ignored
+ﬁndings.
+
+(cid:3)
+
+, Br
+
+Various impurities present in natural seawater, mostly induc-
+ing solid particles, microorganisms, organic matter, Ca2+, Mg2+,
+(cid:3)
+, and so forth, nonetheless, make the efﬁcient and
+Sr2+, Cl
+long-term generation of H2 from seawater rather challenging.
+No matter how an electrolytic reactor is constructed, seawater
+electrolysis must occur there in order to obtain high-purity H2.
+The anode, cathode and membrane are core parts of the reactor,
+but they are also the ones most vulnerable to pollution, corro-
+sion, or poisoning from these impurities. Since natural saltwater
+
+194
+
+(cid:3)
+
+(cid:3)2 at ƞ
+
+contains little H+/ OH
+, the larger current densities (J), the more
+milky cathode precipitation (caused by pH drop) as well as the
+more severe anode corrosion (damaged by halide ions and more
+derived species). Direct oxidation of natural seawater would be
+ideal, yet since the pH is close to neutral and halide ions far out-
+–
+number OH
+, the selectivity of O2 would be limited. Some studies
+added used buffered seawater to attain relatively better perfor-
+mances, like seawater + 1 M KOH + 1 M phosphate (KPi) + 1 M
+borate (KBi) adopted by Nocera’s group [22] as well as seawa-
+ter + NaH2PO4 + Na2HPO4 (pH adjusted to 7) adopted by groups
+of Qiao and Liu [23]. Though such buffering seawater electrolytes
+may afford smaller pH gradients across the electrolytic cell and
+better catalyst performance, adding salts into seawater and then
+ﬁltering actually has two little issues. (i) One-step seawater split-
+ting becomes two-step pre-treated seawater (less Ca2+/Mg2+) split-
+ting. (ii) Salts need to be added regularly to ensure stable
+reaction. Such issues are even more pronounced for alkalized sea-
+water, because making seawater alkaline consumes KOH prior to
+the electrolysis. Even if some work removes Ca2+/Mg2+ using rel-
+atively cheaper salts (e.g., Na2CO3) and then adds NaOH/KOH to
+create alkalinity, direct electrolysis of natural seawater turns into
+indirect electrolysis of alkaline seawater. Materials that can afford
+high J at overpotentials<480 mV (ƞ < ƞ480,) are being sought and
+designed for catalysis under alkaline seawater conditions
+(pH > 7.5 [11]) in that alkaline media can block chlorine electro-
+chemistry at certain potentials. While it is possible to design such
+catalysts and some progress has been made (e.g., NF/NiMoN@Ni-
+398, 1 M KOH + natural seawater [24]), artiﬁ-
+FeN, 1 A cm
+cially alkalizing seawater adds the complexity and energy
+penalty for industrial applications. Note that even though
+roughly 30% KOH solution is employed in industrial electrolysis
+of water, the catalysts in alkaline saltwater will degrade more
+quickly if it is overly alkaline (e.g., 6 M KOH + seawater [25]).
+Acidic seawater electrolysis is a different route with certain ben-
+eﬁts like less precipitation and faster hydrogen evolution reac-
+tion (HER), yet it faces new issues (unsuppressed chloride
+oxidation and acid etching). At present, relevant studies based
+on acidic seawater are rare [26]. Though one-step direct electrol-
+ysis has much simpler equipment, it now has stricter require-
+ments for both electrodes and membranes. Clearly, the cost-
+effectiveness of direct electrolysis can only be higher than indi-
+rect electrolysis if both the electrode and the membrane are dur-
+able enough. While OH
+concentrations in natural seawater are
+small, orders of magnitude lower than those in alkaline elec-
+trolytes, it is possible to directly electrolyze natural seawater at
+a good efﬁciency adopting appropriate catalyst designs (e.g., cat-
+alyst: Cr2O3-CoOx, seawater: pH = 7.9, without solids/microor-
+(cid:3)2 at 1.99 V with 75% iR compensation in
+ganisms, J: 0.4 A cm
+(cid:3)2 at 2.33 V in a proton
+a single-compartment cell, J: 1 A cm
+exchange membrane (PEM)-based ﬂow-type electrolyzer [27]).
+Alternatively, unconventional
+systems
+(SESs) also exhibit great potential for cost-effective H2 produc-
+tion. Overall, since residual cations and more unwanted anionic
+ions will still be present after chemical pre-precipitation treat-
+ment, H2-evolving and O2-evolving catalysts that show high
+selectivity and durability even in impure seawater electrolytes
+with impurity ions are highly desirable.
+
+seawater electrolysis
+
+–
+
+

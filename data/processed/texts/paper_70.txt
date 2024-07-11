@@ -1,0 +1,245 @@
+J. Mod. Power Syst. Clean Energy (2016) 4(4):581–592
+DOI 10.1007/s40565-016-0238-z
+
+Stochastic coordinated operation of wind and battery energy
+storage system considering battery degradation
+
+Ying WANG1, Zhi ZHOU2, Audun BOTTERUD2, Kaifeng ZHANG1,
+Qia DING3
+
+energy
+
+battery
+
+storage
+
+Abstract Grid-scale
+systems
+(BESSs) are promising to solve multiple problems for future
+power systems. Due to the limited lifespan and high cost of
+BESS, there is a cost-beneﬁt trade-off between battery effort
+and operational performance. Thus, we develop a battery
+degradation model to accurately represent the battery degra-
+dation and related cost during battery operation and cycling.
+A linearization method is proposed to transform the devel-
+oped battery degradation model into the mixed integer linear
+programming (MILP) optimization problems. The battery
+degradation model is incorporated with a hybrid determinis-
+tic/stochastic look-ahead rolling optimization model of wind-
+BESS bidding and operation in the real-time electricity
+market. Simulation results show that the developed battery
+
+CrossCheck date: 17 September 2016
+
+Received: 29 June 2016 / Accepted: 18 September 2016 / Published
+online: 14 October 2016
+(cid:2) The Author(s) 2016. This article is published with open access at
+Springerlink.com
+& Kaifeng ZHANG
+
+kaifengzhang@seu.edu.cn
+
+Ying WANG
+wangyingseu@126.com
+
+Zhi ZHOU
+zzhou@anl.gov
+
+Audun BOTTERUD
+abotterud@anl.gov
+
+Qia DING
+dingqia@sgepri.sgcc.com.cn
+
+1 Key Laboratory of Measurement and Control of CSE, School
+of Automation, Southeast University, Nanjing 210096, China
+
+2 Argonne National Laboratory, Lemont, IL 60439, USA
+3 NARI Technology Co. Ltd., Nanjing 211106, China
+
+degradation model is able to effectively help to extend the
+battery cycle life and make more proﬁts for wind-BESS.
+Moreover, the proposed rolling look-ahead operational opti-
+mization strategy can utilize the updated wind power forecast,
+thereby also increase the wind-BESS proﬁt.
+
+Keywords Wind power, Battery energy storage system
+(BESS), Battery degradation, Stochastic programming,
+Rolling optimization
+
+1 Introduction
+
+With increasing penetration of wind generation, power
+systems are faced with great challenges in dealing with the
+variability and uncertainty of renewable resources. With
+very ﬂexible charging-discharging characteristics, grid-
+scale energy storage is one of many potential sources of
+grid ﬂexibility which can aid variable renewable integra-
+tion. An energy storage system can provide multiple
+functions in coordinating wind power in the power system.
+For example, energy storage can be used for load time
+shifting, wind power smoothing or energy arbitrage. The
+idea is to store energy during the periods of low demand or
+low energy prices, and stands ready to dispatch energy to
+the grid during the periods of high demand or high energy
+prices. Energy storage can also provide ancillary services
+to the system. Moreover, energy storage can be used to
+reduce or eliminate the deviations from generation sched-
+ules, making wind farms more like conventional genera-
+tors. Meanwhile, energy storage can provide some other
+services, like ﬂexible ramping capacity [1] or increased do-
+not-exceed limits for wind power [2], in order to satisfy the
+integration requirements from the power grid.
+
+Among the energy storage systems available, the battery
+energy storage system (BESS) is the most widely utilized
+
+123
+
+582
+
+Ying WANG et al.
+
+technology for wind farms because this technology has
+been rapidly improved [3]. In recent years, there have been
+many BESS announced, contracted and built for wind
+farms around the world. For example, a 10 MW advanced
+lead-acid battery and a 31.5 MW lithium-ion phosphate
+battery are integrated with the 21 MW Kaheawa Wind
+Power II project in Hawaii and the 100.5 MW wind farm in
+West Virginia, respectively. In China, a 14 MW lithium-
+ion phosphate battery and a 2 MW vanadium redox ﬂow
+battery have been built in Zhangbei National Wind and
+Solar Energy Storage and Transmission Demonstration
+Project. Recent research efforts have focused on how to
+coordinate the wind power with BESS for multiple objec-
+tives, such as smoothing power ﬂuctuations [4, 5], energy
+arbitrage
+ancillary
+[6],
+services [8, 9].
+
+regulation
+
+other
+
+and
+
+[7],
+
+in
+
+cost
+
+2015
+
+lithium-ion
+
+It is well known that one of the biggest barriers for
+application of the grid-scale BESS is its high cost [10]. The
+average
+is
+battery
+350000*700000 $/MWh [11], and the realized investment
+costs of grid-scale BESS are substantially higher. Mean-
+while, energy storages have limited lifespan. For example,
+the average full cycle life of the lithium-ion battery is only
+4500 cycles [12]. Considering that the life of a battery is
+much shorter than that of a conventional generator, and the
+battery station investment cost and the battery cell
+replacement cost are high, it becomes important to consider
+the degradation cost of BESS. Furthermore, battery life-
+time is closely related with the operational performances,
+for instance, frequent and deep cycles accelerate cyclic
+aging and reduce the cycle life [13]. Thus, the short-term
+operation of a battery affects the overall lifetime of the
+battery. The interplay between short-term operation and
+long-term battery lifetime are therefore necessary to be
+considered. There is a cost-beneﬁt trade-off between two
+desirable goals,
+i.e. 1) better battery health status and
+longevity, and 2) better performance of a wind-BESS.
+Generally, if one is willing to accept making less proﬁt in
+the energy market (such as curtailing more wind power
+sometimes), or a less smooth wind power output, the bat-
+tery can spare some effort and degradation. Thus, it is
+important to consider the battery degradation in order to
+best take advantage of BESS. In many cases, it may be
+proﬁtable to extend the BESS lifespan by adjusting its
+operation to some degree.
+
+The battery lifetime and degradation problems have
+attracted attentions in recent
+literatures. For microgrid
+operation, [14] proposes a detailed physical-based degra-
+dation model solved by dynamic programming. References
+[15, 16] propose degradation models to extend battery life
+in electric vehicles. Reference [17] builds a battery
+degradation cost model in a short-term scheduling problem,
+and proposes a big-M linearization method for degradation
+
+123
+
+calculation. Reference [8] considers degradation cost for
+battery bidding in the ancillary service market, and solves
+it by nonlinear solvers.
+
+In this paper, we propose a method for coordinated oper-
+ation of wind-BESS considering battery degradation. Com-
+pared with existing research, our main contributions are:
+
+1) We propose a hybrid deterministic/stochastic look-
+ahead rolling optimization model
+for coordinated
+wind-BESS operation in the real-time market. Inspired
+by the rolling optimization proposed in [18], we derive
+a deterministic/stochastic model based on the timeli-
+nes of a rolling wind power forecast and the real-time
+market, which is suitable for wind-BESS real-time
+operation and bidding.
+
+2) We build a battery degradation model for the wind-
+BESS operation. This is accomplished by introducing
+degradation percentage constraints as well as a degra-
+dation cost in the objective function. Compared to the
+literature which ignores or simpliﬁes the battery cost,
+such as [4, 18], this paper introduces a more accurate
+battery degradation cost model representing degrada-
+tion under different states of charge (SoCs) during
+charging and discharging processes. Compared to the
+existing battery degradation studies, such as [16, 17],
+we propose a different linearization method to trans-
+form the degradation model into a mixed integer linear
+programming (MILP) problem, which can be solved
+by commercial solvers, and therefore have great
+potential to be used in multiple applications.
+
+This paper is organized as follows. Section 2 describes
+the overall wind-BESS look-ahead rolling optimization
+method and its timeline. Section 3 introduces the back-
+linearization
+ground, mathematical
+method of battery degradation. Section 4 presents the
+wind-BESS model formulation. Section 5 provides results
+from a case study. Section 6 concludes this paper.
+
+formulation
+
+and
+
+2 Wind-BESS coordinated operation timeline
+
+A hybrid deterministic/stochastic look-ahead rolling
+optimization method of the wind-BESS is proposed, with
+the assumed timeline in the real-time market as shown in
+Fig. 1. The timelines of the real-time energy markets are
+market dependent. For example, New York Independent
+System Operator (NYISO) and California Independent
+System Operator (CAISO) close the real-time market 75
+minutes before the start of the operating hour and post the
+real-time commitment results 45 minutes prior to the start
+of the operating hour [19, 20]. In contrast, Midcontinent
+Independent System Operator (MISO) closes it 30 minutes
+before the operating hour [21]. In this paper, we assume
+
+

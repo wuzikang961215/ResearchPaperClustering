@@ -1,0 +1,225 @@
+Contents lists available at ScienceDirect 
+
+Renewable and Sustainable Energy Reviews 
+
+journal homepage: www.elsevier.com/locate/rser 
+
+Recent advancement and assessment of green hydrogen 
+production technologies 
+
+Bidattul Syirat Zainal a,*, Pin Jern Ker a, Hassan Mohamed a, Hwai Chyuan Ong b, 
+I.M.R. Fattah c, **, S.M. Ashrafur Rahman d, Long D. Nghiem c, T M Indra Mahlia c 
+a Institute of Sustainable Energy, Universiti Tenaga Nasional, Jalan IKRAM-UNITEN, 43000, Kajang, Selangor, Malaysia 
+b School of Engineering and Technology, Sunway University, Jalan Universiti, Bandar Sunway, 47500, Petaling Jaya, Selangor, Malaysia 
+c Centre for Technology in Water and Wastewater, School of Civil and Environmental Engineering, Faculty of Engineering and Information Technology, University of 
+Technology Sydney, Sydney, NSW, 2007, Australia 
+d Biofuel Engine Research Facility, Queensland University of Technology (QUT), Brisbane, QLD, 4000, Australia   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Hydrogen colours 
+Green hydrogen 
+Hydrogen economy 
+Renewable energy 
+Hydrogen production technologies 
+Solid oxide electrolysis cell 
+Anion exchange membrane 
+Electrified steam methane reforming 
+
+Hydrogen energy has garnered substantial support from industry, government, and the public, positioning it as a 
+pivotal future fuel source. However, its commercial realisation faces significant hurdles, including slow infra-
+structure growth and the high cost of producing clean hydrogen. This review uniquely emphasises the different 
+colour  codes  of  hydrogen,  which  have  been  rarely  discussed  in  the  literature  to  date.  Hydrogen  production 
+methods are classified by colour codes, with green hydrogen, produced from renewable sources such as wind and 
+solar,  being  the  most  desirable  option.  The  demand  for  green  hydrogen  across  various  sectors  is  expected  to 
+surge.  This  review  comprehensively  evaluates  the  major  hydrogen  production  methods  based  on  cost,  envi-
+ronmental  impact,  and  technological  maturity.  Recent  data  confirm  the  increased  efficiency,  cost- 
+competitiveness,  and  scalability  of  green  hydrogen  production  technologies.  The  cost  of  green  hydrogen  has 
+declined significantly, making it competitive with blue hydrogen (produced from fossil fuels with carbon cap-
+ture).  The  review  also  scrutinises  several  recent  hydrogen  production  technologies,  highlighting  their  advan-
+tages, disadvantages, and technological readiness. Among these, the solid oxide electrolysis cell (SOEC) currently 
+outperforms others, with  anion exchange membrane (AEM)  and electrified steam methane reforming  (ESMR) 
+also showing promise. This review also succinctly summarises global progress in hydrogen infrastructure and 
+policies. By spotlighting the diverse colour codes of hydrogen and discussing the crucial takeaways and impli-
+cations  for  the  future,  this  review  offers  a  comprehensive  overview  of  the  hydrogen  energy  landscape.  This 
+unique focus enriches the literature and enhances our understanding of hydrogen as a promising energy source.   
+
+1. Introduction 
+
+Global  greenhouse  gaseous  (GHG)  emission  has  surged  to  their 
+highest level in history [1], presenting an existential threat to human-
+kind as global warming continues to exacerbate. Among all human ac-
+tivities, burning fossil fuels for energy is the most significant contributor 
+to GHG increase, particularly carbon dioxide. The heat from the sun was 
+then trapped by the GHGs, raising the temperature. Therefore, the main 
+goals of the 2015 Paris Agreement are to try to limit the temperature 
+◦
+increase to 1.5 
+C and to make a more vigorous global effort to address 
+climate change by keeping the temperature increase this century below 
+
+◦
+C above pre-industrial levels [2]. Hence, countries worldwide agreed 
+2 
+that reducing carbon emissions is required to prevent the harmful effects 
+of climate change, such as coral reef destructions, heatwaves, frequent 
+wildfires and floods, droughts, and rising sea levels. Various solutions 
+have been discussed, including transitioning to renewable energy for a 
+sustainable future, as renewable energy is an abundant and continuously 
+replenished natural resource. 
+
+Solar,  hydro,  wind,  biomass,  and  biogas  are  sustainable  energy 
+sources that do not deplete and will not cause long-term harmful envi-
+ronmental effects. Sustainable energy requires energy conservation, ef-
+ficiency, and renewable energy to reduce climate change and protect the 
+environment. Hydrogen has great potential to be an essential part of a 
+
+* Corresponding author. 
+** Corresponding author. 
+
+E-mail addresses: biddatul@uniten.edu.my (B.S. Zainal), IslamMdRizwanul.Fattah@uts.edu.au (I.M.R. Fattah).  
+
+https://doi.org/10.1016/j.rser.2023.113941 
+Received 6 April 2023; Received in revised form 12 October 2023; Accepted 17 October 2023   
+
+RenewableandSustainableEnergyReviews189(2024)113941Availableonline2November20231364-0321/©2023ElsevierLtd.Allrightsreserved.B.S. Zainal et al.                                                                                                                                                                                                                                
+
+Nomenclatures 
+
+Air reactor AR 
+Anion exchange membrane AEM 
+Australian Renewable Energy Agency ARENA 
+Autothermal reforming ATR 
+Battery electric vehicle BEV 
+Bio-electrochemical systems BESs 
+Biological water gas shift reaction BWGS 
+Carbon capture and storage CCS 
+Carbon capture, storage, and use CCUS 
+Catalytic partial oxidation CPOX 
+Department of Energy DOE 
+Dry reforming DR 
+Electric vehicles EV 
+Electrified steam methane reforming ESMR 
+Electrochemical catalytic coal gasification ECG 
+Energy Information Administration EIA 
+Environmental, social, and governance ESG 
+European Union EU 
+Fuel cell electric vehicles FCEVs 
+Gas hourly space velocity GHSV 
+Greenhouse gas GHG 
+Gross domestic product GDP 
+High heating value HHV 
+Hydrogen energy technology HET 
+International Energy Agency IEA 
+International Renewable Energy Agency IRENA 
+Levelised cost of energy LCOE 
+Life cycle assessment LCA 
+Light intensity Lux 
+Methane pyrolysis MP 
+Microbial electrolysis cells MECs 
+Microbial fuel cells MFCs 
+Million metric tonnes per year MMTPA 
+Monodisperse iron oxide nanoparticles IONPs 
+Net Zero Emissions NZE 
+Partial oxidation POX 
+Partial oxidation of ethanol POE 
+Photovoltaic PV 
+Polymer electrolyte membrane electrolysis PEMEL 
+Proton exchange membrane PEM 
+Research and development R&D 
+SMR with CCS SMR-CCS 
+Solid oxide electrolysis cells SOEC 
+Steam methane reforming SMR 
+Technology Readiness Level TRL 
+Thermal decomposition TD 
+Thermochemical water-splitting cycle TWSC 
+Water-gas shift WGS 
+
+Symbols/Molecular formulae/Units 
+(cid:0)
+Acetate  CH3COO
+Acetic acid CH3COOH 
+Atmospheric pressure atm 
+Australian dollar A$ 
+(cid:0)
+Bicarbonate HCO3
+Butanoic acid CH3CH2CH2COOH 
+
+Calcium oxide CaO 
+Canadian dollar CAD 
+Capacitive current density mA/cm2 
+Carbon dioxide CO2 
+Carbon monoxide CO 
+Cerium(IV) oxide CeO2 
+Chromium Cr 
+Cobalt 
+Co 
+Celenium Ce 
+Cubic meters m3 
+◦
+Degree Celcius
+C 
+Deuterium isotope 2H 
+Dimethyl ether DME 
+Enthalpy change ΔH 
+Ethanol  C2H5OH 
+Exajoule EJ 
+Gamma-alumina γ-Al2O3 
+Gibbs’s energy ΔG 
+Gigawatt/gigatonnes GW/GT 
+Glucose  C6H12O6 
+Hybrid sulphur HyS 
+Hydrogen H2 
+Hydrogen peroxide H2O2 
+Hydronium ion H
+(cid:0)
+Hydroxide ions OH
+Indian rupee crore INR Cr 
+Iron 
+Fe 
+Iron (III) oxide Fe3O4 
+Kilojoules/mol kJ/mol 
+Megajoule MJ 
+Megajoule per cubic meter MJ/m3 
+Megapascal MPa 
+Methane CH4 
+Methanol CH3OH 
+Metric tonne Mt 
+N–Methyl–2–pyrrolidone NMP 
+Nanoparticles of metal sulfides (zinc sulfide/cadmium sulfide) ZnS/ 
+
++
+
+CdS 
+
+Nickel  Ni 
+Nickel (II) chloride hexahydrate NiCl2.6H2O 
+Oxygen  O2 
+Polycyclic aromatic hydrocarbons PAHs 
+Potassium carbonate K2CO3 
+Potassium hydroxide KOH 
+Propane  C3H8 
+Protium isotope 1H 
++
+Hydrogen proton H
+Rhodium Rh 
+Sodium-borohydride NaBH4 
+Standard enthalpy of formation H
+Terawatt hour TWh 
+Tetrahydrofuran THF 
+Tritium isotope 3H 
+United States Dollar (USD) $ 
+Vanadium-chlorine V–Cl 
+H2O 
+Water 
+V  
+Volt 
+
+298 
+
+◦
+
+RenewableandSustainableEnergyReviews189(2024)1139412

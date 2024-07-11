@@ -1,0 +1,221 @@
+Contents lists available at ScienceDirect 
+
+Energy Strategy Reviews 
+
+journal homepage: www.elsevier.com/locate/esr 
+
+Research on the evolution of China’s photovoltaic technology innovation 
+network from the perspective of patents 
+
+Feng Hu a, Saiya Mou b,#, Shaobin Wei c, #, Liping Qiu d, *, Hao Hu e, **, Haiyan Zhou f,*** 
+a Institute of International Business and Economics Innovation and Governance, Shanghai University of International Business and Economics, Shanghai, China 
+b School of Business Administration, Zhejiang Gongshang University, Hangzhou, China 
+c China Center for Economic Research, East China Normal University, Shanghai, China 
+d CEEC Economic and Trade Cooperation Institute, Ningbo University, Ningbo, China 
+e School of Economics, Shanghai University, Shanghai, China 
+f Graduate School, Nueva Ecija University of Science and Technology, Cabanatuan, Philippines   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Handling Editor: Dr. Mark Howells  
+
+JEL classification: 
+L52 
+O33 
+
+Keywords: 
+Photovoltaic technology 
+Innovation network 
+Two-mode network 
+Social network analysis 
+
+Photovoltaic (PV) technology, as a low-carbon energy technology, is crucial to mitigating climate change and 
+achieving sustainable development. China has the largest total number of PV technology patents in the world, 
+but  the  lack  of  core  technologies  has  restricted  the  further  innovative  development  of  China’s  PV  industry. 
+Therefore,  it  is  necessary  to  clarify  China’s  current  PV  technology  accumulation  to  better  catch  up  with  key 
+technology areas. To clearly describe the structural characteristics of China’s PV technology innovation network, 
+this study uses China’s patent PV technology data over the past 20 years from the Incopat global patent database 
+and  analyses  the  structural  characteristics  of  the  network  from  the  perspectives  of  one-mode  and  two-mode 
+networks, using method of social network analysis (SNA). The results show that 1) the leading PV enterprises 
+have basically formed relatively stable internal collaborations and that the scale of innovation network devel-
+opment has expanded rapidly, with very strong stamina; 2) with the development of China’s PV industry, many 
+innovative PV techniques have been developed by leading enterprises in the field of innovation and research and 
+development (R&D) of PV technology, and among patent applicants with strong collaboration, kinship collab-
+oration with investment relationships is dominant; 3) provinces participating in PV technology innovation are 
+increasing significantly, the network is more influenced by leading nodes, and the eastern coastal provinces are 
+pioneers in the innovation and R&D of PV technology; and 4) PV technological innovation collaboration between 
+patent  applicants  and  cities  has  changed  from  local  collaboration  to  cross-regional  collaboration,  high-value 
+areas  are  basically  concentrated  in  the  eastern  coastal  region  of  China,  with  scattered  spatial  characteristics, 
+and  cross-regional  collaboration  presents  a  “triangular”  spatial  structure,  with  the  Yangtze  River  Delta,  Pearl 
+River  Delta,  and  Beijing-Tianjin-Hebei  as  cores.  The  conclusions  can  provide  patent  information  support  for 
+scientific  research  on  energy  conservation  and  emission  reduction  to  achieve  low-carbon  goals,  and  can  also 
+provide reference for policy formulation of renewable energy development and green development strategies.   
+
+1. Introduction 
+
+As an important strategic emerging industry, the photovoltaic (PV) 
+industry is one of the most promising renewable energy industries in the 
+world today. The PV industry not only addresses the impending deple-
+tion of traditional energy sources but also provides an excellent path to 
+
+solving problems such as global warming and environmental pollution, 
+with  its  clean  energy  properties  [1,2,3,4,5].  The  Chinese  government 
+attaches great importance to the issue of global climate change and has 
+proactively pledged to achieve a carbon peak and carbon neutrality by 
+2030  and  2060,  respectively,  demonstrating  the  responsibility  of  a 
+major  country  in  addressing  climate  issues  [6].  Solar  energy  is  an 
+
+* Corresponding author. 
+** Corresponding author. 
+*** Corresponding author. 
+
+E-mail addresses: 21010010015@pop.zjgsu.edu.cn (Liping Qiu), huhao@staff.shu.edu.cn (H. Hu), zhouhaiyansh@hotmail.com (H. Zhou).   
+
+#  Co-first Author: Saiya Mou & Shaobin Wei contributed equally to this work and share first authorship. 
+
+https://doi.org/10.1016/j.esr.2024.101309 
+Received 3 September 2023; Received in revised form 10 December 2023; Accepted 10 January 2024   
+
+EnergyStrategyReviews51(2024)101309Availableonline18January20242211-467X/©2024TheAuthors.PublishedbyElsevierLtd.ThisisanopenaccessarticleundertheCCBYlicense(http://creativecommons.org/licenses/by/4.0/).F. Hu et al.                                                                                                                                                                                                                                       
+
+important  kind  of  renewable  energy,  and  one  of  the  fastest  growing 
+renewable energy sources, with the advantages of easy installation, easy 
+maintenance  and  no  pollution  [7],  which  could  theoretically  meet 
+global energy needs [8]. The climate environment and energy crisis have 
+greatly  stimulated  China’s  research,  development  and  application  of 
+solar energy [9], and the development of the PV industry is considered 
+an  important  direction  for  China  to  achieve  green  development  and 
+transformation and is also an important tool to achieve the “dual car-
+bon” goal [10]. 
+
+PV  technology  is  an  important  technical  way  to  achieve  green 
+development, transformation and overtaking. PV patents are innovative 
+forms  of  PV  technology,  and  research  on  PV  patents  can  reflect  the 
+research and development (R&D) trend of PV technology in a country 
+[11].  The  development  of  China’s  PV  industry  is  a  typical  process  of 
+technological change in a catching-up economy [12], that is, through 
+the initial stage of acquiring foreign technologies, to vertical integration, 
+and  investing  in  research  and  development  of  their  own  technology 
+catch-up process. Existing researches suggest that although China pre-
+fers international cooperation in the mode of technological cooperation 
+in the PV industry [13], the total number of multinational patents in this 
+field  is  relatively  small  [14],  and  China’s  innovative  capabilities  in 
+developing  PV  technologies  are  accumulated  through  domestic  R&D 
+activities [15]. Despite the fact that the total number of patents applied 
+for Chinese PV technology has ranked first in the world since 2012, the 
+Chinese PV industry still has a large gap with developed countries in 
+Europe and the United States in terms of fragmented patents and missing 
+core patents, e.g., ethylene vinyl acetate (EVA) film raw materials [16, 
+17,18].  Therefore,  identifying  the  knowledge  base  of  Chinese  indige-
+nous PV patents to build patent innovation synergy is a key issue. 
+
+Regarding  the  research  on  PV  industry  technology,  scholars  have 
+mainly focused on the importance to economic development [19], how 
+to promote technological innovation in the PV industry [20,21], and the 
+impact of government policies on PV technology innovation [22,23,24], 
+among other aspects. For example [25], explained the future develop-
+ment trend of the PV industry and the importance of strengthening PV 
+technological innovation, and [26] and [27] propose that the impact of 
+government  support  policies  for  PV  technology  on  PV  innovation  is 
+obvious, i.e., effective policies can reduce the R&D costs, improve the 
+profits,  and  better  promote  the  development  of  enterprises,  but  few 
+scholars have studied PVtechnology innovation from the perspective of 
+complex networks. 
+
+With regard to complex networks, most scholars mainly build a one- 
+mode network to conduct in-depth studies on the trade between coun-
+tries  or  regions  [28,29],  economic  ties  [30],  innovative  collaboration 
+[31,32,33] and population mobility [34]; however, there is still a large 
+gap in the application and depth of research on two-mode networks [35, 
+36].  With  the  deepening  of  complex  network  research  and  the 
+complexity of real network relationships, the two-mode network formed 
+by associations between different types of network nodes has attracted 
+increasing attention from scholars [37]. Compared with one-mode net-
+works,  two-mode  networks  can  display  the  information  of  different 
+types  of  nodes  and  inter-associations  more  abundantly  to  mine  more 
+effective information in the network model and avoid a lack of charac-
+teristic  information  regarding  the  main  network  structure  [38]. 
+Regarding  the  research  on  two-mode  networks,  scholars  have  mainly 
+analyzed  the  structural  characteristics  of  networks  and  definitions  of 
+networks [39,40]. With the expansion of research, scholars have con-
+structed  two-mode  networks  for  different  types  of  subjects,  such  as 
+enterprise-city,  actor-movie,  actor-policy,  listed  company-non-listed 
+company, and merger and acquisition (M&A) parties-M&A events [41, 
+42,43], and used social network analysis to study the network density, 
+centrality, core-edge and other aspects of two-mode networks [44,45, 
+46]; however, two-mode networks are rarely used in research on inno-
+vation networks. 
+
+Regarding  research  on  innovation  networks,  scholars  have  used 
+world-renowned patent databases, such as the Derwent World Patents 
+
+Index  (DWPI),  Incopat,  European  Patent  Office  (EPO)  and  literature 
+databases such as SCI [47,48,49], and used social network analysis to 
+investigate the network centrality and overall network characteristics of 
+technological innovation networks in industrial fields [50,51], such as 
+new energy vehicles [52], solar cells [53], and biological sciences [54, 
+55].  Previous  studies  have  not  sufficiently  addressed  innovation  net-
+works from the perspectives of one-mode and two-mode networks; in 
+addition, innovation network research has not been widely conducted 
+on PV technology. 
+
+In view of this, the Incopat global patent database of Chinese local PV 
+technology  patent  data  to  construct  a  mapping  of  the  evolution  of 
+China’s  PV  technology  innovation  network  over  the  past  20  years. 
+Specifically, we want to answer the following questions: what are the 
+basic  characteristics  of  China’s  innovation network  in  the  field  of PV 
+technology? What is the evolutionary trajectory? And what is the cor-
+relation  between  provincial  spaces?  The  potential  marginal  contribu-
+tions  are:  the  dual  perspectives  of  one-mode  and  two-mode  network 
+break  the  limitation  of  the  single-element  perspective  of  traditional 
+factor network research, and also make up for the lack of information 
+caused by the single perspective, deepen the idea of evolutionary eco-
+nomics, and enrich the content of innovation linkage network analysis. 
+In  practical  level,  exploring  the  spatial  situation  of  China’s  PV  tech-
+nology  innovation  collaboration  to  identify  problems  from  a  novel 
+perspective, helping to clarify China’s current PV technology accumu-
+lation pattern. In addition, an in-depth analysis of the network pattern 
+evolution  of  PV  technology  innovation  networks  at  different  spatial 
+scales  could  promote  the  innovation  and  development  of  China’s  PV 
+industry and provide suggestions for overcoming the shortcomings of PV 
+technology,  achieving  technological  breakthroughs  in  core  areas,  and 
+promoting the development of China’s PV industry. 
+
+2. Research data and methods 
+
+2.1. Research data 
+
+The data used in this study were obtained from the Incopat global 
+patent database. Drawing on the research methods of previous scholars 
+and using the International Patent Classification (IPC) green patent code 
+[56], PV-related IPC patents in the Incopat global patent database were 
+searched.1  First, the patents that are not related to PV were excluded, 
+and  second,  patents  with  a  single  applicant,  natural  persons  or  com-
+panies registered outside China were excluded. In total, 6206 patents in 
+the  past  20  years,  i.e.,  from  2002  to  2021,  met  the  inclusion  re-
+quirements. For the calculation of patent collaboration, first and nonfirst 
+patent  applicants  were  distinguished,  and  collaboration  was  divided 
+into the first patent applicant (initiating) and the nonfirst patent appli-
+cant  (participating),  forming  a  directed  data  matrix  of  collaborative 
+innovation among patent applicants. If a patent was applied for by four 
+patent applicants A, B, C, and D, the collaborations between A and B, A 
+and C, and A and D were all counted (3 times). To show the evolution 
+characteristics of the PV technology innovation network as objectively 
+as possible and to avoid sudden changes caused by special circumstances 
+within  a  certain  year,  a  multiple  stage  method  was  adopted,  i.e.,  the 
+research  period  was  divided  into  four  stages:  2002–2006  (Stage  I), 
+2007–2011 (Stage II), 2012–2016 (Stage III) and 2017–2021 (Stage IV). 
+
+http://www.wipo.intclassifications/ipc/en/est/.  Accessed 
+
+1 WIPO.  (2015).  World  Intellectual  Property  Organization.  IPC  Green  In-
+ventory. 
+20 
+December 2015. Photovoltaic-related patent no: H01L 27/142, 31/00–31/078; 
+H01G 9/20; H02 N 6/00; H01L 27/30, 51/42–51/48; H01L 25/00, 25/03, 25/ 
+16, 25/18, 31/042; C01B 33/02; C23C 14/14, 16/24; C30B 29/06; G05F 1/67; 
+F21L 4/00; F21S 9/03; H02J 7/35; H01G 9/20; H01 M 14/00. 
+
+EnergyStrategyReviews51(2024)1013092

@@ -1,0 +1,469 @@
+Contents lists available at ScienceDirect 
+
+Energy 
+
+journal homepage: www.elsevier.com/locate/energy 
+
+Risk-constrained stochastic scheduling for energy hub: Integrating 
+renewables, demand response, and electric vehicles 
+
+Chengying Yang a, b, Zhixin Wu c, d, *, Xuetao Li a, b, Ashk Fars e 
+a School of Economics and Management, Hubei University of Automotive Technology, Shiyan, 442000, Hubei, China 
+b Shiyan Industry Technique Academy of Chinese Academy of Engineering, Shiyan, 442000, Hubei, China 
+c College of Business Administration, Zhejiang University of Finance & Economics Dongfang College, Haining, 314408, Zhejiang, China 
+d College of Business Administration, Zhejiang University of Finance & Economics, Hangzhou, 310018, Zhejiang, China 
+e Automation and Engineering of Yerevn Company, Yerevan, Armenia   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Handling Editor: X Ou  
+
+Keywords: 
+Risk-constrained stochastic scheduling 
+Energy hub management 
+Uncertainties 
+Slime mold algorithm 
+Coughing and chaos theory 
+
+This research introduces a stochastic scheduling approach that incorporates risk constraints for an energy hub 
+(EH), considering uncertainties related to renewable generation and load demands. The proposed method utilizes 
+the  Conditional  Value  at  Risk  (CVaR)  technique  to  assess  and  quantify  risks.  By  striking  a  balance  between 
+reducing operational and emissions costs and increasing risk aversion, the approach presents a trade-off. The EH 
+comprises  various  components  such  as  a  wind  turbine  (WT),  photovoltaic  (PV)  cells,  a  fuel  cell  power  plant 
+(FCPP),  a  combined  heat  and  power  generation  unit  (CHP),  and  plug-in  electric  vehicles  (PEVs).  Uncertain 
+variables  encompass  factors  such  as  wind  speed,  solar  irradiation,  different  demands,  and  market  prices.  To 
+optimize profits and enhance the consumption curve, demand response programs (DRPs) for electrical, thermal, 
+and cooling demands are implemented. To address the uncertainties associated with input random variables, the 
+efficient k-means data clustering method is employed. A new slime mold algorithm, based on coughing and chaos 
+theory, has been proposed to enhance the problem’s solution. The algorithm incorporates innovative operators to 
+improve  its  capabilities.  By  utilizing  the  coughing  mechanism  and  chaos  theory,  the  algorithm  explores  the 
+solution space more effectively, resulting in improved outcomes for the problem at hand. The results demonstrate 
+significant  flexibility  in  EH  management  and  are  extensively  discussed.  Simulation  results  indicate  that  inte-
+grating  PEVs,  FCPP,  and  DRPs  can  lead  to  reductions  of  2  %,  7  %,  and  11  %  in  the  EH’s  operating  costs, 
+respectively. Furthermore, considering PEVs, FCPP, and DRPs can improve the EH’s risk cost by 1.98 %, 6.7 %, 
+and 10.5 %, respectively. Based on the numerical results, in Case 4 led to a remarkable 12.65 % reduction in 
+operational costs while simultaneously achieving a 15.43 % decrease in emission costs, showcasing the effec-
+tiveness of the proposed approach in optimizing energy management in an energy hub system.   
+
+1. Introduction 
+
+1-1. Difficulties and goals 
+
+The optimal management of energy hubs (EHs) presents significant 
+difficulties and challenges due to the complex and dynamic nature of the 
+system. Understanding and addressing these challenges is essential to 
+achieve efficient and sustainable energy management [1]. Some of the 
+key difficulties and goals in managing EHs include.  
+
+i)  Nonlinear  and  Non-convex  Optimization:  The  operation  and 
+control  of  EHs  involve  complex  and  nonlinear  optimization 
+
+problems. The interactions between different energy resources, 
+storage  systems,  and  loads  create  intricate  relationships  that 
+require  sophisticated  optimization  algorithms  to  find  optimal 
+solutions.  Additionally,  the  non-convex  nature  of  the  problem 
+further complicates the optimization process [2].  
+
+ii)  Uncertainties in Renewable Generation and Load Demands: EHs 
+heavily rely on renewable energy sources, which are inherently 
+uncertain and variable [3]. Factors such as weather conditions, 
+time  of  day,  and  seasonality  can  significantly  affect  the  avail-
+ability and output of renewable energy generation technologies. 
+Moreover,  load  demands  can  also  vary  unpredictably,  posing 
+challenges in accurately forecasting and managing energy supply 
+and demand [4]. 
+
+* Corresponding author. College of Business Administration, Zhejiang University of Finance & Economics Dongfang College, Haining, 314408, Zhejiang, China. 
+
+E-mail address: 20150201@zufedfc.edu.cn (Z. Wu).  
+
+https://doi.org/10.1016/j.energy.2023.129680 
+Received 29 August 2023; Received in revised form 12 October 2023; Accepted 13 November 2023   
+
+Energy288(2024)129680Availableonline17November20230360-5442/©2023PublishedbyElsevierLtd.C. Yang et al.                                                                                                                                                                                                                                    
+
+Minimum and maximum limit for charge power of FC 
+
+Uch
+
+Th(cid:0) s, Udisch
+
+Th(cid:0) s Binary for thermal storage charge and discharge 
+
+Nomenclature 
+
+Abbreviation 
+MPPT  Maximum Power Point Tracking 
+PV 
+WT 
+FC 
+HS 
+PEV 
+
+Photovoltaic 
+Wind Turbine 
+Fuel-Cell 
+Hydrogen Storage 
+Plug-in electric vehicles 
+
+Indices 
+t 
+s 
+v 
+
+time 
+Scenario index 
+PEV index 
+
+Partial Load ratio 
+Thermal energy ratio 
+
+Parameters and variables 
+PLR 
+TER 
+PFC(cid:0) Th, PFC(cid:0) El Thermal and electrical generation of fuel-cell 
+Pch
+Electrical power required for hydrogen Production 
+FC 
+Pdisch
+FC 
+Pmin
+FC
+Pch,min
+FC
+Pdisch,min
+FC
+
+Equivalent electrical power of consumed hydrogen 
+FC Minimum and maximum power contribution of FC 
+, Pch,max
+FC
+,Pdisch,max
+FC
+of FC 
+Equivalent electrical power of stored hydrogen 
+Efficiency of FC 
+
+, Pmax
+
+Minimum and maximum limit for discharge Power 
+
+PH2 
+ηFC 
+Pmin
+H2
+
+, Pmax
+
+H2 Minimum and maximum limit of equivalent electrical 
+
+power of hydrogen storage 
+
+Binary for hydrogen generation and hydrogen usage 
+
+, Udisch
+H2
+
+Efficiency of the hydrogen tank 
+
+WT Electrical power generated by WT 
+
+Nominal power of WT 
+WT converter efficiencies 
+
+PV  Electrical power generated by PV 
+Solar radiation on PV panels 
+Solar radiation on PV panels at standard condition 
+Temperature of PV panels at standard condition 
+Temperature coefficient 
+
+Uch
+H2
+ηH2 
+A, B, C  WT power curve parameters 
+W(t, s) Wind speed 
+Wcut,in, Wr, Wcut,out Cut-in, rated and cut-out speeds for WT 
+PWT, Pout
+Pr
+WT 
+ηcon
+WT 
+PPV, Pout
+S 
+Sstd 
+Tstd 
+CT 
+Npa
+PV
+TPV 
+TAmb 
+NOCT 
+ηcon
+PV 
+SOC 
+PEV, Pdisch
+Pch
+, ηdisch
+ηch
+PEV
+PPEV(cid:0) tr 
+SOC
+ΔD 
+PEV , Pch,max
+Pch,min
+PEV 
+
+Temperature of PV panels 
+Ambient temperature 
+Nominal operation cell temperature 
+PV converter efficiencies 
+State of charge of PEV 
+
+PV  Number of solar parallel and series cells 
+
+Power consumption of PEV during travel 
+
+Traveling distance of vth PEV 
+
+min, SOC
+
+, Nse
+
+max
+
+Minimum and maximum limit for SOC of PEV 
+
+PEV Charge and discharge power of PEV 
+PEV Efficiency of charge and discharge performance of PEV 
+
+PEV Minimum and maximum limit for charge power of 
+
+Pdisch
+PEV
+
+, Pdisch
+
+PEV Minimum and maximum limit for discharge power Of 
+
+PEV 
+Efficiency of PEV 
+
+, Udisch
+
+PEV Binary for PEV charge and discharge performances 
+
+ηPEV 
+Uch
+PEV
+PTh(cid:0) s 
+Pch
+Th(cid:0) s 
+CostPV, CostWT Cost of electricity generation with PV and WT 
+
+Level of stored energy inside thermal storage 
+Charge power level of thermal storage 
+
+CostEl(cid:0) N, CostTh(cid:0) N, CostG(cid:0) N Cost of power procurement from the 
+
+electrical, thermal and gas markets 
+
+CostCHP, CostB Cost of heat generation with CHP and boiler 
+CostTh(cid:0) S, CostC(cid:0) S Operation cost of heating and cooling storages 
+CostEl(cid:0) DR, CostTh(cid:0) DR, CostC(cid:0) DR Cost of electrical, thermal, and 
+
+cooling DRP 
+
+CHP unit 
+
+CostUN(cid:0) Em,CostCHP(cid:0) Em Cost of emissions with upstream network and 
+
+CostB(cid:0) Em, CostPC(cid:0) Em Cost of emissions with boiler and Fuel-cell 
+ΨEl(cid:0) N, ΨTh(cid:0) N, ΨG(cid:0) N Electrical, thermal, and gas networks prices 
+ΨTh(cid:0) S, ΨC(cid:0) S Price of operation for thermal and cooling storages 
+ΨEl(cid:0) Dr,ΨTh(cid:0) Dr,ΨC(cid:0) Dr Price of participation in electrical, thermal, and 
+
+cooling DRPs 
+Discharge power level of thermal storage 
+
+Power loss amount inside thermal storage 
+Factor for calculation of the thermal storage loss power 
+Th(cid:0) s Factors for calculation of thermal storage minimum and 
+
+maximum power level 
+
+Nominal capacity of thermal storage 
+
+Th(cid:0) s Efficiency of charge and discharge performance of 
+
+thermal storage 
+
+Performances 
+Factors for calculation of cooling storage power 
+
+Th(cid:0) s Factors for calculation of cooling minimum and power 
+
+level 
+Nominal capacity of cooling storage 
+
+Th(cid:0) s Efficiency of charge and discharge performance of 
+
+cooling storage 
+Level of stored energy inside cooling storage 
+Charge power level of cooling storage 
+
+Discharge power level of cooling storage 
+
+Power loss amount inside cooling storage 
+
+C(cid:0) S Binary for cooling storage charge and discharge 
+
+performances 
+
+PEl, PTh, PC, PG Electrical, heating, cooling, and gas demands 
+LPFshift,down
+
+Factors for decrement and increment of 
+
+El
+
+Factors for decrement and increment of 
+
+Factors for decrement and increment of 
+
+C
+
+El
+
+Th
+
+, LPFshift,up
+electrical load through DRP 
+, LPFshift,up
+thermal load through DRP 
+, LPFshift,up
+cooling load through DRP 
+, Pshift,up
+El
+with DRP 
+,Ushift,up
+El
+demand DRP 
+, Pshift,up
+Th
+with DRP 
+, Ushift,up
+Th
+demand DRP 
+, Pshift,up
+C
+with DRP 
+, Ushift,up
+C
+demand thorough DRP 
+
+Decreased and increased amount of electrical load 
+
+Binary for decreasing and increasing the electrical 
+
+Decreased and increased amount of thermal load 
+
+Binary for decreasing and increasing thermal 
+
+Decreased and increased amount of cooling load 
+
+Binary for decreasing and increasing the cooling 
+
+El(cid:0) N Minimum and maximum limit for power procurement 
+
+from the electrical grid 
+
+G(cid:0) N Minimum and maximum limit for power procurement 
+
+Th(cid:0) N Minimum and maximum limit for power procurement 
+
+from gas network 
+
+from thermal market 
+
+ηB, ηTr
+
+, ηChiller(cid:0) El
+
+, ηChiller(cid:0) Ab Efficiency of boiler, transformer, 
+
+Th(cid:0) s 
+
+Pdisch
+Th(cid:0) s 
+Ploss
+aloss
+Th(cid:0) s 
+Th(cid:0) s,φmax
+φmin
+
+PCap
+Th(cid:0) s 
+Th(cid:0) s, ηdisch
+ηch
+
+aloss
+C(cid:0) S 
+Th(cid:0) s, φmax
+φmin
+
+Pcap
+C(cid:0) S 
+Th(cid:0) s, ηdisch
+ηch
+
+PC(cid:0) S 
+Ph
+C(cid:0) S 
+Pdisch
+C(cid:0) S 
+Ploss
+C(cid:0) S 
+C(cid:0) S, Uch
+Uch
+
+LPFshift,down
+
+Th
+
+LPFshift,down
+
+C
+
+Pshift,down
+El
+
+Ushift,down
+
+El
+
+Pshift,down
+Th
+
+Ushift,down
+
+Th
+
+Pshift,down
+C
+
+Ushift,down
+
+C
+
+El(cid:0) N, Pmax
+Pmin
+
+G(cid:0) N, Pmax
+Pmin
+
+Th(cid:0) N, Pmax
+Pmin
+
+Energy288(2024)1296802

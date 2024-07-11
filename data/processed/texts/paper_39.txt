@@ -1,0 +1,189 @@
+Contents lists available at ScienceDirect 
+
+Sustainable Materials and Technologies 
+
+journal homepage: www.elsevier.com/locate/susmat 
+
+A review on global warming potential, challenges and opportunities of 
+renewable hydrogen production technologies 
+
+Hannah Hyunah Cho *, Vladimir Strezov , Tim J. Evans 
+
+School of Natural Sciences, Faculty of Science and Engineering, Macquarie University, NSW 2109, Australia   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Global warming impact 
+Renewable hydrogen production 
+Wind electrolysis 
+Solar PV electrolysis 
+Biomass gasification 
+Biogas reforming 
+
+This review compares global warming potential of renewable hydrogen production technologies including wind- 
+and  solar  PV-powered  water  electrolysis,  biomass  gasification  and  biogas  reforming  based  on  64  hydrogen 
+production cases compiled from the literature. Unlike many previous studies, this review discusses the cases from 
+various countries, while selecting the production technologies that have potential of commercialisation. Among 
+the four reviewed technologies, wind electrolysis performed the best in global warming impacts (1.29 kg CO2 eq/ 
+kg  H2),  whereas  biogas  reforming  technology  performed  the  worst  (3.61  kg  CO2  eq/kg  H2).  Key  factors  that 
+contributed to most of the impacts were found to be materials used for construction of wind- and solar- electricity 
+generation system for both wind- and solar PV-powered electrolysis, and energy consumption during gasification 
+processes for biomass gasification, while methane leakage during biogas production had the highest contribution 
+to the impacts of biogas reforming cases. On average, the renewable hydrogen cases demonstrated 68–92% lower 
+global  warming  potential  when  compared  to  conventional  coal  gasification  and  natural  gas  steam  methane 
+reforming systems. Increasing demand for renewable hydrogen and possibility of hydrogen being integrated into 
+existing natural gas networks highlight the important role of renewable hydrogen production in the future.   
+
+1. Introduction 
+
+From the introduction of Kyoto Protocol in 1997 to the recent United 
+Nations (UN) Climate Change Conference of the Parties (COP26), efforts 
+to  mitigate  greenhouse  gas  (GHG)  emissions  have  been  witnessed  in 
+various industrial sectors, especially in the energy sector with increasing 
+demand  for  clean  energy  production  [1,2].  Among  a  range  of  clean 
+energy options, renewable hydrogen is gaining increasing attention as a 
+low-carbon energy carrier [3] which does not emit GHG emissions when 
+used  for  energy  generation  [4].  Hydrogen  has  potential  as  an  energy 
+source to replace current use of natural gas (e.g., heat supply to industry 
+and replacement of transport fuels) [5] with numerous advantages, such 
+as flexibility of feedstock selection (e.g., from fossil fuel sources to waste 
+materials)  [6],  marginal  energy  loss  during  transmission  and  wide 
+applicability  to  fuel  cells  and  various  industrial  sectors  [1,7].  Once 
+hydrogen  is  compressed  to  a  desired  pressure,  it  can  be  distributed 
+through  existing  natural  gas  pipelines  with  minor  technological 
+
+modifications  [1].  Currently,  hydrogen  is  demanded  from  various  in-
+dustrial sectors, including oil refining (33%), ammonia manufacturing 
+(27%), methanol production (11%) and steel production (3%), [8] with 
+anticipated demand increase by almost sixfold in 2050, mostly driven by 
+increasing demand from the steel and ammonia industries (Fig. 1-a and 
+1-b) [9,10]. 
+
+Hydrogen can be produced from both renewable and non-renewable 
+sources (see Fig. 2). Nevertheless, global hydrogen production in 2020 
+almost entirely relied on fossil fuel sources with only 0.7% was produced 
+from natural gas with carbon capture, utilisation and storage (CCUS) out 
+of the total production of 90 Mt. (million tonnes) (Fig. 1-b) [11]. Despite 
+the  impressive  increase  in  the  low-emission  hydrogen  production  in 
+2021 (almost 20% increase compared to 2020, including hydrogen from 
+natural gas with CCUS and water electrolysis), it still comprised a mere 
+fraction of total production, with only 1 Mt. of low-emission production 
+out of 94 Mt. of global hydrogen production in 2021, while natural gas 
+remained as the major source of hydrogen production, which resulted in 
+
+Abbreviations: AD, Anaerobic digestion; ATR, Auto thermal reforming; BG-reform, Biogas reforming; BMG, Biomass gasification; CCS, Carbon capture and storage; 
+CCUS, carbon capture, utilisation and storage; CG, Coal gasification; GHG, Greenhouse gas; GWP, Global warming potential; LCA, Life cycle assessment; PEM, Proton 
+exchange membrane; POX, Partial oxidation; PV, Solar photovoltaic; PV-elec, Solar PV-powered electrolysis; SCWG, Supercritical water gasification; SMR, Steam 
+methane reforming; SOEC, Solid oxide electrolysis cells; SR, Steam reforming; W-elec, Wind-powered electrolysis. 
+
+* Corresponding author. 
+
+E-mail addresses: hannah-hyunah.cho@hdr.mq.edu.au (H.H. Cho), vladimir.strezov@mq.edu.au (V. Strezov), tim.evans@riotinto.com (T.J. Evans).  
+
+https://doi.org/10.1016/j.susmat.2023.e00567 
+Received 18 October 2022; Received in revised form 6 January 2023; Accepted 7 January 2023   
+
+SustainableMaterialsandTechnologies35(2023)e00567Availableonline10January20232214-9937/©2023ElsevierB.V.Allrightsreserved.H.H. Cho et al.                                                                                                                                                                                                                                  
+
+630 Mt. of direct CO2  emissions (7% of emissions from industrial sec-
+tors) from the fossil-based hydrogen production in 2021 [12]. In order to 
+minimise the emissions from hydrogen production, replacing natural gas 
+with  renewable  sources  is  essential  [13].  Various  low-emission 
+hydrogen  production  technologies  are  available,  including  fore-
+mentioned  water  electrolysis,  biomass  gasification  and  fossil-based 
+production  with  CCUS  [11],  which  have  been  discussed  in  several 
+countries as future energy options. For instance, Japan has announced 
+their plans to produce hydrogen using only renewable electricity, while 
+US intends to increase hydrogen production from biomass gasification 
+[14]. As of 2018, around 70 ongoing projects, mostly in Germany, have 
+been identified as renewable-sourced hydrogen production [15]. How-
+ever, these low-emission technologies only share about 1% of the cur-
+rent global hydrogen production [12]. 
+
+One  possible  reason  that  hinders  expansion  of  the  low-emission 
+hydrogen could be high production cost. Levelised production cost of 
+natural gas-based hydrogen ranges between US$ 0.5/kg H2 to $ 1.7/ kg 
+H2, which could be doubled (up to 4 times) when CCUS is applied [11]. 
+Although the cost of water electrolysis is greatly affected by the cost of 
+electricity [16], the average production cost of renewable water elec-
+trolysis  is  currently  about  6–16  times  higher  than  natural  gas-based 
+hydrogen [11], with the potential cost reductions to US$ 1.3–2.4/ kg 
+H2  for  solar-powered  electrolysis  and  US$  1.1–2.5  /kg  H2  for  wind- 
+powered electrolysis in 2030 [17]. Another challenge of low-emission 
+hydrogen is lack of infrastructure for stable supply and transmission of 
+the  hydrogen  [10].  This  could  be  of  particular  problem  where  large- 
+scale  and  long-distance  hydrogen  transmission  is  necessary.  A  study 
+by [18] addressed this issue for China where renewable sources avail-
+able  for  hydrogen  production  and  gas  supply  networks  are  unevenly 
+distributed.  The  study  concluded  that  utilising  existing  natural  gas 
+pipelines for inter-province transmission of renewable hydrogen would 
+be optimal, while the use of combined natural gas pipelines and dedi-
+cated hydrogen pipelines could only be feasible when unit transmission 
+cost is reduced to a certain degree. Storage of hydrogen is also consid-
+ered  as  challenging.  Liquified  hydrogen  requires  less  storage  volume 
+than gaseous hydrogen but energy loss and energy consumption during 
+the  liquefying  processes  are  disadvantageous.  Storage  of  gaseous 
+hydrogen,  on  the  other  hands,  requires  specifically-designed  storage 
+tanks that can withstand high pressure, but materials suitable for the 
+tanks  and  infrastructure  for  transporting  the  hydrogen  still  seek  for 
+technological and economic advancement [19]. 
+
+The  renewable  electricity-operated  production  system  is  also 
+referred  to as green hydrogen, while hydrogen from natural gas with 
+CCUS  is  referred  as  blue  hydrogen  with  methane  pyrolysis  is  also 
+
+included in the blue hydrogen in some studies [20]. Methane pyrolysis 
+(also known as methane decomposition or methane cracking), one of the 
+emerging  technologies  according  to  the  recent  report  by  IEA  [11]  is 
+another  fossil-based  production  but it  does  not  create  any  direct CO2 
+emissions,  instead  it  enables  carbon  sequestration  by  producing  solid 
+carbon as a by-product. Due to its unique production processes, it is also 
+referred  as  turquoise  hydrogen  in  some  cases  [21].  Current  primary 
+hydrogen  production  technologies,  fossil-based  production  without 
+emissions abatement, are classified as grey hydrogen [22], although this 
+colour coding system does not fully interpret the life cycle impacts of 
+various  hydrogen  production  processes  [3].  Green  hydrogen  is  often 
+considered  as  the  cleanest  [23],  but  when  emissions  during  certain 
+production stage is considered (e.g., manufacture of solar cells, for de-
+tails see Section 3.2. and Table 3), it is not carbon emission free. While 
+some studies use different colour codes interchangeably (for example, 
+hydrogen production by coal gasification is classified as grey hydrogen 
+[22] but in some studies, it is classified as brown hydrogen [21]), China, 
+the world's largest hydrogen producer, established standard for defining 
+grey,  low-carbon,  clean  and  green  hydrogen  by  setting  up  emission 
+threshold for each production pathway [24]. Based on the GHG emission 
+from  coal  gasification  (29.02  kg  CO2  eq/kg  H2),  which  is  the  major 
+production pathway in China (about 63% of total production in 2020), 
+emissions threshold of low-carbon and clean hydrogen is set at 14.51 kg 
+CO2  eq/kg  H2  and  4.9  kg  CO2  eq/kg  H2,  respectively,  while  green 
+hydrogen has the threshold below 4.9 kg CO2 eq/kg H2 [24]. 
+
+Theoretically, all wind and solar energy could be used to produce 
+hydrogen,  but  when  technical  constraints  (e.g.,  land  availability  and 
+collectable energy based  on current technologies)  are  considered, the 
+usable amount of those energy sources could be reduced. From an eco-
+nomic perspective, this amount could be further reduced due to the high 
+production cost, which makes clean hydrogen less competitive in energy 
+market [17]. Based on the anticipated cost reduction in clean hydrogen 
+production as well as significant increase in the capacity of electrolyser, 
+the production of green and blue hydrogen is estimated to reach 61.7 Mt. 
+and 33 Mt. out of total production of 180 Mt. in 2030, respectively (see 
+Fig. 1-b) [25], while global hydrogen production will almost entirely be 
+produced  from  renewable  sources  by  2050,  with  more  than  60%  as 
+green hydrogen and around 40% as blue hydrogen [10]. 
+
+Low-emission  hydrogen  production  technologies  include  electro-
+chemical (e.g., biofuel-powered water electrolysis), thermochemical (e. 
+g., water splitting using solar thermal energy) and biological processes 
+(e.g. fermentation of biomass) [13,26], but many of these technologies 
+have not yet been commercially produced due to low production effi-
+ciency,  high  production  cost, and  lack of  production  and  distribution 
+
+Fig. 1. Current and future hydrogen demand and production; (a) Industrial profiles of hydrogen demand in 2015 and 2050; (b) Current and projected hydrogen 
+production technologies. 
+* Reproduced based on [10–12,14,16,25]. 
+
+SustainableMaterialsandTechnologies35(2023)e005672(a)(b)01002003004005006002020202120302050Total hydrogen production (Mt/year)YearNatural gas without CCUSCoalOilNatural gas with CCUSWater electrolysisBy-product from refineryBiomass0204060801002015%OthersMetal processingRefiningChemicals0204060801002050%ShippingTransportChemicalsSteel processing

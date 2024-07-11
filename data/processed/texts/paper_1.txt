@@ -1,0 +1,150 @@
+Contents lists available at ScienceDirect 
+
+Coordination Chemistry Reviews 
+
+journal homepage: www.elsevier.com/locate/ccr 
+
+Review 
+
+A review of carbon dots in synthesis strategy 
+
+Huaxin Liu, Xue Zhong, Qing Pan, Yi Zhang, Wentao Deng, Guoqiang Zou, Hongshuai Hou *, 
+Xiaobo Ji 
+
+State Key Laboratory of Powder Metallurgy, College of Chemistry and Chemical Engineering, Central South University, Changsha 410083, China   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Carbon dots 
+Carbon quantum dots 
+Graphene quantum dots 
+Synthesis strategy 
+Nanomaterials 
+
+Among the carbon nanomaterials family, the fluorescent carbon dot has emerged as a significant member among 
+the novel types of nanomaterials, and many researchers have introduced studies on its properties and potential 
+applications. Carbon dots (CDs) have numerous outstanding characteristics, such as remarkable photostability, 
+negligible cytotoxicity, exceptional biocompatibility, effortless surface modification, and remarkable chemical 
+inertness. As a result, they have found extensive applications in various domains, including but not limited to cell 
+imaging, in vivo imaging, drug delivery, fluorescence sensing, photocatalysis, production of polychromatic light 
+emitting diodes (LEDs), energy conversion and storage, etc. Recently, many synthesis strategies of carbon dots 
+have been developed, but how to synthesize in a controlled way is still challenging. The focus of this article is to 
+provide an overview of the advancements made in the production of carbon dots, with particular attention given 
+to their synthesis techniques along with some discussion and provide a reference for the controllable synthesis 
+and method selection of carbon dots.   
+
+1. Introduction 
+
+Carbon  dot  belongs  to  the  family  of  carbon  nanomaterials  and  is 
+regarded as a significant member due to its unique fluorescent proper-
+ties. It is worth mentioning that CDs were first discovered by researchers 
+accidentally when purifying single-walled carbon nanotubes manufac-
+tured by arc discharge method in 2004 [1]. Subsequently, these type of 
+new materials were named by Sun et al. in 2006 [2]. In general, CDs 
+refer to carbon particles that are finely dispersed and have a size of less 
+than  10  nm,  which  are  coated  with  functional  groups  like  hydroxyl, 
+amino, carboxyl or aromatic ring. CDs have gained significant attention 
+in recent years due to their numerous exceptional properties. Apart from 
+possessing  a  high quantum  yield  and  adjustable  emission  wavelength 
+like  traditional  semiconductor  quantum  dots,  CDs  exhibit  remarkable 
+photostability,  negligible  cytotoxicity,  exceptional  biocompatibility, 
+effortless surface modification, and remarkable chemical inertness [3]. 
+Based on their fundamental composition, CDs can be classified into four 
+categories:  graphene  quantum  dots  (GQDs)  that  have  a  2D  layered 
+graphene  core,  carbon  quantum  dots  (CQDs)  with  a  spherical  crystal 
+core,  carbon  nanodots (CNDs)  that  have  an  amorphous  core  [4],  and 
+carbonized  polymer  dots  (CPDs)  which  possess  a  highly  dehydrated 
+crosslinking  polymer  frame  or  a  slightly  graphitized  core  [5,6].  In 
+addition to the most basic constituent elements C, H, O, doping elements 
+
+such  as  N,  S,  P  are  usually  introduced  into  CDs.  Fig.  1 illustrates  the 
+extensive  utilization  of  CDs  in  various  areas,  including  cell  imaging 
+[7–10],  in  vivo  imaging  [5,11],  drug  delivery  [12–15],  fluorescence 
+sensing [16–24], photocatalysis [25–29], production of polychromatic 
+LEDs [30–33], energy conversion and storage [34–44], etc. As a novel 
+type  of  fluorescent  nanomaterial,  CDs  have  exhibited  remarkable 
+promise.  However,  the  controllable  synthesis  of  CDs  still  faces  many 
+challenges. Since the discovery of CDs, various functional CDs have been 
+synthesized  with  diversified  strategies.  This  review  describes  various 
+synthetic routes for the production of CDs. Finally, the characteristics of 
+each method are summarized. We aim to create a thorough summary of 
+the  various  synthesis  strategies  applied  for  CDs  and  offer  a  useful 
+reference for those seeking to achieve controllable synthesis and select 
+appropriate methods for CDs.Table 1. 
+
+2. Synthesis methods 
+
+Since the discovery of CDs, how to synthesize CDs in a controlled way 
+has been the key for scientists to research. According to different carbon 
+sources, the synthesis strategies of CDs can be roughly divided into “top- 
+down” and “bottom-up” [45,46]. The “top-down” synthesis method in-
+volves  the  stripping  process  from larger  carbon  sources,  either physi-
+cally or chemically, to create small CDs. Generally, carbon nanotubes 
+
+* Corresponding author. 
+
+E-mail address: hs-hou@csu.edu.cn (H. Hou).  
+
+https://doi.org/10.1016/j.ccr.2023.215468 
+Received 13 July 2023; Accepted 22 September 2023   
+
+CoordinationChemistryReviews498(2024)215468Availableonline10October20230010-8545/©2023ElsevierB.V.Allrightsreserved.H. Liu et al.                                                                                                                                                                                                                                      
+
+[1,47]. carbon fibres, and graphite rods [2] are used as carbon sources 
+for  “top-down”  method.  On  the  contrary,  the  “bottom-up”  synthesis 
+method employs small carbon sources under molecular or ionic states to 
+synthesize CDs. Most organic small molecules or oligomers include citric 
+acid, glucose, polyethylene glycol and urea are taken into consideration. 
+Common “top-down” and “bottom-up” methods will be discussed in the 
+following sections. 
+
+2.1. “top-down” strategies 
+
+2.1.1. Arc discharge 
+
+The arc discharge process takes place in a low-pressure arc chamber 
+filled with inert gas. Powdered carbon precursors are usually made into 
+anode  and  the  cathode  is  usually  made  of  pure  graphite.  When  the 
+system is working, the precursors are evaporated and consumed. As a 
+result, the carbon precursors sublimate and travel towards the cathode, 
+where they deposit as nanostructures. CDs were firstly discovered in this 
+way. Xu et al. discovered two novel nanomaterials during the purifica-
+tion  of  single-walled  carbon  nanotubes  (SWNT)  extracted  from  arc 
+discharge soot [1]. These materials were separated from the coarse soot, 
+and included short tubular carbon as well as a mixture of fluorescent 
+nanoparticles originating from SWNT. Carboxyl functional groups were 
+introduced to the arc-treated soot by oxidizing it with 3.3 mol/L HNO3 
+to  enhance  the  hydrophilicity  of  the  carbon  material,  and  then  the 
+
+precipitate  was  extracted  using  a  NaOH  solution  and  subsequently 
+separated through gel electrophoresis. It was suggested that the sepa-
+rated fluorescent carbon and short tubular carbon species were a novel 
+carbon material, which was later named CDs. It should be noted that 
+while CDs produced through this method exhibit good fluorescence, the 
+particle size  distribution is inconsistent  and the yield is exceptionally 
+low,  making  it  unsuitable  for  large-scale  manufacturing.  Further 
+research suggested that the spacing of the electrodes played a crucial 
+role in determining the diameter and quality of the carbon nanotubes 
+synthesized [48]. By arranging the magnetic field lines appropriately, 
+the motion of the arc and the production process can be enhanced. The 
+magnetic field also boosted the growth rate of the deposit and improves 
+the purity of the resultant product. This may be a way to improve the 
+purity of CDs obtained by arc discharge method. 
+
+2.1.2. Laser ablation method 
+
+Laser ablation involves utilizing a high-energy laser to irradiate the 
+material, leading to rapid heating. Laser pulses can generate small pits in 
+the sample, consuming the sample and creating plasma flowing through 
+the sample surface, thereby ionizing the sample. Early years, a carbon 
+target was created by Sun and colleagues through the hot-pressing of a 
+combination  of  graphite  powder  and  cement,  followed  by  a  gradual 
+process of baking, curing, and annealing in a flow of argon gas [2]. In the 
+presence of water, argon was used as carrier gas to ablate carbon target 
+
+Fig. 1. A summary of the synthesis process and potential application of CDs.  
+
+CoordinationChemistryReviews498(2024)2154682

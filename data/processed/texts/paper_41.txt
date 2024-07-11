@@ -1,0 +1,267 @@
+Materials Today Nano 10 (2020) 100072
+
+Contents lists available at ScienceDirect
+
+Materials Today Nano
+
+j o u r n a l h o m e p a g e : h t t p s : / / w w w . e v i s e . c o m / p r o ﬁ l e / # / M T N A N O / l o g i n
+
+Polyanion-type electrode materials for advanced sodium-ion batteries
+
+L.N. Zhao a, b, c, 1, T. Zhang a, c, 1, H.L. Zhao d, **
+a Department of Materials Science and Engineering, College of Engineering, Peking University, Beijing 100871, China
+b Beijing Innovation Centre for Engineering Science and Advanced Technology (BIC-ESAT), China
+c Beijing Key Laboratory for Magnetoelectric Materials and Devices (BKLMMD), China
+d School of Materials Science and Engineering, University of Science and Technology Beijing, Beijing 100083, China
+
+, Y.L. Hou a, b, c, *
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Article history:
+Received 15 November 2019
+Received in revised form
+27 December 2019
+Accepted 8 January 2020
+Available online 17 January 2020
+
+Keywords:
+Sodium-ion batteries
+Polyanion
+NASICON
+Cathode materials
+Anode materials
+
+Electrical energy storage (EES) exploiting secondary battery technologies is ideal for large-scale energy
+storage needs due to the rapid growth in proliferation of renewable energy sources and the emerging
+markets of grid-scale battery applications. Sodium-ion batteries (SIBs), a more sustainable EES option
+alternative to lithium-ion batteries (LIBs), have attracted intensive interests over the past decade,
+because of the natural abundance, evenly geographical-distributed Na-source, signiﬁcantly low cost, and
+environmental benignity. Polyanionic compounds offer an appealing combination of rich structural di-
+versity, superior ionic conductivity, high structural and thermal stability, and convenient storage/
+handling, making them competitive and attractive candidate electrode materials for next generation
+energy storage systems. In this review, recent advancements made regarding polyanion-type electrodes
+used for SIBs are summarized, elaborating their intrinsic structural characteristics, electrochemical
+properties, and corresponding sodium-storage mechanisms. Furthermore, we highlight the recent
+achievements in the lab-scale Na-ion full-cell prototypes that consist of polyanion-type compounds as
+one or both working electrodes. Last but not least, challenges and outlooks on further optimization of the
+structure and the electrochemical performance of polyanion-type electrode materials for SIBs are also
+presented to provide some insights to facilitate the practical realization of sodium-ion technologies.
+
+© 2020 Elsevier Ltd. All rights reserved.
+
+1. Introduction
+
+Due to the economic and environmental vulnerability of fossil
+fuels combustion, effectively exploiting renewable, sustainable, and
+clean energy sources becomes especially urgent to address the
+worldwide shortage of resources and global warming concerns. In
+order to curb the renewable energy sources intermittency and
+obtain stable and continuous generation of electricity for power
+grid operations, developing performance- and cost-effective en-
+ergy storage systems is of the prime necessity [1]. In the past de-
+cades, electrical energy storage (EES) exploiting secondary battery
+technologies revealed to be one of the most feasible options
+because of their high energy round-trip efﬁciency, versatile power,
+and suitable energy characteristics to meet various grid functions
+successful
+and
+
+productions
+
+Particularly,
+
+scalable
+
+[2,3].
+
+* Corresponding author.
+** Corresponding author.
+
+E-mail addresses: hlzhao@ustb.edu.cn (H.L. Zhao), hou@pku.edu.cn (Y.L. Hou).
+
+1 These authors contributed equally to this work.
+
+https://doi.org/10.1016/j.mtnano.2020.100072
+2588-8420/© 2020 Elsevier Ltd. All rights reserved.
+
+commercialization of lithium-ion batteries (LIBs) in 1990 is a great
+milestone, which not only catalyzes unprecedented applications of
+electronics information industry, but also offers new opportunities
+for better integration and penetration of renewable energy sources
+[4]. Intrinsic ﬂexibility of battery storage technologies coupled to
+renewable electricity sources will usher in revolution of our electric
+infrastructure systems, even the entire ecology-economy model of
+modern civilization [5]. It is called Smart Grid (Fig. 1), which works
+as an enabling engine to transform the current energy industry into
+a new era of reliability, availability, and efﬁciency that will
+contribute to our economic and environmental health [6].
+
+Apparently, the ultimate success of the Smart Grid is inseparable
+from the effectiveness of large-scale energy storage. Nowadays, LIBs
+are ubiquitous in the sector of small-scale consumer electronics and
+gradually increasing the market share in battery electric vehicles.
+LIBs have the ability to respond quickly to match the rapid growth
+in renewable energy sources, due to the high energy density and
+stable cycling properties of the already commercialized designs and
+the potentials of different shapes and sizes. Yet, facing the steep
+price rise and resource constraints from the scarcity and non-
+
+2
+
+L.N. Zhao et al. / Materials Today Nano 10 (2020) 100072
+
+(cid:2)
+
+(cid:2)
+
+(cid:2)
+
+, N3(cid:2)
+
+This problem can be circumvented by implementing polyanion-
+type electrode materials with open framework providing pro-
+nounced structural stability. Polyanionic compounds have become
+in the last two decades the subject of very attractive research since
+the discovery of electrochemical active LiFePO4 [16,21,75]. Poly-
+anionic framework materials possess versatile and adjustable
+n(cid:2)
+: X ¼ B, C, S, P, Si, As,
+structures, built on polyanionic groups [(XO4)m
+Mo, W, V, or Ti, etc.] strongly covalent-bonded with [(MOx)n(cid:2)
+:
+M ¼ transition-metal] [76]. The “mixed-polyanionic units” can also
+be realized by designing the join with other anions, such as [Y
+, e.g.
+, O2(cid:2)
+, etc.] [X2Om: e.g. PO4eP2O7, SO4eS2O3, etc.], and
+F
+, OH
+n(cid:2)
+, e.g. PO4eCO3, PO4eSO4, PO4eNO3, etc.] [14,77]. Fig. 2
+[(XO4)m
+shows the crystal structures of the representative polyanionic
+compounds, and the corresponding crystal structural parameters
+are summarized in Table 1. Polyanion-type electrode materials are
+particularly attractive and widely considered as futuristic Na-host
+robust
+electrodes due to the following considerations:
+covalent-bonded framework provides high structural and thermal
+stability, essential for extensive cycling life and safety issues. (2) A
+large interstitial space generated from the open network structure
+of interconnected conduction pathways leads to fast ionic con-
+duction and low volumetric expansion during Na-ions sodiation/
+desodiation processes. (3) Rich structural diversity allows the
+monitoring of the given Mnþ
+/M(n(cid:2)1)þ
+redox couples and achieves
+higher values of redox potentials than that of layer oxides through
+the inductive effects introduced by Goodenough [78]. However, the
+“weight penalty” from the presence of polyanion units and no
+direct MeOMe electronic delocalization result in quite poor
+intrinsic electronic conductivity in this class of material. To
+compact this issue, coating with various conductive materials,
+constructing special micro/nano structures, as well as lattice
+doping are effective strategies to achieve high electrochemical
+performance of polyanion-type electrode materials.
+
+(1)
+
+In this review, the recent research progress and prospective
+future in the broad class of polyanion-type electrode materials for
+SIBs are summarized. A detail account of various sodium-based
+polyanionic compounds is given, focusing especially on intrinsic
+structural
+features, sodium-storage mechanisms, and electro-
+chemical performance. We highlight the descriptions of the most
+promising sodium-ion full-cells proposed so far on the use of
+polyanion-type electrodes and the various architectures and stra-
+tegies to enhance the electrochemical performances with regard to
+full-cell characteristics and electrochemistry considerations.
+In
+addition, some of the practical challenges and future prospects
+toward the commercialization of polyanion-type compounds for
+SIBs are also included. The polyanion-type compounds are pro-
+posed to be potential systems for large-scale energy storage
+applications.
+
+2. Structures and sodium-storage mechanisms
+
+2.1. Polyanion compounds as cathode materials
+
+2.1.1. Olivine and maricite NaFePO4
+
+Because olivine-type LiFePO4 gains great commercial success in
+LIBs owing to its low cost and high energy density, the sodium
+counterpart, NaFePO4,
+is one of the earliest and most widely
+studied polyanionic compounds as cathode material for SIBs. Two
+main types of structures of NaFePO4, olivine and maricite, have thus
+far been reported to be Na insertion hosts for rechargeable
+batteries.
+
+Olivine NaFePO4 (Fig. 2a) crystallizes into an orthorhombic
+structure (space group of Pnma), in which the Na and Fe atoms
+occupy half of the octahedral sites, while the P atoms are conﬁned
+the tetrahedral sites in a distorted
+into the one-eighth of
+
+Fig. 1. Schematic illustration of the Smart Grid.
+
+uniform distribution of lithium resource, LIBs are believed to be not
+the best choice for stationary, large-scale EES applications and, in
+addition, there are growing concerns on adverse ecological hazards
+upon disposal of toxic elements [7]. The challenges and demands
+outlined above have motivated the researchers to pursue various
+alternative battery chemistries (termed as “post-LIBs”), featuring as
+low cost, widespread availability, and environmentally friendly, to
+replace LIBs especially in applications unrestricted by high gravi-
+metric and/or volumetric energy density [8].
+
+Given the abundance of sodium-based resources and the
+similar performance characteristics with LIBs, room-temperature
+sodium-ion batteries (SIBs) hold great promise to meet large-
+scale EES demands [9,10]. Comparing with Li, however, the large
+ionic size of Na (1.02 Å vs. 0.76 Å) and its low standard electro-
+þ
+chemical potential vs. SHE (~2.71 V vs. Na
+/
+Li) as a consequence of sluggish redox kinetics, hugxe volume
+variations, and low redox potentials resulted in less favorable
+power and energy densities of SIBs and thus limiting their further
+applications for grid-scale energy storage [11e13]. Tremendous
+efforts have been geared to explore suitable electrode materials for
+SIBs to match the performance and characteristics of modern LIBs
+[14e18].
+
+/Na and 3.04 V vs. Li
+
+þ
+
+A large variety of compounds have been unveiled with consid-
+erable sodium-storage capacities for SIBs. Layered metal oxides
+[19e23], polyanion compounds
+[21,24,25], and metal hex-
+acyanometalates [26e30] have been extensively investigated as
+cathode materials, whereas hard carbon [31e34], metal alloys
+[35e38], and transition-metal chalcogenides [39e42] have been
+studied as anode materials. However, most of them suffer from
+poor cycling performance owing to the structural instability during
+Na-ions insertion/extraction processes. For example,
+layered
+transition-metal oxides possess high theoretical capacity, but un-
+dergo very complicated multiphase transitions during Na-(de)
+intercalation reactions, leading to rapid structural degradation of
+the host materials [43,44]. In addition, Prussian blue analogues
+synthesized by a conventional coprecipitation method always
+contain a certain amount of lattice defects and coordinate water,
+resulting in a huge loss of active sites and causing a severe problem
+with electrolyte [45,46]. In the case of anode materials, huge
+volumetric change, such as 400%e490% volume expansion from Sn
+or P reacting with Na to form Na3.75Sn or Na3P, results in the pul-
+verization of the active materials and rapid deteriorations of cycling
+performances [47e49].
+
+

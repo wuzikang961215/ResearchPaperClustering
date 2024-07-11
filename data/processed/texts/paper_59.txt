@@ -1,0 +1,196 @@
+Received November 2, 2018, accepted November 22, 2018, date of publication December 11, 2018,
+date of current version January 4, 2019.
+
+Digital Object Identifier 10.1109/ACCESS.2018.2885083
+
+State-of-Charge Balancing Control for
+ON/OFF-Line Internal Cells Using Hybrid Modular
+Multi-Level Converter and Parallel Modular
+Dual L-Bridge in a Grid-Scale Battery
+Energy Storage System
+
+ASHRAF BANI AHMAD, CHIA AI OOI
+AND JIASHEN TEH , (Member, IEEE)
+School of Electrical and Electronic Engineering, Universiti Sains Malaysia, Nibong Tebal 14300, Malaysia
+
+, (Member, IEEE), DAHAMAN ISHAK ,
+
+Corresponding author: Chia Ai Ooi (chia.ai@usm.my)
+
+This work was supported by Universiti Sains Malaysia under Project 304/PELECT/60313053, Project 304/PELECT/8014099, and Project
+304/PELECT/6050385.
+
+ABSTRACT Cell state-of-charge (SoC) balancing within a battery energy-storage system (BESS) is the
+key to optimizing capacity utilization of a BESS. Many cell SoC balancing strategies have been proposed;
+however, control complexity and slow SoC convergence remain as key issues. This paper presents two
+strategies to achieve SoC balancing among cells: main balancing strategy (MBS) using a cascaded hybrid
+modular multi-level converter (CHMMC) and a supplementary balancing strategy (SBS) using a cascaded
+parallel modular dual L-bridge (CPMDLB). The control and monitoring of individual cells with a reduction
+in the component count and the losses of BESS are achieved by integrating each individual cell into an
+L-bridge instead of an H-bridge. The simulation results demonstrate a satisfactory performance of the
+proposed SoC balancing strategy. In this result, SoC balancing convergence point for the cells/modules
+is achieved at 1000 min when cell-prioritized MBS-CHMMC works without SBS-CPMDLB and at
+216.7 min when CPMBS-CHMMC works together with SBS-CPMDLB and when the duration required
+reduces by 78.33 %. Similarly, a substantial improvement in SoC balancing convergence point for the
+cells/modules is achieved when module-prioritized MBS-CHMMC works together with SBS-CPMDLB;
+the duration needed to reach the SoC balancing convergence point for the cells/modules is achieved after
+333.3 and 183.3 min.
+
+INDEX TERMS Cell balancing, half-bridge multi-level converter, hybrid multi-level converter, lithium-ion
+battery (Li-ion), state-of-charge (SoC).
+
+I. INTRODUCTION
+Large-scale battery energy storage systems (BESSs) are con-
+structed by connecting numerous cells in series or parallel
+to obtain the desired voltage and capacity ratings [1], [2].
+BESS is a promising technology for power grid applications
+because it has several attractive features, such as improving
+power grid quality via voltage and frequency disturbance
+regulation, immediate response to grid demands, enhancing
+the power supply reliability by providing backup electricity,
+and accelerating the interaction between electric vehicle and
+smart grid [3]–[5]. Lithium-ion (Li-ion) cells have received
+
+considerable interest from researchers due to their several
+advantages, such as long lifecycle, high speciﬁc energy,
+cell safety, fast charge capability and low self-discharge
+rate [6]–[8]. However, cell parameter differences as a result
+of manufacturing tolerances or during BESS operation lead
+to inequality in state-of-charge (SoC) among the cells within
+a BESS [9]. All cells in a BESS should not be overcharged or
+deeply discharged [4]; otherwise, the BESS will be forced to
+stop operating when any cell reaches its voltage limit where
+the cells are connected in series [10], [11]. Accordingly,
+the available capacity of BESS is not fully utilized even if
+
+VOLUME 7, 2019
+
+2169-3536 
+ 2018 IEEE. Translations and content mining are permitted for academic research only.
+Personal use is also permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+
+131
+
+one cell has a different SoC than the others [10]. Therefore,
+an SoC balancing circuit is required to utilize fully the avail-
+able capacity of BESS [12], [13].
+
+Different cell-balancing circuits have been stated in the
+literature [14]–[41]. The circuits are categorized as passive or
+active depending on their energy trading approaches. Passive
+cell-balancing circuits [14], [15], also known as dissipative
+cell-balancing circuits, operate by eliminating excess energy
+of the cells in the form of heat by connecting a shunt resistor
+to each cell. The passive approach has advantages, such as
+simple implementation, small size and low cost. However, it
+has some drawbacks, such as energy loss, heat problems and
+its need for a relatively long time to achieve the SoC balancing
+of cells. Active cell-balancing circuits [16]–[41] are designed
+to transfer energy among the cells without shunt resistors,
+where the energy is moved from cells with high energy to
+cells with low energy. Accordingly, the drawbacks of the
+passive approach have been overcome. The active approach
+can be categorized into three distinct methods based on induc-
+tors [16]–[18]/transformers [19]–[23], capacitors [24]–[28]
+and energy converters [29]–[41].
+
+In recent years, modular cascaded H-bridge (MCHB)
+multi-level converter topologies have received a considerable
+interest for their use in BESS because of their features of
+using MOSFET switches, possessing inherent modularity and
+reducing output voltage harmonics [30]. In [31], each indi-
+vidual cell is integrated with a non-isolated DC/DC converter
+and an additional capacitor to achieve SoC balancing among
+the cells. However, this topology is unsuitable for grid-scale
+BESS applications due to the complexity and cost with a lot
+of cells required. While the researchers in [32]–[36] have
+proposed to integrate each pack of cells with DC/DC con-
+verter and additional capacitors to achieve SoC balancing,
+the main drawback is the inability to control and monitor each
+individual cell. In addition, SoC balancing for the internal
+cells of BESS is not achieved. SoC balancing among the
+phases and sub-modules has been achieved by using MCHB
+without adding external balancing circuits [13], [37]–[40].
+However, the main drawback of these topologies is that the
+SoC among the internal cells of BESS is not addressed. SoC
+balancing among the modules was achieved in [13] by con-
+trolling their duty cycle, where each H-bridge of the cascaded
+topology was connected to a pack of cells and these cells
+were connected to one another in series. Pack terminal voltage
+measurements are used to achieve the balancing among the
+modules which is another drawback for the approach used
+in [13] due to the inability to provide an accurate estimation
+of SoC. SoC balancing among the modules was also achieved
+in [39] by releasing the output power of each module depend-
+ing on their SoC, and SoC balancing among the three phases
+was achieved by controlling the zero-voltage component of
+the output voltage. Each pack of cells is connected to a single
+converter. Thus, an additional battery management system is
+required to achieve a balancing among the cells as well as for
+SoC estimation.
+
+A. B. Ahmad et al.: SoC Balancing Control for ON/OFF-Line Internal Cells
+
+A multi-level battery management system is developed
+in [40] to address SoC balancing among the cells within a bat-
+tery pack. Additional DC–AC inverters and a multi-winding
+transformer are used to achieve SoC balancing at pack level
+and cell level, respectively. Module balancing and phase
+balancing are achieved using the same approach employed
+in [39]. SoC is estimated for each pack instead of each indi-
+vidual cell by using Extended Kalman ﬁlter to estimate SoC,
+which is considered an extremely complicated method. SoC
+balancing among the internal cells of BESS was achieved
+by integrating each cell into an H-bridge without additional
+components [11], [41]. Topology [41] has attractive features,
+such as controlling and monitoring of each individual cell of
+BESS, SoC balancing for each internal level of BESS cells
+and increasing the reliability of the system by the possibility
+of insulation of the failure cells. Moreover, control complex-
+ity was addressed in [41] by using a hierarchical control
+strategy. However, despite the aforementioned attractive fea-
+tures, using a high number of MOSFET switches and taking
+a long duration to achieve SoC balancing among the cells are
+the drawbacks of this topology. In [42] and [43], a parallel
+hybrid modular multi-level converter without SoC balancing
+strategy is proposed. Compared with traditional MCHB, the
+hybrid MCHB can potentially minimize the number of con-
+verter components and power losses [43].
+
+This work aims to address the challenges arising from
+using hundred thousand cells as required in a grid-scale
+BESS. The main challenges are control complexity and
+slow balancing. In this study, two original contributions are
+included. First, main balancing strategy (MBS) using a cas-
+caded hybrid modular multi-level converter (CHMMC) is
+proposed to maintain the attractive features of the proposed
+topology in [11] and [41] while overcoming its drawbacks.
+In comparison with the topology used in [11] and [41],
+CHMMC is proposed to reduce the control complexity by
+reducing the number of MOSFET switches to almost half
+while achieving the same attractive features. Second, supple-
+mentary balancing strategy (SBS) using a cascaded parallel
+modular dual L-bridge (CPMDLB) is proposed to reduce
+the duration needed to achieve SoC balancing among the
+cells in a grid-scale BESS. The methodology of this novelty
+topology is described in Section II. The balancing of BESS
+for the proposed topology using control strategy is presented
+in Section III. Simulation results of the proposed SoC bal-
+ancing strategy with comparative analysis are discussed in
+Section IV. The experimental set-up is presented inSection V,
+and Section VI concludes this paper.
+
+II. METHODOLOGY
+A. DESCRIPTION AND CIRCUIT DIAGRAM
+Fig. 1 depicts the proposed topology for a three-phase grid-
+scale BESS. Each phase consists of Z banks and modules (M )
+and ZN sub-modules (SM) and cells, where Z is the number of
+banks and modules, and N is the number of cells and SM into
+each M . The value of N is uniﬁed for all the modules. A bank
+
+132
+
+VOLUME 7, 2019
+
+

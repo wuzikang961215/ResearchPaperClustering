@@ -1,0 +1,237 @@
+Applied Energy 197 (2017) 1–13
+
+Contents lists available at ScienceDirect
+
+Applied Energy
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / a p e n e r g y
+
+Dealing with multiple decades of hourly wind and PV time series in
+energy models: A comparison of methods to reduce time resolution and
+the planning implications of inter-annual variability
+
+Climate Policy Group, Department of Environmental Systems Science, ETH Zürich, Switzerland
+
+Stefan Pfenninger
+
+h i g h l i g h t s
+
+(cid:1) Comparison of resampling, clustering, and heuristics to reduce model time resolution.
+(cid:1) Suitable approach depends on input data and model constraint setup.
+(cid:1) Heuristic approaches appear more stable than statistical clustering.
+(cid:1) Results with high renewable shares but few years of input data are unreliable.
+(cid:1) Better modeling and planning methods needed to deal with inter-year variability.
+
+a r t i c l e
+
+i n f o
+
+a b s t r a c t
+
+Article history:
+Received 5 October 2016
+Received in revised form 3 February 2017
+Accepted 10 March 2017
+Available online 4 April 2017
+
+Keywords:
+High-resolution energy modeling
+Time series data
+Variable renewable generation
+Modeling methods
+
+Using a high-resolution planning model of the Great Britain power system and 25 years of simulated
+wind and PV generation data, this study compares different methods to reduce time resolution of energy
+models to increase their computational tractability: downsampling, clustering, and heuristics. By com-
+paring model results in terms of costs and installed capacities across different methods, this study shows
+that the best method depends heavily on input data and the setup of model constraints. This implies that
+there is no one-size-ﬁts-all approach to the problem of time step reduction, but heuristic approaches
+appear promising. In addition, the 25 years of time series demonstrate considerable inter-year variability
+in wind and PV power output. This further complicates the problem of time detail in energy models as it
+suggests long time series are necessary. Model results with high shares of PV and wind generation using a
+single or few years of data are likely unreliable. Better modeling and planning methods are required to
+determine robust scenarios with high shares of variable renewables. The methods are implemented in
+the freely available open-source modeling framework Calliope.
+(cid:1) 2017 The Author. Published by Elsevier Ltd. This is an open access article under the CC BY license (http://
+creativecommons.org/licenses/by/4.0/).
+
+1. Introduction
+
+Energy system models were ﬁrst developed in the 1970s by the
+International Energy Agency (IEA) and the International Institute
+for Applied Systems Analysis (IIASA) in the aftermath of the inter-
+national oil crisis. Using optimization methods, in particular linear
+programming, they allowed analysts to structure their assump-
+tions and data, forming them into internally coherent scenarios
+of how energy is extracted, converted, transported, and used, and
+how these processes might change in the future. Today, with the
+increasing deployment of variable renewable generation, the glo-
+bal energy system is again undergoing a fundamental transition.
+Global installed wind power capacity reached about 417 GW in
+
+2015, up from 17 GW in 2000, while solar photovoltaics (PV) has
+experienced an even higher growth rate, with capacity rising from
+below 1 GW in 2000 to 222 GW in 2015 globally [1]. Energy mod-
+els are important decision-making aids to help navigate the trans-
+formation of the current fossil-fuel based energy system to one
+based on clean and renewable energy [2].
+
+In this context, the rising importance of variable renewable
+generation has presented two crucial and related problems to
+energy modelers. The ﬁrst problem is procuring data on the
+generation potential for wind and PV power with sufﬁcient resolu-
+tion in space and time, then integrating this data into power sys-
+tem models such as LIMES-EU [3] or larger energy system
+models such as TIMES and TIAM [4]. Having data with temporal
+resolution of one hour or better allows a model to depict the
+hour-by-hour and day-by-day ﬂuctuations in power output from
+
+E-mail address: stefan.pfenninger@usys.ethz.ch
+
+http://dx.doi.org/10.1016/j.apenergy.2017.03.051
+0306-2619/(cid:1) 2017 The Author. Published by Elsevier Ltd.
+This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+
+2
+
+S. Pfenninger / Applied Energy 197 (2017) 1–13
+
+these technologies, how they correlate with each other and with
+power demand [5]. The second problem pertains to the inter-
+annual variability of renewable generation, which requires many
+years of data to fully address. Recent work has started to address
+the ﬁrst problem but in the main, studies are limited to a single
+or a small number of years [6–9]. The provision of longer time ser-
+ies requires input data ideally spanning multiple decades. This is
+becoming possible through the use of global reanalysis data for
+energy modeling [10,11].
+
+Both of these problems overlap in one crucial area: for large
+models to be computationally tractable, it is often not feasible
+for them to include full hourly time series for an entire year,
+let alone for several decades. This is primarily due to the
+computational requirements of running what are often linear or
+mixed-integer optimization models. Work has started to emerge
+investigating ways to reduce the number of time steps in models
+while retaining relevant detail, primarily by using statistical
+clustering methods to derive a set of typical days or weeks from
+a larger input time series, then feeding those days into an energy
+model [12–15]. However, there are well-known limitations to sta-
+tistical clustering methods, including the fact that most methods
+produce clusters even in homogeneous datasets, and that clusters
+must be validated and their stability assessed [16]. This implies
+that approaches may vary in performance in different years, and
+that speciﬁc approaches are more or less suitable depending on
+the structure of the underlying model.
+
+This paper treats this problem systematically, by examining dif-
+ferent techniques to reduce the time resolution of energy models
+and their impact on model performance and results, and by doing
+so, answers two questions. First, how accurate are different meth-
+ods to reduce time resolution when compared on the same model
+and with different model conﬁgurations? Second, how can time
+resolution be reduced in the most efﬁcient way while maintaining
+scientiﬁc accuracy? The rationale when reducing the number of
+time steps is to balance improved computational performance with
+model accuracy. This study compares different approaches to
+achieve this, including downsampling, statistical clustering meth-
+ods, and heuristic selection of speciﬁc days and weeks. Wind and
+solar generation show signiﬁcant inter-annual variability, so
+multi-decade time series data should ideally be used to represent
+the full range of this variability [11,10]. This further complicates
+the answers to the two questions posed above: when considering
+power systems with very high shares of variable renewable gener-
+ation, it is necessary to also consider whether the differences in
+accuracy between different time resolution reduction approaches
+persist across different years or when examining multi-decade
+time series. The analysis is performed with a model of the UK
+power system based on the open-source Calliope high-resolution
+modeling framework [8].
+
+2. Background
+
+Table 1 gives a stylized overview of the ways in which temporal
+resolution has been included in energy models in order of increas-
+ing detail (spatial resolution is included for completeness, but this
+paper focuses on temporal resolution). With the displacement of
+traditional power generation by variable renewables expected to
+increase, energy modelers have been moving downwards in this
+table from lower to higher resolutions. Approaches such as average
+availabilities for technologies, which were sufﬁcient when model-
+ing baseload or completely dispatchable generators such as coal or
+nuclear power, have been replaced with more explicit treatment of
+time. However, this more explicit treatment comes at a computa-
+tional cost. Assuming a model with a single year of 8760 hourly
+time steps, 20 technologies (such as wind generation or electric
+
+heating), 20 locations and 5 time-dependent constraints (such as
+maximum power generation per location, storage charging, and
+discharging), more than 17 million total constraints would result.
+Reducing such a model’s size by one or two orders of magnitude
+by reducing the number of time steps brings with it a concomitant
+reduction in computational complexity, and thus in required CPU
+time and memory requirements to solve it.
+
+There are broadly two ways to explicitly include temporal detail
+in energy models without including full time series data. The ﬁrst
+is time slices, that is, a reduced set of time steps chosen to charac-
+terize key aspects of temporal variability, for example by covering
+weekdays and weekends, different times of day, and different sea-
+sons. For example, four seasons with four times per day for both
+weekdays and weekends would result in 32 time slices. Large
+energy system models such as TIMES generally use time slices
+e.g., [19,20]. The second way is representative of typical days (or
+longer time periods) extracted or artiﬁcially constructed from full
+time series. Typical days are an intermediate step on the path
+towards full time series: selecting a number of speciﬁc days from
+the data covering as much variability as possible, or constructing
+synthetic days by clustering the data. In both cases the goal is to
+preserve the relevant statistical properties of the time series and
+thus minimize impact on model results.
+
+Two problems arise when reducing the resolution of model
+input time series: concurrency and continuity. It is important that
+correlation between events is realistic in an energy model, for
+example, a stormy winter day may induce higher heating demand,
+reduce PV power output to almost zero, but provide above-average
+wind power production. A concurrency problem arises when a sub-
+set of typical heat demand days are mixed with a subset of typical
+wind production days and such correlations are lost. This can be
+circumvented by ensuring that an internally consistent set of input
+data is used across the entire model. The second problem is that of
+continuity and appears when there is a state in a model that needs
+to carry over from one time step to the next. The prime example of
+this is the state of charge of storage facilities. Ensuring continuity
+between time steps can be difﬁcult to address when picking repre-
+sentative days, so recent approaches have often used groups of
+consecutive days [14]. Selecting days should take into considera-
+tion a statistical measure of representativeness, as a selection
+based on a typical (e.g. seasonal basis) has shown to be inferior
+for high shares of variable renewables [21].
+
+Statistical clustering is a way to group samples into groups
+called clusters, such that the similarity of samples within a cluster
+is higher than between clusters. It can be used to select represen-
+tative time periods, and has been applied in particular when study-
+ing demand proﬁles and to estimate load proﬁles where data is
+limited. Rhodes et al. [22] use the k-means clustering technique
+to group homes with similar hourly electricity demand proﬁles
+and use regression to determine which variables inﬂuence demand
+in a cluster. Similar clustering approaches for electricity demand
+were also used in Räsänen et al. [23] and McLoughlin et al. [24].
+Green et al. [12] use k-means clustering for power demand in a
+mixed-integer Great Britain (GB) power system dispatch model
+written in GAMS, for one year at a time over the 12 years in the
+period 1994–2005, reporting no more than around 1% model error
+in system-wide power costs but a model speedup of a factor of
+about 60 when using their clustered demand data. Clustering has
+also been used for more than just demand data. Heuberger et al.
+[15] use the k-means clustering approach reported in Green et al.
+[12] for demand and for wind and solar production in a cost-
+optimizing mixed-integer GB power system planning model,
+reporting about a 0.6% error in system-wide cost results and a 4%
+error in technology-speciﬁc costs when comparing to unclustered
+data. Baringo and Conejo [25] compare the use of load duration
+curves and k-means clustering for an efﬁcient representation of
+
+

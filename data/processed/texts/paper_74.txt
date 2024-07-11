@@ -1,0 +1,183 @@
+Article
+Weather Impact on Solar Farm Performance: A Comparative
+Analysis of Machine Learning Techniques
+
+Ajith Gopi 1,2, Prabhakar Sharma 3
+and Erdem Cuce 7
+
+, Kumarasamy Sudhakar 4,5,6,*, Wai Keng Ngui 4
+
+, Irina Kirpichnikova 6
+
+1
+
+3
+
+4
+
+Energy Sustainability Research Group, Automotive Engineering Center, Universiti Malaysia Pahang,
+Pekan 26600, Pahang, Malaysia
+
+2 Agency for New and Renewable Energy Research and Technology (ANERT),
+
+Thiruvananthapuram 695033, India
+School of Engineering Sciences, Delhi Skill and Entrepreneurship University, Delhi 110089, India
+Faculty of Mechanical and Automotive Engineering Technology, Universiti Malaysia Pahang,
+Pekan 26600, Pahang, Malaysia
+
+5 Centre of Excellence for Advancement Research Fluid Flow (Fluid Center), Universiti Malaysia Pahang,
+
+Gambang 26300, Pahang, Malaysia
+
+6 Department of Electric Power Stations, Network and Supply Systems, South Ural State University (National
+
+Research University), 76 Prospekt Lenina, 454080 Chelyabinsk, Russia
+
+7 Department of Mechanical Engineering, Faculty of Engineering and Architecture, Recep Tayyip Erdogan
+
+University, Zihni Derin Campus, 53100 Rize, Turkey
+
+* Correspondence: sudhakar@ump.edu.my; Tel.: +609-424-6249
+
+Abstract: Forecasting the performance and energy yield of photovoltaic (PV) farms is crucial for
+establishing the economic sustainability of a newly installed system. The present study aims to
+develop a prediction model to forecast an installed PV system’s annual power generation yield
+and performance ratio (PR) using three environmental input parameters: solar irradiance, wind
+speed, and ambient air temperature. Three data-based artiﬁcial intelligence (AI) techniques, namely,
+adaptive neuro-fuzzy inference system (ANFIS), response surface methodology (RSM), and artiﬁcial
+neural network (ANN), were employed. The models were developed using three years of data from
+an operational 2MWp Solar PV Project at Kuzhalmannam, Kerala state, India. Statistical indices such
+as Pearson’s R, coefﬁcient of determination (R2), root-mean-squared error (RMSE), Nash-Sutcliffe
+efﬁciency (NSCE), mean absolute-percentage error (MAPE), Kling-Gupta efﬁciency (KGE), Taylor’s
+diagram, and correlation matrix were used to determine the most accurate prediction model. The
+results demonstrate that ANFIS was the most precise performance ratio prediction model, with an R2
+value of 0.9830 and an RMSE of 0.6. It is envisaged that the forecast model would be a valuable tool
+for policymakers, solar energy researchers, and solar farm developers.
+
+Keywords: artificial intelligence; forecasting; solar irradiance; energy generation; solar plant; neuro-fuzzy
+
+1. Introduction
+
+Renewable energy is the best solution for mitigating the threats of climate change.
+With technology making rapid advancements, the renewable energy sector has achieved
+incredible progress in the last decade [1]. Since almost all renewable energy sources are
+intermittent, improved forecasting and modeling of power resources becomes essential for
+renewable energy to manage the grid effectively [2]. The vulnerabilities in the supply chain
+of renewable energy must be smoothened to cope with the variabilities. The incorporation
+of storage systems beneﬁts the large scale solar power developments [2]. Intelligent systems
+can support the integration of renewables into the existing grid and make renewable energy
+competitive in the current market. When artiﬁcial intelligence (AI) is integrated into
+renewable energy plants, the sensors and internet of things (IoT) devices can give new
+insights to the grid operators. Hybridization and storage are also becoming popular
+
+Citation: Gopi, A.; Sharma, P.;
+
+Sudhakar, K.; Ngui, W.K.;
+
+Kirpichnikova, I.; Cuce, E. Weather
+
+Impact on Solar Farm Performance:
+
+A Comparative Analysis of Machine
+
+Learning Techniques. Sustainability
+
+2023, 15, 439. https://doi.org/
+
+10.3390/su15010439
+
+Academic Editor: Kian Jon Chua
+
+Received: 7 September 2022
+
+Revised: 12 November 2022
+
+Accepted: 14 November 2022
+
+Published: 27 December 2022
+
+Copyright: © 2022 by the authors.
+
+Licensee MDPI, Basel, Switzerland.
+
+This article is an open access article
+
+distributed under
+
+the terms and
+
+conditions of the Creative Commons
+
+Attribution (CC BY) license (https://
+
+creativecommons.org/licenses/by/
+
+4.0/).
+
+Sustainability 2023, 15, 439. https://doi.org/10.3390/su15010439
+
+https://www.mdpi.com/journal/sustainability
+
+sustainabilitySustainability 2023, 15, 439
+
+2 of 28
+
+with solar Photovoltaic (PV) plants, which help the grid in the case of intermittency and
+unreliability of the power source [3].
+
+The increased acceptance of distributed energy resources in the grid necessitates
+integrating AI techniques to control and optimize loads and manage the selection of
+different renewable energy resources for meeting the loads based on availability. With
+AI integration, microgrids and virtual power plants have become more dynamic and
+intelligent [4]. Artiﬁcial intelligence can enhance the performance of solar power plants to
+a greater level. The weather remains a signiﬁcant factor in inﬂuencing the generation of
+renewable energy-based plants, such as solar and wind plants [5]. It is crucial to predict the
+output of wind and solar PV plants for the demand and supply management of electricity
+systems worldwide. Different AI techniques can predict PV plants’ performance precisely
+and thus, improve efﬁciency and accessibility. AI can address the issues of variability in
+renewable energy generation [6]. AI-based techniques offer a higher potential for predicting
+both the weather and the performance of renewable energy [7]. AI techniques will learn
+critical information patterns, avoiding the need for mathematical routines and complex
+rules. Intelligent sensors and IoT systems are interconnected to collect vast amounts of
+data [8].
+
+1.1. Literature Review
+
+Most of the published work on this topic is concerned with predicting solar radiation.
+The power output of a PV-based solar farm/plant module, though, is affected by factors
+other than solar irradiation. There has been little research on projecting PV-generated
+electricity. Factors such as hardware (cell size, solar cell type, incidence angle, layout) and
+weather conditions inﬂuence the electrical power output. In a PV system, for example,
+the temperature of the solar cell inﬂuences the quantity of electricity generated. Solar
+irradiation, ambient temperature, wind speed, and relative humidity affect the cell’s tem-
+perature. Various researchers have made efforts to predict the power generated from a
+solar PV plant by utilizing artiﬁcial intelligence (AI) tools like adaptive neuro-fuzzy infer-
+ence system (ANFIS) [9], artiﬁcial neural networks (ANN) [10], numerical regression [11],
+support vector machines [3,12], and response surface methodology (RSM) [13] based on
+weather categorization concepts. Shi et al. [14] used a support vector machine for weather
+categorization to create a unique prediction model for estimating the power production of
+a 20 MW PV facility. The prediction model had a prediction error of 8.46%. The study used
+only the type of day (foggy, clear, rainy, and cloudy) as input. RSM was employed to create
+a predictive model by Kazemian et al. [15] for a photovoltaic system. The correlations
+between the characteristics above outputs, such as thermal, electrical energy, entropy, and
+exergy, were determined by means of their interactions in system performance. In another
+study, solar irradiation data from a township named Kermanshah in Iran was used to
+predict solar radiation using three methodologies: ANFIS, ANN, and RSM. The results
+were compared among themselves. The ﬁnding was that the prediction efﬁcacy of RSM
+was marginally superior compared to the neural network [16].
+
+In a more extensive study by Mellit et al. [17], a year’s data was used to anticipate the
+electricity generated by a 50 W PV plant. ANN was used for model training and prediction.
+This study was intended to predict only day power generation with an error range of
+4.38% to 31.01%. Deep learning neural networks (NNs) are also suggested for prediction
+and modeling. Because of the potential to maintain prior time-series data employing
+the memory architecture, the long short-term memory (LSTM) technique was used to
+predict PV power generation [18]. When applied to 21 examined PV plants, LSTM and
+auto-encoders proved more efﬁcient in power prediction than multi-layer perceptron and
+physical prediction approaches [19]. A hybrid approach of fuzzy decision and neural
+networks was employed to model-predict the photovoltaic-based power generation at two
+different sites in Mexico [20]. The study conducted at Hermosillo and Mexico City in the
+Sonora State of Mexico proved that the ANFIS method provides more accurate results than
+the conventional statistical methods.
+
+

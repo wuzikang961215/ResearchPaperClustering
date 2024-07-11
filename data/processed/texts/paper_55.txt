@@ -1,0 +1,200 @@
+Received: 6 May 2023
+
+Revised: 23 September 2023
+
+Accepted: 3 October 2023
+
+DOI: 10.1002/prs.12541
+
+O R I G I N A L A R T I C L E
+
+Introduction to grid-scale battery energy storage system
+concepts and fire hazards
+
+Veronica Goldsmith
+
+Arup, Los Angeles, California, USA
+
+Correspondence
+Veronica Goldsmith, Arup, 900 Wilshire Blvd.,
+19th floor, Los Angeles, CA, USA.
+Email: veronica.goldsmith@arup.com
+
+Abstract
+
+As the world continues to enact progressive climate change targets, renewable
+
+energy solutions are needed to achieve these goals. One such solution is large-scale
+
+lithium-ion battery (LIB) energy storage systems which are at the forefront in ensur-
+
+ing that solar- and wind-generated power is delivered when the grids need it most.
+
+However, the perceived hazards of LIBs due to recent events in the United States
+
+and Australia pose a risk to their future success. When a battery energy storage sys-
+
+tem (BESS) has a multilayered approach to safety, the thermal runaway, fire, and
+
+explosion hazards can be mitigated. Successful
+
+implementation of this approach
+
+requires cooperation, collaboration, and education across all stakeholder groups to
+
+break down these preconceived notions. Much can be learned from the recent BESS
+
+fire and explosion events to inform safer design and operation. These events and
+
+their contributing factors share many commonalities with historic losses in the hydro-
+
+carbon industry. Fire and process safety engineers who have traditionally worked in
+
+the hydrocarbon industry can be of immense value to the BESS industry.
+
+K E Y W O R D S
+
+alternative energy infrastructure, BESS, energy storage, fire engineering, lessons learned
+
+1
+
+| B A T T E R I E S , P O WE R , A N D T H E GR I D
+
+supplying when the conditions are less than favorable. This energy
+
+balancing challenge is symbolized in Figure 1. It is imperative that this
+
+The way in which the world generates, transmits, and uses its energy
+
+theoretical scale is balanced. Energy storage is a piece of the solution,
+
+is changing. We have been decarbonizing our electricity networks and
+
+along with distributed generation and microgrids, which can hypothet-
+
+transitioning our vehicles to run from petroleum fuels to batteries/fuel
+
+ically tip the scale.
+
+cells. Additionally, we are striving to make upgrades and expansions
+
+The risks of imbalance in the electrical grid are significant, most
+
+to transmission networks and use energy more wisely.
+
+recently highlighted by a severe winter storm in Texas in February
+
+We are now generating power with wind, solar, and wave tech-
+
+2021, which resulted in the usage of power significantly outpacing
+
+nologies, which are variable generation technologies because supply
+
+production. As shown in Figure 2, this resulted in the Texas energy
+
+will vary over time based on the weather, daylight, and gravitational
+
+grid frequency dropping below a safety threshold of 59.4 hertz. Had
+
+forces. When coupled with inflexible generation, such as nuclear
+
+the frequency stayed below this threshold for 9 min, the entire net-
+
+which cannot quickly ramp up and down to match changes in energy
+
+demand, energy balancing issues ensue. This is because these variable
+
+work would have shut down, as generating units would have tripped,
+disconnecting from the grid to protect themselves.1
+
+and inflexible generation technologies do not provide the stable out-
+
+There are a number of opportunities for energy storage to be
+
+put that fossil fuels historically could guarantee. In a system where
+
+deployed throughout the electricity network. Energy storage is not
+
+supply constantly must meet the demand, we are in danger of over-
+
+just limited to large power plants; it can be deployed at many loca-
+
+generating when the renewable generation is high and under-
+
+tions along the network. Power generation is being decentralized:
+
+Process Saf Prog. 2024;43:357–363.
+
+wileyonlinelibrary.com/journal/prs
+
+© 2023 American Institute of Chemical Engineers.
+
+357
+
+358
+
+GOLDSMITH
+
+F I G U R E 1
+
+The energy balancing challenge.
+
+F I G U R E 2
+
+Texas 2021—Rapid decrease in generation resulting in frequency drop.2
+
+businesses and homeowners are now generating power too. Some
+
+medical devices, cars, and houses and can bring stability to our
+
+electricity companies even allow these users to sell electricity back to
+
+the power grid or receive credits through net metering. Businesses
+
+power grids. Some benefits of LIBs for energy storage are their high
+energy density, power density,3 and efficiency. With increasing
+
+can utilize energy storage for reliable or uninterrupted power supply.
+
+Energy storage downstream of distribution can relieve peak loads by
+
+demand for LIBs, the prices were reducing until 2022 when a 7%
+increase4 was seen due to increase in raw material cost. Lithium
+
+buying/charging during low demand and selling/discharging during
+
+high demand. Along transmission lines, storage can also offer opportu-
+
+carbonate and lithium hydroxide prices saw the greatest rises in
+2022.4
+
+nities for grid stabilization.
+
+2
+
+|
+
+L I T H I U M - I O N BA T T E R I E S
+
+One form of energy storage is using lithium-ion batteries (LIBs). The
+first commercial LIBs were introduced in 1991.2 What once just pow-
+
+ered our personal electronics and power tools is now used to power
+
+foils.
+
+Over the past 30 years, many types of LIBs have been developed,
+
+each chemistry having its trade-offs with respect to thermal stability,
+
+specific power, safety, performance, and cost. A LIB typically gets its
+
+name from the cathode chemistry. The primary components of a LIB
+
+are the cathode, anode, electrolyte, separator, and current collectors.
+
+Table 1 outlines various compositions of the first four components.
+
+Today's current collectors are made of thin copper and aluminum
+
+ 15475913, 2024, 2, Downloaded from https://aiche.onlinelibrary.wiley.com/doi/10.1002/prs.12541 by University Of Adelaide, Wiley Online Library on [29/06/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

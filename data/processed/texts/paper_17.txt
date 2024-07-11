@@ -1,0 +1,234 @@
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 8 ( 2 0 2 3 ) 1 1 2 3 7 e1 1 2 7 3
+
+Available online at www.sciencedirect.com
+ScienceDirect
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / h e
+
+Recent advances in ammonia synthesis
+technologies: Toward future zero carbon emissions
+
+Mostafa El-Shaﬁe
+
+, Shinji Kambara
+
+*
+
+Environmental and Renewable Energy Systems Division, Gifu University, Gifu City, Japan
+
+h i g h l i g h t s
+
+(cid:1) The ammonia synthesis processes were assessed including conventional Haber-Bosch technology.
+(cid:1) The catalytic materials of ammonia synthesis were reviewed.
+(cid:1) The novel analysis of ammonia production methods has been compared.
+(cid:1) Fundamental of ammonia combustion was reviewed.
+(cid:1) The future end-use vision of energy sources was proposed to achieve low carbon emissions.
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Article history:
+
+Received 28 December 2021
+
+Received in revised form
+
+29 July 2022
+
+Accepted 6 September 2022
+
+Available online 1 October 2022
+
+Keywords:
+
+Hydrogen production
+
+Ammonia synthesis
+
+Plasma
+
+Sustainability
+
+As a carbon-free molecule, ammonia has gained great global interest in being considered a
+
+signiﬁcant future candidate for the transition toward renewable energy. Numerous appli-
+
+cations of ammonia as a fuel have been developed for energy generation, heavy trans-
+
+portation, and clean, distributed energy storage. There is a clear global target to achieve a
+sustainable economy and carbon neutrality. Therefore, most of the research's efforts are
+concentrated on generating cost-effective renewable energy on a large scale rather than
+
+fossil fuels. However, storage and transportation are still roadblocks for these technologies,
+
+for example, hydrogen technologies. Ammonia could be replaced as a viable fuel for a clean
+
+and sustainable future of global energy. More efforts from governments and scientists can
+
+lead to making ammonia a clean energy vector in most energy applications. In this review,
+ammonia synthesis was assessed, including conventional HabereBosch technology. Current
+hydrogen technologies as the key parameters for ammonia generation are also evaluated.
+
+The role of ammonia as a hydrogen-based fuel and generation roadmap are discussed for
+
+future utilization of energy mix. Further, ammonia generation processes are addressed in
+
+depth, including blue and green ammonia generation. A survey of ammonia synthesis cat-
+
+alytic materials was conducted and the role of catalyst materials in ammonia generation was
+
+compared, which showed that the Ru-based catalyst generated the maximum ammonia
+
+after 20 h of starting experiment. An end-use plan for using ammonia as a clean energy fuel in
+
+vehicles, marines, gas turbines as well as fuel cells, is brieﬂy discussed to recognize the
+
+potential applications of ammonia use. The practical and future end-use vision of energy
+
+sources is proposed to achieve great beneﬁts at low carbon emissions and costs. This review
+
+can provide prospective knowledge of large-scale aspects and environmental considerations
+of ammonia. Herein, we conclude that ammonia will become the “clean energy carrier link”
+that will achieve the global energy and economy sustainability targets.
+
+© 2022 Hydrogen Energy Publications LLC. Published by Elsevier Ltd. All rights reserved.
+
+* Corresponding author.
+
+E-mail address: mostafaelshaﬁe81@gmail.com (M. El-Shaﬁe).
+
+https://doi.org/10.1016/j.ijhydene.2022.09.061
+0360-3199/© 2022 Hydrogen Energy Publications LLC. Published by Elsevier Ltd. All rights reserved.
+
+11238
+
+i n t e r n a t i o n a l j o u r n a l o f h y d r o g e n e n e r g y 4 8 ( 2 0 2 3 ) 1 1 2 3 7 e1 1 2 7 3
+
+Introduction
+
+All emitted greenhouse gases (GHGs), especially carbon diox-
+ide (CO2) massively contribute to the climate change effect by
+creating greenhouse thermal radiation traps that lead to
+increased atmosphere or environment temperature. As a
+result, a sharp increase in global temperatures has been re-
+ported [1]. This increase in temperature will promote ice
+melting that will raise the ocean's water level and have many
+other impacts on the environment. The registered global
+temperature increase is approximately 1 (cid:3)C. Because of the
+impact of GHGs on climate change, various technologies have
+been developed to reduce or avoid the CO2 emission from
+current fossil fuels and their applications. The predicted,
+human-caused annual emission by from 2015 to 2100 has
+been investigated [2].
+
+Thus, the transformation from conventional
+
+fuels to
+renewable energy is considered an urgent issue to reduce GHG
+emissions. Recently, renewable energy sources have received
+much more interest in creating new global energy shifts for
+low-carbon or carbon-free energy resources. Solar and wind
+energy are the solutions for most large-scale power generation.
+Battery storage can address some of the current energy chal-
+lenges, but it cannot be applied to large-scale applications.
+Wind energy is the most commercial renewable energy source
+in the world. Wind turbines have been developed to become
+taller, bigger hubs with large-diameter rotors. The wind tur-
+bine farm capacity has reached 659 MW [3]. Power generation
+from wind turbines will increase in the next 20 years [2].
+
+Solar energy, such as wind energy, has also gained great
+worldwide attention. It is considered as a paramount energy
+source for renewable energy production. Solar energy tech-
+nology applications, such as photovoltaics (PVs), solar heating/
+cooling, and solar thermal electricity, are well established [2,4].
+Nonetheless, solar and wind energy depend on environmental
+conditions, locations, and seasonal periods. The liqueﬁed form
+is the preferred option for energy storage, which is generated
+from renewable energy sources in a low-cost and sustainable
+manner [5]. A development system has been proposed for the
+production of carbon-free hydrogen from the liqueﬁed natural
+gas through a solar-driven catalytic thermal cracking process
+integrated into the ammonia synthesis unit [6]. Further, a new,
+integrated solar-based ammonia synthesis and fuel cell sys-
+tem has been presented [7]. The integrated solar system was
+simulated on the average day of each month, and the energy
+and exergy analysis were also demonstrated. The design and
+optimization of an ammonia synthesis system is also pre-
+sented in this review for ammonia-based solar thermochem-
+ical energy storage consisting of a heat recovery reactor to heat
+supercritical steam and a preconditioning system to preheat
+the feed gas to a sufﬁciently high temperature [8,9].
+
+Liquid organic hydrogen carrier (LOHC) systems have
+recently received great interest for hydrogen storage and
+transportation. State-of-the-art catalysts for hydrogen storage
+in LOHC have been developed [10]. There are different options
+for generating liquid energy carriers, such as liqueﬁed
+hydrogen, LOHCs, ammonia, and products of CO2 reduction.
+The processes of CO2 reduction and liquefying hydrogen are
+the costliest, which should also be considered, apart from
+
+factors like safety and utility. The effect of the degree of hy-
+drogenation on the viscosity, surface tension, and density of
+the LOHC system based on diphenylmethane has been
+investigated [11]. The mechanisms of hydrogen transfer pro-
+cesses for different LOHCs have been reviewed. It has been
+found that the evaluation was signiﬁcant for large-scale
+implementation of LOHCs in sustainable fuel production
+[12]. Ammonia has emerged as a great clean energy source for
+future global renewable energy fuel sources [13,14]. The pro-
+cess of electrochemical ammonia synthesis at ambient tem-
+perature and pressure can be used to generate green
+ammonia. The main challenges are the low ammonia pro-
+duction and the low long-term stability of the catalyst mate-
+rials. Recently, green ammonia synthesis using CeO2/RuO2
+nanolayers on vertical graphene catalyst via electrochemical
+route in alkaline electrolytes has been investigated to enhance
+ammonia yield and catalytic material lifetime [15]. The CeO2
+showed the highest performance of the ammonia synthesis
+yield. Furthermore, green ammonia synthesis using photo-
+assisted electrochemical-based demonstrators has been
+studied [16]. The ammonia synthesis without CO2 emission
+and low energy consumption is considered signiﬁcant. Hence,
+an energy-efﬁcient process of small-scale ammonia synthesis
+with plasma-enabled nitrogen oxidation and catalytic reduc-
+tion of adsorbed NOx is presented [17]. The renewable electric
+sources, such as water electrolysis powered by solar or wind
+energy sources, should be used in the electrochemical
+ammonia synthesis process. A global transition to the massive
+production of carbon-free energy is needed. However, pro-
+cesses of storage, transportation, and utilization of renewable
+energy on a large scale have still not been fully developed.
+Energy decarbonization via green hydrogen or ammonia has
+been reviewed [18]. Green hydrogen and green ammonia as
+sustainable future energy vectors have been considered.
+
+Ammonia can be easily liqueﬁed at ambient temperature
+and a moderate pressure of 10 bar or at atmospheric pressure
+by cooling down to (cid:4)33 (cid:3)C. Furthermore, ammonia as a fuel
+exposed a narrow ﬂammability range, high power to fuel efﬁ-
+ciency which making it safe [19]. However, ammonia is a toxic
+compound, high emission of NOx, NH3 residuals, and the
+reactivity as a fuel is relatively low [20]. Various studies were
+conducted to enhance the ammonia combustion process and
+pollutant reduction. Ammonia is primarily generated by a
+well-established conventional process called “Haber-Bosch”.
+Most of the ammonia thus generated is utilized in fertilizer
+production; the annual worldwide ammonia production is
+about 180 million tons, making it the second most global
+commercially manufactured chemical [21,22]. HabereBosch
+technology has been used for industrial ammonia produc-
+tion. Hydrogen is produced by the steam reforming process
+from fossil fuels (methane or coal), and then it combines with
+nitrogen generated from air by the cryogenic process to pro-
+duce ammonia [23]. Ammonia can be transported using the
+current infrastructure of fossil fuels. Ammonia can be seen as a
+clean hydrogen energy carrier link, which can be used as a
+hydrogen supplier. An investigation of the supply chain
+context, including ammonia decomposition to hydrogen and
+nitrogen gas, has been conducted to distribute ammonia like
+hydrogen [24]. Ammonia decomposition has been investigated
+
+

@@ -1,0 +1,301 @@
+Contents lists available at ScienceDirect 
+
+Renewable and Sustainable Energy Reviews 
+
+journal homepage: www.elsevier.com/locate/rser 
+
+Optimal day-ahead large-scale battery dispatch model for multi-regulation 
+participation considering full timescale uncertainties 
+
+Mingze Zhang a, Weidong Li a, *, Samson Shenglong Yu b, Haixia Wang a, Yu Ba a 
+a School of Electrical Engineering, Dalian University of Technology, Dalian, 116024, China 
+b School of Engineering, Deakin University, Melbourne, Victoria, 3216, Australia   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+Keywords: 
+Day-ahead scheduling 
+Large-scale batteries 
+Power system economics 
+Power system reliability 
+Power system reserve 
+Renewable energy systems 
+
+Grid scale battery integration plays an important role in renewable energy integration and the formation of smart 
+grid. To mitigate the problems of insufficient frequency response and peak regulation capacities faced by modern 
+power grids with high wind energy uptake, a day-ahead optimization dispatch strategy considering operational 
+risks is proposed in this study. In the day-ahead dispatch model, generation units and a large-scale battery energy 
+storage  station  (LS-BESS)  are  coordinated  to  participate  in  multi-type  frequency  control  ancillary  services 
+(FCASs). For optimal performance, scheduling in different timescales and the complementarity between power 
+and  energy  types  of  requirements  are  coordinated,  with  various  service  uncertainties  considered.  Then  the 
+conditional  value-at-risk  theory  is  utilized  to  achieve  the  optimal  mix  of  multiple  resources  for  day-ahead 
+regulation  reserves,  to  realize  the  minimum  operation  cost.  To  tackle  the  uncertainty  of  wind  power  over  a 
+large timescale, a robust optimization (RO) approach based on the budget uncertainty set is employed, which 
+considers robustness and economy. This can help avoid over-conservation of the standard RO and enhance the 
+applicability of the decisions made. Simulation studies and comparison analysis of multiple schemes verify the 
+effectiveness  of  the  proposed  optimal  day-ahead  dispatch  strategy,  which  also  demonstrate  that  a  LS-BESS 
+participating in multiple FCASs for day-ahead dispatch can help realize secure, reliable, and economic power 
+grid.   
+
+1. Introduction 
+
+Active power regulations in power systems are coordinated by FCASs 
+at different timescales, including inertia frequency response (IFR) and 
+PFR on the timescale of tens of seconds to ensure security, SFR on the 
+timescale of a few minutes to improve quality, and hourly peak regu-
+lation to achieve power balance. With growing penetration of renewable 
+energy  and  gradual  decommission  of  conventional  generation  units, 
+some issues have arisen for FCASs: 1) power system’s IFR and PFR are 
+weakened  [1,2],  so  its  resilience  to  resist  step  disturbances  is  dimin-
+ished, and the risk of load shedding is increased; 2) SFR is weakened [3], 
+which reduces the flexibility of the power system to deal with load and 
+wind power fluctuations, leading to possible frequency instability; and 
+3) the anti-peak regulation characteristic of wind power [4] deteriorates 
+the  downward  peak  shaving  capacity  [5],  and  wind  energy  has  high 
+uncertainty,  which  make  the  wind  power  curtailment  remain  signifi-
+cant, resulting in low wind energy utilization. If these problems are not 
+properly solved, the security of operations cannot be well maintained, 
+
+and the reliability and cost-effectiveness of the power system cannot be 
+optimized. 
+
+As an effective means to realize the time-sequence shift of power and 
+energy,  an  energy  storage  system  can  enhance  the  peak  regulation 
+capability of the power system, to achieve peak load shifting [6] and 
+store surplus wind power [7]. For a storage device with fast response, it 
+can  also  participate  in  FFR,  PFR,  and  SFR  [8]  through  charging  and 
+discharging, to improve the frequency regulation capability of the power 
+system and improve the frequency security and reliability. Among many 
+energy storage devices, a modern battery energy storage station (BESS) 
+is a type of storage with fast response [9,10], which therefore can alle-
+viate  the  above-mentioned  FCASs  problems  [11,12].  Technological 
+maturity and reduced costs of batteries have welcomed its wide appli-
+cation in power systems. In the context of the increasingly prominent 
+FCASs problem, batteries systems are considered a promising means of 
+energy storage. In particular, an LS-BESS with a comparable scale of a 
+typical  generation  unit,  can  play  a  better  role  as  the  proportion  of 
+non-dispatchable  renewable  energy  resources  keeps  increasing  in  the 
+power  grid,  leading  to  increasingly  less  active  power  regulation 
+
+* Corresponding author. 
+
+E-mail address: wdli@dlut.edu.cn (W. Li).  
+
+https://doi.org/10.1016/j.rser.2023.113963 
+Received 23 March 2022; Received in revised form 28 August 2023; Accepted 18 October 2023   
+
+RenewableandSustainableEnergyReviews189(2024)113963Availableonline7November20231364-0321/©2023ElsevierLtd.Allrightsreserved.M. Zhang et al.                                                                                                                                                                                                                                  
+
+Nomenclature 
+
+Pmax
+g,i
+
+, Pmin
+
+g,i Maximum and minimum power output of generation unit i 
+
+Cop, Cre, Crisk Operation, reserve, and risk costs of the system in the 
+
++
+g,i, V
+
+V
+
+(cid:0)
+g,i  Ramp-up and ramp-down limits of generation unit i (MW 
+
+whole dispatch day ($) 
+
+g,i,t, Ce
+Cb
+
+g,i,t Startup and shutdown costs of generation unit i in period t 
+
+B,t, Pdis
+Pch
+
+B,t  Charging and discharging power of LS-BESS in period t 
+
+($) 
+Production cost of generation unit i in period t ($) 
+
+(MW) 
+
+Pmax
+B , Erated
+
+B
+
+Rated power and energy capacities of LS-BESS (MW and 
+
+(MW) 
+
+per time step) 
+
+Cge
+g,i,t 
+CDPR
+g,i,t 
+
+cSFR
+g 
+
+Rload
+1,t 
+
+ui,t 
+
+vt 
+
+Pg,i,t 
+
+Deep peak regulation cost of generation unit i in period t 
+($) 
+B , cSFR
+
+Unit compensation costs of participating in fast 
+
+B
+
+B , cPFR
+cFFR
+
+frequency regulation (FFR), primary frequency response 
+(PFR), and secondary frequency regulation (SFR) for a LS- 
+BESS ($/MWh) 
+Unit compensation cost of participating in SFR for a 
+generation unit ($/MWh) 
+The under-frequency load shedding (UFLS) loss in period t 
+($) 
+
+cload, cW  Unit loss costs of load curtailment and wind energy 
+
+curtailment ($/MWh) 
+Binary variable: “1” if generation unit i is ON in period t, 
+and “0” otherwise 
+Binary variable: “1” if LS-BESS is discharging in period t, 
+and “0” otherwise 
+Power output of generation unit i in period t (MW) 
+
+MWh) 
+Energy capacity of LS-BESS in period t (MWh) 
+
+EB,t 
+ηch, ηdis  Charging and discharging rates of LS-BESS 
+SoCini
+B 
+
+State of charge (SoC) of LS-BESS in the initial period of the 
+dispatch day 
+Power shortage or deficiency within period t (MW) 
+Equivalent inertia time constant of the system in period t 
+(s) 
+Droop coefficient of generation unit i (MW/Hz) 
+
+Virtual regulation coefficient of LS-BESS participating in 
+FFR in period t (MWs/Hz) 
+Virtual droop coefficient of LS-BESS in period t (MW/Hz) 
+Proportion of the high-frequency components of frequency 
+fluctuations in period t 
+Minimum spinning reserve rate required by the system 
+Pre-specified frequency limit to trigger the UFLS relay (Hz)  
+
+ΔPL,t 
+HS,t 
+
+KPFR
+g,i 
+KFFR
+B,t 
+
+KPFR
+B,t 
+HFt 
+
+γ 
+f min 
+
+resources.  Having  the  combined  advantages  of  power-type  and 
+energy-type storage components, a LS-BESS can provide peak regulation 
+with  energy  demand  and  SFR  service  for  both  power  and  energy  in 
+normal operations, and can be used as an emergency regulation resource 
+for FFR and PFR after a large step disturbance to ensure frequency sta-
+bility.  For  a  LS-BESS  to  effectively  participate  in  multi-regulations, 
+optimal day-ahead dispatch for a power system with the LS-BESS and 
+wind energy is required. The main goal of the day-ahead dispatch is to 
+determine  the  next-day  generation units’  scheduling  and  spinning  re-
+serves  needed,  so  that  the  multi-regulations  can be  satisfied,  and  fre-
+quency stability can be guaranteed by the orchestrated energy resources. 
+This has motivated this research. 
+
+Currently,  some  studies  have  considered  a  BESS  as  a  means  of 
+providing FCAS for a power system, and we have briefly summarized 
+them. From the analytical perspective of this study, BESSs can be clas-
+sified into two categories: direct and non-direct dispatch BESSs. Non- 
+direct-dispatch of BESSs means that the BESSs cannot be directly dis-
+patched by bulk power grid operators due to their small capacities, and 
+their participation in one or more types of FCASs is generally based on 
+some response incentive mechanisms [9,13,14] or aggregated in virtual 
+power plants [15,16] to participate in power system ancillary services. 
+The operational strategies for this type of BESSs are developed by the 
+BESS control center or the virtual power plant control center from their 
+own perspectives. 
+
+In other words, the operation and control of the above-mentioned 
+BESSs are not directly dispatched by bulk power grid operators. They 
+are  either  autonomously  adjusted  according  to  the  frequency  control 
+signal or coordinated by the aggregators or collaborative power gener-
+ation operators. Therefore, the operation strategies of participating in 
+FCASs  are  not  applicable  to  directly  dispatched  BESSs.  While  some 
+studies involve BESSs that are directly dispatched by grid operators, they 
+focus on determining the optimal bidding strategies for BESSs in multi- 
+type  FCASs  participation.  For  example,  studies  in  Refs.  [17–19]  pro-
+posed a control strategy and optimal clearing scheduling method of a 
+BESS  to  participate  in  the  PFR  and  energy  markets  to  realize  high 
+profitability under the day-ahead electricity market mechanism. These 
+studies  reflect  BESS-centric  decision-making,  which  is  not  a  holistic 
+
+method for bulk grid operators’ system-wide decisions. 
+
+For a BESS that can be directly dispatched by bulk power grid op-
+erators,  its  unexpected  actions  outside  the  dispatch  expectation  may 
+have a massive impact on the power grid, due to its large power and 
+energy capacity. Therefore, a LS-BESS should be managed through the 
+central power dispatch from a holistic perspective of power grid oper-
+ations. However, there are only a few research attempts on how to fully 
+utilize its advantage and complement a LS-BESS and other sources. This 
+is  an  especially  important  research  direction  to  realize  a  suitable 
+dispatch scheme of grid-scale LS-BESS-incorporated power systems. If a 
+LS-BESS only provides a single service, it is not conducive to realizing its 
+full regulation potential and short-term return on investment. Therefore, 
+a LS-BESS should participate in multi-regulation services in the power 
+system  to  better  serve  the  grid  operations.  Studies  in  Refs.  [17–21] 
+consider one or two types of regulations, but have not involved the co-
+ordination of various FCASs at the full timescale in daily operations, or 
+considered the potential operational risk of the power grid. Therefore, it 
+is hard to achieve better coordination among secure, reliable, and eco-
+nomic power grid operations. 
+
+For day-ahead dispatch strategies of wind-energy-integrated power 
+grids with a LS-BESS, it is necessary to consider the uncertainty of wind 
+power output [22], which requires an appropriate stochastic optimiza-
+tion  approach.  The  chance-constrained  programming  reported  in 
+Ref.  [23]  accepts  optimization  decisions  that  do  not  meet  the  con-
+straints,  but  within  a  certain  range.  This  may  lead  to  the  day-ahead 
+optimization results unsuitable for the grid operations in the dispatch 
+day. The scenario-based stochastic programming model in Ref. [24] can 
+obtain  a  dispatch  scheme  that  considers  the  actual  characteristics  of 
+each  typical  scenario,  which  is  generally  applicable  to  the  situations 
+where  the  actual  probability  distribution  of  the  uncertainties  can  be 
+effectively obtained. Under the condition of unknown probability, the 
+RO method [25,26] shows great advantages, and the obtained optimi-
+zation  strategy  is  effective  for  any  scenario  in  the  uncertainty  set. 
+However,  the  decisions  resulting  from  the  standard  RO  are  usually 
+overly conservative, leading to limited profitability. The RO approach 
+based on the budget uncertainty set can improve this problem [27,28], 
+and it is favored by some studies. The uncertainty set is generated by 
+
+RenewableandSustainableEnergyReviews189(2024)1139632

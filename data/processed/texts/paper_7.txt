@@ -1,0 +1,242 @@
+Contents lists available at ScienceDirect 
+
+Resources Policy 
+
+journal homepage: www.elsevier.com/locate/resourpol 
+
+Enhancing resource efficiency through the utilization of the green bond 
+market: An empirical analysis of Asian economies
+
+☆ 
+
+Xuanmei Cheng a, Chengnuo Yan b, Kaite Ye b, Kanxiang Chen c, * 
+a School of Management, Zhijiang College, Zhejiang University of Technology, Hangzhou, 310014, China 
+b School of Management, Zhejiang University of Technology, Hangzhou, 310014, China 
+c School of Economics, Zhejiang University of Technology, Hangzhou, 310014, China   
+
+A R T I C L E  I N F O    
+
+A B S T R A C T    
+
+JEL classification: 
+Q50 
+Q56 
+G23 
+P24 
+R11 
+
+Keywords: 
+Resource efficiency 
+Green bonds 
+Green economic growth 
+Asian economies 
+
+1. Introduction 
+
+This research explores the effects of the green bonds market on resource efficiency across 12 actively involved 
+Asian economies from 2015 to 2022. The empirical results indicate a positive connection between green bond 
+issuance and resource efficiency, suggesting that a 1% increase in green bonds corresponds to significant short- 
+term (0.33%) and long-term (0.43%) improvements. Surprisingly, a negative relationship is observed between 
+GDP growth and resource efficiency, implying that economic expansion may contribute to heightened resource 
+consumption. The study highlights the favorable impact of renewable power generation on resource efficiency, 
+driven by the sustainability of renewable energy sources. Nevertheless, challenges arise from poverty ratios and 
+consumer price indices, impeding the adoption of resource-efficient technology. Furthermore, while cell phone 
+penetration initially benefits resource efficiency, a negative correlation emerges in the long term due to increased 
+non-renewable  energy  consumption.  In  light  of  these  findings,  the  study  recommends  practical  policies  for 
+sustainable  development,  including  actively  promoting  the  green  bonds  market,  targeted  investments  in 
+renewable energy, and initiatives to address economic disparities while encouraging resource-efficient practices.   
+
+The urgent threat posed by climate change serves as a compelling call 
+for  global  action.  In  the  aftermath  of  the  pandemic,  a  distinctive  op-
+portunity emerges in the form of a green recovery (Zachariadis et al., 
+2023). This approach not only addresses the economic and social chal-
+lenges exacerbated by the pandemic but also paves the way toward a 
+sustainable future. Essential to this initiative is the adoption of a process 
+that transitions towards a low-carbon footprint. By investing in renew-
+able energy, sustainable infrastructure, and green technologies, societies 
+can  simultaneously  stimulate  economic  growth,  create  employment 
+opportunities,  and  mitigate  the  adverse  impacts  of  climate  change 
+(Briggs et al., 2022; Saboori et al., 2022; Sun et al., 2023). This pivotal 
+moment requires international collaboration, forward-thinking policies, 
+and a shared commitment to usher in an era characterized by resilience 
+and  sustainability,  prioritizing  the  well-being  of  the  planet  and  its 
+inhabitants. 
+
+Recognizing the paramount importance of financing the transition to 
+a low-carbon paradigm is essential in confronting the urgent challenges 
+
+posed by climate change. Adequate funding for this shift towards a low- 
+carbon portfolio is the key to unlocking a sustainable future (Hu et al., 
+2023; Cheng et al., 2023). The magnitude of this transformation requires 
+substantial investments in clean energy, sustainable transportation, and 
+eco-friendly  technologies.  By  directing  financial  resources  into  these 
+initiatives, we can not only reduce greenhouse gas emissions but also 
+foster innovation and drive economic growth (Ren et al., 2023; Su et al., 
+2023). The financial sector plays a critical role in mobilizing capital for 
+environmentally  responsible  projects,  expediting  the  transition  to  a 
+low-carbon economy. Gao and Chen (2023) assert that, at this pivotal 
+moment  in  the  battle  against  climate  change,  allocating  financial  re-
+sources to this cause is not merely an investment in the environment but 
+also  a  testament  to  a  commitment  to  safeguard  the  planet  for  future 
+generations. 
+
+Green bonds serve as crucial mechanisms for financing the shift to a 
+low-carbon portfolio and advancing sustainable development (Tu et al., 
+2020). Its market size has expanded from over 37 billion USD in 2014 to 
+over 487.1 billion USD in 2022, expected to reach 914.4 billion USD by 
+2030.  These  financial  instruments  are  intricately  crafted  to  generate 
+
+This work is supported by the National Social Science Foundation of China (Grant No. 21AJL003, 21BJY262) 
+
+☆
+
+* Corresponding author. 
+
+E-mail addresses: may1981@zjut.edu.cn (X. Cheng), ycn1010@163.com (C. Yan), 1392325576@qq.com (K. Ye), ckchen@zjut.edu.cn (K. Chen).  
+
+https://doi.org/10.1016/j.resourpol.2023.104623 
+Received 19 November 2023; Received in revised form 28 December 2023; Accepted 29 December 2023   
+
+ResourcesPolicy89(2024)104623Availableonline13January20240301-4207/©2024ElsevierLtd.Allrightsreserved.X. Cheng et al.                                                                                                                                                                                                                                   
+
+capital  for  projects  that yield  environmental  benefits.  Specifically,  Ye 
+and Rasoulinezhad (2023) express that green bonds provide investors 
+with the means to champion initiatives like renewable energy projects, 
+energy-efficient building endeavors, and the establishment of sustain-
+able transportation systems. By directing funds toward these environ-
+mentally  responsible  projects,  green  bonds  establish  a  tangible 
+connection between financial investments and positive environmental 
+outcomes  (Li  et  al.,  2023).  These  instruments  not  only  serve  as  a 
+financial tool but also act as a catalyst for promoting eco-friendly en-
+deavors  on  a  broader  scale.  The  issuance  and  uptake  of  green  bonds 
+contribute  to  the  overall  momentum  in  fostering  environmentally 
+conscious  Ye  and  Rasoulinezhad  (2023)investments,  thereby  encour-
+aging  the  development  of  innovative  solutions  to  address  pressing 
+environmental  challenges  (Rasoulinezhad,  2022).  In  doing  so,  green 
+bonds  play  a  dual  role  in  shaping  a  sustainable  future  –  not  only  by 
+providing financial support to green projects but also by influencing a 
+shift in investment behavior towards projects that align with ecological 
+sustainability.  n  recent  times,  there  has  been  a  notable  surge  in  the 
+issuance of green bonds by corporate entities. The proportion of total 
+corporate bonds designated as green increased significantly, rising from 
+4.7% in 2020 to 8.3% in 2021 and further to 11.0% in 2022 (Adekoya 
+et al., 2023). The collective issuance of green bonds in Asia and Australia 
+demonstrated  growth,  reaching  $33.15  billion  in  the  first  quarter, 
+compared to the previous year’s $32.28 billion. A substantial portion of 
+this increase can be attributed to the issuance of $5.50 billion in green 
+bonds by Saudi Arabia’s Public Investment Fund. India also experienced 
+an  uptick  in  issuance,  marking  a  34.6%  increase  to  $2.06  billion. 
+Notably, China emerged as the primary source of green bonds in 2022, 
+recording a significant figure of USD 85.4 billion (RMB 575.2 billion) 
+according to Climate Bonds Initiative (2022). 
+
+Financing  projects  related  to  resource  efficiency  is  of  paramount 
+importance in light of the environmental consequences triggered by the 
+overconsumption  of  natural  resources.  The  relentless  exploitation  of 
+resources,  driven by  growing global  demands,  has led to  a  myriad  of 
+ecological  challenges  such  as  deforestation,  depletion  of  biodiversity, 
+and the exacerbation of climate change (Li et al., 2023). These adverse 
+effects  underscore  the  urgency  of  adopting  sustainable  practices  that 
+prioritize  resource  efficiency.  According  to  Zhao  and  Rasoulinezhad 
+(2023),  by  directing  financial  support  towards  projects  aimed  at 
+enhancing resource efficiency, we can address the root causes of envi-
+ronmental degradation. These projects may encompass innovations in 
+recycling  technologies,  sustainable  agricultural  practices,  and  the 
+development  of  circular  economy  models.  Investing  in  resource  effi-
+ciency  not  only  mitigates  environmental  harm  but  also  promotes 
+long-term resilience by ensuring the responsible and sustainable use of 
+finite  resources  (Yao  et  al.,  2023).  In  essence,  financing  projects  in 
+resource efficiency is a strategic investment in the health of our planet, 
+fostering a balance between human needs and the preservation of our 
+precious natural resources for generations to come. 
+
+This study centers on a key research question, examining how the 
+expansion of the green bonds market can act as a catalyst in promoting 
+resource efficiency. The central hypothesis suggests that with the growth 
+of the green bonds market, there will be a noticeable increase in funding 
+for  projects  specifically  aimed  at  improving  resource  efficiency.  The 
+research  aims  to  empirically  investigate  this  hypothesis  through  a 
+comprehensive analysis focused on selected Asian countries. To assess 
+this  hypothesis,  the  paper  will  conduct  an  empirical  exploration,  uti-
+lizing data and case studies to scrutinize the relationship between the 
+expansion of the green bonds market and the advancement of resource 
+efficiency initiatives. 
+
+The  decision  to  focus  on  Asian  economies  is  motivated  by  the  re-
+gion’s  dynamic  economic  landscape,  rapid  industrialization,  and  the 
+consequential strain on natural resources. By examining resource effi-
+ciency in Asian economies, the research aims not only to contribute to 
+the global discourse on sustainable finance but also to provide insights 
+into the distinctive challenges and opportunities in a region that holds a 
+
+pivotal role in the global economy. The motivations behind this study 
+are grounded in the necessity to foster sustainable development prac-
+tices,  address  environmental  concerns,  and  promote  responsible 
+resource utilization in a region that wields significant influence on the 
+global stage. 
+
+This study yields significant insights into the relationship between 
+green bonds and resource efficiency, with a specific emphasis on Asian 
+economies.  Firstly,  by  investigating  how  the  expansion  of  the  green 
+bonds market can stimulate resource efficiency initiatives, the research 
+offers valuable perspectives on the role of financial instruments in pro-
+pelling sustainability practices. The empirical exploration, focusing on a 
+set of Asian countries, enriches existing literature by providing region- 
+specific insights, recognizing the diverse economic and environmental 
+landscapes within Asia. Moreover, the study advances our understand-
+ing  of  the  practical  implications  of  green  bonds  in  fostering  resource 
+efficiency  projects,  offering  evidence-based  guidance  for  sustainable 
+finance strategies to policymakers and financial institutions. Addition-
+ally, the research illuminates the motivations behind studying resource 
+efficiency in Asian economies, acknowledging the region’s pivotal role 
+in  the  global  economy  and  the  associated  environmental  challenges. 
+Ultimately,  this  study  contributes  not  only  to  academic  discourse  but 
+also  to  real-world  applications,  deepening  our  understanding  of  how 
+financial instruments can be harnessed to address urgent environmental 
+concerns within the distinctive context of Asian economies. 
+
+The remaining sections of the paper are strategically structured to 
+adeptly tackle the research objectives. Section 2 meticulously delves into 
+the  literature  gap,  providing  a  thorough  review  of  pertinent  studies. 
+Shifting  the  focus  to  the  transmission  channels  through  which  green 
+bonds influence resource efficiency, Section 3 offers a detailed exami-
+nation. Following this, Section 4 presents the empirical findings derived 
+from the study. Finally, Section 5 serves as the conclusion, summarizing 
+the key insights and implications drawn from the research. This orga-
+nizational  framework  ensures  a  cohesive  and  logical  progression 
+through the paper’s exploration of the relationship between green bonds 
+and resource efficiency. 
+
+2. Literature gap 
+
+A comprehensive review of prior studies is essential to identify gaps 
+in the literature and underscore the novel contributions of the present 
+paper. This critical examination allows for a thorough understanding of 
+the  existing  research  landscape  and  the  identification  of  areas  where 
+further investigation is warranted. In this context, the following main-
+streams  of  literature  are  presented  based  on  the  existing  body  of 
+knowledge. 
+
+The current literature places a strong emphasis on the imperative of 
+pursuing sustainability and transitioning to a green economy, indicating 
+a  heightened  awareness  of  the  urgent  need  to  address  environmental 
+challenges and cultivate long-term economic resilience. Buonocore and 
+Pettoello-Mantovani’s  study  (Buonocore  and  Pettoello-  Mantovani, 
+2023)  highlighted  the  economic  repercussions  of  climate  change, 
+emphasizing the potential for severe disruptions and economic losses if 
+sustainable practices are not adopted. Additionally, Wang et al.’s work 
+(Wang et al., 2023) underscored the importance of incorporating envi-
+ronmental considerations into business practices for sustained viability. 
+In the financial sector, research by Dmuchowski et al. (2023) showcased 
+the  business  case  for  sustainability,  illustrating  that  companies  with 
+robust  environmental, social,  and  governance (ESG)  practices tend  to 
+outperform  their  counterparts.  Furthermore,  the  concept  of  a  green 
+economy, as articulated by Mealy and Teytelboym (2022), advocates for 
+a  paradigm  shift  towards  environmentally  sustainable  practices, 
+emphasizing the interconnectedness of economic, social, and environ-
+mental  dimensions.  This  collective  body  of  literature  reflects  a 
+comprehensive  acknowledgment  of  the  intertwined  relationship  be-
+tween  environmental  responsibility  and  economic  success  in  contem-
+porary discourse. 
+
+ResourcesPolicy89(2024)1046232

@@ -1,0 +1,299 @@
+Contents lists available at ScienceDirect 
+
+Progress in Energy and Combustion Science 
+
+journal homepage: www.elsevier.com/locate/pecs 
+
+A review of solar hybrid photovoltaic-thermal (PV-T) collectors 
+and systems 
+
+María Herrando a, b, Kai Wang c, Gan Huang b, d, Todd Otanicar e, Osama Bany Mousa f, 
+Rafaela A. Agathokleous g, Yulong Ding h, Soteris Kalogirou g, Ned Ekins-Daukes i, 
+Robert A. Taylor f, Christos N. Markides b, * 
+a Fluid Dynamics Technology Group, I3A, University of Zaragoza, Zaragoza, 50007, Spain 
+b Clean Energy Processes (CEP) Laboratory, Department of Chemical Engineering, Imperial College London, South Kensington Campus, London, SW7 2AZ, UK 
+c Institute of Refrigeration and Cryogenics, Key Laboratory of Refrigeration and Cryogenic Technology of Zhejiang Province, Zhejiang University, Hangzhou, 310027, China 
+d Institute of Microstructure Technology, Karlsruhe Institute of Technology, Karlsruhe, Germany 
+e Department of Mechanical and Biomedical Engineering, Boise State University, Boise, USA 
+f School of Mechanical and Manufacturing Engineering, University of New South Wales, Sydney, NSW, Australia 
+g Department of Mechanical Engineering and Materials Science and Engineering, Cyprus University of Technology, Limassol, Cyprus 
+h Birmingham Centre for Energy Storage & School of Chemical Engineering, University of Birmingham, Birmingham, UK 
+i School of Photovoltaic & Renewable Energy Engineering, University of New South Wales, Sydney, NSW, Australia  
+
+A B S T R A C T    
+
+In this paper, we provide a comprehensive overview of the state-of-the-art in hybrid PV-T collectors and the wider systems within which they can be implemented, 
+and assess the worldwide energy and carbon mitigation potential of these systems. We cover both experimental and computational studies, identify opportunities for 
+performance enhancement, pathways for collector innovation, and implications of their wider deployment at the solar-generation system level. First, we classify and 
+review the main types of PV-T collectors, including air-based, liquid-based, dual air–water, heat-pipe, building integrated and concentrated PV-T collectors. This is 
+followed by a presentation of performance enhancement opportunities and pathways for collector innovation. Here, we address state-of-the-art design modifications, 
+next-generation  PV  cell  technologies,  selective  coatings,  spectral  splitting  and  nanofluids.  Beyond  this,  we  address  wider  PV-T  systems  and  their  applications, 
+comprising a thorough review of solar combined heat and power (S–CHP), solar cooling, solar combined cooling, heat and power (S–CCHP), solar desalination, solar 
+drying and solar for hydrogen production systems. This includes a specific review of potential performance and cost improvements and opportunities at the solar- 
+generation system level in thermal energy storage, control and demand-side management. Subsequently, a set of the most promising PV-T systems is assessed to 
+analyse their carbon mitigation potential and how this technology might fit within pathways for global decarbonization. It is estimated that the REmap baseline 
+emission curve can be reduced by more than 16% in 2030 if the uptake of solar PV-T technologies can be promoted. Finally, the review turns to a critical examination 
+of key challenges for the adoption of PV-T technology and recommendations.   
+
+1. Background and introduction 
+
+1.1. Context and motivation 
+
+The interest in and demand for alternative energy from renewable 
+sources has continued to rise globally in recent decades, promoted by an 
+increase  in  environmental  awareness  and  the  growing  importance 
+placed on sustainability, reducing energy consumption and the associ-
+ated emissions and pollution. In 1992, the Rio Convention on Climate 
+Change  [1]  established  a  framework  for  actions  aimed  at  reducing 
+fossil-fuel consumption and limiting the associated emissions. In 2015, 
+over  190  countries  signed  a  legally-binding  agreement  at  the  Paris 
+
+◦
+
+Climate Conference [2] to keep the rise in the average global tempera-
+C (above 20th-century pre-industrial levels) [3]. To ach-
+ture below 2 
+ieve this challenging target, a fundamental transformation of the global 
+energy system is required, which has in fact been taking place in recent 
+decades [4]. 
+
+Renewable  energy  systems  have  been  the  main  drivers  and  will 
+continue to be essential for this transformation as they contribute to all 
+objectives:  promoting  the  security  of  supply  while  lowering  energy 
+costs,  reducing  emissions  while  driving  growth  and  generating  jobs 
+through industrial development. A record 200 GW of renewable energy 
+capacity was added in 2019. Renewable energy accounted for 27% of 
+global  electricity  use  and  over  18%  of  the  world’s  total  energy  con-
+sumption according to the latest REN21 report [5]. Solar energy remains 
+
+* Corresponding author. 
+
+E-mail address: c.markides@imperial.ac.uk (C.N. Markides).  
+
+https://doi.org/10.1016/j.pecs.2023.101072 
+Received 30 August 2021; Received in revised form 29 November 2022; Accepted 1 January 2023   
+
+ProgressinEnergyandCombustionScience97(2023)101072Availableonline12April20230360-1285/©2023TheAuthors.PublishedbyElsevierLtd.ThisisanopenaccessarticleundertheCCBYlicense(http://creativecommons.org/licenses/by/4.0/).M. Herrando et al.                                                                                                                                                                                                                              
+
+Nomenclature 
+
+a-Si 
+AHP 
+ANN 
+ASHP 
+AZO 
+BIPV 
+BIPV-T 
+c-Si 
+CCHP 
+CIGS 
+CHP 
+COP 
+CPC 
+CPV 
+CPV-T 
+CSP 
+D 
+DASC 
+DCMD 
+DEC 
+DHW 
+DNI 
+DSM 
+DX 
+Eg 
+Eth 
+ETC 
+FF 
+FPC 
+G 
+GHI 
+GNP 
+HCE 
+HDH 
+HP 
+HVAC 
+I 
+IEA 
+ITO 
+IR 
+IX 
+J01 
+Jsc 
+k 
+KPI 
+LCA 
+
+amorphous silicon 
+analytic hierarchy process 
+artificial neural network 
+air-source heat pump 
+aluminium zinc oxide 
+building-integrated PV 
+building-integrated PV-T 
+monocrystalline silicon 
+combined cooling, heat and power 
+copper indium gallium selenide 
+combined heat and power 
+coefficient of performance 
+compound parabolic collector 
+concentrated PV 
+concentrated PV-T 
+concentrated solar power 
+pipe diameter 
+direct absorption solar collector 
+direct contact membrane distillation 
+desiccant cooling systems 
+domestic hot water 
+direct normal incident radiation 
+demand-side management 
+direct expansion 
+band-gap energy 
+threshold for the onset of absorption 
+evacuated-tube collector 
+fill factor 
+flat-plate collector 
+solar irradiance 
+global horizontal irradiation 
+graphene nanoplatelets 
+heat collection element 
+humidification-dehumidification 
+heat pump 
+heating cooling and air conditioning 
+electric current 
+international energy agency 
+indium tin oxide 
+infrared 
+indirect expansion 
+diode saturation current density 
+cell short-circuit current density 
+Boltzmann constant 
+key performance indicator 
+life cycle assessment 
+
+national determined contribution 
+
+latent heat storage 
+membrane distillation 
+multi-effect distillation 
+
+LHS 
+MD 
+MED 
+MWCNT multi-walled carbon nanotube 
+NDC 
+NePCM  nano-enhanced PCM 
+NSGA-II  non-dominated sorting genetic algorithm 
+O&M 
+ORC 
+PC 
+PCM 
+pc-Si 
+PEM 
+PMMA 
+PTC 
+PV 
+PV-T 
+q 
+REmap 
+RES 
+rev 
+RO 
+SAHP 
+SBS 
+SH 
+SHC 
+SHJ 
+ST 
+SHS 
+T 
+TCOs 
+TCS 
+TES 
+TIM 
+TOPSIS 
+
+operation and maintenance 
+organic Rankine cycle 
+polycarbonate 
+phase-change material 
+polycrystalline silicon 
+proton exchange membrane 
+poly(methyl methacrylate) 
+parabolic-trough collector 
+photovoltaic 
+PV-thermal 
+electric charge 
+renewable energy roadmap 
+renewable energy systems 
+reversible 
+reverse osmosis 
+solar assisted heat pump 
+spectral beam splitting 
+space heating 
+solar heating and cooling 
+silicon heterojunction 
+solar thermal 
+sensible heat storage 
+temperature 
+transparent conducting oxides 
+thermochemical storage 
+thermal energy storage 
+transparent insulation material 
+technique for order preference by similarity to ideal 
+solution 
+technology readiness level 
+Trombe wall 
+underfloor heating 
+US dollar 
+ultraviolet 
+voltage 
+open-circuit voltage 
+distance between the pipes 
+width to pipe-diameter ratio 
+
+TRL 
+TW 
+UFH 
+USD 
+UV 
+V 
+Voc 
+W 
+W/D 
+W&ASHP water & air-source heat pump 
+WSHP  water-source heat pump  
+
+a small fraction of this total (below 2%) despite its fast growth compared 
+to other renewable sources (solar thermal (ST) systems: 8% per year, 
+photovoltaic (PV) systems: 37% per year, both on average since 2010 
+[6]).  This  growth  has  been  made  possible  by  the  implementation  of 
+national policies that have supported renewable projects in Europe, and 
+by  the  Chinese  policy  of  subsidies  for PV  systems  [5,7]. In  2019, the 
+renewable energy sector employed 11.5 million people, among these 4.6 
+million were employed in the solar sector [8]. 
+
+Solar energy is an abundant primary-energy resource, which can be 
+exploited  in  cost-competitive  and  reliable  ways  for  electrical  power 
+generation,  either  with  PV  technology  or  thermodynamic  cycles  in 
+concentrated solar power (CSP) systems, as well as for heating or cooling 
+purposes through ST systems. Some of the advantages of this renewable 
+resource compared to others, e.g., wind, are its larger predictability on 
+
+an annual basis and daily [9], the low degradation rate of the compo-
+nents of a solar installation during its lifetime which is generally 20–25 
+years [10,11], and that this technology rarely underperforms or fails. 
+For example, long-term field data show that PV panels experience, on 
+average, a power output loss of only 0.5% per year [12], and only 2% of 
+the PV panels installed do not meet the manufacturer’s warranty after 10 
+years [13]. 
+
+The  total  worldwide  power  generation  capacity  of  installed  PV 
+panels increased by 12% in 2019 and reached a record of 630 GW in 
+total, while the thermal energy generation capacity of installed ST col-
+lectors  amounted  to 480  GW  (thermal  Watt) in  2019,  with China  ac-
+counting  for  almost  70%  of  the  total  solar  thermal  capacity  [6,14], 
+which corresponds to savings of about 140 million tons of CO2 per year 
+[6]. The PV market is driven by China, Japan and the US, and several 
+
+ProgressinEnergyandCombustionScience97(2023)1010722

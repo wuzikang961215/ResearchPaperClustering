@@ -1,0 +1,217 @@
+Energy Policy 77 (2015) 79–88
+
+Contents lists available at ScienceDirect
+
+Energy Policy
+
+journal homepage: www.elsevier.com/locate/enpol
+
+The merit-order effect in the Italian power market: The impact of solar
+and wind generation on national wholesale electricity prices$
+Stefano Clò n, Alessandra Cataldi, Pietro Zoppoli
+a Department of the Treasury (DT) of the Italian Ministry of Economy and Finance(MEF), Italy1
+
+H I G H L I G H T S
+
+(cid:1) We ﬁnd empirical evidence of the merit-order effect in the Italian market.
+(cid:1) 1 GWh from solar and wind (hourly average) reduces prices by 2.3€/MW and 4.2€/MWh.
+(cid:1) The impact of RES on price has declined as RES production has increased.
+(cid:1) Monetary savings from solar production do not compensate the cost of the incentives.
+(cid:1) Monetary savings from wind production are higher than the cost of the incentives.
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Article history:
+Received 25 July 2014
+Received in revised form
+28 November 2014
+Accepted 29 November 2014
+Available online 16 December 2014
+
+Keywords:
+Renewables
+Electricity price
+Merit-order effect
+Feed-in tariff
+Italian wholesale power market
+
+Italy promoted one of the most generous renewable support schemes worldwide which resulted in a
+high increase of solar power generation. We analyze the Italian day-ahead wholesale electricity market,
+ﬁnding empirical evidence of the merit-order effect. Over the period 2005–2013 an increase of 1 GWh in
+the hourly average of daily production from solar and wind sources has, on average, reduced wholesale
+electricity prices by respectively 2.3€/MWh and 4.2€/MWh and has ampliﬁed their volatility. The impact
+on prices has decreased over time in correspondence with the increase in solar and wind electricity
+production. We estimate that, over the period 2009–2013, solar production has generated higher
+monetary savings than wind production, mainly because the former is more prominent than the latter.
+However, in the solar case, monetary savings are not sufﬁcient to compensate the cost of the related
+supporting schemes which are entirely internalized within end-user tariffs, causing a reduction of the
+consumer surplus, while the opposite occurs in the case of wind.
+
+& 2014 Elsevier Ltd. All rights reserved.
+
+1.
+
+Introduction
+
+The Italian power market has undergone signiﬁcant changes in
+recent years. Among these changes, one of the most relevant is the
+growth in wind and photovoltaic (PV) power capacity promoted by
+national support schemes for renewable energy sources (RES).
+While wind power capacity has been mainly supported through a
+Green Certiﬁcates Scheme, solar power capacity has been directly
+subsidized through a Feed-in Premium, known as Conto Energia.
+
+The Conto Energia represents one of the most impressive PV
+supporting schemes in the world (IEA, 2011). Thanks to massive
+investments in wind and solar installed capacity2 (EPIA, 2012; IEA,
+2013), wind and solar power generation substantially increased –
+by 23 TWh from 2008 to 2013 – constituting “an undisputed world
+record” according to the IEA (IEA, 2013). Over the same period,
+energy demand decreased by 43 TWh in conjunction with the
+ﬁnancial crisis and the subsequent economic recession (Fig. 1).
+
+☆We thank the GME for having provided the data and for its support. We are also
+grateful to Emanuele Bacchiocchi, Susan Battles and Michael Benton for their
+comments. The usual disclaimer applies.
+
+n Correspondence to: Università di Milano, DEMM–Department of Economics,
+
+Management and Quantitative Methods, Via del Conservatorio 7, Milan, Italy.
+
+E-mail address: stefano.clo@unimi.it (S. Clò).
+1 The views expressed in the paper are those of the authors and do not ne-
+
+cessarily reﬂect those of the MEF and the DT
+
+2 In a ﬁrst phase 2005–2007, RES support schemes promoted some initial in-
+vestments in intermittent RES power capacity which, however, covered only a
+marginal position: 3 GW in 2007 or 1.6% of total installed power capacity according
+to data on power installed capacity provided by the Italian Transmission system
+operator (Terna s.p.a.). In the period 2008–2010, wind and solar power capacity
+grew from 4 GW to 9 GW (þ 49% annual average growth rate), while in the years
+2011–2012, it surged from 9 GW to 25 GW, covering 12% of total national power
+capacity. At the time of writing this article, ofﬁcial data on installed capacity for
+2013 were not yet available.
+
+http://dx.doi.org/10.1016/j.enpol.2014.11.038
+0301-4215/& 2014 Elsevier Ltd. All rights reserved.
+
+80
+
+S. Clò et al. / Energy Policy 77 (2015) 79–88
+
+Fig. 1. RES power generation by source in the day-ahead Italian market (2013 data refer to the period January–October) (TWh).
+Source: own elaboration on GME.
+
+The contraction in electricity consumption as well as the sig-
+niﬁcant growth in solar and wind power generation have drasti-
+cally changed the Italian electricity mix, with a sharp increase in
+the RES share. Indeed, in less than ten years, the share of RES in the
+day-ahead power market increased from 17% in 2005 to 40% in
+2013.3 This growth comes almost entirely from non-program-
+mable wind and solar RES.
+
+These changes on both the demand and supply side of the day-
+ahead power market had a non-negligible impact on the Italian
+wholesale electricity price. Subsequently to the bullish trend over
+the period 2005–2008, the wholesale electricity price sharply
+collapsed during the ﬁnancial crisis. Then, following a subsequent
+recovery, from the beginning of 2012 the price trended again
+downward, in conjunction with both the economic recession and
+RES penetration (Fig. 2).
+
+The penetration of intermittent RES can explain part of this
+decline. Wind and solar energy sources have very low operational
+costs and they are dispatched on a legal priority basis with respect
+to electricity generated by non-renewable sources. In particular,
+the GSE (Gestore dei Servizi Energetici)4 works as a non-pro-
+grammable RES collector as it bids in the day-ahead market at a
+zero price an amount of electricity equal to the forecasting of the
+intermittent RES power generation.5 Thus, wind and solar power
+generation effectively enters the day-ahead market at the base of
+the merit-order function and shifts it to the right (the same pro-
+cess is described by Ketterer, 2012; Nicolosi and Fürsch, 2009;
+Zachman, 2013). Most expensive marginal plants are driven out of
+the market, thus favoring a decline in the clearing wholesale
+electricity price (Fischer, 2006).6 Various papers ﬁnd empirical
+
+3 Details on the energy mix by source and its change over time are reported in
+
+the Appendix A.
+
+4 The GSE (Gestore dei Servizi Energetici) is the public institution which di-
+rectly pays the economic incentives to the producers of power generated by re-
+newable sources.
+
+5 When the day-ahead forecasting deviates from the day-of effective RES
+power generation, traditional sources are called to cover the gap in the day-of
+balancing market (mercato di aggiustamento), whose analysis goes beyond the
+scope of this paper.
+
+6 This effect has been represented also in an alternative way: an increase in RES
+power generation shifts the residual demand function to the left along a given
+supply curve (Sensfuss et al., 2008, Hirth, 2013, O’Mahoney and Denny, 2011). At
+the same time, self-produced and consumed electricity reduces the net demand
+and shifts it to the left along a given supply curve. While these representations are
+equivalent in terms of market equilibrium, we opt to represent the merit-order
+effect in terms of supply curve shift (see Fig. 3–5), because RES generation effec-
+tively bids via the GSE in the day-ahead market and enters the market at the base
+
+evidence of the merit-order effect in various countries: Germany
+(Ketterer, 2012; Würzburg et al., 2013), Spain (Gelabert et al.,
+2011), Israel (Milstein and Tishler, 2011), Denmark (Jonsson et al.,
+2010), Texas (Woo et al., 2011) and Ireland (O’Mahoney and Denny,
+2011). These studies differ with respect to econometric approach,
+types of renewable sources and country analyzed, as well as fre-
+quency of the data used; but they all converge towards the con-
+clusion that RES penetration has lowered wholesale electricity
+prices.7 For the purpose of this paper, we recall that Gelabert et al.
+(2011) and Würzburg et al. (2013) both ﬁnd that the reduction in
+wholesale electricity prices induced by higher RES production
+offsets the increase in ﬁnal electricity retail prices induced by RES
+support schemes (subsidies directly paid by consumers in the ﬁnal
+energy bill). They respectively conclude that in Spain and Germany
+the increase in electricity production from RES has generated a net
+beneﬁt to consumers.
+
+Our paper aims to extend this empirical literature by assessing
+the merit-order effect in the Italian day-ahead wholesale power
+market over the period 2005–2013. Since Italian RES supporting
+policies have been subject to political debate due to the cost of the
+subsidies internalized within end-user tariffs, we are interested in
+assessing to what extent the penetration of solar and wind elec-
+tricity sources has lowered day-ahead wholesale electricity prices
+and whether such a reduction has been sufﬁcient to offset the cost
+of the RES support schemes borne by ﬁnal consumers.
+
+Based on a consolidated empirical approach (Woo et al., 2011),
+we develop a quantitative analysis to assess the extent to which
+variations in consumption patterns and in the energy mix have
+had an impact on the national wholesale electricity price (PUN).8
+While existing literature has mainly focused on wind generation,
+or has treated wind and solar generation jointly (named inter-
+mittent RES), we disentangle the differential impact of solar and
+wind generation on Italian day-ahead wholesale electricity prices
+over the period 2005–2013. Moreover, as RES production has in-
+creased greatly from year to year during the considered period, we
+impact of
+are
+
+interested in understanding whether
+
+the
+
+(footnote continued)
+of the merit-order function.
+
+7 Würzburg et al. (2013) develop an exhaustive review of this literature and a
+meta-analysis of various studies on the German market and conclude that 1 addi-
+tional GWh produced by wind technology reduces the German wholesale elec-
+tricity price between 0.5 and 2.0 €/MWh. A similar result is found by Gelabert et al.
+(2011) concerning the Spanish market.
+
+8 Prezzo Unico Nazionale (Single National Price).
+
+

@@ -1,0 +1,230 @@
+ReseaRch  aRticle
+
+Defective TiO2−x for High-Performance Electrocatalytic 
+NO Reduction toward Ambient NH3 Production
+
+Zixiao Li, Qiang Zhou, Jie Liang, Longcheng Zhang, Xiaoya Fan, Donglin Zhao, 
+Zhengwei Cai, Jun Li, Dongdong Zheng, Xun He, Yongsong Luo, Yan Wang, Binwu Ying, 
+Hong Yan, Shengjun Sun, Jing Zhang, Abdulmohsen Ali Alshehri, Feng Gong,*  
+Yinyuan Zheng,* and Xuping Sun*
+
+Synthesis of green ammonia (NH3) via electrolysis of nitric oxide (NO) is 
+extraordinarily sustainable, but multielectron/proton-involved hydrogena-
+tion steps as well as low concentrations of NO can lead to poor activities and 
+selectivities of electrocatalysts. Herein, it is reported that oxygen-defective 
+TiO2 nanoarray supported on Ti plate (TiO2−x/TP) behaves as an efficient cata-
+lyst for NO reduction to NH3. In 0.2 m phosphate-buffered electrolyte, such 
+TiO2−x/TP shows competitive electrocatalytic NH3 synthesis activity with a 
+maximum NH3 yield of 1233.2 µg h−1 cm−2 and Faradaic efficiency of 92.5%. 
+Density functional theory calculations further thermodynamically faster 
+NO deoxygenation and protonation processes on TiO2−x (101) compared to 
+perfect TiO2 (101). And the low energy barrier of 0.7 eV on TiO2−x (101) for the 
+potential-determining step further highlights the greatly improved intrinsic 
+activity. In addition, a Zn-NO battery is fabricated with TiO2−x/TP and Zn 
+plate to obtain an NH3 yield of 241.7 µg h−1 cm−2 while providing a peak 
+power density of 0.84 mW cm−2.
+
+world  population  and  it  is  also  currently 
+known  as  a  clean,  safe,  and  hydrogen-
+rich  energy  carrier  to  decarbonize  the 
+future  energy  storage  and  transportation 
+process.[1–4]  The  energy-intensive  Haber-
+Bosch  method  adopted  by  NH3  synthesis 
+industries,  nonetheless,  remains  as  a 
+fossil  fuel-based  technology  with  a  sig-
+nificant  carbon  footprint.[5]  The  develop-
+ment of energy-saving and carbon-neutral 
+NH3  synthetic  routes  is  therefore  of  great 
+interest.  Electrosynthesis  of  NH3  from 
+nitrogen  (N2)  and  water  (H+  in  acids), 
+which  can  be  powered  by  green  energy, 
+has  aroused  scientists’  interest  as  an 
+appealing  and  sustainable  alternative.[6–16] 
+However, according to the thermodynamic 
+principle,  NN  bond  requires  robust  dis-
+sociation  energies  (941  kJ  mol−1),  which 
+greatly  limits  the  Faradaic  efficiency  (FE) 
+and  NH3  yield.  Moreover,  the  hydrogen 
+evolution  catalysis  makes  high-rate  N2-to-NH3  hydrogena-
+tion  unrealistic  in  the  aqueous  phase.  Nitric  oxide  (NO)  can 
+be  regarded  as  a  suitable  nitrogen  source  for  generating  NH3 
+due to easier NO deoxygenation than the NN bond breaking, 
+
+1. Introduction
+
+Ammonia  (NH3)  with  extensive  usage  in  the  manufacture  of 
+fertilizers  plays  a  cirtical  role  in  supporting  about  half  of  the 
+
+Z. Li, J. Liang, L. Zhang, X. Fan, D. Zhao, J. Li, D. Zheng, X. He, Y. Luo, 
+Y. Wang, B. Ying, H. Yan, X. Sun
+Institute of Fundamental and Frontier Sciences
+University of Electronic Science and Technology of China
+Chengdu, Sichuan 610054, China
+E-mail: xpsun@uestc.edu.cn
+Q. Zhou, F. Gong
+Key Laboratory of Energy Thermal Conversion and Control of Ministry 
+of Education
+School of Energy and Environment
+Southeast University
+Nanjing, Jiangsu 211189, China
+E-mail: gongfeng@seu.edu.cn
+Z. Cai, S. Sun
+College of Chemistry
+Chemical Engineering and Materials Science
+Shandong Normal University
+Jinan, Shandong 250014, China
+
+The ORCID identification number(s) for the author(s) of this article 
+can be found under https://doi.org/10.1002/smll.202300291.
+
+DOI: 10.1002/smll.202300291
+
+J. Zhang
+Interdisciplinary Materials Research Center
+Institute for Advanced Study
+Chengdu University
+Chengdu 610106, China
+A. A. Alshehri
+Chemistry Department
+Faculty of Science
+King Abdulaziz University
+P.O. Box 80203, Jeddah 21589, Saudi Arabia
+Y. Zheng
+Huzhou Key Laboratory of Translational Medicine
+First People’s Hospital affiliated to Huzhou University
+Huzhou, Zhejiang 313000, China
+E-mail: yinyuan_zheng@sina.com
+
+Small 2023, 19, 2300291
+
+2300291  (1 of 7)
+
+© 2023 Wiley-VCH GmbH
+
+www.small-journal.comand  the  more  positive  reduction  potential  of  NO  to  synthesize 
+NH3  than  that  of  N2  will  make  the  electrochemical  NO  reduc-
+tion reaction (NORR) more sustainable and efficient.[17–22] Fur-
+thermore,  it  is  believed  that  NO,  a  hazardous  air  contaminant 
+widely  present  in  exhaust  gas  from  fossil  fuel  combustion, 
+poses a major threat to both human health and ecological bal-
+ance.[23]  Hence,  it  is  reasonable  to  abate  waste  NO  to  NH3  by 
+electrocatalysis,  which  consumes  less  energy  and  eases  the 
+pressures  on  the  environment.  Despite  the  high  reactivity  of 
+NO,  the  complex  five-electron-coupled  six-proton  deep  reduc-
+tion  to  NH3  and  concurrent  side-product/intermediate  (N2, 
+N2O, NH2OH, etc.) formation dramatically lowers NH3 genera-
+tion rates.[24,25] The development of genuinely active and NH3-
+selective catalysts for NORR would enable the implementation 
+of the technology in industries.
+
+Much effort was devoted to ascertaining selectivities of noble 
+metals, especially Pt, during the NO electrolysis, yet their NH3 
+selectivities  typically  remained  unsatisfactory  because  of  the 
+coproduction of other products (N2O or NH2OH).[26–28] Recent 
+NORR  catalysts  including  MoS2  nanoarray,[21]  a-B2.6C/TiO2,[29] 
+single-atom Nb sites supported on B,N co-doped carbon nano-
+tubes (Nb-SA/BNC),[30] Cu foam,[31] etc. can selectively produce 
+NH3  from  NO,  but  metal  complexes  to  increase  the  solubility 
+of  NO  or  high-purity  of  NO  are  needed  for  enhanced  perfor-
+mance.  Encouragingly,  TiO2,  one  of  the  cheapest,  most  ecof-
+riendly,  and  highly  durable  materials,  is  seen  as  a  promising 
+electrode  material  for  electrocatalysis.[32–38]  Notably,  limited 
+active sites and low electrical conductivity of TiO2 usually lead 
+to poor catalytic performance. The design of TiO2 with 1) abun-
+dant available active sites that prefer to generate NH3 via deep 
+NO  reduction  rather  than  following  N−N  coupling  pathways 
+to  N2  or  N2O,  2)  morphology  conducive  to  electron  pass/
+mass  transport,  and  3)  improved  electrical  conductivity  for 
+NO  electrolysis  would  provide  us  high-performance  catalysts 
+and meaningful advances in identifying economical and high-
+active  NH3-producing  NORR  catalysts,  whereas  related  works 
+have been rarely reported.
+
+Herein,  we  report  high-efficiency  NH3  electrosynthesis 
+on  oxygen  vacancies  (OVs)  defect-engineered  TiO2−x  using 
+low-concentration  NO  as  the  reactant.  An  open  nanoarray 
+architecture  of  TiO2−x  further  maximizes  the  utilization  of 
+optimized  catalytic  sites  for  NO  adsorption  and  subsequent 
+activation.  Accordingly,  such  TiO2−x  nanoarray  on  Ti  plate 
+(TiO2−x/TP)  acts  as  a  superb  NH3-producing  3D  nanocata-
+lyst  for  NO  electrolysis  in  neutral  media,  attaining  a  great 
+yield  of  1233.2  µg  h−1  cm−2  and  high  FE  of  92.5%,  superior 
+to many state-of-the-art NORR catalysts (Table S1, Supporting 
+Information).  Density  functional  theory  (DFT)  calculations 
+identify  *NH2  protonation  to  *NH3  on  TiO2−x  (101)  as  the 
+potential-determining  step  with  an  uphill  energy  barrier  of 
+only  0.7  eV.  Importantly,  unlike  the  difficult  formation  of 
+*NO on perfect TiO2 (101), NO adsorption on the TiO2−x (101) 
+results in a dramatic energy drop of ≈2.1 eV, reflecting more 
+favorable adsorption properties of defective TiO2−x. Addition-
+ally, our TiO2−x/TP is directly applied in a homemade Zn-NO 
+battery  as  a  robust  and  kinetically  fast  cathode  to  afford  a 
+peak  power  density  of  0.84  mW  cm−1  and  an  NH3  yield  as 
+high as 241.7 µg h−1 cm−2.
+
+2. Results and Discussion
+
+2.1. Morphology and Structure Characterizations
+
+The  synthetic  process  of  TiO2−x/TP  is  shown  in  Figure  1a 
+including  hydrothermal  treatment,  H+  exchange,  and  H2/Ar  
+annealing.  X-ray  diffraction  (XRD)  patterns  for  TiO2−x/TP  
+and TiO2−x/TP show typical peaks at 25.4°, 37.9°, 48.1°, 54.0°, and 
+55.2°,  which  correspond  to  the  (101),  (004),  (200),  (105),  and 
+(211)  facets  of  TiO2  (JCPDS  (Joint  Committee  on  Powder  Dif-
+fraction  Standards)  No.  73-1764)  (Figure  1b).[39]  The  diffraction 
+peaks at 40.2° and 53.0° attributed to (101) and (102) facets of Ti 
+(JCPDS  No.  44-1294).  But,  in  detail,  the  sharp  diffraction  peak 
+of  (101)  for  TiO2−x/TP  becomes  weak  compared  with  TiO2/TP. 
+Scanning electron microscopy (SEM) image in Figure 1c reveals 
+the smooth nanoribbons of TiO2−x/TP, which shows no obvious 
+difference  with  TiO2/TP  (Figure  S1,  Supporting  Information). 
+Energy-dispersive  X-ray  (EDX)  mapping  images  demonstrate 
+that elements of Ti and O are uniformly distributed on the sur-
+face  of  TiO2−x/TP  (Figure  1d).  Transmission  electron  micros-
+copy (TEM) image also reveals the TiO2−x with uniform and no 
+obvious defects of morphology, which are consistent with SEM 
+results (Figure 1e). The lattice fringe with interplanar distances 
+of  0.351  nm  is  observed  from  high-resolution  TEM  (HRTEM) 
+shown  in  Figure  1f,  which  can  be  ascribed  to  the  (101)  facet 
+of  the  TiO2  phase.  Notably,  the  lattice  fringe  defects  can  be 
+detected,  which  suggests  the  successful  formation  of  a  defect-
+rich structure.
+
+In order to further verify the existence of OVs, electron para-
+magnetic  resonance  (EPR)  test  is  performed.  A  pair  of  shark 
+peaks  of  TiO2−x/TP  exhibit  at  g  =  2.002  (Figure  1g),  indicating 
+electron  trapping  at  oxygen  defects,  which  is  in  contrast  to  no 
+obvious peaks of TiO2/TP.[40] To investigate the surface chemical 
+bonding  of  TiO2−x/TP,  X-ray  photoelectron  spectroscopy  (XPS) 
+analysis is implemented. As shown in Ti 2p spectrum, the dis-
+tinct peaks of Ti 2p3/2 and Ti 2p1/2 appear at 457.9 and 463.8 eV 
+belonging to Ti4+ of the TiO2/TP (Figure 1h).[41,42] Nevertheless, 
+the  peaks  Ti  2p3/2  and  Ti  2p1/2  of  TiO2−x/TP  shift  to  the  lower 
+binding  energy  compared  with  TiO2/TP,  which  attribute  to 
+decreased  Ti  oxidation  state.[43]  As  for  O  1s  (Figure  1i),  peaks 
+at 529.4, 531.2, and 532.6 eV are related to lattice O, OVs, and 
+physisorbed  H2O,  for  TiO2/TP,  respectively.[44–46]  Furthermore, 
+the  area  of  OVs  relative  to  the  sum  area  of  all  peaks  [S(OVs)/
+(S(physisorbed  H2O)  +  S(OVs)  +  S(lattice  O))]  is  16.7%  for  TiO2−x/TP, 
+indicating  that  more  OVs  in  TiO2−x/TP  are  constructed  than 
+TiO2/TP  (13.8%).  Above  observations  suggest  the  successful 
+construction of OVs in TiO2−x/TP.
+
+2.2. Electrochemical Performance Measurements
+
+A  three-electrode  setup  of  an  H-shape  electrolytic  reactor  con-
+taining  0.2  m  phosphate-buffered  solution  (PBS)  with  flowing 
+NO  gas  is  used  to  test  the  electrochemical  NORR  perfor-
+mance  of  TiO2−x/TP.  The  system  of  three  electrodes  contains 
+a  work  electrode  (self-supporting  TiO2−x/TP),  a  reference  elec-
+trode  (Ag/AgCl),  and  a  counter  electrode  (graphite  electrode). 
+During  the  test,  the  gas  of  NO  (10  vol%)  with  a  flowing  speed 
+
+Small 2023, 19, 2300291
+
+2300291  (2 of 7)
+
+© 2023 Wiley-VCH GmbH
+
+www.advancedsciencenews.comwww.small-journal.com 16136829, 2023, 24, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/smll.202300291 by University Of Adelaide, Wiley Online Library on [29/06/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

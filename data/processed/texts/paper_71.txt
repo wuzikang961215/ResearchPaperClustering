@@ -1,0 +1,449 @@
+There are amendments to this paper
+
+Electrolysis of low-grade and saline surface water
+
+Wenming Tong 
+Peter Strasser 
+
+ 1,2, Mark Forster 
+ 5 *, Alexander J. Cowan 
+
+ 3,4 * and Pau Farràs 
+
+ 1,2 *
+
+ 3,4, Fabio Dionigi5, Sören Dresp5, Roghayeh Sadeghi Erami1,2, 
+
+Powered  by  renewable  energy  sources  such  as  solar,  marine,  geothermal  and  wind,  generation  of  storable  hydrogen  fuel 
+through  water  electrolysis  provides  a  promising  path  towards  energy  sustainability.  However,  state-of-the-art  electrolysis 
+requires support from associated processes such as desalination of water sources, further purification of desalinated water, 
+and transportation of water, which often contribute financial and energy costs. One strategy to avoid these operations is to 
+develop electrolysers that are capable of operating with impure water feeds directly. Here we review recent developments in 
+electrode materials/catalysts for water electrolysis using low-grade and saline water, a significantly more abundant resource 
+worldwide  compared  to  potable  water.  We  address  the  associated  challenges  in  design  of  electrolysers,  and  discuss  future 
+potential  approaches  that  may  yield  highly  active  and  selective  materials  for  water  electrolysis  in  the  presence  of  common 
+impurities such as metal ions, chloride and bio-organisms.
+
+Freshwater is likely to become a scarce resource for many com-
+
+munities, with more than 80% of the world’s population exposed 
+to high risk levels of water security1. This has been recognized 
+within the Sustainable Development Goal 6 (SDG 6) on Clean Water 
+and  Sanitation2.  At  the  same  time,  low-grade  and  saline  water  is  a 
+largely abundant resource which, used properly, can address SDG 7 
+on Affordable and Clean Energy as well as SDG 13 on Climate Action.
+Hydrogen, a storable fuel, can be generated through water elec-
+trolysis  and  it  may  provide  headway  towards  combating  climate 
+change and reaching zero emissions3, since the cycle of generation, 
+consumption  and  regeneration  of  hydrogen  can  achieve  carbon 
+neutrality. In addition to providing a suitable energy store, hydro-
+gen can be easily distributed and used in industry, households and 
+transport.  Hydrogen,  and  the  related  fuel  cell  industry,  has  the 
+potential  to  bring  positive  economic  and  social  impacts  to  local 
+communities in terms of energy efficiency and job markets; glob-
+ally the hydrogen market is expected to grow 33% to US$155 bil-
+lion in 20224. However, there are remaining challenges related to the 
+minimization of the cost and integration of hydrogen into daily life, 
+as well as meeting the ultimate hydrogen cost targets of <US$2 kg–1 
+set by the US Department of Energy5–7.
+
+Commercially available water electrolysers operate with support 
+from  ancillary  components/equipment8,9.  The  high  purity  water 
+feeds are achieved by incorporating extensive water purification sys-
+tems into the overall electrolyser design (internal) or via pre-treat-
+ment  using  external  purification/desalination  plants.  Desalination 
+and subsequent purification, and the associated investment costs for 
+plantation, land, maintenance and transportation, therefore impose 
+considerable  costs.  Several  techno-economic  studies  have  been 
+published in the past few years10,11, however, a more comprehensive 
+review with up-to-date costs is still needed. Desalination costs vary 
+considerably  depending  on  the  price  of  electricity,  and  increase  if 
+intermittent renewable sources are used12. Nevertheless, the cost of 
+water  purification  systems  remains  significant12.  Particular  inter-
+est in direct saline water electrolysis exists for off-shore large-scale 
+hydrogen  production,  a  sector  where  the  capital  costs  are  domi-
+nated by the footprint of the installation, and the simplification in 
+
+engineering by removing pre-treatment systems would have a great 
+impact on the economic viability of such installations3.
+
+A route to reduce cost would be to use low-grade or saline water 
+directly  through  development  of  efficient  and  selective  catalytic 
+electrode  materials  and  the  utilization  of  effective  membranes  in 
+the electrolysers that are suitable for impure water. Therefore, ideal 
+catalytic electrode materials and membranes should be able to deal 
+with  competing  redox  reactions  at  both  electrodes,  complications 
+related to membrane function, reactor degradation and biofouling. 
+Here  we  review  key  issues  and  recent  research  in  electrolysis  and 
+the development of electrode materials/catalysts targeting direct use 
+of low-grade and saline water in the electrolysis processes. In addi-
+tion, we address the major aspects in the design of electrolysers for 
+hydrogen generation.
+
+Challenges of saline water electrolysis
+Splitting  water  into  oxygen  and  hydrogen  is  an  energetically  uphill 
+chemical process where an external energy source is required to drive 
+the reaction. In an electrolyser, electricity is converted to, and stored in 
+the form of, chemical bonds. The hydrogen evolution reaction (HER) 
+at the cathode is a two electron-proton reaction, which can be formu-
+lated as Eqs. (1) or (2) under acidic or alkaline conditions, respectively.
+
+Acidic
+
+2Hþ
+
+2e�
+
+þ
+
+H2
+
+!
+
+Alkaline
+
+2H2O
+
+2e�
+
+H2 þ
+
+2OH�
+
+þ
+
+!
+
+Þ
+The counter reaction at the anode, the oxygen evolution reaction 
+(OER),  is  a  multi-electron  transferring  process,  involving  several 
+intermediates and the removal of four protons per oxygen molecule 
+evolved. It can be described by Eqs. (3) or (4) in acidic or alkaline 
+environments, respectively.
+
+ð
+
+Acidic
+
+2H2O
+
+4Hþ
+
+O2 þ
+
+þ
+
+4e�
+
+!
+
+Alkaline
+
+4OH�
+
+2H2O
+
+O2 þ
+
+þ
+
+4e�
+
+!
+
+1School of Chemistry, National University of Ireland Galway, Galway, Ireland. 2Energy Research Centre, Ryan Institute, National University of Ireland 
+Galway, Galway, Ireland. 3Department of Chemistry, University of Liverpool, Liverpool, UK. 4Stephenson Institute for Renewable Energy, University of 
+Liverpool, Liverpool, UK. 5The Electrochemical Energy, Catalysis and Materials Science Laboratory, Department of Chemistry, Chemical Engineering 
+Division, Technical University Berlin, Berlin, Germany. *e-mail: pstrasser@tu-berlin.de; a.j.cowan@liverpool.ac.uk; pau.farras@nuigalway.ie
+
+NATuRE ENERgy | VOL 5 | May 2020 | 367–377 | www.nature.com/natureenergy
+
+1
+
+ð
+
+Þ
+
+2
+
+3
+
+ð
+
+Þ
+
+4
+
+ð
+
+Þ
+
+367
+
+Review ARticlehttps://doi.org/10.1038/s41560-020-0550-8Catalysts are usually either deposited onto the current collector 
+electrodes  (catalyst  coated  electrode,  CCE)  or  are  coated  directly 
+onto  the  ion  exchange  membranes  (catalyst  coated  membrane, 
+CCM) to facilitate the water splitting reactions. An important cata-
+lytic activity metric is the difference between the applied potential at 
+a given current density and the half-reaction standard potential; the 
+so called overpotential (ɳ). This difference characterizes the extra 
+energy  taken  to  push  the  half  reaction  significantly  forward  from 
+the thermodynamic zero net-current equilibrium point13. The com-
+plexity of the OER requires a large overpotential, even with state-of-
+the-art catalysts and especially when compared to the HER.
+
+Water  electrolysis  typically  requires  ultra-purified  water,  either 
+directly  in  membrane  electrolysers  (proton  exchange  membrane 
+water  electrolysers,  PEMWE;  anion  exchange  membrane  water 
+electrolysers, AEMWE) or in a mixture with salts for alkaline water 
+electrolysers  (AWE).  The  key  challenges  in  the  direct  electroly-
+sis  of  saline  water  have  long  been  identified  and  discussed14,  and 
+remain major issues today. Although carbonates in seawater (saline 
+water)  can  act  as  buffers,  the  capacity  is  not  high  enough  to  pre-
+vent increases in the local pH at the cathode and decreases in the 
+local pH at the anode. Studies showed changes in pH near the elec-
+trode surface could be on the order of 5–9 pH units from that of 
+the bulk seawater, for a slightly buffered medium when its overall 
+pH value is in between 4 and 10, even at moderate current densities 
+<10 mA cm–2(ref.  15–17). Such dramatic pH fluctuations may cause 
+catalyst  degradation.  Local  pH  increases  near  the  cathode  during 
+seawater (not artificially buffered) electrolysis can lead to precipita-
+tion of magnesium hydroxide (Mg(OH)2), which occurs when pH 
+≥ ~9.5(ref. 18), blocking the cathode14,19. Stabilization of pH fluctua-
+tions may require the addition of supporting electrolytes20,21.
+
+Other  challenges  include  the  presence  of  non-innocent  ions 
+(both  anions  and  cations)17,22  and  bacteria/microbes23,  as  well  as 
+small  particulates,  all  of  which  may  poison  electrodes/catalysts 
+and  limit  their  long-term  stability.  This  challenge  also  extends  to 
+the membranes used for the separation of the anode and cathode24. 
+Another key issue to consider is the competition between the OER 
+and chloride chemistry at the anode.
+
+Chloride electro-oxidation chemistry is complicated and several 
+reactions occur depending on the pH values, potentials applied and 
+temperature.  If,  for  simplicity,  we  consider  the  temperature  of  25 
+°C  and  fix  the  total  concentration  of  chlorine  species  to  0.5  M  (a 
+typical chloride concentration for seawater), a Pourbaix diagram for 
+aqueous chloride chemistry can be constructed as shown in Fig. 117.
+When the pH is below 3.0 the free chlorine evolution reaction 
+(ClER, Eq. 5) dominates over the other chloride oxidation reactions 
+(Fig. 1). Hypochlorous acid formation might also occur at lower pH 
+at high anodic potentials, but becomes the major reaction for pH 
+3–7.5. Hypochlorite formation takes place at pH values higher than 
+7.5 (Eq. 6), which represents the pKa of hypochlorous acid. Partial 
+dissociations  (that  is,  chlorine  dissolved  in  water)  and  dispropor-
+tionation  (that  is,  hypochlorite  ions  subjected  to  higher  tempera-
+ture) complicate the chemistry of chlorine species. At the two pH 
+extremes the two chloride oxidation reactions are:
+
+HOCl
+
+Cl2
+
+Cl–
+
+HOCl
+
+OCl–
+
+HOCl
+
+Cl–
+
+O2
+
+H2O
+
+1.6
+
+1.4
+
+1.2
+
+1.0
+
+0.8
+
+0.6
+
+)
+
+E
+H
+S
+ 
+s
+u
+s
+r
+e
+v
+ 
+V
+
+(
+ 
+l
+a
+i
+t
+n
+e
+t
+o
+P
+
+OCl–
+
+Cl–
+
+~ 0.480 V
+
+O2
+
+H2O
+
+CT,Cl = 0.5 M
+T = 25° C
+
+0.4
+
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+
+12
+
+14
+
+pH
+
+Fig. 1 | The Pourbaix diagram of an aqueous saline electrolyte. 
+Represented is the electrode potential versus pH diagram, it provides 
+information of the stability of an aqueous 0.5 M NaCl electrolyte, including 
+the H2O/O2 and the Cl–/Cl2/HOCl/ClO– redox couples. The diagram 
+depicts potential–pH regions where the oxygen evolution reaction (OER) 
+and the chloride oxidation reactions are thermodynamically possible. 
+The green line represents the thermodynamic equilibrium between water 
+and oxygen. at electrode potentials more positive than the green line, the 
+OER process becomes thermodynamically possible. The red line shows 
+the competing acidic oxidation of chloride to free gaseous chlorine. The 
+black and purple lines mark the onset of the oxidation of chloride to 
+hypochlorous acid, HClO, or hypochlorite, ClO–. The potential difference 
+between the chloride chemistry and the water oxidation is maximized to 
+480 mV in alkaline media pH > 7.5 (light blue region), where chloride 
+is oxidized to ClO–. SHE, standard hydrogen electrode. adapted with 
+permission from ref. 17, John Wiley and Sons.
+
+the hypochlorite formation starts, where it remains at its maximum 
+value of ~480 mV (ref. 17). In other words, under alkaline conditions 
+a water oxidation catalyst can exhibit up to 480 mV kinetic overpo-
+tential without any interfering chlorine chemistry. This is known as 
+the ‘alkaline design criterion’ in saline water electrolysis17, because 
+the  requirements  for  the  catalytic  activity  of  the  OER  catalyst  are 
+least stringent in this region.
+
+It is worth noting that both chloride reactions (Eqs. (5) and (6)) 
+are two-electron reactions, in contrast with the OER in which four 
+electrons are involved. This difference in the numbers of electrons 
+involved in the mechanisms (Eq. (2) versus Eq. (4)) give rise to the 
+commonly  observed  higher  overpotential  for  OER  than  chloride 
+oxidation  and  makes  OER  kinetically  unfavourable.  Therefore, 
+developing highly selective anode catalysts is essential to avoid the 
+evolution of corrosive and toxic chlorine gas during the electrolysis 
+of saline water.
+
+ClER:
+
+2e� E0
+
+2Cl�
+
+Cl2 þ
+Hypochlorate formation:
+
+!
+
+(cid:31)
+
+¼
+
+1:36 V versus SHE; pH
+
+0
+
+¼
+
+(cid:30)
+
+Cl�
+E0
+
+ð
+
+þ
+¼
+
+ClO�
+
+2OH�
+H2O
+0:89 V versus SHE; pH
+
+!
+
+þ
+
+2e�
+14
+
+Þ
+
+þ
+¼
+
+The competing chloride oxidations are thermodynamically unfa-
+vourable compared to the OER (Fig. 1) and the difference between 
+the standard electrode potentials increases with increasing pH until 
+
+5
+
+ð
+
+Þ
+
+6
+
+ð
+
+Þ
+
+Reactor design considerations
+Currently  the  two  proven  low-temperature  (<100  °C)  water  elec-
+trolyser technologies dominating the commercial market are AWE 
+and  PEMWE25.  Other  emerging  technologies  include  low  tem-
+perature AEMWE26, as well as high-temperature electrolysis, such 
+as proton conducting ceramic electrolysis (~150 °C–400 °C)27 and 
+solid oxide electrolysis (~500–800 oC)28. These four configurations 
+are depicted in Fig. 2.
+
+These electrolyser technologies use either ultra-pure, deionized 
+18.2 MΩ·cm water or 20–30% KOH aqueous solution (AWE) with 
+contaminants at and below the ppm level. Such high levels of water 
+purity are chosen to avoid complications related to catalyst opera-
+tion,  membrane  operation  and  general  component  degradation. 
+
+368
+
+NATuRE ENERgy | VOL 5 | May 2020 | 367–377 | www.nature.com/natureenergy
+
+Review ARticleNaTure eNergy

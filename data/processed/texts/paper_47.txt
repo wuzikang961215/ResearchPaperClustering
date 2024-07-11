@@ -1,0 +1,250 @@
+7800
+
+IEEE TRANSACTIONS ON INDUSTRY APPLICATIONS, VOL. 59, NO. 6, NOVEMBER/DECEMBER 2023
+
+Detection of False Data Injection Attacks in Battery
+Stacks Using Input Noise-Aware Nonlinear State
+Estimation and Cumulative Sum Algorithms
+
+Victoria Obrien , Student Member, IEEE, Vittal S. Rao , Life Senior Member, IEEE,
+and Rodrigo D. Trevizan , Member, IEEE
+
+Abstract—Grid-scale battery energy storage systems (BESSs)
+are vulnerable to false data injection attacks (FDIAs), which could
+be used to disrupt state of charge (SoC) estimation. Inaccurate SoC
+estimation has negative impacts on system availability, reliability,
+safety, and the cost of operation. In this article a combination of
+a Cumulative Sum (CUSUM) algorithm and an improved input
+noise-aware extended Kalman ﬁlter (INAEKF) is proposed for the
+detection and identiﬁcation of FDIAs in the voltage and current
+sensors of a battery stack. The series-connected stack is represented
+by equivalent circuit models, the SoC is modeled with a charge
+reservoir model and the states are estimated using the INAEKF. The
+root mean squared error of the states’ estimation by the modiﬁed
+INAEKF was found to be superior to the traditional EKF. By
+
+Manuscript received 8 February 2023; revised 12 May 2023 and 17 July
+2023; accepted 12 August 2023. Date of publication 25 August 2023; date of
+current version 22 November 2023. Paper 2023-IACC-0055.R2, presented at the
+2022 IEEE Power and Energy Conference at Illinois, Champaign, IL,USA, Mar.
+10–11, and approved for publication in the IEEE TRANSACTIONS ON INDUSTRY
+APPLICATIONS by the IndustrialAutomation and Control Committee of the IEEE
+Industry Applications Society [DOI: 10.1109/PECI54197.2022.9744036]. This
+paper describes objective technical results and analysis. Any subjective views
+or opinions that might be expressed in the paper do not necessarily represent the
+views of the U.S. Department of Energy or the United States Government. Sandia
+National Laboratories is a multimission laboratory managed and operated by
+National Technology & Engineering Solutions of Sandia, LLC, a wholly owned
+subsidiary of Honeywell International Inc., for the U.S. Department of Energy’s
+National Nuclear Security Administration under contract DE-NA0003525. This
+article has been authored by an employee of National Technology & Engi-
+neering Solutions of Sandia, LLC under Contract DE-NA0003525 with the
+U.S. Department of Energy (DOE). The employee owns all right, title and
+interest in and to the article and is solely responsible for its contents. The
+United States Government retains and the publisher, by accepting the article
+for publication, acknowledges that the United States Government retains a
+non-exclusive, paid-up, irrevocable, world-wide license to publish or reproduce
+the published form of this article or allow others to do so, for United States
+Government purposes. The DOE will provide public access to these results
+of federally sponsored research in accordance with the DOE Public Access
+Plan https://www.energy.gov/downloads/doe-public-access-plan. SAND2023-
+08566J. This work was supported in part by the U.S. Department of Energy,
+Ofﬁce Electricity, Energy Storage Program, and in part by the U.S. Department
+of Education’s Program on Graduate Assistance in Areas of National Need to
+Texas Tech University. (Corresponding author: Victoria Obrien.)
+
+Victoria Obrien is with the Department of Electrical and Computer Engi-
+neering, Texas Tech University, Lubbock, TX 79409 USA, and also with the
+Energy Storage Technology and Systems Group, Sandia National Laboratories,
+Albuquerque, NM 87123 USA (e-mail: vaobrie@sandia.gov).
+
+Vittal S. Rao is with the Department of Electrical and Computer Engineering,
+Texas Tech University, Lubbock, TX 79409 USA (e-mail: vittal.rao@ttu.edu).
+Rodrigo D. Trevizan is with the Energy Storage Technology and Systems
+Group, Sandia National Laboratories, Albuquerque, NM 87123 USA (e-mail:
+rdtrevi@sandia.gov).
+
+Color versions of one or more ﬁgures in this article are available at
+
+https://doi.org/10.1109/TIA.2023.3308548.
+
+Digital Object Identiﬁer 10.1109/TIA.2023.3308548
+
+employing the INAEKF, this article addresses the research gap that
+many state estimators make asymmetrical assumptions about the
+noise corrupting the system. Additionally, the INAEKF estimates
+the input allowing for the identiﬁcation of FDIA, which many
+alternative methods are unable to achieve. The proposed algorithm
+was able to detect attacks in the voltage and current sensors in
+99.16% of test cases, with no false positives. Utilizing the INAEKF
+compared to the standard EKF allowed for the identiﬁcation of
+FDIA in the input of the system in 98.43% of test cases.
+
+Index Terms—Anomaly detection, cumulative sum, equivalent
+circuit model, false data injection attacks, noisy input, smart grid.
+
+I. INTRODUCTION
+
+B ATTERY Energy Storage Systems (BESSs) tied to the
+
+electric power grid are composed of several battery cells,
+which are connected to form battery stacks to meet power re-
+quirements [2], [3], [4]. BESS are cyberphysical systems (CPSs)
+that require several electronic control and protection devices
+equipped with computation and communications capabilities for
+their safe and efﬁcient operation [5]. One of them, the Battery
+management system (BMS) is required to control the charging
+and discharging of the cells by monitoring sensor readings, es-
+timating system states, and ensuring safe operation of the BESS
+[2], [6], [7]. BMSs typically include stack current sensors, volt-
+age sensors on each of the battery cells, and an additional voltage
+sensor for the battery stack, all of which could be susceptible
+to false data injection attacks (FDIAs). FDIAs corrupt sensor
+data, which could result in incorrect BMS protection, operation,
+and inaccurate state of charge (SoC) estimation [2]. Incorrect
+SoC or voltage estimates can cause cell overcharge or deep
+discharge, which accelerate battery degradation and can cause
+battery thermal runaway, power outages, and damage to costly
+power grid equipment [2], [8], [9], [10], [11], [12], [13]. The
+goal of attackers could range from practical reduction in usable
+SoC to accelerated battery degradation to system malfunctions
+or to battery failure, in extreme cases.
+
+To compromise system reliability and damage equipment,
+the attacker must carefully construct attack vectors which may
+be stealthy or agnostic to the targeted system. Stealthy FDIAs
+are constructed to evade bad data detection (BDD) techniques
+[14], [15]. As discussed in [15], to elude BDD algorithms
+the measurement residuals (following the injection of FDIA)
+must remain undisturbed. Therefore, designing stealthy FDIAs
+requires extensive information about the system’s topology and
+
+0093-9994 © 2023 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+See https://www.ieee.org/publications/rights/index.html for more information.
+
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:11:03 UTC from IEEE Xplore.  Restrictions apply. 
+
+OBRIEN et al.: DETECTION OF FALSE DATA INJECTION ATTACKS IN BATTERY STACKS
+
+7801
+
+dynamic models to obtain carefully constructed attack vectors.
+Liu et al. [14] discussed multiple methods, including brute-force
+and heuristic methods, for designing stealthy attack vectors. In
+this article, we consider FDIA vectors that are agnostic to the
+system’s topology and parameters. These simpler, non-stealthy
+attacks are more straightforward and inexpensive to launch and
+are more likely to be encountered in real systems.
+
+For the reliable and safe operation of the grid, it is critical that
+FDIAs targeting grid-scale BESSs are detected and mitigated as
+quickly as possible. Methods for detecting data integrity attacks,
+including FDIAs, targeting CPSs have been studied extensively
+in literature [2], [14], [16], [17], [18], [19], [20], [21], [22], [23],
+[24], [25]. The FDIAs are detected using either model-based
+or data-driven methods. Model-based methods typically utilize
+statistical approaches to detect anomalies on the residuals ob-
+tained by state estimators [1], [18], [20], [26]. On the other hand,
+Data-driven methods [23], [24], [25] do not require a model
+of the physical system and focus on learning system dynamics
+by processing sensor data streams. Common statistical methods
+used to detect FDIAs and other anomalies are the chi-squared test
+[18] and variations of the cumulative sum (CUSUM) algorithm
+[1], [19], [20], [26]. The chi-squared test is a popular choice
+to discover abnormalities in CPSs [18], [27] but is known to
+have higher false positive rates. The chi-squared test was used
+to detect outliers in the measurements of a battery during SoC
+estimation and was found to trigger multiple false positives [27].
+Bombarding the BMS with warnings about anomalies when
+nothing is truly wrong could hinder system operation, therefore
+it is critical to minimize false positives while maximizing true
+positives. One beneﬁt of the CUSUM algorithm used in this
+article is that the false positive rate can be adjusted to zero by
+appropriately selecting the parameters of the algorithm, most
+commonly the value of the upper and lower thresholds.
+
+A signiﬁcant limitation of residual-based FDIA detectors is
+their inability to detect errors in the input variables [1], [2].
+Most state estimation methods, including variants of the Kalman
+Filter (KF) [28], assume that inputs are accurately known and
+deterministic. Therefore, residual-based error detection cannot
+be applied to the input since their residuals cannot be calculated.
+The dynamic models used in SoC estimation utilize the stack
+current as the system input [3], which is obtained from current
+sensors. Considering the architecture of BMSs [5], [29], it is
+clear that, similar to voltage measurements, current sensors
+are also subject to disturbances from noise, faults, or attacks.
+Nevertheless, a gap exists in the battery SoC estimation literature
+as uncertainty in the input variable is not accounted for. Variants
+of the KF that consider noisy inputs, such as [23], [24], have
+not been applied to battery SoC estimation nor FDIA detection.
+State estimators based on the unknown input observer or ro-
+bust state estimation (e.g., [21], [22], [30]) could potentially
+mitigate errors introduced by FDIA in the input variable or
+even detect input attacks in SoC estimation. However, those
+require the solution of relatively large optimization problems
+involving time-series of sensor data, making them ill-suited for
+implementation in real-time embedded systems with limited
+memory and computational capacity like BMSs.
+
+Data-driven anomaly identiﬁcation methods are used more
+frequently in literature but have their own set of limitations.
+Authors in [24] and [25] use deep learning methods, speciﬁcally
+convolutional neural networks (CNNs), to detect errors in battery
+systems’ operation which may include faults or cyberattacks. In
+the survey article [23], Sayghe et al. discuss supervised, semi-
+supervised, unsupervised, and deep learning methods to detect
+FDIAs in power systems. To train data-driven methods, hundreds
+of datasets may be required. For example, to train the CNN
+presented in [24], 100 control datasets and 300 fault datasets
+were used. Battery data used to train data-based methods is often
+proprietary data that may be challenging or expensive to obtain,
+giving residual-based battery modeling methods an advantage
+over data driven methods. In addition, battery models can be
+adjusted to account for changing battery parameters by updating
+the model parameters [8], [31], whereas data driven methods rely
+highly on the training data and algorithm setup to yield accurate
+detection [23].
+
+A. Overview of the Method and Paper Organization
+
+This article extends the work [1] and addresses many of the
+aforementioned limitations of the state-of-the-art by developing
+an input noise-aware extended KF (INAEKF) to perform SoC
+estimation. The INAEKF is better suited for the SoC estimation
+framework than the extended KF (EKF), as it is well known that
+battery stack current measurements are susceptible to noise and
+may be subject to spooﬁng attacks [32]. The proposed method
+extends the EKF utilized in [1] by considering additive Gaussian
+noise in the input of the state estimator. Accounting for additive
+noise in the input variable has been previously proposed for
+the KF [33] and the unscented KF (UKF) [34], but none of
+those methods have been applied to SoC estimation and we were
+unable to ﬁnd literature that provided the framework for an EKF
+that considered input noise, which is accomplished in this article.
+These methods allow for estimation of the input variable and,
+consequently, an input residual, which allows for postprocessing
+of the input signal for faults, bad data, and attack detection.
+Additionally, the INAEKF can mitigate the error introduced by
+noisy input data, thus providing more accurate state estimates
+than the traditional EKF when the input variable is subject
+to zero-mean random noise. That is especially relevant given
+that SoC estimation of batteries is known to be susceptible to
+measurement errors [35].
+
+To conform to the new state estimation framework, the battery
+model proposed in this article presents improvements upon the
+model utilized in [1]. These enhancements include removing the
+stack current from the vector of measurements and modeling it
+in the state estimator as a single noisy input variable, i.e., its
+signal is not split into two variables representing the charging
+and discharging currents. Instead, a nonlinear function is used to
+account for the stack current-dependent Coulombic efﬁciency.
+The case studies demonstrate the superior performance of the
+INAEKF when compared with the EKF in terms of estimation
+accuracy and FDIA detection. We also compare the CUSUM
+with the chi-squared test for attack detection.
+
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:11:03 UTC from IEEE Xplore.  Restrictions apply. 
+
+

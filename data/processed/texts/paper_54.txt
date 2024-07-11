@@ -1,0 +1,377 @@
+0
+6
+0
+5
+4
+4
+0
+1
+.
+4
+2
+0
+2
+.
+4
+1
+9
+0
+6
+C
+E
+P
+U
+A
+S
+/
+9
+0
+1
+1
+.
+0
+1
+ 
+:
+I
+
+O
+D
+
+ 
+|
+ 
+
+E
+E
+E
+I
+ 
+4
+2
+0
+2
+©
+ 
+0
+0
+.
+1
+3
+$
+/
+4
+2
+/
+5
+-
+4
+3
+1
+7
+-
+3
+0
+5
+3
+-
+8
+-
+9
+7
+9
+ 
+|
+ 
+)
+
+C
+E
+P
+U
+A
+S
+(
+ 
+e
+c
+n
+e
+r
+e
+f
+n
+o
+C
+ 
+g
+n
+i
+r
+e
+e
+n
+i
+g
+n
+E
+ 
+r
+e
+w
+o
+P
+ 
+s
+e
+i
+t
+i
+s
+r
+e
+v
+i
+n
+U
+ 
+n
+a
+c
+i
+r
+f
+
+A
+ 
+n
+r
+e
+h
+t
+u
+o
+S
+ 
+d
+n
+2
+3
+ 
+4
+2
+0
+2
+
+Performance Evaluation Of Grid-scale Battery
+Energy Storage System Employing Virtual
+Synchronous Generator Control For Grid Code
+Compliance In Weak Grids
+
+Karabo Senyane
+School of Electrical
+and Information Engineering
+University of the Witwatersrand
+Johannesburg, South Africa
+karabo.senyane51@gmail.com
+
+John Van Coller
+School of Electrical
+and Information Engineering
+University of the Witwatersrand
+Johannesburg, South Africa
+john.vancoller@wits.ac.za
+
+Lesedi Masisi
+School of Electrical
+and Information Engineering
+University of the Witwatersrand
+Johannesburg, South Africa
+lesedi.masisi@wits.ac.za
+
+Abstract—This document is on the design and testing of a grid-
+scale Battery Energy Storage System (BESS) employing Virtual
+Synchronous Generator (VSG) control grid-forming scheme.
+The BESS is rated 60 MWh/50 MW. The simulations were
+conducted using MATLAB/Simulink/Simscape software. The pro-
+tection functions and the associated protection relays needed to
+achieve these functionalities are presented. The approach adopted
+can apply to any relevant standard or grid code associated with
+a Transmission System Operator (TSO) internationally, however,
+the local grid codes in the context of South Africa were used.
+The system is designed to be compliant with the document
+Grid Connection Code for Battery Energy Storage Facilities
+(BESF) connected to the Electricity Transmission System (TS)
+or the Distribution System (DS) in South Africa and is classified
+under Category C as defined in the same document. The system
+was able to adjust both its active and reactive power outputs
+accordingly in response to load reduction conditions in the
+network. Furthermore, for local fault conditions,
+it was able
+to ride-through transient faults and trip and disconnect for
+permanent faults. For these two cases the BESS protection
+functionality serves as primary protection. The system was also
+able to trip and disconnect for remote permanent faults where
+the associated protection functionality is utilised as back-up
+protection.
+
+Index Terms—grid stability, BESS, grid-forming inverters, grid
+
+code, weak grid
+
+I. INTRODUCTION
+
+Power grids worldwide are undergoing a major transition
+from the synchronous generator dominated technology asso-
+ciated with fossil-fuel generators to generation and storage
+technology based on Inverter Based Resources (IBRs). BESS
+is meant to play an integral role in mitigating the intermittency
+associated with large-scale solar and wind power generation
+plants. There are numerous grid-forming techniques in the
+literature, however, the focus of this work shall be on Virtual
+Synchronous Generator (VSG) technology. Models in both
+Root Mean Squared (RMS) (phasor) and Electro-Magnetic
+Transient (EMT)-based simulation software packages are in-
+creasingly becoming important tools in the field of power
+
+systems. These models are important for grid-integration stud-
+ies in order to assess the stability of newly-built or modified
+components of the grid such as generators and BESS.
+
+II. LITERATURE REVIEW
+
+In [1], Vilmann et al investigated the stability of wind farms
+when they are integrated into parts of the grid considered
+weak. The frequency and voltage compliance capabilities of
+three grid-forming techniques namely: droop control, Virtual
+Synchronous Machine (VSM) and synchronverter were inves-
+tigated and benchmarked. The procedure followed was that of
+quantifying the performance during a contingency of a fre-
+quency disturbance, with sensitivity to the Short Circuit Ratio
+(SCR), X/R ratio and the inertia constant H. The conclusion
+of the investigation was that the VSM is the most compliant
+grid-forming control technique. In [2], Sang et al reviewed
+the history of some of the common grid-forming control tech-
+nologies which are the VSG and the synchronverter. Detailed
+descriptions of the two is outlined in [3] and [4] respectively.
+In [5], Alsokhiry et al investigated the limitations of Voltage
+Source Converters (VSC) in weak AC grids from a voltage
+stability point of view. The conclusion from the analysis was
+that the maximum active power that the VSC can exchange
+with a weak AC grid is determined by voltage stability limits.
+The simulations were conducted using MATLAB/Simulink.
+In [6], a comprehensive review of grid-forming pilot projects
+and demonstrations that have been implemented worldwide
+was undertaken. The projects include BESS, HVDC systems,
+wind farms and hybrid plants. A comparison study was also
+undertaken where the similarities and differences between
+the projects were highlighted. A similar review of grid-scale
+BESS grid-forming projects, already in deployment or under
+construction worldwide, was conducted and listed in [7]. In
+[8] Minnaar et al
+investigated issues of power quality as
+pertains to grid code compliance in South Africa, with a
+focus on harmonic emissions. However, there was not much
+
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:09:48 UTC from IEEE Xplore.  Restrictions apply. 
+
+Fig. 1. Single line diagram for investigated network
+
+focus on BESS technology in particular and no conduction of
+simulations to test for grid code compliance. The authors in [9]
+also looked into technicalities of grid codes and compared the
+South African grid code for Renewable Power Plants (RPPs)
+to those of other Transmission System Operators (TSOs) that
+operate within other countries with a main focus on European
+countries. The TSOs include Energinet in Denmark, EirGrid
+in Ireland and SONI in Northern Ireland, National Grid in
+the United Kingdom and TenneT in Germany. However, there
+were no simulations undertaken in order to evaluate the
+dynamic performance of the RPPs or BESS against grid code
+compliance for any of the TSOs.
+There has been limited studies in performance evaluation of
+grid-forming BESS for grid code compliance in weak grids
+both internationally and locally, in the context of the grid in
+South Africa. This paper seeks to fill in this gap.
+
+III. METHODOLOGY
+
+Fig. 2. Control block for implementation of P-f droop, inertia and damping
+for the BESS inverter
+
+Fig. 1 shows the single line diagram of the network used
+in the investigation. The SCR at the grid interface point is
+3, which corresponds to a weak grid condition. The core
+control module for the VSG is shown in Fig. 2. It includes
+damping, with the corresponding damping constant denoted
+by the letter D, active power vs frequency droop constant
+denoted by the letter Kp and inertia constant denoted by the
+letter H. Other control blocks such as those that implement
+
+reactive power vs voltage droop are not shown. All the inverter
+control techniques are implemented in the direct-quadrature-
+zero (dq0) domain. The Park Transformation is utilised to
+transform the network variables from the conventional three-
+phase abc reference frame to the dq0 rotating reference frame,
+and the inverse Park Transformation is utilised to re-transform
+them after control and manipulation.
+For the overall control loops the cascaded voltage and current
+control technique was implemented and extensive explanation
+of the comprehensive VSG control loops is documented in
+[2]. In cases where the local grid code does not exist or
+is underdeveloped, international standards such as the IEEE
+Standard for Interconnection and Interoperability of Inverter-
+Interconnecting with Associated
+Based Resources (IBRs)
+Transmission Electric Power Systems (IEEE 2800-2022), or
+other well-developed grid codes such as that for National
+Grid in the United Kingdom, can be used as a guideline
+for testing for compliance. However, for the focus of this
+particular investigation the South African grid code document
+for BESS compliance is well-developed enough to be used
+as a guideline. The base values for the per unit system are
+derived from a 50 MVA base and a base voltage of 0.69 kV.
+
+TABLE I
+BESS VOLTAGE-TIME PAIR VALUES FOR RIDE-THROUGH CONDITIONS
+
+Voltage (p.u)
+0 ≤ V < 0.10
+0.10 ≤ V < 0.20
+0.20 ≤ V < 0.30
+0.30 ≤ V < 0.40
+0.40 ≤ V < 0.50
+0.50 ≤ V < 0.60
+
+time (s)
+0.15
+0.37
+0.59
+0.80
+1.02
+1.24
+
+Voltage (p.u)
+0.60 ≤ V < 0.70
+0.70 ≤ V < 0.80
+0.80 ≤ V < 0.85
+0.85 ≤ V < 0.90
+0.90 ≤ V ≤1.08
+1.08 < V ≤1.20
+
+time (s)
+1.46
+1.67
+2.00
+20.0
+normal operation
+2.00
+
+Both Table I and Table II are extracted from graphs in
+[10]. These tables show the ranges for both the voltage and
+frequency and the corresponding minimum trip times which
+are set in the protection and control modules of the BESS.
+
+Authorized licensed use limited to: University of Adelaide. Downloaded on June 29,2024 at 09:09:48 UTC from IEEE Xplore.  Restrictions apply. 
+
+

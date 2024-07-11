@@ -1,0 +1,301 @@
+RES EARCH
+
+ELECTROCHEMISTRY
+
+La- and Mn-doped cobalt spinel oxygen evolution
+catalyst for proton exchange membrane electrolysis
+
+Lina Chong1, Guoping Gao2, Jianguo Wen3, Haixia Li2, Haiping Xu1, Zach Green4, Joshua D. Sugar5,
+A. Jeremy Kropf1, Wenqian Xu6, Xiao-Min Lin3, Hui Xu4, Lin-Wang Wang2, Di-Jia Liu1,7*
+
+Discovery of earth-abundant electrocatalysts to replace iridium for the oxygen evolution reaction (OER)
+in a proton exchange membrane water electrolyzer (PEMWE) represents a critical step in reducing the
+cost for green hydrogen production. We report a nanofibrous cobalt spinel catalyst codoped with
+lanthanum (La) and manganese (Mn) prepared from a zeolitic imidazolate framework embedded in
+electrospun polymer fiber. The catalyst demonstrated a low overpotential of 353 millivolts at 10
+milliamperes per square centimeter and a low degradation for OER over 360 hours in acidic electrolyte.
+A PEMWE containing this catalyst at the anode demonstrated a current density of 2000 milliamperes
+per square centimeter at 2.47 volts (Nafion 115 membrane) or 4000 milliamperes per square centimeter
+at 3.00 volts (Nafion 212 membrane) and low degradation in an accelerated stress test.
+
+L ow-temperature water electrolysis can
+
+rapidly produce environmentally sus-
+tainable, or green, hydrogen and is a
+prospective means of storing energy from
+renewable but intermittent power sources,
+such as wind and solar, in future clean energy
+infrastructure (1–4). Commercial systems use
+either liquid alkaline electrolyte or proton ex-
+change membrane electrolyte (1). Compared
+with the alkaline counterpart, a proton ex-
+change membrane water electrolyzer (PEMWE)
+offers the advantages of higher current density,
+higher H2 purity, lower resistance losses, and
+more compact design, rendering it a preferred
+technology where high efficiency and small
+footprint are essential (1, 2). Working under
+the acidic and oxidative environment, how-
+ever, adds substantial challenges to the catalyst
+activity and stability profile. This is particularly
+the case for the anode catalyst because of the
+high overpotential for oxygen evolution reac-
+tion (OER) (3). At present, OER catalysts for
+PEMWE are primarily restricted to the plat-
+inum group metal (PGM) materials, such as
+IrOx (1). Their high cost and limited reserve,
+however, pose substantial barriers to the wide-
+spread implementation of PEMWE. Low-cost
+transition metals and their oxides are known
+to be active toward OER in alkaline electrolyte
+(4–6), but their demonstration in acidic elec-
+trolyte is very limited (1, 7, 8).
+
+Cobalt molecular and oxide compounds have
+emerged as promising OER catalysts for water
+
+1Chemical Science and Engineering Division, Argonne
+National Laboratory, Lemont, IL 60439, USA. 2Material
+Science Division, Lawrence Berkeley National Laboratory,
+Berkeley, CA 94720, USA. 3Center for Nanoscale Materials,
+Argonne National Laboratory, Lemont, IL 60439, USA.
+4Giner Inc., Auburndale, MA 02466, USA. 5Sandia National
+Laboratory, Livermore, CA 94550, USA. 6X-ray Science
+Division, Advanced Photon Source, Argonne National
+Laboratory, Lemont, IL 60439, USA. 7Pritzker School of
+Molecular Engineering, University of Chicago, Chicago,
+IL 60637, USA.
+*Corresponding author. Email: djliu@anl.gov
+
+splitting in recent years (9). Kanan and Nocera
+systematically investigated water oxidation
+using a catalyst deposited from Co2+ solution
+in pH 7 phosphate buffer (10). Gerken et al.
+performed a comprehensive mechanistic study
+of cobalt-catalyzed water oxidation from homo-
+geneous to heterogeneous phases in electrolyte
+over a broad pH range of 0 to 14 (11). Those
+studies have provided profound understanding
+of electrocatalytic oxygen evolution by cobalt.
+More recently, thin film spinel-type Co3O4 was
+found to be active toward OER and stable at
+low overpotential in acid (12). The activity and
+stability of Co oxide were improved substan-
+tially when modified with iron, manganese,
+antimonite, and PbOx (13–15). In addition to
+activity and stability, the inherent conductivity
+represents an essential requirement for ef-
+ficient OER electrocatalysis to overcome the
+insulating properties of most transition metal
+oxides in their crystalline form. Conventional
+carbon supports, used to facilitate the elec-
+tron conductivity, are not stable against oxi-
+dation to CO2 at the PEMWE anode under
+OER operating potential. For example, a Co-
+polyoxometalate composited with carbon paste
+achieved a lower OER onset potential than
+IrO2 in 1 M sulfuric acid but decayed quickly,
+presumably as a result of oxidative corrosion
+of the carbon (16). Self-conductive oxide cat-
+alysts can also enhance the active -site volu-
+metric density without being diluted by a
+secondary nonactive support. A recently devel-
+oped self-healing OER catalyst has demon-
+strated excellent activity and durability in
+acidic electrolyte (14). The approach, however,
+requires the presence of metal precursors in
+the aqueous electrolyte, hindering integration
+into a PEMWE. Most of the aforementioned
+studies were carried out either in half-cells or
+aqueous electrolyzers, where the demands for
+OER catalyst stability and conductivity are
+different from those in a PEMWE. For exam-
+ple, the dissolved transition metal concentra-
+
+tion must be minimized to avoid poisoning the
+proton exchange membrane in the PEMWE.
+Effective OER for PEMWE requires optimal
+interfacial properties, microporosity, and sur-
+face catalytic activity (1), all of which need to be
+validated in the operating electrolyzer.
+
+In this work, we present a cobalt spinel–
+based OER catalyst derived from a zeolitic
+methyl-imidazolate framework (Co-ZIF) and
+processed by electrospinning. The catalyst
+demonstrated excellent OER activity ben-
+efiting from its high specific surface area,
+porous interconnected nanonetwork structure,
+and high conductivity.
+
+Design of an acid-stable cobalt OER catalyst
+
+Our design concept of an efficient cobalt
+spinel–based OER catalyst for PEMWE anodes
+is based on the following rationale: To en-
+hance OER activity in acid, an oversized and
+more stable second element can be selectively
+introduced to the cobalt oxide surface to
+generate strain, oxygen vacancy (Vo), and acid
+tolerance (17); to improve the oxide electronic
+conductivity, a third element with similar
+charge and dimension to cobalt may be in-
+corporated inside the lattice to bridge the
+Fermi bandgap through d orbital partial oc-
+cupation of the third element induced by its
+d-electron delocalization. Advancing further
+from the rotating disk electrode (RDE) or half-
+cell study to a membrane electrode assembly
+(MEA) demonstration, the catalyst should
+have a high porosity and surface area easily
+accessible to the reactant (H2O). Meanwhile,
+the electrode layer should be effective in trans-
+porting H2O and releasing O2 without blocking
+the water-catalyst interface. Furthermore, the
+oxide catalyst should be self-conductive with-
+out the need for another conductive support,
+such as carbon, that is unstable under high
+OER operating potential and current density.
+Finally, the metal oxide should be stable against
+oxidative and acidic (pH 2 to 4) corrosion in
+the PEMWE environment.
+
+We selected Co-ZIF as the precursor for the
+catalyst preparation because of its high intrin-
+sic porosity and reticular structure. It has re-
+cently been used to prepare a nanoplate oxide
+with excellent OER activity tested in strong
+alkaline electrolyte (1 M KOH) using the RDE
+method (18). Our catalyst preparation through
+low-temperature oxidation partially retained
+the porosity and morphology of Co-ZIFs after
+their conversion into interconnected hollow
+metal oxide particles, providing an excellent
+platform for enhanced charge and mass transfer.
+Among different elements that we screened,
+we selected lanthanum (La3+) as the second
+element because of its much larger radius
+compared with that of Co2+ (1.06 Å versus
+0.72 Å) along with its strong affinity to bind
+−OH groups at the surface of cobalt oxide. We
+also added manganese ions (Mn2+) of similar
+
+Chong et al., Science 380, 609–616 (2023)
+
+12 May 2023
+
+1 of 8
+
+Downloaded from https://www.science.org on June 29, 2024RES EARCH | R E S E A R C H A R T I C L E
+
+A
+
+Co-ZIF
+
++ Mn(II)
+
++ La(III)
+
+B
+
+F
+
+Electrospinning
+
+ZIF in Polymer Nanofiber
+
+Interconnected Porous Oxide
+
+E-spin
+
+Activation
+
+C
+
+G
+
+D
+
+H
+
+E
+
+I
+
+La
+
+Mn
+
+Fig. 1. Synthesis, morphology, and structure of LMCF. (A) Schematics of
+LMCF synthesis including formation of Co-ZIF embedded PAN polymer fiber by
+electrospinning and thermal oxidative activation to produce interconnected
+porous cobalt oxide particles after removing all the organics. The background
+SEM images show a cross-linked, ZIF-containing fiber nanonetwork produced by
+electrospinning and the interconnected porous oxide after the activation.
+(B) SEM image (scale bar, 1 mm). (C) HAADF-STEM image (scale bar, 500 nm).
+(D) TEM image (scale bar, 200 nm). (E) HRTEM image (scale bar, 5 nm).
+
+(F to H) STEM image and the corresponding La and Mn distributions
+(scale bar, 2 nm). The color bars show the element counts. The maximal counts are
+321 for La and 142 for Mn. (I) HRTEM image (scale bar, 0.5 nm). The green dots
+represent atomic columns of tetrahedral (T) and octahedral (O) oxygens, and the red
+dots represent the cobalt atomic columns simulated based on bulk phase inside
+lattice. The dotted yellow ellipses (on surface) show a different orientation compared
+with the solid yellow ellipses from the simulation (in bulk), suggesting a shift of
+oxygen position as a result of lattice relaxation.
+
+radius to Co2+ (0.8 Å versus 0.72 Å) during the
+Co-ZIF synthesis, which would be oxidized to
+Mn3+ (0.72 Å) during the oxidative conversion
+and uniformly distributed inside the cobalt
+spinel lattice to promote conductivity (via
+bandgap) and OER activity (via affinity OH
+or H group). The catalyst synthesis scheme is
+shown in Fig. 1A. Briefly, La- and Mn-doped
+Co-ZIF, LaMn@Co-ZIF, was prepared in solu-
+tion. Powder x-ray diffraction (XRD) combined
+with scanning electron microscopy (SEM)–
+energy dispersive x-ray spectroscopy (EDX)
+elemental mapping confirmed the successful
+incorporation of atomic La and Mn into the
+structure and cavity of the Co-ZIF (fig. S1).
+
+The LaMn@Co-ZIF was then suspended in a
+polyacrylonitrile (PAN) polymer slurry (LaMn@
+Co-ZIF/PAN) (19), which was subsequently
+electrospun into a fibrous mat. The nanofiber
+embedded with individual LaMn@Co-ZIF was
+activated in flowing air at 360°C for 6 hours to
+remove the organic components, forming La-
+and Mn-codoped porous cobalt spinel fibers
+(denoted LMCF). Thermogravimetric analysis
+(TGA) confirmed the removal of carbon and
+nitrogen in LMCF after oxidative activation
+(fig. S2). The SEM image of LMCF shows an
+interconnected nanofibrous network mor-
+phology with ample macropores in between
+the entwined nanofibers (Fig. 1B). High-angle
+
+annular dark-field scanning transmission
+electron microscopy (HAADF-STEM) revealed
+that individual LMCF particles retained the
+original Co-ZIF’s rhombic dodecahedral shape,
+aligned and fused together in strings after
+oxidation (Fig. 1C). The ZIF-shaped LMCF
+particle is highly porous with a hollow struc-
+ture composed of nanopores, as shown by
+transmission electron microscopy (TEM) (Fig.
+1D). Each particle is composed of aggregates of
+Co3O4 nanocrystallites, with an average size of
+~3.5 nm, determined by aberration-corrected
+high-resolution transmission electron micros-
+copy (HRTEM) (Fig. 1E and fig. S3). Nitrogen
+adsorption measurement of LMCF at 77 K
+
+Chong et al., Science 380, 609–616 (2023)
+
+12 May 2023
+
+2 of 8
+
+Downloaded from https://www.science.org on June 29, 2024

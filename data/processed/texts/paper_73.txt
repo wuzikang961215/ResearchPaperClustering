@@ -1,0 +1,171 @@
+Review
+Fiber Optic Sensing Technologies for Battery Management
+Systems and Energy Storage Applications
+
+Yang-Duan Su 1, Yuliya Preger 2
+
+, Hannah Burroughs 3, Chenhu Sun 1 and Paul R. Ohodnicki 1,4,*
+
+1 Mechanical Engineering and Materials Science, University of Pittsburgh, Pittsburgh, PA 15260, USA;
+
+YAS57@pitt.edu (Y.-D.S.); sunchenhu@gmail.com (C.S.)
+Sandia National Laboratories, Albuquerque, NM 87123, USA; ypreger@sandia.gov
+Lawrence Livermore National Laboratory, Livermore, CA 94550, USA; burroughs5@llnl.gov
+Electrical and Computer Engineering, University of Pittsburgh, Pittsburgh, PA 15260, USA
+
+2
+
+3
+
+4
+
+* Correspondence: PRO8@pitt.edu
+
+Abstract: Applications of ﬁber optic sensors to battery monitoring have been increasing due to
+the growing need of enhanced battery management systems with accurate state estimations. The
+goal of this review is to discuss the advancements enabling the practical implementation of battery
+internal parameter measurements including local temperature, strain, pressure, and refractive index
+for general operation, as well as the external measurements such as temperature gradients and vent
+gas sensing for thermal runaway imminent detection. A reasonable matching is discussed between
+ﬁber optic sensors of different range capabilities with battery systems of three levels of scales, namely
+electric vehicle and heavy-duty electric truck battery packs, and grid-scale battery systems. The
+advantages of ﬁber optic sensors over electrical sensors are discussed, while electrochemical stability
+issues of ﬁber-implanted batteries are critically assessed. This review also includes the estimated
+sensing system costs for typical ﬁber optic sensors and identiﬁes the high interrogation cost as one of
+the limitations in their practical deployment into batteries. Finally, future perspectives are considered
+in the implementation of ﬁber optics into high-value battery applications such as grid-scale energy
+storage fault detection and prediction systems.
+
+Keywords: ﬁber optic sensor; ﬁber Bragg grating; temperature monitoring; thermal runaway; battery
+management systems; Li-ion battery; electric vehicle; cost estimation
+
+Batteries are growing increasingly promising as the next-generation energy source
+for power vehicles, hybrid-electric aircraft, and even grid-scale energy storage, and the
+development of sensing systems for enhancing capabilities of health monitoring in battery
+management systems (BMS) has become an urgent task. BMS play a vital role in modern
+electric vehicles (EVs) and other applications for battery performance management, health
+diagnostics, and protection against extreme conditions. As illustrated in Figure 1, these
+key functionalities currently rely critically on the accurate measurement of parameters
+such as voltage, current, and temperature as inputs to cell state-estimation algorithms.
+Then, model-based estimators compute the estimated capacity, internal cell resistance, and
+cell state-of-charge (SOC), which contribute to the further estimation of remaining energy,
+power, state-of-health (SOH), and state-of-life (SOL) of the battery pack [1]. Therefore,
+reliable and accurate input measurements are important as they affect the estimation
+accuracy and convergence rate of the BMS algorithms. In contemporary BMS, common
+temperature sensing technologies are thermocouples or micro-thermistors combined with
+voltage-divider circuits [1–4]. However, these sensors are based on electrical connections
+that may suffer from noises such as electromagnetic interference (EMI), and they cannot
+be integrated within the highest value locations in the cell structure. As a result, the
+accuracy of cell state-estimation can be limited by weakly informative parameters external
+
+Academic Editor: Francesco Fienga
+
+1. Introduction
+
+Citation: Su, Y.-D.; Preger, Y.;
+
+Burroughs, H.; Sun, C.; Ohodnicki,
+
+P.R. Fiber Optic Sensing Technologies
+
+for Battery Management Systems and
+
+Energy Storage Applications. Sensors
+
+2021, 21, 1397. https://doi.org/
+
+10.3390/s21041397
+
+Received: 25 January 2021
+
+Accepted: 11 February 2021
+
+Published: 17 February 2021
+
+Publisher’s Note: MDPI stays neutral
+
+with regard to jurisdictional claims in
+
+published maps and institutional afﬁl-
+
+iations.
+
+Copyright: © 2021 by the authors.
+
+Licensee MDPI, Basel, Switzerland.
+
+This article is an open access article
+
+distributed under
+
+the terms and
+
+conditions of the Creative Commons
+
+Attribution (CC BY) license (https://
+
+creativecommons.org/licenses/by/
+
+4.0/).
+
+Sensors 2021, 21, 1397. https://doi.org/10.3390/s21041397
+
+https://www.mdpi.com/journal/sensors
+
+sensors(cid:1)(cid:2)(cid:3)(cid:1)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:1)(cid:1)(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7)Sensors 2021, 21, 1397
+
+2 of 34
+
+to the battery, which must be extrapolated to estimate cell temperatures within each
+module of a battery pack. Therefore, in order to downsize and reduce the overall battery
+cost by optimizing the utilization of cell total capacity and preventing conservative pack
+design [5,6] while maintaining reliability and safety from catastrophic failures, the demand
+for more compact and accurate sensor technologies that can be directly deployed internal
+to cells has become critical.
+
+Figure 1. Execution ﬂow diagram of parameter estimation algorithms involved in battery management systems (BMS) [1].
+
+Fiber optic (FO) sensors exhibit several key advantages over traditional electrical coun-
+terparts, which make them promising candidates to be integrated in BMS for measuring
+critical cell state-parameters. First, silica-based ﬁber optic cables are inherently immune to
+EMI and radio frequency interference (RFI), and they are electrically insulating [7]. Plastic
+ﬁber optic cables are also resistant to corrosive chemical species such as hydrogen ﬂuoride
+(HF) that may form in Li-ion battery electrolytes [8]. Second, the light weight, ﬂexibility,
+and low cost of optical ﬁbers make it possible for them to be embedded into individual cells
+without signiﬁcant additional size and weight, which cannot be done with conventional
+thermistors. Internal cell deployment can enable the monitoring of not only the internal cell
+temperature but also the volume expansion and phase transitions of the electrode active
+material that triggers capacity fade [9]. Third, the high sensitivity, multiplexing capability,
+and potential for functionalization to measure a wide range of parameters of interest for FO
+sensors allows them to detect strain, temperature, acoustic emission, and chemical species
+formations that serve as strong indicators of batteries’ state and health.
+
+Based on their spatial distribution topologies (i.e., “geospatial characteristics”), FO
+sensors can be broadly classiﬁed into three types: single-point sensors, quasi-distributed
+sensors, and fully distributed sensors. A quasi-distributed sensor consists of multiple point
+sensors that compute measurands at ﬁxed and discrete points along the cable, while a fully
+distributed sensor computes measurands along the entire region of interest of a ﬁber optic
+cable with spatial and temporal resolution dependent upon the details of the interrogation
+scheme. Depending on the sensing modality, physical measurands of FO sensors are
+typically encoded by light modulation effects such as shifts in wavelength or frequency,
+and changes in phase, intensity, or state of polarization. Fully distributed sensors typically
+require costly interrogator instrumentation to enable a large number of sensing points and
+therefore, they are of great interest for applications that exhibit linear characteristics such as
+electric powerlines, bridges, railways, tunnels, and pipelines where the value proposition is
+the highest [10]. The operation principle of these sensors is mainly based on light scattering
+including Rayleigh, Brillouin, and Raman scattering. On the other hand, in-ﬁber devices
+such as ﬁber Bragg grating (FBG) sensors can be used for either single point or quasi-
+distributed sensing and have drawn signiﬁcant attention in developing enhanced battery
+management systems owing to two major advantages: the potential for self-referencing
+ability and the quasi-distributed capability to form optical ﬁber sensing networks through
+multiplexing schemes at much lower cost than fully distributed sensors [11]. In practice,
+common measurands of Li-ion cells such as temperature and strain are encoded by Bragg
+wavelength shifts, which can be expressed as a function of grating period and refractive
+index and their differential variation with respect to the measurands. When stimulated by
+these cell parameters, the FBG sensor experiences changes in its periodicity of grating and
+its refractive index, which then induce wavelength shifts.
+
+FO sensors have been investigated extensively for gaseous chemical species sensing,
+and CO2 concentration has also been recently demonstrated as a crucial measurand to
+
+Sensors 2021, 21, x FOR PEER REVIEW 2 of 35   cell structure. As a result, the accuracy of cell state-estimation can be limited by weakly informative parameters external to the battery, which must be extrapolated to estimate cell temperatures within each module of a battery pack. Therefore, in order to downsize and reduce the overall battery cost by optimizing the utilization of cell total capacity and preventing conservative pack design [5,6] while maintaining reliability and safety from catastrophic failures, the demand for more compact and accurate sensor technologies that can be directly deployed internal to cells has become critical.  Figure 1. Execution flow diagram of parameter estimation algorithms involved in battery management systems (BMS) [1]. Fiber optic (FO) sensors exhibit several key advantages over traditional electrical counterparts, which make them promising candidates to be integrated in BMS for meas-uring critical cell state-parameters. First, silica-based fiber optic cables are inherently immune to EMI and radio frequency interference (RFI), and they are electrically insulat-ing [7]. Plastic fiber optic cables are also resistant to corrosive chemical species such as hydrogen fluoride (HF) that may form in Li-ion battery electrolytes [8]. Second, the light weight, flexibility, and low cost of optical fibers make it possible for them to be embed-ded into individual cells without significant additional size and weight, which cannot be done with conventional thermistors. Internal cell deployment can enable the monitoring of not only the internal cell temperature but also the volume expansion and phase tran-sitions of the electrode active material that triggers capacity fade [9]. Third, the high sen-sitivity, multiplexing capability, and potential for functionalization to measure a wide range of parameters of interest for FO sensors allows them to detect strain, temperature, acoustic emission, and chemical species formations that serve as strong indicators of batteries’ state and health. Based on their spatial distribution topologies (i.e., “geospatial characteristics”), FO sensors can be broadly classified into three types: single-point sensors, quasi-distributed sensors, and fully distributed sensors. A quasi-distributed sensor consists of multiple point sensors that compute measurands at fixed and discrete points along the cable, while a fully distributed sensor computes measurands along the entire region of interest of a fiber optic cable with spatial and temporal resolution dependent upon the details of the interrogation scheme. Depending on the sensing modality, physical measurands of FO sensors are typically encoded by light modulation effects such as shifts in wavelength or frequency, and changes in phase, intensity, or state of polarization. Fully distributed sensors typically require costly interrogator instrumentation to enable a large number of sensing points and therefore, they are of great interest for applications that exhibit linear characteristics such as electric powerlines, bridges, railways, tunnels, and pipelines where the value proposition is the highest [10]. The operation principle of these sensors is mainly based on light scattering including Rayleigh, Brillouin, and Raman scattering. On the other hand, in-fiber devices such as fiber Bragg grating (FBG) sensors can be used for either single point or quasi-distributed sensing and have drawn significant attention in developing enhanced battery management systems owing to two major advantages: the potential for self-referencing ability and the quasi-distributed capability to form optical fiber sensing networks through multiplexing schemes at much lower cost than fully dis-tributed sensors [11]. In practice, common measurands of Li-ion cells such as temperature and strain are encoded by Bragg wavelength shifts, which can be expressed as a function 

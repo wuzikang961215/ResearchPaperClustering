@@ -1,0 +1,280 @@
+Renewable Energy 126 (2018) 322e331
+
+Contents lists available at ScienceDirect
+
+Renewable Energy
+
+j o u r n a l h o m e p a g e : w w w . e l s e v i e r . c o m / l o c a t e / r e n e n e
+
+ERA5: The new champion of wind power modelling?
+
+Jon Olauson a, b, *
+a Division of Electricity, Department of Engineering Sciences, Uppsala University, Sweden
+b Integration of Renewable Energy Sources Group, KTH Royal Institute of Technology, Stockholm, Sweden
+
+a r t i c l e i n f o
+
+a b s t r a c t
+
+Article history:
+Received 27 September 2017
+Received in revised form
+28 February 2018
+Accepted 22 March 2018
+Available online 26 March 2018
+
+Keywords:
+ERA5
+MERRA-2
+Wind power modelling
+Long-term correction
+Reanalyses
+
+Output from meteorological reanalyses are used extensively in both academia and industry for modelling
+wind power. Recently, the ﬁrst batch of the new ERA5 reanalysis was released. The main purpose of this
+paper is to compare the performance of ERA5 and MERRA-2 (a commonly used reanalysis today) in terms
+of modelling i) the aggregated wind generation in ﬁve different countries and ii) the generation for 1051
+individual wind turbines in Sweden. The modelled wind power generation was compared to measure-
+ments. In conclusion, ERA5 performs better than MERRA-2 in all analysed aspects; correlations are
+higher, mean absolute and root mean square errors are in average around 20% lower and distributions of
+both hourly data and changes in hourly data are more similar to those for measurements. It is also shown
+that the uncertainty related to long-term correction (using one year of measurements and reanalysis data
+to predict the energy production during the remaining 1e5 years) is 20% lower for ERA5. In fact, using
+one year sample data and ERA5 gives slightly more accurate estimates than using two years of sample
+data and MERRA-2. Additionally, a new metric for quantifying the system size and dispersion of wind
+farms is proposed.
+
+© 2018 Elsevier Ltd. All rights reserved.
+
+1. Introduction
+
+Quoting Ref. [1], “reanalysis is the process whereby an un-
+changing data assimilation system is used to provide a consistent
+reprocessing of meteorological observations, typically spanning an
+extended segment of the historical data record”. The products from
+a reanalysis include many variables such as wind speeds, temper-
+ature and atmospheric pressure and are used extensively for
+modelling wind power both in academia and industry. Examples of
+applications include generation of long wind power time series for
+grid integration studies and long-term correction (LTC) of wind
+speed measurements conducted prior to the construction of wind
+farms. An important advantage of reanalyses is that these are often
+freely and globally available.
+
+Over the decades, new reanalyses have gradually become more
+high-resolved in time and space [2]. During the last years, MERRA
+[3] and MERRA-2 [1] (both produced by NASA) have been very
+popular for modelling wind power generation [4e14] due to, e.g.,
+the hourly temporal resolution and adequate height for wind
+speeds (50 m). A general conclusion from the studies cited above is
+
+* Kungliga Tekniska H€ogskolan, SE-100 44, Stockholm, Sweden.
+
+E-mail address: olauson@gmail.com.
+
+https://doi.org/10.1016/j.renene.2018.03.056
+0960-1481/© 2018 Elsevier Ltd. All rights reserved.
+
+that MERRA gives good results in terms of country-wise wind po-
+wer generation (relatively low errors when comparing to
+measurements).
+
+During 2017e2018, a new reanalysis named ERA5 [15] will be
+released. Contrary to its predecessor ERA-Interim [16], ERA5 has
+hourly resolution and wind speed data is freely available at 100 m
+height, i.e. relevant for modern wind turbines (WTs). The horizontal
+resolution is around 31 km, which is better than ERA-Interim and
+MERRA. The main objective of this paper is to compare the per-
+formance of MERRA-2 and ERA5 in terms of modelling wind power,
+both for countries and for individual WTs. For the former, the
+generation in Germany, Denmark, France, Sweden and Bonneville
+Power Administration (BPA) in north-west USA were analysed. For
+simplicity, BPA is denoted a “country” in the remaining of this pa-
+per. For the analysis of individual WTs, hourly time series for more
+than 1000 Swedish units were obtained.
+
+The most common approach for modelling country-wise wind
+power from reanalyses is to i) generate wind speed time series for
+each site, ii) transform wind speed to power via a power curve (PC)
+and iii) aggregate. Regarding point i), the reanalysis wind speeds
+can either be scaled so that a desired mean generation is met [9,10]
+or calculated from reanalysis data at different model heights [4,12]
+(possibly using statistical [6] or dynamical [17] downscaling). When
+transforming wind speed to power, some authors [4,9] use one
+
+J. Olauson / Renewable Energy 126 (2018) 322e331
+
+323
+
+generic PC while others [6,12] use farm speciﬁc ditto. It is common
+to alter the original PCs, e.g. using smoother “multi-turbine” power
+curves [4,12]. Especially for larger countries, it may be important to
+handle the maximum country-wise output, which can be consid-
+erably lower than the installed capacity [4,10,12]. Post-processing
+of the outputs at any of steps i-iii) is possible for improving the
+results. Examples include correction of seasonal and diurnal biases
+[10] and noise addition for a better representation of observed wind
+power variability.
+
+The remainder of the paper is structured in the following
+manner. First, the two reanalyses and all measurement datasets are
+described. In Section 3, the methods used are presented, including a
+suggestion for a new metric describing the geographical di-
+mensions of a wind power system. Subsequently the results are
+given and the paper is concluded with a short discussion.
+
+Several different datasets were retrieved for the purpose of this
+study. The two reanalyses are described in Section 2.1 while mea-
+surements and metadata are described in Section 2.2.
+
+2. Data
+
+2.1. Reanalyses
+
+In this work, the performance of MERRA-2 and ERA5 are
+compared. Other freely available reanalyses also exist (e.g. ERA-
+Interim and JRA-55), but have lower spatiotemporal resolutions
+and heights for wind speed data.
+
+The ﬁrst version of MERRA, the “Modern-Era Retrospective
+Analysis for Research and Applications”, was released in 2009. In
+early 2016 the production stopped and was replaced by MERRA-2
+which is now updated in “near real-time”, i.e. data is available
+with a couple of months lag. For the purpose of modelling wind
+power, these two reanalyses perform similarly [12].
+
+The ﬁrst batch of the ERA5 dataset, produced by the European
+Centre for Medium-Range Weather Forecasts (ECMWF), was
+released in July 2017 and covers the period 2010e2016. Subse-
+quently, ERA5 will span 1950 to near real-time. Some important
+properties of MERRA-2 and ERA5 are shown in Table 1. For com-
+parison, data for ERA-Interim, the predecessor of ERA5, are also
+given. ECMWF reanalyses are produced on reduced Gaussian grids,
+i.e. using different number of grid points along different latitudes
+and thus keeping the grid point separation in metres approximately
+constant. Since the data is downloaded on a user-deﬁned regular
+lat/lon grid, the resolutions given in Table 1 are only approximate.
+Downloading with a higher resolution is possible, but this merely
+implies an interpolation of the data.
+
+The spatial resolutions of ERA5 and MERRA-2 are illustrated
+qualitatively in Fig. 1. For comparison, mean wind speeds from the
+meso-scale model MIUU [18] (spatial resolution 0.5 km) are also
+shown. Note that data from the native model heights are shown
+
+Table 1
+Information on the two reanalyses considered in this study (MERRA-2 and ERA5).
+For comparison, data for ERA-Interim, the predecessor of ERA5, is also shown. The
+spatial resolutions of the ERA reanalyses are approximate (see Section 2.1). In gen-
+eral, wind speed data are available at several heights or pressure levels. Only the
+most proper for modelling wind power is given here.
+
+MERRA-2
+
+ERA-Interim
+
+ERA5
+
+Temporal resolution
+Spatial resolution
+Coverage
+
+1 h
+0:5(cid:4) (cid:5) 0:625(cid:4)
+1980e
+
+6 h
+79 km (z0:75(cid:4))
+1979e
+
+Wind speed height
+
+50 m
+
+10 m
+
+1 h
+31 km (z0:28(cid:4))
+2010e2016,
+soon 1950e
+100 m
+
+(50 m for MERRA-2 and 100 m for ERA-I) and that the colors thus
+represent different ranges of mean wind speeds. Although ERA5
+gives more correct patterns than MERRA-2 e.g. along the coast, it is
+obvious that none of the reanalyses are capable of resolving the
+local variations, especially in more complex terrain. Using rean-
+alyses directly for determining the mean wind speed at a site is
+therefore not recommended.
+
+2.2. Wind power measurements and metadata
+
+In order to model country-wise generation and to evaluate the
+
+results, the following measurements and metadata were used:
+
+1. Coordinates, capacity and,
+
+if available, commissioning and
+
+decommissioning dates of each farm.
+
+2. Hourly measurements of nation-wide generation.
+3. Time series of the installed capacity corresponding to the
+measured generation. Since the wind farm database might be
+incomplete and that commissioning/decommissioning dates
+might not be available, this time series can differ from the one
+calculated from the wind farm data (item one in this list). The
+measured and modelled generation time series were therefore
+normalised to their corresponding capacity time series in order
+½t(cid:2).
+to get comparable per unit generation; pp:u:½t(cid:2) ¼ pMW ½t(cid:2)=pinst
+
+For Germany, Denmark and France, data were retrieved from the
+“Open Power System Data” (OPSD) database (data packages
+“Renewable power plants” version 2017-07-03 and “Time series”
+version 2017-07-09). Primary data are from various sources, for a
+complete list see Ref. [19]. Since coordinates for German offshore
+farms were lacking or seemed suspicious, these were instead ob-
+tained from wikipedia.org. The latter source was also used for
+country-wise installed capacities (linear interpolation of end-of-
+½t(cid:2)). BPA generation
+year values was employed to calculate pinst
+time series and farm metadata except coordinates were retrieved
+from Ref. [20]. Coordinates for BPA farms were obtained from on-
+line sources;
+thewindpower.net, wikipedia.org and farm de-
+velopers' web pages. The BPA generation time series is given with
+ﬁve-minute resolution, so the data were averaged into hourly
+blocks.
+
+Generation measurements for individual Swedish WTs were
+obtained from the Cesar database. This dataset can be retrieved by
+request from the Swedish Energy Agency and a more thorough
+description can be found in Ref.
+[21]. Only wind turbines
+commissioned year 2000 or later with a capacity of (cid:3) 1 MW and at
+least one year records were considered. Wind turbines for which
+the rated capacity changed during the measurement period and
+measurements taken for farms in aggregation were also excluded.
+In total, 1e6 year long time series for 1051 WTs remained to be
+analysed.
+
+For Sweden, generation time series for individual WTs but no
+coordinates were available. The latter were therefore estimated
+from the reanalyses grid points with the highest correlation be-
+tween modelled and measured generation. Since choosing the best
+ﬁtting data could potentially give overly optimistic results, a test
+was performed. Relatively exact coordinates for ten randomly
+chosen WTs were found from the developers/owners web pages
+and reanalyses time series were computed for these sites. The
+corresponding correlations to measurements were in principle
+identical to those obtained from the best ﬁtting time series; the
+largest difference for a single WT was 0.001 and the average cor-
+relations were the same within three digits precision.
+It was
+therefore concluded that estimating coordinates from the best
+ﬁtting reanalyses grid points does not skew the results (neither
+positively nor negatively). It can be mentioned that the mean
+
+
