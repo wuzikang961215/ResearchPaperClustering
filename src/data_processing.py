@@ -24,15 +24,6 @@ class DataProcessing:
         self.stop_words = set(stopwords.words('english'))
         self.lemmatizer = WordNetLemmatizer()
 
-    def rename_files(self, directory):
-        """
-        Rename files in the given directory to a consistent format.
-        """
-        for i, filename in enumerate(sorted(os.listdir(directory))):
-            if filename.endswith('.pdf'):
-                new_name = f"paper_{i+1}.pdf"
-                os.rename(os.path.join(directory, filename), os.path.join(directory, new_name))
-
     def extract_text_from_first_two_pages(self, pdf_path):
         try:
             # Extract text from the first two pages
@@ -124,6 +115,7 @@ class DataProcessing:
             r'A\s*B\s*S\s*T\s*R\s*A\s*C\s*T\s*(.*?)\s*(?:JEL classification:|1\. Introduction|Introduction|E-mail addresses|Corresponding authors|Manuscript received|Shared first authorship|doi|DOI|©|Received:|Accepted:|Available online|Article history:|Keywords:|1\. Background|K E Y W O R D S\nenergy storage|index terms|K\s*E\s*Y\s*W\s*O\s*R\s*D\s*S\s*\n*\n*alternative|Keywords  Energy saving|Keywords  Plants|CrossCheck date: 17 September)',
             re.DOTALL | re.IGNORECASE)
         
+         # Define the third pattern to extract abstract without explicit labeling
         abstract_pattern3 = re.compile(
             r'(?:Shandong, China|Peter H\. L\. Notten|Genqiang Zhang|98195, United States of America|Yuliang Cao|Xuping Sun|abc|Dingsheng Wang|Roghayeh Sadeghi Erami1,2|Di-Jia Liu1,7).*?\n\s*(.*?)(?=\nKeywords:|\n1\. Introduction|Y\. Li, M\. Cheng|2023 The Author\(s\)|can  provide  both  high  energy|world  population  and|cid:44|Freshwater is likely to|L ow-temperature water)', 
             re.DOTALL | re.IGNORECASE)
@@ -133,9 +125,6 @@ class DataProcessing:
         
         if match:
             abstract = match.group(1).strip()
-            # Further clean up the abstract to remove any remaining noise
-            # abstract = re.sub(r'\s+', ' ', abstract)  # Replace multiple spaces/newlines with a single space
-            # abstract = re.sub(r'\s*•.*?\s*', '', abstract)  # Remove bullet points if present
             # Remove additional noise like dates and publisher notes
             abstract = re.sub(r'\(cid:.*?\)', '', abstract)  # Remove "(cid:...)" noise
             abstract = re.sub(r'©.*$', '', abstract)  # Remove © and anything that follows
@@ -151,9 +140,6 @@ class DataProcessing:
 
         if match:
             abstract = match.group(1).strip()
-            # Further clean up the abstract to remove any remaining noise
-            # abstract = re.sub(r'\s+', ' ', abstract)  # Replace multiple spaces/newlines with a single space
-            # abstract = re.sub(r'\s*•.*?\s*', '', abstract)  # Remove bullet points if present
             # Remove additional noise like dates and publisher notes
             abstract = re.sub(r'\(cid:.*?\)', '', abstract)  # Remove "(cid:...)" noise
             abstract = re.sub(r'©.*$', '', abstract)  # Remove © and anything that follows
@@ -184,12 +170,7 @@ class DataProcessing:
         if not os.path.exists(output_directory):
             os.makedirs(output_directory)
 
-        abstracts = []
-
-        # Sort filenames numerically
-        sorted_filenames = sorted(os.listdir(input_directory), key=lambda x: int(os.path.splitext(x)[0].split('_')[-1]))
-
-        for filename in sorted_filenames:
+        for filename in os.listdir(input_directory):
             if filename.endswith('.txt'):
                 file_path = os.path.join(input_directory, filename)
                 with open(file_path, 'r', encoding='utf-8') as file:
@@ -200,17 +181,6 @@ class DataProcessing:
                 output_path = os.path.join(output_directory, filename.replace('.txt', '_abstract.txt'))
                 with open(output_path, 'w', encoding='utf-8') as out_file:
                     out_file.write(abstract)
-                abstracts.append({"File Name": filename, "Abstract": abstract})
-
-        # Create a DataFrame from the list of dictionaries
-        df = pd.DataFrame(abstracts, columns=["File Name", "Abstract"])
-
-        # Sort the DataFrame by the 'File Name' column
-        df = df.sort_values(by="File Name", key=lambda x: x.str.extract(r'(\d+)')[0].astype(int))
-
-        # Save the DataFrame to a CSV file
-        output_file = os.path.join(output_directory, 'abstracts.csv')
-        df.to_csv(output_file, index=False, encoding='utf-8')
 
 
     def _refine_abstract(self, abstract):
