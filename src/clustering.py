@@ -66,10 +66,15 @@ class Clustering:
                 model = SpectralClustering(n_clusters=n, random_state=42)
             elif self.algorithm == 'gmm':
                 model = GaussianMixture(n_components=n, random_state=42)
+            elif self.algorithm == 'dbscan':
+                # DBSCAN does not use a predefined number of clusters, setting eps for each iteration
+                model = DBSCAN(eps=0.5)
             labels = model.fit_predict(X)
             wcss.append(model.inertia_ if hasattr(model, 'inertia_') else 0)
             silhouette_scores.append(silhouette_score(X, labels))
-            davies_bouldin_scores.append(davies_bouldin_score(X, labels))
+            # Convert sparse matrix to dense array for davies_bouldin_score
+            X_dense = X.toarray() if hasattr(X, 'toarray') else X
+            davies_bouldin_scores.append(davies_bouldin_score(X_dense, labels))
 
         return wcss, silhouette_scores, davies_bouldin_scores
     

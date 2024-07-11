@@ -9,7 +9,8 @@ import pytesseract
 from PIL import Image
 from pdf2image import convert_from_path
 import csv
-
+from pdfminer.high_level import extract_text
+import pandas as pd
 
 # Download required NLTK data
 nltk.download('stopwords')
@@ -32,124 +33,184 @@ class DataProcessing:
                 new_name = f"paper_{i+1}.pdf"
                 os.rename(os.path.join(directory, filename), os.path.join(directory, new_name))
 
-    
-    def _detect_stuck_words(self, text):
+    def extract_text_from_first_two_pages(self, pdf_path):
+        try:
+            # Extract text from the first two pages
+            text = extract_text(pdf_path, page_numbers=[0, 1])
+            return text
+        except Exception as e:
+            print(f"Error extracting text from {pdf_path}: {e}")
+            return ""
+
+    def save_text_to_file(self, text, output_path):
+        try:
+            with open(output_path, 'w', encoding='utf-8') as file:
+                file.write(text)
+        except Exception as e:
+            print(f"Error saving text to {output_path}: {e}")
+
+        def process_pdfs(self, input_directory, output_directory):
+            if not os.path.exists(output_directory):
+                os.makedirs(output_directory)
+
+            for filename in os.listdir(input_directory):
+                if filename.endswith('.pdf'):
+                    pdf_path = os.path.join(input_directory, filename)
+                    text = self.extract_text_from_first_two_pages(pdf_path)
+                    output_path = os.path.join(output_directory, filename.replace('.pdf', '.txt'))
+                    self.save_text_to_file(text, output_path)
+
+    def process_pdfs(self, input_directory, output_directory):
+        if not os.path.exists(output_directory):
+            os.makedirs(output_directory)
+
+        for filename in os.listdir(input_directory):
+            if filename.endswith('.pdf'):
+                pdf_path = os.path.join(input_directory, filename)
+                text = self.extract_text_from_first_two_pages(pdf_path)
+                output_path = os.path.join(output_directory, filename.replace('.pdf', '.txt'))
+                self.save_text_to_file(text, output_path)
+
+
+    def correct_misplaced_abstract(self, text):
         """
-        Detects if there are stuck words in the text by counting occurrences
-        of concatenated lowercase and uppercase letters.
-
-        Args:
-            text (str): Text to check for stuck words.
-
-        Returns:
-            bool: True if stuck words are detected, False otherwise.
-        """
-        stuck_words = re.findall(r'[a-z][A-Z]', text)
-        # Set a threshold for the number of stuck word pairs to determine if OCR is needed
-        return len(stuck_words) > 44 # 44 is the max length of stuck words in paper_66
-
+        Corrects the abstract if it is misplaced after the "1. Introduction" section.
         
-    
-    def extract_abstracts(self, directory):
-        """
-        Extracts abstracts from PDF files in the specified directory.
-
         Args:
-            directory (str): Path to the directory containing PDF files.
-
-        Returns:
-            list: List of tuples containing file names and extracted abstracts.
-        """
-        # Rename files for consistency
-        # self.rename_files(directory)
+            text (str): The text to correct.
         
-        # List all renamed PDF files and sort them
-        file_paths = sorted([os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.pdf')]) # modify file name here for testing
-
-        results = []
-        for file_path in file_paths:
-            try:
-                with open(file_path, 'rb') as f:
-                    reader = PdfReader(f)
-                    text = ''
-                    for page_num in range(min(2, len(reader.pages))):  # Extract text from the first two pages only
-                        text += reader.pages[page_num].extract_text()
-                    # Print a small portion of the full extracted text for debugging
-                    print(f"Extracted text from {file_path}:\n{text[:5000]}...\n")
-                    abstract = self._extract_abstract(text)
-
-                    if not abstract: # or self._detect_stuck_words(text):
-                        # Use OCR as a fallback
-                        print(f"Using OCR for file: {file_path}")
-                        pages = convert_from_path(file_path, first_page=1, last_page=2)
-                        ocr_text = ''
-                        for page in pages:
-                            ocr_text += pytesseract.image_to_string(page)
-
-                        # Print a small portion of the OCR extracted text for debugging
-                        print(f"OCR extracted text from {file_path}:\n{ocr_text[:5000]}...\n")
-                        abstract = self._extract_abstract(ocr_text)
-
-                    if abstract:
-                        results.append((file_path, abstract))
-                    else:
-                        results.append((file_path, "Abstract not found"))
-
-            except Exception as e:
-                print(f"Error processing {file_path}: {e}")
-        return results
-
-
-    def _extract_abstract(self, text):
+        Returns:
+            str: The text with the abstract corrected if it was misplaced.
         """
-        Extracts the abstract section from the text using improved regex and NLP.
+        # Pattern to find the misplaced abstract right after "1. Introduction"
+        introduction_pattern = re.compile(r'(1\. Introduction\s+)(.*?)(\n\n\s*[A-Z])', re.DOTALL | re.IGNORECASE)
+        match = introduction_pattern.search(text)
+        
+        if match:
+            introduction_section = match.group(1)
+            misplaced_abstract = match.group(2).strip()
+            following_content = match.group(3)
+            
+            # Check if the misplaced abstract starts with common abstract phrases
+            if misplaced_abstract and re.match(r'^[A-Z]', misplaced_abstract):
+                text = text.replace(misplaced_abstract, '').strip()
+                # Insert the misplaced abstract at the correct position
+                text = re.sub(r'(A\s*B\s*S\s*T\s*R\s*A\s*C\s*T\s*)', r'\1\n' + misplaced_abstract + '\n\n', text, flags=re.IGNORECASE)
+        
+        return text
+
+    def extract_abstract(self, text):
+        """
+        Extracts the abstract from the given text.
 
         Args:
-            text (str): Full text extracted from a PDF.
+            text (str): The text from which to extract the abstract.
 
         Returns:
-            str: Extracted abstract text.
+            str: The extracted abstract.
         """
-        # Improved regular expression to find the 'Abstract' section and avoid 'Graphical Abstract' and other irrelevant sections
-        abstract_match = re.search(r'(?i)(abstract)[:\s\n]*(.*?)(?=(1\.\s*introduction|introduction|keywords|index terms|references|acknowledgements|bibliography|Nomenclature Note:|1\.\s*background and introduction|Copyright 2015, Hydrogen Energy|2022 The Author(s)|2022 Hydrogen Energy Public|2023 Hydrogen Energy Publications|/C2112023 International Association|Nomenclature))', text, re.DOTALL)
+        # Remove graphical abstract section if present
+        text = re.sub(r'G R A P H I C A L  A B S T R A C T.*?A R T I C L E  I N F O', '', text, flags=re.DOTALL | re.IGNORECASE)
 
-        if abstract_match:
-            abstract = abstract_match.group(2).strip()
-            abstract = self._clean_abstract(abstract)
-            abstract = self._refine_abstract(abstract)
-            abstract = self.preprocess_text(abstract)
+        # Define the primary pattern to search for the abstract section
+        abstract_pattern1 = re.compile(
+            r'A\s*B\s*S\s*T\s*R\s*A\s*C\s*T\s*'
+            r'(?:.*?Keywords:\s*(?:\w+.*?\n)*)(.*?)'
+            r'(?:1\. Introduction|1\. Background|Introduction|E-mail addresses|Corresponding authors|Shared first authorship|doi|DOI|©|Received|Manuscript received|Accepted|Available online|Article history:|Keywords:|2017 The Author|2017 Elsevier Ltd.|Nomenclature|copyright|corresponding author|1⋅h|2023 International Association)',
+            re.DOTALL | re.IGNORECASE)
+
+        # Define the secondary pattern to search for the abstract section including potential keywords
+        abstract_pattern2 = re.compile(
+            r'A\s*B\s*S\s*T\s*R\s*A\s*C\s*T\s*(.*?)\s*(?:JEL classification:|1\. Introduction|Introduction|E-mail addresses|Corresponding authors|Manuscript received|Shared first authorship|doi|DOI|©|Received:|Accepted:|Available online|Article history:|Keywords:|1\. Background|K E Y W O R D S\nenergy storage|index terms|K\s*E\s*Y\s*W\s*O\s*R\s*D\s*S\s*\n*\n*alternative|Keywords  Energy saving|Keywords  Plants|CrossCheck date: 17 September)',
+            re.DOTALL | re.IGNORECASE)
+        
+        abstract_pattern3 = re.compile(
+            r'(?:Shandong, China|Peter H\. L\. Notten|Genqiang Zhang|98195, United States of America|Yuliang Cao|Xuping Sun|abc|Dingsheng Wang|Roghayeh Sadeghi Erami1,2|Di-Jia Liu1,7).*?\n\s*(.*?)(?=\nKeywords:|\n1\. Introduction|Y\. Li, M\. Cheng|2023 The Author\(s\)|can  provide  both  high  energy|world  population  and|cid:44|Freshwater is likely to|L ow-temperature water)', 
+            re.DOTALL | re.IGNORECASE)
+
+
+        match = abstract_pattern1.search(text)
+        
+        if match:
+            abstract = match.group(1).strip()
+            # Further clean up the abstract to remove any remaining noise
+            # abstract = re.sub(r'\s+', ' ', abstract)  # Replace multiple spaces/newlines with a single space
+            # abstract = re.sub(r'\s*•.*?\s*', '', abstract)  # Remove bullet points if present
+            # Remove additional noise like dates and publisher notes
+            abstract = re.sub(r'\(cid:.*?\)', '', abstract)  # Remove "(cid:...)" noise
+            abstract = re.sub(r'©.*$', '', abstract)  # Remove © and anything that follows
+            abstract = re.sub(r'\d{4} Elsevier Ltd\. All rights reserved\.', '', abstract)  # Remove "2016 Elsevier Ltd. All rights reserved."
+            if abstract.strip():  # Check if abstract is not an empty string
+                return abstract
+        
+        # Try correcting misplaced abstract if not found or empty
+        text_corrected = self.correct_misplaced_abstract(text)
+        # if text_corrected:
+        #     return text_corrected
+        match = abstract_pattern2.search(text_corrected)
+
+        if match:
+            abstract = match.group(1).strip()
+            # Further clean up the abstract to remove any remaining noise
+            # abstract = re.sub(r'\s+', ' ', abstract)  # Replace multiple spaces/newlines with a single space
+            # abstract = re.sub(r'\s*•.*?\s*', '', abstract)  # Remove bullet points if present
+            # Remove additional noise like dates and publisher notes
+            abstract = re.sub(r'\(cid:.*?\)', '', abstract)  # Remove "(cid:...)" noise
+            abstract = re.sub(r'©.*$', '', abstract)  # Remove © and anything that follows
+            abstract = re.sub(r'\d{4} Elsevier Ltd\. All rights reserved\.', '', abstract)  # Remove "2016 Elsevier Ltd. All rights reserved."
+            abstract = re.sub(r'Marine engines mainly.*?the climate goals\.', '', abstract, flags=re.DOTALL)  # Remove text from "Marine engines mainly" to "the climate goals."
+            abstract = re.sub(r'Investment in large-scale renewable.*?to host and support', '', abstract, flags=re.DOTALL)  # Remove the paragraph from "Investment in large-scale renewable" to "to host and support"
+            abstract = re.sub(r'As the catalyst.*?the climate system \[7\]\.', '', abstract, flags=re.DOTALL)  # Remove the paragraph from "As the catalyst" to "the climate system [7]."
+            abstract = re.sub(r'Renewable energy is the best solution.*?are also becoming popular', '', abstract, flags=re.DOTALL)  # Remove the paragraph from "Renewable energy is the best solution" to "are also becoming popular"
+            abstract = re.sub(r'The sun is a huge sphere.*?this combined solar irradiance\.', '', abstract, flags=re.DOTALL)  # Remove the paragraph from "The sun is a huge sphere" to "this combined solar irradiance."
+            abstract = re.sub(r'The global energy outlook.*?long-term economic growth \[2\]\.', '', abstract, flags=re.DOTALL)  # Remove the paragraph from "The global energy outlook" to "long-term economic growth [2]."
             return abstract
-    
 
-    def _clean_abstract(self, abstract):
-        """
-        Cleans the extracted abstract by removing redundant phrases and unwanted sections.
+        match = abstract_pattern3.search(text)
 
-        Args:
-        abstract (str): Extracted abstract text.
+        if match:
+            abstract = match.group(1).strip()
+            # Remove additional noise like dates and publisher notes
+            abstract = re.sub(r'\(cid:.*?\)', '', abstract)  # Remove "(cid:...)" noise
+            abstract = re.sub(r'©.*$', '', abstract)  # Remove © and anything that follows
+            abstract = re.sub(r'\d{4} Elsevier Ltd\. All rights reserved\.', '', abstract)  # Remove "2016 Elsevier Ltd. All rights reserved."
+            abstract = re.sub(r'Received \d{1,2}(st|nd|rd|th) [A-Za-z]+ \d{4}\s*DOI: 10\.\d{4}/[a-zA-Z0-9]+\s*rsc\.li/chem-soc-rev', '', abstract, flags=re.DOTALL)  # Remove "Received ..." to "rsc.li/chem-soc-rev"
+            abstract = re.sub(r'l\s*e\s*c\s*i\s*t\s*r\s*A\s*w\s*e\s*v\s*e\s*R\s*i\s*\s*§', '', abstract, flags=re.DOTALL | re.IGNORECASE)  # Remove the noise "l e c i t r A w e v e R i §"
+            return abstract
 
-        Returns:
-            str: Cleaned abstract text.
-        """
-        # List of phrases and patterns to remove
-        redundant_phrases = [
-            r"(\d{4} )?elsevier ltd", r"all rights reserved", r"©", r"doi:", r"published by",
-            r"\d{4} (elsevier|springer|wiley|taylor & francis) [\w\s]+", r"K\s*E\s*Y\s*W\s*O\s*R\s*D\s*S",
-            r"School of [\w\s]+", r"Email: [\w\s@.]+", r"Corresponding Author:", r"Data Availability Statement included at the end of the article.",
-            r"Graphical Abstract", r"Highlights", r"Key Points", r"Summary", r"1, Shandong Normal University, China", r"2, Shanghai Jiao Tong University \(SJTU\), Shanghai, China",
-            r"3Al-Rayyan International University College, in Partnership with the University of Derby UK, Doha, Qatar",
-            r"4& Finance, Xi’an Jiaotong University, Xian, China", r"Jaffar Abbas, Antai College of Economics and Management",
-            r",Shanghai Jiao Tong University, No. 800, Dongchuan Road, Minhang District, Shanghai 200240,China."
-        ]
+        return "Abstract not found"
 
-        for phrase in redundant_phrases:
-            abstract = re.sub(phrase, '', abstract, flags=re.IGNORECASE)
+    def process_text_files(self, input_directory, output_directory):
+        if not os.path.exists(output_directory):
+            os.makedirs(output_directory)
 
-        # Remove excessive whitespace and fix issues caused by different background color
-        abstract = re.sub(r'([a-z])([A-Z])', r'\1 \2', abstract)  # deal with words stuck together due to different background color
-        abstract = re.sub(r'\s+', ' ', abstract).strip()
+        abstracts = []
 
-        return abstract
+        # Sort filenames numerically
+        sorted_filenames = sorted(os.listdir(input_directory), key=lambda x: int(os.path.splitext(x)[0].split('_')[-1]))
+
+        for filename in sorted_filenames:
+            if filename.endswith('.txt'):
+                file_path = os.path.join(input_directory, filename)
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    text = file.read()
+                abstract = self.extract_abstract(text)
+                abstract = self._refine_abstract(abstract)
+                abstract = self.preprocess_text(abstract)
+                output_path = os.path.join(output_directory, filename.replace('.txt', '_abstract.txt'))
+                with open(output_path, 'w', encoding='utf-8') as out_file:
+                    out_file.write(abstract)
+                abstracts.append({"File Name": filename, "Abstract": abstract})
+
+        # Create a DataFrame from the list of dictionaries
+        df = pd.DataFrame(abstracts, columns=["File Name", "Abstract"])
+
+        # Sort the DataFrame by the 'File Name' column
+        df = df.sort_values(by="File Name", key=lambda x: x.str.extract(r'(\d+)')[0].astype(int))
+
+        # Save the DataFrame to a CSV file
+        output_file = os.path.join(output_directory, 'abstracts.csv')
+        df.to_csv(output_file, index=False, encoding='utf-8')
 
 
     def _refine_abstract(self, abstract):
@@ -189,18 +250,26 @@ class DataProcessing:
         return ' '.join(words)
     
 
-    def save_abstracts_to_csv(self, results, output_file):
+    def save_abstracts_to_csv(self, input_dir, output_file):
         """
-        Save the extracted abstracts to a CSV file.
+        Reads all abstract output text files from the input directory and saves them into a CSV file.
 
         Args:
-            results (list): List of tuples containing file names and extracted abstracts.
-            output_file (str): Path to the output CSV file.
+            input_dir (str): The directory containing the abstract output text files.
+            output_file (str): The path to the output CSV file.
         """
-        os.makedirs(os.path.dirname(output_file), exist_ok=True)
-        with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
-            writer = csv.writer(csvfile)
-            writer.writerow(['File Name', 'Abstract'])
-            for file_path, abstract in results:
-                file_name = os.path.basename(file_path)
-                writer.writerow([file_name, abstract])
+        abstracts = []
+
+        # Iterate through all text files in the input directory
+        for filename in os.listdir(input_dir):
+            if filename.endswith(".txt"):
+                filepath = os.path.join(input_dir, filename)
+                with open(filepath, 'r', encoding='utf-8') as file:
+                    abstract = file.read().strip()
+                    abstracts.append({"File Name": filename, "Abstract": abstract})
+
+        # Create a DataFrame from the list of dictionaries
+        df = pd.DataFrame(abstracts, columns=["File Name", "Abstract"])
+
+        # Save the DataFrame to a CSV file
+        df.to_csv(output_file, index=False, encoding='utf-8')
