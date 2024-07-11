@@ -242,6 +242,47 @@ To determine the optimal number of clusters, we employed two key analyses:
   - Decided to focus on improving text extraction quality to enhance the overall clustering performance.
   - Will explore more advanced text extraction methods, possibly integrating more robust OCR techniques or leveraging external text extraction services like AWS Textract.
   - Further refinement of the extraction phase is expected to lead to better representation and improved clustering outcomes.
+ 
+### Enhanced Abstract Extraction Process
 
+I realized that using PyPDF2 for abstract extraction was not yielding ideal results, as the silhouette score was suboptimal regardless of the vectorization or clustering algorithms applied. To address this, I focused on removing noise from the text data to improve the clustering outcomes. My exploration led me to switch to pdfminer for text extraction.
 
+#### Initial Text Extraction with pdfminer
+
+- **Quality Improvement**:
+  By using pdfminer, the quality of the extracted text improved significantly. The text was more organized and better separated from other sections compared to PyPDF2.
+
+#### Abstract Extraction
+
+- **Text File Creation**:
+  After extracting the text with pdfminer, I saved the content into text files. This allowed for more controlled and manageable processing.
+  
+- **Pattern-Based Extraction**:
+  Initially, I attempted to identify patterns from "abstract" to "1. introduction." However, there were numerous edge cases that needed to be handled individually. 
+
+- **Three Rounds of Parsing**:
+  1. **First Parse**:
+      - Targeted regular patterns starting from "abstract" and ending at "introduction."
+  2. **Second Parse**:
+      - Addressed cases where the abstract was misplaced after the introduction title, correcting its position.
+  3. **Third Parse**:
+      - Handled papers without the "abstract" keyword. This involved hard-coded, brute-force methods to cover all edge cases.
+  - **Outcome**:
+      - These three rounds of parsing significantly improved the extraction process, yielding cleaner abstracts with most noise removed. However, abstracts from papers 15, 18, 19, 20, 21, 22, 47, and 70 were incomplete. Nonetheless, this was preferable to extracting noisy content.
+      - Papers 65, 73, and 78 were unprocessed due to complex formatting issues, but this was a significant reduction from the previous 14-15 unprocessed files.
+
+#### Improved Silhouette Score
+
+- **New Scores**:
+  - Using spacy_word2vec and hierarchical clustering, the silhouette scores improved dramatically, ranging from 0.11 to as high as 0.6 or 0.8.
+  - A notable observation was that the score was significantly higher when the cluster count was 1-2, suggesting that the data might be better organized and naturally split into 2-3 groups based on visualizations.
+
+#### Limitations and Future Work
+
+- **Current Solution**:
+  - The current method relies heavily on brute force and specific patterns, which might not scale well with larger datasets. Handling every edge case manually is not feasible for extensive data.
+  
+- **Need for Advanced Solutions**:
+  - To achieve even better precision and handle larger datasets effectively, a trained model to recognize abstracts without explicit programming is necessary.
+  - Advanced tools and machine learning models from AWS, Google Cloud, or other platforms could provide the required sophistication to automate and improve the extraction process further.
 
