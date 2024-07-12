@@ -19,7 +19,7 @@ class Clustering:
 
     def _initialize_vectorizer(self, vectorizer_type):
         if vectorizer_type == 'tfidf':
-            return TfidfVectorizer(max_features=1000, token_pattern=r'(?u)\b[A-Za-z]+\b')
+            return TfidfVectorizer(max_features=1500, token_pattern=r'(?u)\b[A-Za-z]+\b')
         elif vectorizer_type == 'spacy_word2vec':
             return SpacyWord2VecVectorizer()
         elif vectorizer_type == 'bert':
