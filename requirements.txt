@@ -95,6 +95,7 @@ safetensors==0.4.3
 scikit-learn==1.5.0
 scipy==1.12.0
 seaborn==0.13.2
+sentence-transformers==3.0.1
 shellingham==1.5.4
 six==1.16.0
 slate3k==0.5.3
