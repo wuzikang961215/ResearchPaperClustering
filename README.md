@@ -107,8 +107,6 @@ This approach balances the need for accuracy with the practical constraints of t
 
 It was discovered that while OCR helps when "Abstract" is in a weird format and cannot be recognized, overusing OCR can lead to poor word extraction. For instance, in some cases where there are stuck words due to newline removal, using OCR introduced more issues. Therefore, it is more effective to use `PdfReader`'s `extract_text` function even if it results in stuck words. The stuck words can then be handled by adding a space when newline characters are removed.
 
-It was discovered that while OCR helps when "Abstract" is in a weird format and cannot be recognized, overusing OCR can lead to poor word extraction. For instance, in some cases where there are stuck words due to newline removal, using OCR introduced more issues. Therefore, it is more effective to use `PdfReader`'s `extract_text` function even if it results in stuck words. The stuck words can then be handled by adding a space when newline characters are removed.
-
 ### Moving Forward with Text Vectorization and Clustering
 
 Despite the challenges faced with perfect abstract extraction, progress was made to move forward with text vectorization and clustering. The following steps were implemented:
