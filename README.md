@@ -305,3 +305,6 @@ I realized that using PyPDF2 for abstract extraction was not yielding ideal resu
 
 - **Decision**:
   - The approach using Sentence-BERT with K-Means clustering was chosen despite the lower silhouette score. The practical usability, interpretability of clusters, and even distribution observed in the t-SNE visualization were prioritized.
+ 
+- **Final Decision**:
+  - Eventually, I chose TF-IDF and K-Means because, although the silhouette score is not ideal with a silhouette of only 0.03, it makes more sense to group papers together in real-world scenarios. For example, when I check the groupings, I can see papers related to climate, environment, etc., grouped together. This practical grouping is more beneficial for understanding and analyzing the research topics.
