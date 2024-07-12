@@ -170,19 +170,16 @@ class Clustering:
         summary_df = pd.DataFrame(summary)
         summary_df.to_csv(output_path, index=False)
 
-    def _get_top_terms(self, X, top_n=10):
-        if self.vectorizer_type in ['tfidf', 'doc2vec']:
-            terms = self.vectorizer.get_feature_names_out()
-            sum_words = X.sum(axis=0)
-            words_freq = [(word, sum_words[0, idx]) for word, idx in self.vectorizer.vocabulary_.items()]
-            words_freq = sorted(words_freq, key=lambda x: x[1], reverse=True)
-            top_terms = [word for word, freq in words_freq[:top_n]]
-        else:
-            # Handle word2vec and spacy_word2vec
-            top_terms = ["Not available for word2vec or spacy_word2vec vectorizers"]
+    def _get_top_terms(self, X, terms, top_n=4):
+        sum_words = X.sum(axis=0)
+        words_freq = [(word, sum_words[0, idx]) for word, idx in self.vectorizer.vocabulary_.items()]
+        words_freq = sorted(words_freq, key=lambda x: x[1], reverse=True)
+        top_terms = [word for word, freq in words_freq[:top_n]]
         return top_terms
-    
-    def _get_top_terms_word2vec(self, cluster_abstracts, top_n=10):
+
+
+
+    def _get_top_terms_word2vec(self, cluster_abstracts, top_n=4):
         # Load the pre-trained spaCy model
         nlp = spacy.load('en_core_web_md')
         docs = [nlp(abstract) for abstract in cluster_abstracts]
