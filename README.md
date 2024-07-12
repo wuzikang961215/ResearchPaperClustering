@@ -292,3 +292,16 @@ I realized that using PyPDF2 for abstract extraction was not yielding ideal resu
   - To achieve even better precision and handle larger datasets effectively, a trained model to recognize abstracts without explicit programming is necessary.
   - Advanced tools and machine learning models from AWS, Google Cloud, or other platforms could provide the required sophistication to automate and improve the extraction process further.
 
+#### Further Clustering and Vectorisation Exploration
+
+- **Initial Findings**:
+  - When using Sentence-BERT combined with K-Means clustering, the silhouette score was around 0.08. However, the t-SNE visualization showed more evenly distributed and interpretable clusters.
+  - Hierarchical clustering with Sentence-BERT resulted in a silhouette score of 0.12, but some clusters contained only one paper while others had many more, leading to imbalanced clusters.
+
+- **Evaluation Criteria**:
+  - Silhouette Score: Measures similarity within clusters and separation between clusters. Higher scores generally indicate better-defined clusters.
+  - Cluster Distribution: Evenly distributed clusters are preferable for practical usability.
+  - Visual Inspection: t-SNE plots provided visual insights into the clustering structure, showing that more interpretable clusters might be more valuable even if the silhouette score is lower.
+
+- **Decision**:
+  - The approach using Sentence-BERT with K-Means clustering was chosen despite the lower silhouette score. The practical usability, interpretability of clusters, and even distribution observed in the t-SNE visualization were prioritized.
