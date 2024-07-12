@@ -24,10 +24,13 @@ The Research Paper Clustering project aims to cluster research papers based on t
       jupyter notebook
       ```
     - Open the notebook `ResearchPaperClustering.ipynb` and run it cell by cell. The notebook includes the following steps:
-        1. **Data Extraction and Preprocessing**: Extracts and preprocesses the text data from the PDF files.
-        2. **Text Vectorization**: Converts the preprocessed text into numerical representation using various vectorization methods (TF-IDF, Word2Vec, BERT, etc.).
-        3. **Clustering**: Applies different clustering algorithms (K-Means, Hierarchical Clustering, DBSCAN, Spectral Clustering, Gaussian Mixture Models) to group similar research papers.
-        4. **Evaluation and Visualization**: Evaluates the clustering results using metrics like silhouette score and Davies-Bouldin index, and visualizes the clusters.
+        1. **Data Extraction and Saving**: Extracts and preprocesses the text data from the PDF files. In this section:
+            - Running the first cell extracts all text from the first two pages of all PDFs and saves the extractions in the `data/processed/texts` directory.
+            - Running the next cell extracts abstracts from the text files and saves them in the `data/processed/abstracts` directory as text files. Additionally, it generates an `abstracts.csv` file in the `data/processed` directory for further data manipulation.
+        2. **Vectorization**: Converts the preprocessed text into numerical representation using various vectorization methods (TF-IDF, Word2Vec, BERT, etc.). After comparing the results among all vectorization methods, Word2Vec is used for further steps.
+        3. **Clustering**: Applies different clustering algorithms (K-Means, Hierarchical Clustering, DBSCAN, Spectral Clustering, Gaussian Mixture Models) to group similar research papers. Hierarchical clustering is chosen for its effectiveness in this context.
+        4. **Evaluation and Visualization**: Evaluates the clustering results using metrics like silhouette score and Davies-Bouldin index, and visualizes the clusters in a 2-dimensional graph using t-SNE.
+
 
 ### Contributions
 Feel free to contribute to this project by creating issues or submitting pull requests. Any contributions are welcome!
