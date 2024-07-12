@@ -6,6 +6,7 @@ from sklearn.metrics import silhouette_score, davies_bouldin_score
 from transformers import BertTokenizer, BertModel
 import numpy as np
 import spacy
+from sentence_transformers import SentenceTransformer
 
 class Clustering:
     def __init__(self, n_clusters=9, vectorizer_type='word2vec', algorithm='kmeans', n_init=100):
@@ -22,7 +23,7 @@ class Clustering:
         elif vectorizer_type == 'spacy_word2vec':
             return SpacyWord2VecVectorizer()
         elif vectorizer_type == 'bert':
-            return BERTVectorizer()
+            return SBERTVectorizer()  # Changed from BERTVectorizer to SBERTVectorizer
         else:
             raise ValueError("Unsupported vectorizer type. Choose from 'tfidf', 'spacy_word2vec', or 'bert'.")
         
@@ -232,3 +233,18 @@ class SpacyWord2VecVectorizer:
 
     def get_feature_names_out(self):
         return np.array([f'feature_{i}' for i in range(self.size)])
+
+class SBERTVectorizer:
+    def __init__(self, model_name='paraphrase-MiniLM-L6-v2'):
+        self.model = SentenceTransformer(model_name)
+    
+    def fit_transform(self, texts):
+        vectors = self.model.encode(texts)
+        return np.array(vectors)
+
+    def transform(self, texts):
+        vectors = self.model.encode(texts)
+        return np.array(vectors)
+
+    def get_feature_names_out(self):
+        return np.array([f'feature_{i}' for i in range(self.model.get_sentence_embedding_dimension())])
