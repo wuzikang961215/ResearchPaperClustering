@@ -23,13 +23,19 @@ The Research Paper Clustering project aims to cluster research papers based on t
       ```bash
       jupyter notebook
       ```
-    - Open the notebook `ResearchPaperClustering.ipynb` and run it cell by cell. The notebook includes the following steps:
-        1. **Data Extraction and Saving**: Extracts and preprocesses the text data from the PDF files. In this section:
-            - Running the first cell extracts all text from the first two pages of all PDFs and saves the extractions in the `data/processed/texts` directory.
-            - Running the next cell extracts abstracts from the text files and saves them in the `data/processed/abstracts` directory as text files. Additionally, it generates an `abstracts.csv` file in the `data/processed` directory for further data manipulation.
-        2. **Vectorization**: Converts the preprocessed text into numerical representation using various vectorization methods (TF-IDF, Word2Vec, BERT, etc.). After comparing the results among all vectorization methods, Word2Vec is used for further steps.
-        3. **Clustering**: Applies different clustering algorithms (K-Means, Hierarchical Clustering, DBSCAN, Spectral Clustering, Gaussian Mixture Models) to group similar research papers. Hierarchical clustering is chosen for its effectiveness in this context.
-        4. **Evaluation and Visualization**: Evaluates the clustering results using metrics like silhouette score and Davies-Bouldin index, and visualizes the clusters in a 2-dimensional graph using t-SNE.
+    - Open the notebook `ResearchPaperClustering.ipynb` and run it cell by cell.
+
+### Details and Purposes of Each Step in the Notebook
+
+1. **Data Extraction and Saving**: Extracts and preprocesses the text data from the PDF files. In this section:
+    - Running the first cell extracts all text from the first two pages of all PDFs and saves the extractions in the `data/processed/texts` directory.
+    - Running the next cell extracts abstracts from the text files and saves them in the `data/processed/abstracts` directory as text files. Additionally, it generates an `abstracts.csv` file in the `data/processed` directory for further data manipulation.
+
+2. **Vectorization**: Converts the preprocessed text into numerical representation using various vectorization methods (TF-IDF, Word2Vec, BERT, etc.). After comparing the results among all vectorization methods, Word2Vec is used for further steps.
+
+3. **Determine Optimal Number of Clusters**: This step utilizes the elbow method, silhouette score, and Davies-Bouldin index to determine the best number of clusters.
+
+4. **Clustering and Visualization**: Applies different clustering algorithms (K-Means, Hierarchical Clustering, DBSCAN, Spectral Clustering, Gaussian Mixture Models) to group similar research papers. Hierarchical clustering is chosen for its effectiveness in this context. This step also prints out the silhouette score and Davies-Bouldin index scores, and visualizes the clusters in a 2-dimensional graph using t-SNE. It also outputs the `clustering_results.csv` and `summary_report.csv` to the `data/processed` directory, indicating which paper belongs to which cluster and also which cluster contains how many papers including their corresponding key topic terms, respectively.
 
 
 ### Contributions
